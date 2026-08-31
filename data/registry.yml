@@ -1,0 +1,18 @@
+datasets:
+  - id: tiny-ratings
+    path: data/sample/ratings_tiny.csv
+    status: bundled
+    purpose: "CI와 초기 실습용 synthetic ratings"
+    license: "CC0-1.0; synthetic data generated for this course"
+  - id: publisher-amazon-ratings
+    expected_filename: Amazon_ratings.csv
+    status: local-only
+    redistribution: "unverified"
+  - id: publisher-movielens-20m
+    expected_filename: ratings-20m.csv
+    status: local-only
+    redistribution: "verify upstream and publisher terms before use"
+  - id: publisher-movielens-100k
+    expected_filenames: [u.data, u.item, u.user]
+    status: local-only
+    redistribution: "verify upstream and publisher terms before use"

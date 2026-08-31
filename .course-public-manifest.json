@@ -1,0 +1,28 @@
+{
+  "files": [
+    ".github/workflows/ci.yml",
+    "LICENSE",
+    "README.md",
+    "assignments/student/README.md",
+    "course/course.yml",
+    "course/notion/assets/README.md",
+    "course/notion/assets/w01a/choice-to-recommendation.svg",
+    "course/notion/assets/w01a/personalization-comparison.svg",
+    "course/notion/assets/w01a/recommender-loop.svg",
+    "course/notion/assets/w01a/semester-learning-map.svg",
+    "course/notion/index.md",
+    "course/notion/sessions/README.md",
+    "course/notion/sessions/w01a-orientation-and-recommenders.md",
+    "data/README.md",
+    "data/registry.yml",
+    "data/sample/items_tiny.csv",
+    "data/sample/ratings_tiny.csv",
+    "notebooks/student/README.md",
+    "notebooks/student/w01a-orientation-and-recommenders.ipynb",
+    "pyproject.toml",
+    "src/luna_recsys/__init__.py",
+    "src/luna_recsys/baselines.py",
+    "src/luna_recsys/data.py",
+    "tests/test_package.py"
+  ]
+}

@@ -1,0 +1,24 @@
+name: course-ci
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+      - run: python -m pip install --upgrade pip
+      - run: pip install -e ".[dev]"
+      - run: python -m pytest -q
+      - name: Build notebooks when authoring sources are present
+        if: ${{ hashFiles('scripts/build_notebooks.py') != '' && hashFiles('notebooks/source/*.py') != '' }}
+        run: python scripts/build_notebooks.py
+      - name: Validate Notion source when validator is present
+        if: ${{ hashFiles('scripts/validate_notion_bundle.py') != '' && hashFiles('course/notion/**/*.md') != '' }}
+        run: python scripts/validate_notion_bundle.py course/notion --strict

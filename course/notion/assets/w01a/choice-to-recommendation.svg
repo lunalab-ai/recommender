@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="675" viewBox="0 0 1200 675" role="img" aria-labelledby="title desc">
+  <title id="title">많은 후보에서 추천과 선택으로 이어지는 흐름</title>
+  <desc id="desc">많은 아이템 후보가 사용자의 관심과 맥락을 거쳐 작은 추천 목록이 되고 선택으로 이어지는 과정</desc>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#475569"/>
+    </marker>
+  </defs>
+  <rect width="1200" height="675" rx="32" fill="#f8fafc"/>
+  <text x="70" y="82" font-family="Arial, 'Noto Sans KR', sans-serif" font-size="38" font-weight="700" fill="#172554">너무 많은 후보에서, 살펴볼 만한 작은 목록으로</text>
+  <g font-family="Arial, 'Noto Sans KR', sans-serif">
+    <text x="165" y="160" text-anchor="middle" font-size="25" font-weight="700" fill="#334155">수많은 후보</text>
+    <g fill="#e2e8f0" stroke="#64748b" stroke-width="2">
+      <rect x="70" y="195" width="75" height="75" rx="12"/><rect x="155" y="195" width="75" height="75" rx="12"/><rect x="240" y="195" width="75" height="75" rx="12"/>
+      <rect x="70" y="280" width="75" height="75" rx="12"/><rect x="155" y="280" width="75" height="75" rx="12"/><rect x="240" y="280" width="75" height="75" rx="12"/>
+      <rect x="70" y="365" width="75" height="75" rx="12"/><rect x="155" y="365" width="75" height="75" rx="12"/><rect x="240" y="365" width="75" height="75" rx="12"/>
+    </g>
+    <text x="192" y="490" text-anchor="middle" font-size="20" fill="#64748b">영상 · 상품 · 음악 · 기사 …</text>
+    <line x1="335" y1="320" x2="430" y2="320" stroke="#475569" stroke-width="5" marker-end="url(#arrow)"/>
+    <rect x="455" y="190" width="270" height="260" rx="30" fill="#dbeafe" stroke="#2563eb" stroke-width="4"/>
+    <text x="590" y="235" text-anchor="middle" font-size="27" font-weight="700" fill="#1e3a8a">사용자와 맥락</text>
+    <text x="590" y="285" text-anchor="middle" font-size="22" fill="#1e40af">관심 · 과거 행동</text>
+    <text x="590" y="325" text-anchor="middle" font-size="22" fill="#1e40af">현재 상황 · 목적</text>
+    <line x1="500" y1="365" x2="680" y2="365" stroke="#93c5fd" stroke-width="3"/>
+    <text x="590" y="410" text-anchor="middle" font-size="21" font-weight="700" fill="#1d4ed8">후보를 선별하고 순서를 정함</text>
+    <line x1="750" y1="320" x2="835" y2="320" stroke="#475569" stroke-width="5" marker-end="url(#arrow)"/>
+    <text x="945" y="160" text-anchor="middle" font-size="25" font-weight="700" fill="#334155">작은 추천 목록</text>
+    <g fill="#dcfce7" stroke="#16a34a" stroke-width="3">
+      <rect x="855" y="205" width="180" height="65" rx="14"/>
+      <rect x="855" y="290" width="180" height="65" rx="14"/>
+      <rect x="855" y="375" width="180" height="65" rx="14"/>
+    </g>
+    <text x="885" y="247" font-size="22" font-weight="700" fill="#166534">1</text><text x="925" y="247" font-size="20" fill="#166534">후보 A</text>
+    <text x="885" y="332" font-size="22" font-weight="700" fill="#166534">2</text><text x="925" y="332" font-size="20" fill="#166534">후보 B</text>
+    <text x="885" y="417" font-size="22" font-weight="700" fill="#166534">3</text><text x="925" y="417" font-size="20" fill="#166534">후보 C</text>
+    <line x1="1045" y1="320" x2="1115" y2="320" stroke="#475569" stroke-width="5" marker-end="url(#arrow)"/>
+    <circle cx="1145" cy="320" r="38" fill="#fef3c7" stroke="#d97706" stroke-width="4"/>
+    <path d="M1127 320 l12 13 l24 -28" fill="none" stroke="#92400e" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="1145" y="390" text-anchor="middle" font-size="21" font-weight="700" fill="#92400e">선택</text>
+  </g>
+  <rect x="220" y="545" width="760" height="72" rx="18" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+  <text x="600" y="590" text-anchor="middle" font-family="Arial, 'Noto Sans KR', sans-serif" font-size="23" fill="#334155">추천은 선택을 대신하기보다, 발견할 후보의 범위를 줄여 줍니다.</text>
+</svg>

@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="675" viewBox="0 0 1200 675" role="img" aria-labelledby="title desc">
+  <title id="title">비개인화 추천과 개인화 추천 비교</title>
+  <desc id="desc">비개인화에서는 두 사용자가 같은 인기 목록을 받고 개인화에서는 서로 다른 목록을 받는 비교</desc>
+  <rect width="1200" height="675" rx="32" fill="#f8fafc"/>
+  <text x="70" y="78" font-family="Arial, 'Noto Sans KR', sans-serif" font-size="38" font-weight="700" fill="#172554">같은 후보, 다른 추천 방식</text>
+  <g font-family="Arial, 'Noto Sans KR', sans-serif">
+    <rect x="55" y="120" width="520" height="470" rx="28" fill="#ffffff" stroke="#94a3b8" stroke-width="3"/>
+    <text x="315" y="170" text-anchor="middle" font-size="29" font-weight="700" fill="#334155">비개인화 추천</text>
+    <text x="315" y="205" text-anchor="middle" font-size="20" fill="#64748b">모두에게 같은 인기 목록</text>
+    <circle cx="160" cy="275" r="48" fill="#dbeafe" stroke="#2563eb" stroke-width="3"/>
+    <circle cx="160" cy="445" r="48" fill="#fce7f3" stroke="#db2777" stroke-width="3"/>
+    <text x="160" y="284" text-anchor="middle" font-size="25" font-weight="700" fill="#1e3a8a">A</text>
+    <text x="160" y="454" text-anchor="middle" font-size="25" font-weight="700" fill="#9d174d">B</text>
+    <g fill="#e2e8f0" stroke="#64748b" stroke-width="2">
+      <rect x="260" y="235" width="245" height="48" rx="10"/>
+      <rect x="260" y="295" width="245" height="48" rx="10"/>
+      <rect x="260" y="405" width="245" height="48" rx="10"/>
+      <rect x="260" y="465" width="245" height="48" rx="10"/>
+    </g>
+    <text x="382" y="267" text-anchor="middle" font-size="20" fill="#334155">1. 인기 영상</text>
+    <text x="382" y="327" text-anchor="middle" font-size="20" fill="#334155">2. 인기 음악</text>
+    <text x="382" y="437" text-anchor="middle" font-size="20" fill="#334155">1. 인기 영상</text>
+    <text x="382" y="497" text-anchor="middle" font-size="20" fill="#334155">2. 인기 음악</text>
+    <rect x="625" y="120" width="520" height="470" rx="28" fill="#ffffff" stroke="#16a34a" stroke-width="3"/>
+    <text x="885" y="170" text-anchor="middle" font-size="29" font-weight="700" fill="#14532d">개인화 추천</text>
+    <text x="885" y="205" text-anchor="middle" font-size="20" fill="#64748b">관심과 맥락에 따라 다른 목록</text>
+    <circle cx="730" cy="275" r="48" fill="#dbeafe" stroke="#2563eb" stroke-width="3"/>
+    <circle cx="730" cy="445" r="48" fill="#fce7f3" stroke="#db2777" stroke-width="3"/>
+    <text x="730" y="284" text-anchor="middle" font-size="25" font-weight="700" fill="#1e3a8a">A</text>
+    <text x="730" y="454" text-anchor="middle" font-size="25" font-weight="700" fill="#9d174d">B</text>
+    <rect x="830" y="235" width="245" height="48" rx="10" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+    <rect x="830" y="295" width="245" height="48" rx="10" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+    <rect x="830" y="405" width="245" height="48" rx="10" fill="#fce7f3" stroke="#db2777" stroke-width="2"/>
+    <rect x="830" y="465" width="245" height="48" rx="10" fill="#fce7f3" stroke="#db2777" stroke-width="2"/>
+    <text x="952" y="267" text-anchor="middle" font-size="20" fill="#1e3a8a">1. 데이터 다큐</text>
+    <text x="952" y="327" text-anchor="middle" font-size="20" fill="#1e3a8a">2. 과학 팟캐스트</text>
+    <text x="952" y="437" text-anchor="middle" font-size="20" fill="#9d174d">1. 여행 브이로그</text>
+    <text x="952" y="497" text-anchor="middle" font-size="20" fill="#9d174d">2. 재즈 플레이리스트</text>
+  </g>
+  <text x="600" y="635" text-anchor="middle" font-family="Arial, 'Noto Sans KR', sans-serif" font-size="22" fill="#475569">개인화가 항상 정답은 아닙니다. 목적과 이용 가능한 정보를 함께 봐야 합니다.</text>
+</svg>

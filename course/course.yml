@@ -1,0 +1,88 @@
+course:
+  id: deep-learning-applications-1-recommender
+  korean_title: "딥러닝응용I(추천시스템)"
+  institution: "동덕여자대학교"
+  department: "데이터사이언스전공"
+  instructor: "유원상"
+  semester: "2026-2"
+  credits: 3
+  meeting:
+    days: ["Tuesday", "Thursday"]
+    time: "10:30-11:45"
+    weeks: 16
+  delivery:
+    theory_first: true
+    practice_platform: "Google Colab"
+    materials_platform: "Notion"
+  textbook:
+    title: "AI 에이전트를 위한 개인화 추천 알고리즘: Python, 머신러닝, AI, LLM 활용"
+    author: "임일"
+    year: 2025
+    publisher: "도서출판청람"
+  assessment:
+    midterm: 30
+    final: 40
+    assignments: 10
+    attendance: 20
+  assignment_policy:
+    grading: "pass-fail"
+    pass_points: 10
+    fail_points: 0
+  outcomes:
+    - "추천시스템의 전통적 방법과 딥러닝 기반 방법의 핵심 원리를 설명한다."
+    - "Python으로 추천 데이터를 전처리하고 주요 알고리즘을 구현한다."
+    - "추천 결과를 적절한 지표로 평가하고 해석한다."
+    - "실제 데이터와 사용자 시나리오에 맞는 추천 모델과 미니 애플리케이션을 설계한다."
+
+weeks:
+  - week: 1
+    goal: "수업 운영 방식과 추천시스템 과목의 전체 흐름을 이해하고 Python 실습 환경을 구축한다."
+    topics: ["강의 소개", "평가 및 운영", "추천시스템 개념과 적용 사례", "Python/Jupyter/Colab 환경 설정"]
+    sessions:
+      - {id: "w01a", tentative_title: "오리엔테이션과 추천시스템의 세계"}
+      - {id: "w01b", tentative_title: "Colab 환경 구축과 첫 추천 경험"}
+  - week: 2
+    goal: "기본적인 추천 방법과 추천 성능 평가의 필요성을 이해한다."
+    topics: ["데이터 불러오기", "인기 기반 추천", "사용자 집단별 추천", "내용 기반 추천", "기본 성능 평가"]
+  - week: 3
+    goal: "협업 필터링의 기본 원리와 유사도 기반 추천 방식을 이해한다."
+    topics: ["사용자-아이템 평점 행렬", "유사도", "기본 협업 필터링"]
+  - week: 4
+    goal: "이웃 기반 협업 필터링을 구현하고 사용자 기반과 아이템 기반 추천을 비교한다."
+    topics: ["이웃 기반 CF", "최적 이웃 크기", "평가경향 보정", "User-CF", "Item-CF"]
+  - week: 5
+    goal: "추천 성과측정지표를 이해하고 기본 알고리즘의 성능을 비교한다."
+    topics: ["RMSE", "MAE", "precision", "recall", "ranking 평가", "모델 비교"]
+  - week: 6
+    goal: "행렬분해 기반 추천의 원리와 SGD 기반 학습 절차를 이해한다."
+    topics: ["Matrix Factorization", "잠재요인", "손실함수", "SGD"]
+  - week: 7
+    goal: "행렬분해 모델의 학습·검증 절차와 파라미터 조정 방법을 적용한다."
+    topics: ["train/test", "성능 평가", "하이퍼파라미터 탐색", "MF와 SVD", "중간고사 정리"]
+  - week: 8
+    goal: "전반부 핵심 개념과 적용 능력을 점검한다."
+    topics: ["중간고사"]
+  - week: 9
+    goal: "특징 상호작용을 반영하는 추천 모델을 이해하고 딥러닝 기반 추천으로 확장한다."
+    topics: ["Factorization Machines", "MF와 신경망의 연결", "딥러닝 추천 개요"]
+  - week: 10
+    goal: "Keras로 딥러닝 기반 추천 모델을 구현하고 추가 변수를 반영한다."
+    topics: ["Keras MF", "Embedding layer", "사용자·아이템 특성", "학습과 평가"]
+  - week: 11
+    goal: "오토인코더의 원리를 이해하고 추천시스템에 적용한다."
+    topics: ["AutoEncoder", "encoder/decoder", "선호 복원", "AE 추천"]
+  - week: 12
+    goal: "Transformer 기반 추천의 기본 개념과 활용 방법을 이해한다."
+    topics: ["Transformer", "순차 추천", "행동 시퀀스", "구현 개관"]
+  - week: 13
+    goal: "LLM을 활용한 추천 방식과 임베딩 기반 추천의 가능성을 이해한다."
+    topics: ["LLM 추천", "prompting", "text embedding", "한계와 주의점"]
+  - week: 14
+    goal: "실제 추천시스템 구축에서 발생하는 주요 문제와 대응 전략을 설명한다."
+    topics: ["하이브리드", "sparse matrix", "cold start", "scalability", "presentation", "implicit feedback"]
+  - week: 15
+    goal: "학기 동안 학습한 알고리즘을 종합 비교하고 핵심 개념을 정리한다."
+    topics: ["알고리즘 비교", "평가 지표 복습", "장단점", "코드 리뷰", "기말 대비"]
+  - week: 16
+    goal: "전체 내용을 종합적으로 정리하고 추천시스템 적용 능력을 평가한다."
+    topics: ["기말고사"]

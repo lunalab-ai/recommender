@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="675" viewBox="0 0 1200 675" role="img" aria-labelledby="title desc">
+  <title id="title">추천시스템의 피드백 순환</title>
+  <desc id="desc">사용자와 아이템, 행동 데이터, 추천 모델, 추천 결과가 순환하며 새로운 행동을 만드는 과정</desc>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#475569"/>
+    </marker>
+  </defs>
+  <rect width="1200" height="675" rx="32" fill="#f8fafc"/>
+  <text x="70" y="78" font-family="Arial, 'Noto Sans KR', sans-serif" font-size="38" font-weight="700" fill="#172554">추천 결과는 다시 새로운 행동을 만듭니다</text>
+  <g font-family="Arial, 'Noto Sans KR', sans-serif" text-anchor="middle">
+    <rect x="70" y="230" width="220" height="150" rx="25" fill="#dbeafe" stroke="#2563eb" stroke-width="4"/>
+    <text x="180" y="285" font-size="27" font-weight="700" fill="#1e3a8a">사용자와 아이템</text>
+    <text x="180" y="325" font-size="20" fill="#1e40af">누구에게 무엇을?</text>
+    <line x1="305" y1="305" x2="400" y2="305" stroke="#475569" stroke-width="5" marker-end="url(#arrow)"/>
+    <rect x="425" y="230" width="220" height="150" rx="25" fill="#fef3c7" stroke="#d97706" stroke-width="4"/>
+    <text x="535" y="285" font-size="27" font-weight="700" fill="#78350f">행동과 맥락</text>
+    <text x="535" y="325" font-size="20" fill="#92400e">클릭·평점·구매·상황</text>
+    <line x1="660" y1="305" x2="755" y2="305" stroke="#475569" stroke-width="5" marker-end="url(#arrow)"/>
+    <rect x="780" y="230" width="220" height="150" rx="25" fill="#f3e8ff" stroke="#9333ea" stroke-width="4"/>
+    <text x="890" y="285" font-size="27" font-weight="700" fill="#581c87">추천 방법</text>
+    <text x="890" y="325" font-size="20" fill="#6b21a8">선별하고 순서 정하기</text>
+    <line x1="1015" y1="305" x2="1080" y2="305" stroke="#475569" stroke-width="5" marker-end="url(#arrow)"/>
+    <rect x="1035" y="430" width="120" height="90" rx="20" fill="#dcfce7" stroke="#16a34a" stroke-width="4"/>
+    <text x="1095" y="468" font-size="23" font-weight="700" fill="#14532d">추천</text>
+    <text x="1095" y="500" font-size="19" fill="#166534">목록</text>
+  </g>
+  <path d="M1095 535 C1095 620, 180 630, 180 400" fill="none" stroke="#16a34a" stroke-width="6" stroke-dasharray="12 10" marker-end="url(#arrow)"/>
+  <text x="610" y="585" text-anchor="middle" font-family="Arial, 'Noto Sans KR', sans-serif" font-size="22" font-weight="700" fill="#166534">추천을 본 사용자의 새 행동이 다음 추천의 신호가 됩니다.</text>
+  <rect x="310" y="110" width="580" height="72" rx="18" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+  <text x="600" y="154" text-anchor="middle" font-family="Arial, 'Noto Sans KR', sans-serif" font-size="22" fill="#334155">관찰 → 추천 → 반응 → 다시 관찰하는 반복 구조</text>
+</svg>

@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="675" viewBox="0 0 1200 675" role="img" aria-labelledby="title desc">
+  <title id="title">추천시스템 과목의 학기 학습 지도</title>
+  <desc id="desc">기본 추천과 평가에서 협업 필터링, 잠재요인, 딥러닝 추천, 실제 구축 이슈로 발전하는 다섯 단계</desc>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#64748b"/>
+    </marker>
+  </defs>
+  <rect width="1200" height="675" rx="32" fill="#f8fafc"/>
+  <text x="70" y="82" font-family="Arial, 'Noto Sans KR', sans-serif" font-size="38" font-weight="700" fill="#172554">한 학기 동안 추천을 더 정교하게 만드는 여정</text>
+  <text x="70" y="125" font-family="Arial, 'Noto Sans KR', sans-serif" font-size="22" fill="#475569">각 단계에서 개념 → 구현 → 평가 → 해석을 반복합니다.</text>
+  <line x1="150" y1="335" x2="1050" y2="335" stroke="#94a3b8" stroke-width="6" marker-end="url(#arrow)"/>
+  <g font-family="Arial, 'Noto Sans KR', sans-serif" text-anchor="middle">
+    <g transform="translate(150 335)">
+      <circle r="72" fill="#dbeafe" stroke="#2563eb" stroke-width="5"/>
+      <text y="-8" font-size="24" font-weight="700" fill="#1e3a8a">기본 추천</text>
+      <text y="24" font-size="20" fill="#1e40af">인기·내용·평가</text>
+      <text y="130" font-size="18" fill="#475569">Week 2–5</text>
+    </g>
+    <g transform="translate(375 335)">
+      <circle r="72" fill="#dcfce7" stroke="#16a34a" stroke-width="5"/>
+      <text y="-8" font-size="24" font-weight="700" fill="#14532d">협업</text>
+      <text y="24" font-size="20" fill="#166534">이웃과 유사도</text>
+      <text y="130" font-size="18" fill="#475569">Week 3–5</text>
+    </g>
+    <g transform="translate(600 335)">
+      <circle r="72" fill="#fef3c7" stroke="#d97706" stroke-width="5"/>
+      <text y="-8" font-size="24" font-weight="700" fill="#78350f">잠재요인</text>
+      <text y="24" font-size="20" fill="#92400e">MF·FM</text>
+      <text y="130" font-size="18" fill="#475569">Week 6–9</text>
+    </g>
+    <g transform="translate(825 335)">
+      <circle r="72" fill="#f3e8ff" stroke="#9333ea" stroke-width="5"/>
+      <text y="-8" font-size="24" font-weight="700" fill="#581c87">딥러닝</text>
+      <text y="24" font-size="20" fill="#6b21a8">AE·Transformer</text>
+      <text y="130" font-size="18" fill="#475569">Week 9–12</text>
+    </g>
+    <g transform="translate(1050 335)">
+      <circle r="72" fill="#ffe4e6" stroke="#e11d48" stroke-width="5"/>
+      <text y="-8" font-size="24" font-weight="700" fill="#881337">확장과 적용</text>
+      <text y="24" font-size="20" fill="#9f1239">LLM·하이브리드</text>
+      <text y="130" font-size="18" fill="#475569">Week 13–15</text>
+    </g>
+  </g>
+  <rect x="210" y="535" width="780" height="80" rx="20" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+  <text x="600" y="572" text-anchor="middle" font-family="Arial, 'Noto Sans KR', sans-serif" font-size="23" font-weight="700" fill="#1e293b">학기 미니 프로젝트</text>
+  <text x="600" y="603" text-anchor="middle" font-family="Arial, 'Noto Sans KR', sans-serif" font-size="19" fill="#475569">작은 목록 → 개인화 → 모델 학습 → 평가 → 설명 가능한 결과</text>
+</svg>
