@@ -36,7 +36,7 @@ COURSE_VERSION = "2026-fall-w01"  # 수업 공지의 버전으로 변경
 
 ## 강의자료
 
-- Notion 공개 페이지: `추후 공지`
+- Notion 공개 페이지: [W01A · 오리엔테이션과 추천시스템의 세계](https://app.notion.com/p/w01a-orientation-and-recommenders-3cd7fd00109f818db55fc0a452d428f3?source=copy_link)
 - 강의계획서: `course/course.yml`의 주차별 개요 참조
 - 학생용 notebook: `notebooks/student/`
 - 과제: `assignments/student/`
