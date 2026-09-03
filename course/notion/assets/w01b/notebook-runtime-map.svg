@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="560" viewBox="0 0 1200 560" role="img" aria-labelledby="title desc">
+  <title id="title">Notebook 셀과 Colab runtime의 관계</title>
+  <desc id="desc">Markdown 셀은 설명을 담고 코드 셀은 위에서 아래로 runtime에서 실행되어 변수와 임시 파일을 만든다</desc>
+  <defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto"><path d="M0 0L10 5L0 10z" fill="#40556d"/></marker><style>.t{font:700 30px Arial,'Noto Sans KR',sans-serif;fill:#173450}.h{font:700 21px Arial,'Noto Sans KR',sans-serif;fill:#173450}.b{font:18px Arial,'Noto Sans KR',sans-serif;fill:#29445f}.s{font:16px Arial,'Noto Sans KR',sans-serif;fill:#52677c}.line{stroke:#40556d;stroke-width:4;fill:none;marker-end:url(#a)}</style></defs>
+  <rect width="1200" height="560" fill="#fbfcfe"/><text x="600" y="48" text-anchor="middle" class="t">Notebook은 문서이고, runtime은 실행 상태입니다</text>
+  <rect x="55" y="95" width="465" height="385" rx="24" fill="#eef4ff" stroke="#9bb4c9" stroke-width="2"/>
+  <text x="287" y="135" text-anchor="middle" class="h">Notebook 문서 (.ipynb)</text>
+  <rect x="95" y="165" width="385" height="70" rx="12" fill="#ffffff" stroke="#9bb4c9"/><text x="120" y="194" class="h">Markdown 셀</text><text x="120" y="220" class="s">목적·설명·질문 — 실행 상태를 만들지 않음</text>
+  <rect x="95" y="255" width="385" height="85" rx="12" fill="#ffffff" stroke="#6ba889"/><text x="120" y="286" class="h">코드 셀 ①</text><text x="120" y="316" class="s">import, users, movies, ratings 생성</text>
+  <rect x="95" y="360" width="385" height="85" rx="12" fill="#ffffff" stroke="#6ba889"/><text x="120" y="391" class="h">코드 셀 ②</text><text x="120" y="421" class="s">앞 셀의 변수를 사용해 추천 계산</text>
+  <text x="287" y="513" text-anchor="middle" class="b">Drive 사본에는 코드와 메모가 남습니다</text>
+  <rect x="680" y="95" width="465" height="385" rx="24" fill="#eaf8f1" stroke="#64a785" stroke-width="2"/>
+  <text x="912" y="135" text-anchor="middle" class="h">Colab runtime (VM)</text>
+  <rect x="720" y="165" width="385" height="70" rx="12" fill="#ffffff" stroke="#9bb4c9"/><text x="745" y="194" class="h">Python memory</text><text x="745" y="220" class="s">실행한 변수와 함수</text>
+  <rect x="720" y="255" width="385" height="70" rx="12" fill="#ffffff" stroke="#9bb4c9"/><text x="745" y="284" class="h">임시 file system</text><text x="745" y="310" class="s">/content/recommender, ml-100k</text>
+  <rect x="720" y="345" width="385" height="100" rx="12" fill="#fff5e6" stroke="#d5a95f"/><text x="745" y="378" class="h">Runtime 재시작</text><text x="745" y="407" class="s">memory와 임시 파일이 사라질 수 있음</text><text x="745" y="432" class="s">→ 위 셀부터 순서대로 다시 실행</text>
+  <path d="M525 295 H675" class="line"/><text x="600" y="278" text-anchor="middle" class="s">Shift+Enter</text>
+  <path d="M675 405 H525" class="line"/><text x="600" y="435" text-anchor="middle" class="s">상태는 문서와 별개</text>
+  <text x="600" y="540" text-anchor="middle" class="b">NameError가 나면 대개 필요한 변수를 만든 앞 셀이 실행되지 않은 것입니다.</text>
+</svg>

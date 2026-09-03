@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="560" viewBox="0 0 1200 560" role="img" aria-labelledby="title desc">
+  <title id="title">GitHub, GroupLens, Colab의 연결</title>
+  <desc id="desc">GitHub의 공개 코드와 GroupLens의 공식 데이터가 자동 다운로드 또는 학생의 수동 업로드로 Colab 임시 런타임에 들어오고, notebook 사본은 Google Drive에 저장되는 흐름</desc>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#40556d"/></marker>
+    <style>
+      .title{font:700 30px Arial,'Noto Sans KR',sans-serif;fill:#16324f}.label{font:700 22px Arial,'Noto Sans KR',sans-serif;fill:#16324f}.body{font:18px Arial,'Noto Sans KR',sans-serif;fill:#29445f}.small{font:16px Arial,'Noto Sans KR',sans-serif;fill:#52677c}.box{stroke:#9bb4c9;stroke-width:2}.arrow{stroke:#40556d;stroke-width:4;fill:none;marker-end:url(#arrow)}
+    </style>
+  </defs>
+  <rect width="1200" height="560" fill="#f8fbfd"/>
+  <text x="600" y="48" text-anchor="middle" class="title">코드와 데이터는 어디에서 Colab으로 오는가?</text>
+  <rect x="55" y="105" width="300" height="180" rx="20" fill="#eef4ff" class="box"/>
+  <text x="205" y="145" text-anchor="middle" class="label">GitHub 공개 저장소</text>
+  <text x="205" y="185" text-anchor="middle" class="body">학생 notebook · Python 코드</text>
+  <text x="205" y="220" text-anchor="middle" class="body">Notion 원본 · 작은 sample</text>
+  <text x="205" y="258" text-anchor="middle" class="small">수업 버전은 tag로 고정</text>
+  <rect x="55" y="340" width="300" height="145" rx="20" fill="#fff5e6" class="box"/>
+  <text x="205" y="380" text-anchor="middle" class="label">GroupLens 공식 서버</text>
+  <text x="205" y="420" text-anchor="middle" class="body">MovieLens 100K archive</text>
+  <text x="205" y="455" text-anchor="middle" class="small">자동 다운로드 또는 본인 업로드</text>
+  <rect x="470" y="145" width="320" height="270" rx="24" fill="#eaf8f1" stroke="#64a785" stroke-width="3"/>
+  <text x="630" y="188" text-anchor="middle" class="label">Colab 임시 runtime</text>
+  <text x="630" y="235" text-anchor="middle" class="body">코드 실행 · 변수(memory)</text>
+  <text x="630" y="275" text-anchor="middle" class="body">/content의 내려받은 파일</text>
+  <text x="630" y="315" text-anchor="middle" class="body">추천 계산 · Gradio 앱</text>
+  <rect x="510" y="345" width="240" height="42" rx="10" fill="#ffffff" stroke="#9bb4c9"/>
+  <text x="630" y="373" text-anchor="middle" class="small">재시작하면 상태가 사라질 수 있음</text>
+  <rect x="900" y="195" width="250" height="170" rx="20" fill="#f3efff" class="box"/>
+  <text x="1025" y="238" text-anchor="middle" class="label">Google Drive</text>
+  <text x="1025" y="280" text-anchor="middle" class="body">내 notebook 사본</text>
+  <text x="1025" y="320" text-anchor="middle" class="small">코드와 메모를 저장</text>
+  <path d="M355 195 H465" class="arrow"/><text x="410" y="178" text-anchor="middle" class="small">clone/open</text>
+  <path d="M355 410 C410 410 420 335 465 320" class="arrow"/><text x="407" y="390" text-anchor="middle" class="small">auto / upload</text>
+  <path d="M795 260 H895" class="arrow"/><text x="845" y="242" text-anchor="middle" class="small">사본 저장</text>
+  <path d="M895 315 H795" class="arrow"/><text x="845" y="340" text-anchor="middle" class="small">다시 열기</text>
+  <text x="600" y="525" text-anchor="middle" class="body">원본은 공식 서버에서 직접 받으며 GitHub·SmartClass·공유 Drive에 재배포하지 않습니다.</text>
+</svg>

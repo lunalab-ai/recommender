@@ -1,7 +1,7 @@
 # 딥러닝응용I(추천시스템)
 
-동덕여자대학교 데이터사이언스전공 · 2026학년도 2학기  
-담당교수: 유원상  
+동덕여자대학교 데이터사이언스전공 · 2026학년도 2학기
+담당교수: 유원상
 수업: 화·목 10:30-11:45
 
 이 저장소는 추천시스템 이론, Python/Google Colab 실습, 미니 웹 애플리케이션,
@@ -28,7 +28,7 @@ data/                데이터 사용 안내, registry, 소규모 공개 샘플
 수업에서 지정한 검증 tag를 사용합니다.
 
 ```python
-COURSE_VERSION = "2026-fall-w01"  # 수업 공지의 버전으로 변경
+COURSE_VERSION = "2026-fall-w01b"  # 수업 공지의 검증 tag로 변경
 !pip -q install "git+https://github.com/lunalab-ai/recommender.git@{COURSE_VERSION}"
 ```
 
@@ -37,6 +37,8 @@ COURSE_VERSION = "2026-fall-w01"  # 수업 공지의 버전으로 변경
 ## 강의자료
 
 - Notion 공개 페이지: [W01A · 오리엔테이션과 추천시스템의 세계](https://app.notion.com/p/w01a-orientation-and-recommenders-3cd7fd00109f818db55fc0a452d428f3?source=copy_link)
+- W01B: `course/notion/sessions/w01b-colab-and-first-recommender-app.md`
+- W01B 학생용 Colab: `notebooks/student/w01b-colab-and-first-recommender-app.ipynb`
 - 강의계획서: `course/course.yml`의 주차별 개요 참조
 - 학생용 notebook: `notebooks/student/`
 - 과제: `assignments/student/`
@@ -45,6 +47,8 @@ COURSE_VERSION = "2026-fall-w01"  # 수업 공지의 버전으로 변경
 
 대용량 원본 데이터나 재배포 권한이 명확하지 않은 출판사 자료는 저장소에 포함하지 않습니다.
 필요한 파일명, 출처, 라이선스, 준비 방법은 `data/registry.yml`과 `data/README.md`에 기록합니다.
+MovieLens 100K는 구버전 사용 조건에 따라 원본을 저장소에 넣지 않고 GroupLens 공식 URL에서
+Colab runtime으로 직접 내려받습니다.
 
 ## 평가
 

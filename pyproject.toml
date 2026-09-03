@@ -28,7 +28,7 @@ dev = [
   "ipykernel>=6.29"
 ]
 apps = [
-  "gradio>=5.0"
+  "gradio>=5.0,<7"
 ]
 
 [tool.setuptools]
