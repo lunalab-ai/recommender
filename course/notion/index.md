@@ -48,3 +48,7 @@
 
 코드를 실행한 결과보다 **왜 이 추천이 만들어졌는지**, **어떻게 평가할지**,
 **어떤 사용자를 놓치고 있는지**를 설명하는 능력을 중요하게 봅니다.
+
+## PDF와 퀴즈 답안
+
+[전체 강의 PDF와 별도 퀴즈 답안 다운로드](https://github.com/lunalab-ai/recommender/blob/main/course/handouts/README.md)

@@ -36,6 +36,8 @@ COURSE_VERSION = "2026-fall-w01b"  # 수업 공지의 검증 tag로 변경
 
 ## 강의자료
 
+- [전체 강의 PDF · 별도 퀴즈 답안 다운로드](course/handouts/README.md)
+
 - Notion 공개 페이지: [W01A · 오리엔테이션과 추천시스템의 세계](https://app.notion.com/p/w01a-orientation-and-recommenders-3cd7fd00109f818db55fc0a452d428f3?source=copy_link)
 - W01B: `course/notion/sessions/w01b-colab-and-first-recommender-app.md`
 - W01B 학생용 Colab: `notebooks/student/w01b-colab-and-first-recommender-app.ipynb`

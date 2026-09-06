@@ -1,0 +1,45 @@
+name: Build student handouts
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'course/notion/**'
+      - 'course/quiz/**'
+      - 'scripts/build_handouts.py'
+      - 'scripts/check_public_release.py'
+      - 'scripts/requirements-handouts.txt'
+      - '.github/workflows/handouts.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: student-handouts-${{ github.repository }}
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: pip install -r scripts/requirements-handouts.txt
+      - run: python -m playwright install --with-deps chromium
+      - run: sudo apt-get update && sudo apt-get install -y fonts-noto-cjk
+      - run: python scripts/build_handouts.py
+      - run: python scripts/check_public_release.py course
+      - name: Upload handouts to the repository
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add -- course/handouts
+          if ! git diff --cached --quiet; then
+            git commit -m "Build lecture PDFs and student quiz handouts"
+            git push origin HEAD:main
+          fi
