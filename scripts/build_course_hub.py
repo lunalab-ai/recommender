@@ -74,7 +74,7 @@ def read_sessions(root: Path, metadata: dict) -> list[dict]:
 
 def session_table(root: Path, lessons: list[dict], repository: str) -> str:
     lines = [
-        "| 차시 | 강의 날짜 | 강의 주제 | 강의노트 | 퀴즈 답안 | 실습 ipynb | Colab |",
+        "| 차시 | 강의 날짜 | 강의 주제 | 강의노트 | 퀴즈 | 실습 ipynb | Colab |",
         "|---|---|---|---|---|---|---|",
     ]
     for lesson in lessons:
@@ -90,14 +90,14 @@ def session_table(root: Path, lessons: list[dict], repository: str) -> str:
         if lesson["notion"]:
             notes.append(f"[Notion]({lesson['notion']})")
         quiz = [
-            local_link(root, "보기", f"course/handouts/{stem}-quiz.md"),
+            local_link(root, "답안", f"course/handouts/{stem}-quiz.md"),
             local_link(root, "PDF", f"course/handouts/{stem}-quiz.pdf"),
         ]
         notebook = f"notebooks/student/{stem}.ipynb"
         if (root / notebook).is_file():
             suffix = f"{repository}/blob/{quote(ref, safe='')}/{notebook}"
             ipynb = f"[ipynb](https://github.com/{suffix})"
-            label = "최신본" if ref == "main" else "수업 버전"
+            label = "최신본" if ref == "main" else "수업본"
             colab = f"[{label}](https://colab.research.google.com/github/{suffix})"
         else:
             ipynb = colab = "—"
