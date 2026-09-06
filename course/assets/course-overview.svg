@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="350" viewBox="0 0 1200 350" role="img" aria-labelledby="title desc">
+  <title id="title">데이터에서 추천과 평가까지</title>
+  <desc id="desc">사용자·아이템·행동 데이터로 추천 모델을 만들고, 추천 결과를 평가하며 개선하는 추천시스템 수업</desc>
+  <defs><marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10Z" fill="#67d9c1"/></marker></defs>
+  <rect width="1200" height="350" rx="24" fill="#101f36"/>
+  <g font-family="'Malgun Gothic', 'Noto Sans CJK KR', sans-serif">
+    <text x="48" y="57" font-size="15" letter-spacing="3" fill="#67d9c1">RECOMMENDER SYSTEMS · FALL 2026</text>
+    <text x="48" y="104" font-size="31" font-weight="700" fill="#ffffff">데이터로 이해하고, 코드로 만드는 추천</text>
+    <g fill="#1e3551" stroke="#49647e"><rect x="48" y="141" width="310" height="117" rx="14"/><rect x="444" y="141" width="310" height="117" rx="14"/><rect x="840" y="141" width="310" height="117" rx="14"/></g>
+    <g fill="#ffffff" font-size="23" font-weight="700" text-anchor="middle"><text x="203" y="180">사용자 · 아이템 · 행동</text><text x="599" y="180">추천 모델</text><text x="995" y="180">추천 결과</text></g>
+    <g fill="#c2d5e8" font-size="17" text-anchor="middle"><text x="203" y="223">누구에게, 무엇을 추천할까?</text><text x="599" y="215">인기 기반 → 협업 필터링</text><text x="599" y="239">행렬분해 → 딥러닝</text><text x="995" y="223">왜 이 순서로 추천했을까?</text></g>
+    <g fill="none" stroke="#67d9c1" stroke-width="3" marker-end="url(#arrow)"><path d="M370 200H425"/><path d="M766 200H821"/><path d="M995 267V303H599V267"/></g>
+    <rect x="684" y="285" width="232" height="33" fill="#101f36"/>
+    <text x="800" y="308" text-anchor="middle" font-size="17" fill="#67d9c1">평가 · 해석 · 개선</text>
+  </g>
+</svg>

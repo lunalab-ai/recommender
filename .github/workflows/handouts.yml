@@ -6,6 +6,13 @@ on:
     paths:
       - 'course/notion/**'
       - 'course/quiz/**'
+      - 'course/course.yml'
+      - 'course/hub.yml'
+      - 'course/readme-template.md'
+      - 'course/python-basics.md'
+      - 'course/assets/**'
+      - 'notebooks/student/**'
+      - 'scripts/build_course_hub.py'
       - 'scripts/build_handouts.py'
       - 'scripts/check_public_release.py'
       - 'scripts/requirements-handouts.txt'
@@ -34,12 +41,13 @@ jobs:
       - run: sudo apt-get update && sudo apt-get install -y fonts-noto-cjk
       - run: python scripts/build_handouts.py
       - run: python scripts/check_public_release.py course
+      - run: python scripts/check_public_release.py README.md
       - name: Upload handouts to the repository
         run: |
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add -- course/handouts
+          git add -- course/handouts README.md course/references.md
           if ! git diff --cached --quiet; then
-            git commit -m "Build lecture PDFs and student quiz handouts"
+            git commit -m "Update course hub, references and student handouts"
             git push origin HEAD:main
           fi

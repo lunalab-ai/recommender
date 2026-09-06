@@ -174,6 +174,9 @@ def build(root: Path = ROOT, *, check_only: bool = False) -> list[Path]:
         "\n\n".join(index[:2]) + "\n\n" + "\n".join(index[2:]) + "\n", encoding="utf-8"
     )
     built.append(index_path)
+    from build_course_hub import build as build_hub
+
+    built.extend(build_hub(root))
     return built
 
 

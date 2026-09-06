@@ -40,10 +40,10 @@ class Finding:
 def scan(root: Path) -> list[Finding]:
     root = root.resolve()
     findings: list[Finding] = []
-    for path in sorted(root.rglob("*")):
+    for path in ([root] if root.is_file() else sorted(root.rglob("*"))):
         if not path.is_file():
             continue
-        rel = path.relative_to(root)
+        rel = Path(path.name) if root.is_file() else path.relative_to(root)
         lower_parts = {part.lower() for part in rel.parts}
         bad_parts = lower_parts.intersection(FORBIDDEN_PATH_PARTS)
         if bad_parts:
