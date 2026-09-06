@@ -75,19 +75,7 @@
 
 주교재: 임일, 『AI 에이전트를 위한 개인화 추천 알고리즘: Python, 머신러닝, AI, LLM 활용』, 도서출판청람, 2025.
 
-아래 자료는 수업을 위한 보충 읽기입니다. 각 링크의 설명은 학습을 돕기 위해 추가했으며, 외부 예제의 데이터와 실행 환경은 수업 notebook과 다를 수 있습니다.
-
-| 분야 | 자료 | 언어 | 활용 방법 |
-|---|---|---|---|
-| 실습 도구 | [Google Colab 시작 notebook](https://colab.research.google.com/notebooks/intro.ipynb) | 영어 중심 | 브라우저에서 notebook을 열고 셀 실행 연습 |
-| 실습 도구 | [NumPy — Absolute basics for beginners](https://numpy.org/doc/stable/user/absolute_beginners.html) | 영어 | 배열·shape·인덱싱을 이해하고 평점 행렬 준비 |
-| 실습 도구 | [pandas — Getting started tutorials](https://pandas.pydata.org/docs/getting_started/intro_tutorials/index.html) | 영어 | 표 읽기·행 선택·요약 통계를 MovieLens 실습과 연결 |
-| 실습 도구 | [Matplotlib — Pyplot tutorial](https://matplotlib.org/stable/tutorials/pyplot.html) | 영어 | 평점 분포와 실험 결과를 그래프로 표현 |
-| 추천시스템·머신러닝 | [Google — Recommendation systems](https://developers.google.com/machine-learning/recommendation) | 영어 | 추천 문제와 주요 추천 방법을 개괄 |
-| 추천시스템·머신러닝 | [scikit-learn — Getting Started](https://scikit-learn.org/stable/getting_started.html) | 영어 | 학습·예측·전처리·평가 API 복습; 머신러닝 기초 이후 |
-| 추천시스템·머신러닝 | [Keras — Collaborative Filtering for Movie Recommendations](https://keras.io/examples/structured_data/collaborative_filtering_movielens/) | 영어 | Embedding 기반 영화 추천 예제; 딥러닝 추천 단원에서 참고 |
-
-**[차시별 출처와 본문 참고 링크 전체 보기](course/references.md)** — 매 수업의 참고자료를 한곳에 모아 확인할 수 있습니다.
+**[보충 읽기·차시별 출처·본문 참고 링크 전체 보기](course/references.md)** — 자료별 활용 방법과 매 수업의 참고자료를 한곳에 모았습니다.
 
 ## 과제·데이터·수업 코드
 

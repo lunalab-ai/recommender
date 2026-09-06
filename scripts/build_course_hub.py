@@ -234,7 +234,6 @@ def build(root: Path = ROOT, *, check: bool = False) -> list[Path]:
             for week in config["weeks"]
         ),
         "PYTHON_RESOURCES": resource_table([r for r in resources if r["group"] == "Python 기초"]),
-        "OTHER_RESOURCES": resource_table([r for r in resources if r["group"] != "Python 기초"]),
         "TEXTBOOK": f"주교재: {textbook['author']}, 『{textbook['title']}』, {textbook['publisher']}, {textbook['year']}.",
         "ASSESSMENT": f"중간고사 **{assessment['midterm']}%** · 기말고사 **{assessment['final']}%** · 과제물 **{assessment['assignments']}%** · 출석 **{assessment['attendance']}%**\n\n실습 과제는 원칙적으로 통과 {course['assignment_policy']['pass_points']}점 또는 탈락 {course['assignment_policy']['fail_points']}점으로 평가합니다.",
     }
