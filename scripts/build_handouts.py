@@ -30,7 +30,7 @@ thead { display: table-header-group; }
 img { display: block; max-width: 100%; max-height: 220mm; margin: 12px auto;
       break-inside: avoid; }
 pre { white-space: pre-wrap; overflow-wrap: anywhere; background: #f3f5f7;
-      padding: 10px; font-size: 8.5pt; }
+      padding: 10px; font-size: 8.5pt; break-inside: avoid; }
 code { font-family: 'DejaVu Sans Mono', Consolas, monospace; }
 blockquote { border-left: 3px solid #a4bbd4; padding-left: 12px; margin-left: 0; }
 a { color: #185c99; text-decoration: none; }

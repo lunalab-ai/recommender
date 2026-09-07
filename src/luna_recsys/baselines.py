@@ -98,3 +98,45 @@ def mean_rating_recommendations(
         .assign(mean_rating=lambda frame: frame["mean_rating"].round(3))
         .reset_index(drop=True)
     )
+
+
+def baseline_recommendations(
+    ratings: pd.DataFrame, movies: pd.DataFrame, *, method: str = "mean",
+    users: pd.DataFrame | None = None, group_col: str = "sex", group_value: str = "F",
+    genre: str | None = None, min_ratings: int = 5, top_n: int = 10,
+) -> pd.DataFrame:
+    """Compare count, mean and group mean lists using the W01B output schema.
+
+    A group list uses only group observations. If no item meets its threshold,
+    return the global movie-mean list and label that fallback explicitly. Prediction
+    fallback is a separate per-row decision in ``MeanRatingPredictor``.
+    """
+    if method not in {"count", "mean", "group"}:
+        raise ValueError("method must be count, mean or group")
+    if min_ratings < 1 or top_n < 1:
+        raise ValueError("min_ratings and top_n must be positive")
+    selected = ratings
+    basis = "전체 사용자"
+    if method == "group":
+        if users is None or group_col not in users or users["user_id"].duplicated().any():
+            raise ValueError("Group recommendation requires unique user metadata")
+        ids = users.loc[users[group_col].astype(str).eq(str(group_value)), "user_id"]
+        selected = ratings.loc[ratings["user_id"].isin(ids)]
+        basis = f"{group_col}={group_value}"
+    if method == "count":
+        result = popularity_ranking(selected, item_col="movie_id", min_count=min_ratings)
+        view = movies
+        if genre is not None:
+            if genre not in movies:
+                raise ValueError(f"Unknown genre: {genre}")
+            view = movies.loc[movies[genre].eq(1)]
+        result = result.merge(view[["movie_id", "title"]], on="movie_id", validate="one_to_one")
+        result = result.sort_values(["rating_count", "mean_rating", "movie_id"], ascending=[False, False, True]).head(top_n)
+        result = result[["movie_id", "title", "mean_rating", "rating_count"]].copy()
+        result["mean_rating"] = result["mean_rating"].round(3)
+    else:
+        result = mean_rating_recommendations(selected, movies, genre=genre, min_ratings=min_ratings, top_n=top_n)
+    if method == "group" and result.empty:
+        result = mean_rating_recommendations(ratings, movies, genre=genre, min_ratings=min_ratings, top_n=top_n)
+        basis = "집단 표본 부족 → 전체 사용자 평균"
+    return result.assign(basis=basis).reset_index(drop=True)

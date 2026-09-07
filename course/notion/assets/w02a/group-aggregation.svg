@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="330" viewBox="0 0 1000 330">
+<rect width="1000" height="330" fill="#fafaf7"/>
+<g font-family="Malgun Gothic, Noto Sans CJK KR, sans-serif" fill="#15324b">
+<text x="35" y="43" font-size="27" font-weight="bold">한 키 집계에서 두 키 집계로</text>
+<rect x="35" y="75" width="280" height="170" rx="15" fill="#e8edf5"/>
+<text x="53" y="110" font-size="22" font-weight="bold">속성 연결</text>
+<text x="53" y="147" font-size="19">ratings에 사용자 집단 추가</text>
+<text x="53" y="177" font-size="19">merge의 키: user_id</text>
+<text x="53" y="207" font-size="19">평점 행 수 유지 확인</text>
+<path d="M324 160 h24 l-8 -8 m8 8 l-8 8" stroke="#34536a" stroke-width="3" fill="none"/>
+<rect x="360" y="75" width="280" height="170" rx="15" fill="#d7efeb"/>
+<text x="378" y="110" font-size="22" font-weight="bold">두 키로 묶기</text>
+<text x="378" y="147" font-size="19">집단 + movie_id</text>
+<text x="378" y="177" font-size="19">평균 평점과 평점 수</text>
+<text x="378" y="207" font-size="19">집단 내 표본 수 확인</text>
+<path d="M649 160 h24 l-8 -8 m8 8 l-8 8" stroke="#34536a" stroke-width="3" fill="none"/>
+<rect x="685" y="75" width="280" height="170" rx="15" fill="#fff0d5"/>
+<text x="703" y="110" font-size="22" font-weight="bold">조건 적용</text>
+<text x="703" y="147" font-size="19">장르 · 최소 평점 수</text>
+<text x="703" y="177" font-size="19">점수 정렬 → Top-N</text>
+<text x="703" y="207" font-size="19">집단 표본 부족 시 안내</text>
+<text x="35" y="290" font-size="19">집단을 나누면 묶음당 표본이 줄어든다. 집단 평균은 개인 취향을 보장하지 않는다.</text>
+</g></svg>

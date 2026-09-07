@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="330" viewBox="0 0 1000 330">
+<rect width="1000" height="330" fill="#fafaf7"/>
+<g font-family="Malgun Gothic, Noto Sans CJK KR, sans-serif" fill="#15324b">
+<text x="35" y="43" font-size="27" font-weight="bold">세 표를 키로 연결한다</text>
+<rect x="35" y="75" width="280" height="170" rx="15" fill="#e8edf5"/>
+<text x="53" y="110" font-size="22" font-weight="bold">users</text>
+<text x="53" y="147" font-size="19">사용자 한 명 = 한 행</text>
+<text x="53" y="177" font-size="19">user_id · sex · occupation</text>
+<text x="53" y="207" font-size="19">user_id는 중복 없이</text>
+<path d="M324 160 h24 l-8 -8 m8 8 l-8 8" stroke="#34536a" stroke-width="3" fill="none"/>
+<rect x="360" y="75" width="280" height="170" rx="15" fill="#d7efeb"/>
+<text x="378" y="110" font-size="22" font-weight="bold">ratings</text>
+<text x="378" y="147" font-size="19">평점 한 건 = 한 행</text>
+<text x="378" y="177" font-size="19">user_id + movie_id</text>
+<text x="378" y="207" font-size="19">rating: 1–5</text>
+<path d="M649 160 h24 l-8 -8 m8 8 l-8 8" stroke="#34536a" stroke-width="3" fill="none"/>
+<rect x="685" y="75" width="280" height="170" rx="15" fill="#fff0d5"/>
+<text x="703" y="110" font-size="22" font-weight="bold">movies</text>
+<text x="703" y="147" font-size="19">영화 한 편 = 한 행</text>
+<text x="703" y="177" font-size="19">movie_id · title · 장르</text>
+<text x="703" y="207" font-size="19">movie_id는 중복 없이</text>
+<text x="35" y="290" font-size="19">users → ratings: user_id로 연결   |   ratings → movies: movie_id로 제목 연결</text>
+</g></svg>

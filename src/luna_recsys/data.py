@@ -15,6 +15,11 @@ import pandas as pd
 
 MOVIELENS_100K_URL = "https://files.grouplens.org/datasets/movielens/ml-100k.zip"
 MOVIELENS_100K_MD5 = "0e33842e24a9c977be4e0107933c0723"
+MOVIELENS_100K_SHA256 = "50d2a982c66986937beb9ffb3aa76efe955bf3d5c6b761f4e3a7cd717c6a3229"
+MOVIELENS_100K_MIRROR = (
+    "https://media.githubusercontent.com/media/dgraph-io/dgraph-benchmarks/"
+    "0399f1c120208d3e78431eb7bf4ecafdcee15d8d/movielens/conv100k/ml-100k.zip"
+)
 MOVIELENS_100K_FILES = ("u.user", "u.item", "u.data")
 MOVIELENS_100K_USER_COLUMNS = ("user_id", "age", "sex", "occupation", "zip_code")
 MOVIELENS_100K_GENRES = (
@@ -187,8 +192,9 @@ def download_movielens_100k(
     *,
     url: str = MOVIELENS_100K_URL,
     expected_md5: str = MOVIELENS_100K_MD5,
+    timeout: float = 60,
 ) -> Path:
-    """Download and safely extract the three lesson files from the official archive.
+    """Download the official archive, with a pinned, hash-identical HTTPS mirror.
 
     Existing complete files are reused. The archive is verified before extraction and
     only the three explicitly allowlisted members are written to ``cache_dir``.
@@ -202,13 +208,27 @@ def download_movielens_100k(
     with tempfile.NamedTemporaryFile(dir=cache, suffix=".zip", delete=False) as handle:
         archive_path = Path(handle.name)
     try:
-        with urllib.request.urlopen(url, timeout=60) as response, archive_path.open("wb") as out:
-            shutil.copyfileobj(response, out)
-        destination = extract_movielens_100k_archive(
-            archive_path,
-            cache,
-            expected_md5=expected_md5,
-        )
+        urls = [url]
+        standard = url == MOVIELENS_100K_URL and expected_md5 == MOVIELENS_100K_MD5
+        if standard:
+            urls.append(MOVIELENS_100K_MIRROR)
+        failures = []
+        for source_url in urls:
+            try:
+                with urllib.request.urlopen(source_url, timeout=timeout) as response, archive_path.open("wb") as out:
+                    shutil.copyfileobj(response, out)
+                if standard and hashlib.sha256(archive_path.read_bytes()).hexdigest() != MOVIELENS_100K_SHA256:
+                    raise ValueError("MovieLens archive SHA-256 mismatch")
+                destination = extract_movielens_100k_archive(
+                    archive_path, cache, expected_md5=expected_md5,
+                )
+                break
+            except (OSError, ValueError, zipfile.BadZipFile) as exc:
+                if not standard:
+                    raise
+                failures.append(f"{source_url}: {exc}")
+        else:
+            raise OSError("MovieLens download failed on all verified sources: " + "; ".join(failures))
     finally:
         archive_path.unlink(missing_ok=True)
     return destination

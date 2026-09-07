@@ -21,6 +21,9 @@ dependencies = [
 [project.optional-dependencies]
 dev = [
   "pytest>=8.0",
+  "markdown-it-py>=3,<5",
+  "playwright>=1.50,<2",
+  "pypdf>=5,<7",
   "ruff>=0.9",
   "pre-commit>=4.0",
   "jupytext>=1.16",

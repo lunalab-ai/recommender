@@ -49,7 +49,26 @@ Clone한 공개 저장소에 이 폴더가 아직 없으면 student notebook이 
 인증서 검증을 끄거나 출처 불명 mirror를 사용하지 않습니다. MovieLens 원본 ZIP을 GitHub,
 Notion ZIP, SmartClass 또는 교수자 공유 Drive로 재배포하지 않습니다.
 
-## 원칙
+## W02A 이후 자동 준비
+
+W02A Colab은 `luna_recsys.prepare_movielens(mode="real")`로 실제 데이터를 준비한다.
+캐시 재사용 → 공식 서버 → 고정된 HTTPS 대체 경로 순서이며 파일 업로드가 필요 없다.
+모든 경로가 실패하면 원인을 표시하고 중단한다. 이전 API의 `auto` 합성 대안은 유지한다.
+현재 모드는 `prepared.mode`와 `prepared.description`으로 확인한다.
+이미 가진 사본은 `local_dir`로 지정해 저작·검증에 사용할 수 있다. 그 사본을 다시 다운로드할
+필요는 없지만 비공개 로컬 경로 자체가 학생 Colab의 다운로드 주소가 되는 것은 아니다.
+
+W02A의 합성 대안은 패키지에 포함된 `synthetic_movielens(seed=2026)`가 생성하는 80명·18편·
+960평점의 독자적인 CC0 데이터다. 실제 MovieLens에서 추출한 표본이 아니며 성능 숫자는 원본과
+다르다. W01B의 작은 파일형 대안과 기존 실행 방식은 과거 태그에서 계속 유지한다.
+
+공식 서버의 인증서 만료에 대비해 [Dgraph 벤치마크의 고정된 MovieLens ZIP](https://github.com/dgraph-io/dgraph-benchmarks/blob/0399f1c120208d3e78431eb7bf4ecafdcee15d8d/movielens/conv100k/ml-100k.zip)을 대체 다운로드 경로로 사용한다.
+2026-09-08 실제 다운로드에서 공식 MD5 `0e33842e24a9c977be4e0107933c0723`,
+SHA-256 `50d2a982c66986937beb9ffb3aa76efe955bf3d5c6b761f4e3a7cd717c6a3229`를 확인했다.
+출처는 [GroupLens MovieLens 100K](https://grouplens.org/datasets/movielens/100k/)이며 이용 조건은 원본 README를 따른다.
+이 저장소에는 원본 데이터를 추가하지 않으며 TLS 인증서 검증을 끄지 않는다.
+
+## 운영 원칙
 
 - CI와 기본 notebook은 대용량 데이터 없이 실행되어야 합니다.
 - 데이터 분할과 전처리는 재현 가능하게 version과 random seed를 기록합니다.

@@ -1,4 +1,3 @@
-# Public metadata only. Dates come from the session briefs; refs/Notion URLs from published notices.
 repository: lunalab-ai/recommender
 resources_checked: '2026-09-07'
 sessions:
@@ -10,57 +9,58 @@ sessions:
     date: '2026-09-03'
     colab_ref: 2026-fall-w01b
     notion_url: https://app.notion.com/p/W01B-Colab-3d07fd00109f8168a7e9c245cd0fdd97?source=copy_link
-
-# Supplemental reading selected for this course, checked on 2026-09-07.
-# Descriptions and suggested order are pedagogical additions, not syllabus requirements.
+  w02a:
+    date: '2026-09-08'
+    colab_ref: 2026-fall-w02a
+    notion_url: https://app.notion.com/p/W02A-1-3d47fd00109f81aa814dd9d44570a0ad?source=copy_link
 resources:
-  - group: Python 기초
-    title: 이 수업을 위한 Python 복습 길잡이
-    url: course/python-basics.md
-    language: 한국어
-    purpose: Colab 실행부터 변수·반복문·함수·표 읽기까지, 짧은 예제로 복습
-  - group: Python 기초
-    title: Python 한국어 공식 자습서
-    url: https://docs.python.org/ko/3/tutorial/
-    language: 한국어·일부 영어
-    purpose: 문법을 배운 적이 있다면 3·4·5·8장으로 복습
-  - group: Python 기초
-    title: University of Helsinki — Python Programming MOOC 2026
-    url: https://programming-26.mooc.fi/
-    language: 영어
-    purpose: 프로그래밍이 처음이라면 Introduction의 Part 1부터 연습
-  - group: 실습 도구
-    title: Google Colab 시작 notebook
-    url: https://colab.research.google.com/notebooks/intro.ipynb
-    language: 영어 중심
-    purpose: 브라우저에서 notebook을 열고 셀 실행 연습
-  - group: 실습 도구
-    title: NumPy — Absolute basics for beginners
-    url: https://numpy.org/doc/stable/user/absolute_beginners.html
-    language: 영어
-    purpose: 배열·shape·인덱싱을 이해하고 평점 행렬 준비
-  - group: 실습 도구
-    title: pandas — Getting started tutorials
-    url: https://pandas.pydata.org/docs/getting_started/intro_tutorials/index.html
-    language: 영어
-    purpose: 표 읽기·행 선택·요약 통계를 MovieLens 실습과 연결
-  - group: 실습 도구
-    title: Matplotlib — Pyplot tutorial
-    url: https://matplotlib.org/stable/tutorials/pyplot.html
-    language: 영어
-    purpose: 평점 분포와 실험 결과를 그래프로 표현
-  - group: 추천시스템·머신러닝
-    title: Google — Recommendation systems
-    url: https://developers.google.com/machine-learning/recommendation
-    language: 영어
-    purpose: 추천 문제와 주요 추천 방법을 개괄
-  - group: 추천시스템·머신러닝
-    title: scikit-learn — Getting Started
-    url: https://scikit-learn.org/stable/getting_started.html
-    language: 영어
-    purpose: 학습·예측·전처리·평가 API 복습; 머신러닝 기초 이후
-  - group: 추천시스템·머신러닝
-    title: Keras — Collaborative Filtering for Movie Recommendations
-    url: https://keras.io/examples/structured_data/collaborative_filtering_movielens/
-    language: 영어
-    purpose: Embedding 기반 영화 추천 예제; 딥러닝 추천 단원에서 참고
+- group: Python 기초
+  title: 이 수업을 위한 Python 복습 길잡이
+  url: course/python-basics.md
+  language: 한국어
+  purpose: Colab 실행부터 변수·반복문·함수·표 읽기까지, 짧은 예제로 복습
+- group: Python 기초
+  title: Python 한국어 공식 자습서
+  url: https://docs.python.org/ko/3/tutorial/
+  language: 한국어·일부 영어
+  purpose: 문법을 배운 적이 있다면 3·4·5·8장으로 복습
+- group: Python 기초
+  title: University of Helsinki — Python Programming MOOC 2026
+  url: https://programming-26.mooc.fi/
+  language: 영어
+  purpose: 프로그래밍이 처음이라면 Introduction의 Part 1부터 연습
+- group: 실습 도구
+  title: Google Colab 시작 notebook
+  url: https://colab.research.google.com/notebooks/intro.ipynb
+  language: 영어 중심
+  purpose: 브라우저에서 notebook을 열고 셀 실행 연습
+- group: 실습 도구
+  title: NumPy — Absolute basics for beginners
+  url: https://numpy.org/doc/stable/user/absolute_beginners.html
+  language: 영어
+  purpose: 배열·shape·인덱싱을 이해하고 평점 행렬 준비
+- group: 실습 도구
+  title: pandas — Getting started tutorials
+  url: https://pandas.pydata.org/docs/getting_started/intro_tutorials/index.html
+  language: 영어
+  purpose: 표 읽기·행 선택·요약 통계를 MovieLens 실습과 연결
+- group: 실습 도구
+  title: Matplotlib — Pyplot tutorial
+  url: https://matplotlib.org/stable/tutorials/pyplot.html
+  language: 영어
+  purpose: 평점 분포와 실험 결과를 그래프로 표현
+- group: 추천시스템·머신러닝
+  title: Google — Recommendation systems
+  url: https://developers.google.com/machine-learning/recommendation
+  language: 영어
+  purpose: 추천 문제와 주요 추천 방법을 개괄
+- group: 추천시스템·머신러닝
+  title: scikit-learn — Getting Started
+  url: https://scikit-learn.org/stable/getting_started.html
+  language: 영어
+  purpose: 학습·예측·전처리·평가 API 복습; 머신러닝 기초 이후
+- group: 추천시스템·머신러닝
+  title: Keras — Collaborative Filtering for Movie Recommendations
+  url: https://keras.io/examples/structured_data/collaborative_filtering_movielens/
+  language: 영어
+  purpose: Embedding 기반 영화 추천 예제; 딥러닝 추천 단원에서 참고

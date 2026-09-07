@@ -7,13 +7,113 @@ from pathlib import Path
 import pandas as pd
 import pytest
 
-from luna_recsys.baselines import mean_rating_recommendations, popularity_ranking
+from luna_recsys.baselines import (
+    baseline_recommendations,
+    mean_rating_recommendations,
+    popularity_ranking,
+)
 from luna_recsys.data import (
     download_movielens_100k,
     extract_movielens_100k_archive,
     load_movielens_100k,
 )
+from luna_recsys.datasets import prepare_movielens, synthetic_movielens
 from luna_recsys.demo_app import recommend_for_app
+from luna_recsys.evaluation import evaluate_means, split_ratings
+from luna_recsys.rating_models import MeanRatingPredictor
+
+
+def test_predictor_fallback_order_and_input_order():
+    ratings = pd.DataFrame({'user_id':[1,2,1,2], 'movie_id':[1,1,2,2], 'rating':[5,1,3,1]})
+    users = pd.DataFrame({'user_id':[1,2], 'sex':['F','M']})
+    model = MeanRatingPredictor('group').fit(ratings, users)
+    pairs = pd.DataFrame({'user_id':[1,99,1,2], 'movie_id':[1,1,99,2]}, index=[7,7,2,9])
+    result = model.predict_details(pairs)
+    assert result.prediction.tolist() == [5,3,2.5,1]
+    assert result.level.tolist() == ['group','movie','global','group']
+    assert result.index.tolist() == [7,7,2,9]
+    # Editing frames after fit or supplying test labels cannot change learned means.
+    ratings['rating'] = 1
+    users['sex'] = 'unknown'
+    assert model.predict(pairs.assign(rating=5)).tolist() == [5,3,2.5,1]
+
+
+def test_predictor_support_filter_and_failed_fit():
+    ratings = pd.DataFrame({'user_id':[1,2,1,2], 'movie_id':[1,1,2,2], 'rating':[5,1,3,1]})
+    users = pd.DataFrame({'user_id':[1,2], 'sex':['F','M']})
+    model = MeanRatingPredictor('group', min_group_ratings=2).fit(ratings, users)
+    result = model.predict_details(ratings)
+    assert result.prediction.tolist() == [3,3,2,2]
+    assert result.level.eq('movie').all()
+    with pytest.raises(ValueError, match='unique'):
+        model.fit(ratings, pd.concat([users, users]))
+    assert model.predict(ratings).tolist() == [3,3,2,2]
+    with pytest.raises(ValueError, match='fit'):
+        MeanRatingPredictor().predict(ratings)
+    with pytest.raises(ValueError, match='between'):
+        MeanRatingPredictor().fit(ratings.assign(rating=float('inf')))
+
+
+def test_split_is_reproducible_and_observations_are_disjoint():
+    data = synthetic_movielens()
+    ratings = data.ratings.assign(observation=range(len(data.ratings)))
+    ratings.index = [0] * len(ratings)  # position-based splitting must still work
+    split = split_ratings(ratings)
+    again = split_ratings(ratings)
+    assert split.method == 'user-stratified'
+    assert split.train.observation.tolist() == again.train.observation.tolist()
+    assert set(split.train.observation).isdisjoint(split.test.observation)
+    assert len(split.train) + len(split.test) == len(ratings)
+    result = evaluate_means(split, data.users)
+    assert result.test_count.eq(len(split.test)).all()
+    assert result[['group_used','movie_used','global_used']].sum(axis=1).eq(len(split.test)).all()
+
+
+def test_small_data_split_is_labeled_and_evaluation_matches_hand_calculation():
+    from luna_recsys.evaluation import RatingSplit
+    tiny = pd.DataFrame({'user_id':[1,2], 'movie_id':[1,2], 'rating':[5,1]})
+    assert split_ratings(tiny).method == 'random-small-data'
+    train = pd.DataFrame({'user_id':[1,2], 'movie_id':[1,1], 'rating':[5,1]})
+    test = pd.DataFrame({'user_id':[1,2], 'movie_id':[1,1], 'rating':[4,2]})
+    users = pd.DataFrame({'user_id':[1,2], 'sex':['F','M']})
+    result = evaluate_means(RatingSplit(train,test,'manual'), users)
+    assert result.rmse.tolist() == pytest.approx([1,1,1])
+
+
+def test_group_listing_and_fallback_are_explicit():
+    data = synthetic_movielens()
+    grouped = baseline_recommendations(data.ratings, data.movies, users=data.users,
+        method='group',group_col='occupation',group_value='student',min_ratings=1,top_n=4)
+    assert len(grouped) == 4 and grouped.basis.eq('occupation=student').all()
+    fallback = baseline_recommendations(data.ratings, data.movies, users=data.users,
+        method='group',group_col='occupation',group_value='missing',min_ratings=1,top_n=4)
+    assert len(fallback) == 4 and fallback.basis.str.contains('전체').all()
+    assert baseline_recommendations(data.ratings, data.movies, min_ratings=99999).empty
+    count = baseline_recommendations(data.ratings, data.movies, method='count')
+    assert count.rating_count.is_monotonic_decreasing
+
+
+def test_dataset_auto_failure_is_visible_and_explicit_local_errors_are_not_hidden(tmp_path, monkeypatch):
+    import luna_recsys.datasets as datasets
+    def fail(*args, **kwargs):
+        raise OSError('offline')
+    monkeypatch.setattr(datasets, 'download_movielens_100k', fail)
+    prepared = prepare_movielens(tmp_path)
+    assert prepared.mode == 'synthetic' and '실패' in prepared.description
+    assert len(prepared.data.ratings) == 960
+    assert prepared.data.ratings.equals(synthetic_movielens().ratings)
+    with pytest.raises(FileNotFoundError):
+        prepare_movielens(local_dir=tmp_path/'missing')
+    with pytest.raises(ValueError):
+        prepare_movielens(mode='typo')
+
+
+def test_dataset_offline_mode_never_downloads(tmp_path, monkeypatch):
+    import luna_recsys.datasets as datasets
+    def forbidden(*args, **kwargs):
+        raise AssertionError('offline mode must not download')
+    monkeypatch.setattr(datasets, 'download_movielens_100k', forbidden)
+    assert prepare_movielens(tmp_path, mode='synthetic').mode == 'synthetic'
 
 
 def test_popularity_ranking_orders_by_count_then_mean() -> None:
@@ -120,6 +220,49 @@ def test_uploaded_movielens_archive_rejects_wrong_checksum(tmp_path: Path) -> No
         )
 
 
+def test_download_uses_verified_mirror_after_tls_failure(tmp_path, monkeypatch):
+    import io
+    import urllib.error
+    from luna_recsys import data
+
+    files = _write_tiny_movielens(tmp_path / "source")
+    buffer = io.BytesIO()
+    with zipfile.ZipFile(buffer, "w") as archive:
+        for name in data.MOVIELENS_100K_FILES:
+            archive.write(files / name, f"ml-100k/{name}")
+    payload = buffer.getvalue()
+    expected = hashlib.md5(payload, usedforsecurity=False).hexdigest()
+    monkeypatch.setattr(data, "MOVIELENS_100K_MD5", expected)
+    monkeypatch.setattr(data, "MOVIELENS_100K_SHA256", hashlib.sha256(payload).hexdigest())
+    calls = []
+
+    def fetch(url, **kwargs):
+        calls.append(url)
+        if url == data.MOVIELENS_100K_URL:
+            raise urllib.error.URLError("certificate has expired")
+        return io.BytesIO(payload)
+
+    monkeypatch.setattr(data.urllib.request, "urlopen", fetch)
+    result = download_movielens_100k(tmp_path / "cache", expected_md5=expected)
+    assert calls == [data.MOVIELENS_100K_URL, data.MOVIELENS_100K_MIRROR]
+    assert len(load_movielens_100k(result).ratings) > 0
+    monkeypatch.setattr(data, "MOVIELENS_100K_SHA256", "0" * 64)
+    with pytest.raises(OSError, match="SHA-256 mismatch"):
+        download_movielens_100k(tmp_path / "bad-cache", expected_md5=expected)
+    assert not (tmp_path / "bad-cache/ml-100k/u.data").exists()
+
+
+def test_real_mode_never_silently_returns_synthetic(tmp_path, monkeypatch):
+    from luna_recsys import datasets
+
+    def unavailable(*args, **kwargs):
+        raise OSError("all sources unavailable")
+
+    monkeypatch.setattr(datasets, "download_movielens_100k", unavailable)
+    with pytest.raises(OSError, match="all sources unavailable"):
+        prepare_movielens(tmp_path, mode="real")
+
+
 def test_uploaded_movielens_archive_rejects_missing_member(tmp_path: Path) -> None:
     archive_path = tmp_path / "ml-100k.zip"
     with zipfile.ZipFile(archive_path, "w") as archive:
@@ -149,9 +292,7 @@ def test_mean_rating_recommendations_filters_and_breaks_ties() -> None:
             "Action": [1, 0, 1],
         }
     )
-    result = mean_rating_recommendations(
-        ratings, movies, genre="Action", min_ratings=2, top_n=2
-    )
+    result = mean_rating_recommendations(ratings, movies, genre="Action", min_ratings=2, top_n=2)
     assert result["title"].tolist() == ["Alpha", "Gamma"]
     assert result["mean_rating"].tolist() == [4.5, 4.5]
 

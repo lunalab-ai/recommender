@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="330" viewBox="0 0 1000 330">
+<rect width="1000" height="330" fill="#fafaf7"/>
+<g font-family="Malgun Gothic, Noto Sans CJK KR, sans-serif" fill="#15324b">
+<text x="35" y="43" font-size="27" font-weight="bold">먼저 분할하고, 학습 통계만 사용한다</text>
+<rect x="35" y="75" width="280" height="170" rx="15" fill="#e8edf5"/>
+<text x="53" y="110" font-size="22" font-weight="bold">평점 행 분할</text>
+<text x="53" y="147" font-size="19">학습 75% / 평가 25%</text>
+<text x="53" y="177" font-size="19">seed 42로 고정</text>
+<text x="53" y="207" font-size="19">동일한 test 행으로 비교</text>
+<path d="M324 160 h24 l-8 -8 m8 8 l-8 8" stroke="#34536a" stroke-width="3" fill="none"/>
+<rect x="360" y="75" width="280" height="170" rx="15" fill="#d7efeb"/>
+<text x="378" y="110" font-size="22" font-weight="bold">train에서 fit</text>
+<text x="378" y="147" font-size="19">집단×영화 평균</text>
+<text x="378" y="177" font-size="19">없거나 부족 → 영화 평균</text>
+<text x="378" y="207" font-size="19">없으면 → 전체 평균</text>
+<path d="M649 160 h24 l-8 -8 m8 8 l-8 8" stroke="#34536a" stroke-width="3" fill="none"/>
+<rect x="685" y="75" width="280" height="170" rx="15" fill="#fff0d5"/>
+<text x="703" y="110" font-size="22" font-weight="bold">test에서 평가</text>
+<text x="703" y="147" font-size="19">ID 쌍 → 예측 평점</text>
+<text x="703" y="177" font-size="19">실제 평점과 RMSE 계산</text>
+<text x="703" y="207" font-size="19">test 평점을 fit에 넣지 않기</text>
+<text x="35" y="290" font-size="19">평점 수 순위는 평점 예측값이 아니다. 사용자별 RMSE 평균과 전체 행 RMSE도 구별한다.</text>
+</g></svg>

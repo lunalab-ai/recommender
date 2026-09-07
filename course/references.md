@@ -62,3 +62,21 @@
 
 - [W01B 학생용 Colab 열기](https://colab.research.google.com/github/lunalab-ai/recommender/blob/2026-fall-w01b/notebooks/student/w01b-colab-and-first-recommender-app.ipynb)
 - [학생용 GitHub 저장소](https://github.com/lunalab-ai/recommender)
+
+### W02A · 기본적인 추천 방법 (1)
+
+[강의 원문](notion/sessions/w02a-basic-recommendation-methods-1.md)
+
+- 임일, 『AI 에이전트를 위한 개인화 추천 알고리즘: Python, 머신러닝, AI, LLM 활용』, 청람, 2025, 2.2–2.4, pp.16–26. 인기제품·집단별 추천·RMSE의 수업 전개와 용어를 참고했다. 평점 수 비교, 대체 규칙, 앱과 연습 예는 수업용 추가 구성이다.
+- [GroupLens MovieLens 100K](https://grouplens.org/datasets/movielens/100k/): 데이터 출처. [README](https://files.grouplens.org/datasets/movielens/ml-100k-README.txt)의 사용 조건을 따른다. 원자료를 수업 저장소에 재배포하지 않는다.
+- [pandas: 요약 통계](https://pandas.pydata.org/docs/getting_started/intro_tutorials/06_calculate_statistics.html): `groupby`·평균·개수 집계 복습.
+- [pandas: 표 결합](https://pandas.pydata.org/docs/getting_started/intro_tutorials/08_combine_dataframes.html): 공통 키와 `merge` 복습.
+- [scikit-learn: 데이터 누수](https://scikit-learn.org/stable/common_pitfalls.html#data-leakage): 학습 통계와 평가값의 분리.
+- [scikit-learn: RMSE](https://scikit-learn.org/stable/modules/generated/sklearn.metrics.root_mean_squared_error.html): 평점 예측 오차 계산 API.
+- [Gradio: 화면 배치](https://gradio.app/guides/controlling-layout): 줄바꿈 가능한 열과 탭 구성.
+
+시각자료는 수업을 위해 새로 제작했다. 개념 그림은 생성 이미지이며 도식과 성능 그래프는 재현 가능한 코드로 작성했다.
+
+본문에서 함께 소개한 링크:
+
+- [재사용 코드 안내](https://github.com/lunalab-ai/recommender/blob/main/src/luna_recsys/README.md)
