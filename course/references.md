@@ -18,6 +18,9 @@
 | 추천시스템·머신러닝 | [Google — Recommendation systems](https://developers.google.com/machine-learning/recommendation) | 영어 | 추천 문제와 주요 추천 방법을 개괄 |
 | 추천시스템·머신러닝 | [scikit-learn — Getting Started](https://scikit-learn.org/stable/getting_started.html) | 영어 | 학습·예측·전처리·평가 API 복습; 머신러닝 기초 이후 |
 | 추천시스템·머신러닝 | [Keras — Collaborative Filtering for Movie Recommendations](https://keras.io/examples/structured_data/collaborative_filtering_movielens/) | 영어 | Embedding 기반 영화 추천 예제; 딥러닝 추천 단원에서 참고 |
+| 이전 수업 버전 보관 | [w01a 원 수업 실습 버전](https://github.com/lunalab-ai/recommender/tree/2026-fall-w01a-r3/notebooks/student) | 한국어 | 기존 수업 링크는 보존합니다. 설명과 풀이를 보완한 현재 실습은 위 수업 표에서 엽니다. |
+| 이전 수업 버전 보관 | [w01b 원 수업 실습 버전](https://github.com/lunalab-ai/recommender/tree/2026-fall-w01b/notebooks/student) | 한국어 | 기존 수업 링크는 보존합니다. 설명과 풀이를 보완한 현재 실습은 위 수업 표에서 엽니다. |
+| 이전 수업 버전 보관 | [w02a 원 수업 실습 버전](https://github.com/lunalab-ai/recommender/tree/2026-fall-w02a/notebooks/student) | 한국어 | 기존 수업 링크는 보존합니다. 설명과 풀이를 보완한 현재 실습은 위 수업 표에서 엽니다. |
 
 ## 차시별 출처와 참고 링크
 
@@ -62,6 +65,8 @@
 
 - [W01B 학생용 Colab 열기](https://colab.research.google.com/github/lunalab-ai/recommender/blob/2026-fall-w01b/notebooks/student/w01b-colab-and-first-recommender-app.ipynb)
 - [학생용 GitHub 저장소](https://github.com/lunalab-ai/recommender)
+- [API: arguments, results and examples](https://github.com/lunalab-ai/recommender/blob/2026-fall-w02b/src/API.md)
+- [download_movielens_100k](https://github.com/lunalab-ai/recommender/blob/2026-fall-w02b/src/luna_recsys/data.py#L222)
 
 ### W02A · 기본적인 추천 방법 (1)
 
@@ -80,3 +85,39 @@
 본문에서 함께 소개한 링크:
 
 - [재사용 코드 안내](https://github.com/lunalab-ai/recommender/blob/main/src/luna_recsys/README.md)
+- [준비와 분할 API 안내](https://github.com/lunalab-ai/recommender/blob/2026-fall-w02b/src/luna_recsys/README.md)
+- [API: arguments, results and examples](https://github.com/lunalab-ai/recommender/blob/2026-fall-w02b/src/API.md)
+- [build_comparison_app](https://github.com/lunalab-ai/recommender/blob/2026-fall-w02b/src/luna_recsys/comparison_app.py#L51)
+- [prepare_movielens](https://github.com/lunalab-ai/recommender/blob/2026-fall-w02b/src/luna_recsys/datasets.py#L62)
+- [split_ratings](https://github.com/lunalab-ai/recommender/blob/2026-fall-w02b/src/luna_recsys/evaluation.py#L28)
+- [evaluate_means](https://github.com/lunalab-ai/recommender/blob/2026-fall-w02b/src/luna_recsys/evaluation.py#L60)
+- [FourMethodRecommender](https://github.com/lunalab-ai/recommender/blob/2026-fall-w02b/src/luna_recsys/ranking.py#L18)
+- [evaluate_rankings](https://github.com/lunalab-ai/recommender/blob/2026-fall-w02b/src/luna_recsys/ranking.py#L186)
+- [MeanRatingPredictor](https://github.com/lunalab-ai/recommender/blob/2026-fall-w02b/src/luna_recsys/rating_models.py#L29)
+- [MeanRatingPredictor.fit](https://github.com/lunalab-ai/recommender/blob/2026-fall-w02b/src/luna_recsys/rating_models.py#L77)
+- [MeanRatingPredictor.predict](https://github.com/lunalab-ai/recommender/blob/2026-fall-w02b/src/luna_recsys/rating_models.py#L147)
+
+### W02B · 기본적인 추천 방법 (2)
+
+[강의 원문](notion/sessions/w02b-basic-recommendation-methods-2.md)
+
+강의 원문에 참고자료 절이 아직 작성되지 않았습니다.
+
+본문에서 함께 소개한 링크:
+
+- [MovieLens 100K](https://grouplens.org/datasets/movielens/100k/)
+- [준비와 분할 API 안내](https://github.com/lunalab-ai/recommender/blob/2026-fall-w02b/src/luna_recsys/README.md)
+- [scikit-learn의 누수 안내](https://scikit-learn.org/stable/common_pitfalls.html)
+- [Google의 내용 기반 추천 설명](https://developers.google.com/machine-learning/recommendation/content-based/basics)
+- [공식 API](https://scikit-learn.org/stable/modules/generated/sklearn.feature_extraction.text.TfidfVectorizer.html)
+- [NDCG 공식 API 설명](https://scikit-learn.org/stable/modules/generated/sklearn.metrics.ndcg_score.html)
+- [API: arguments, results and examples](https://github.com/lunalab-ai/recommender/blob/2026-fall-w02b/src/API.md)
+- [build_comparison_app](https://github.com/lunalab-ai/recommender/blob/2026-fall-w02b/src/luna_recsys/comparison_app.py#L51)
+- [prepare_movielens](https://github.com/lunalab-ai/recommender/blob/2026-fall-w02b/src/luna_recsys/datasets.py#L62)
+- [split_ratings](https://github.com/lunalab-ai/recommender/blob/2026-fall-w02b/src/luna_recsys/evaluation.py#L28)
+- [evaluate_means](https://github.com/lunalab-ai/recommender/blob/2026-fall-w02b/src/luna_recsys/evaluation.py#L60)
+- [FourMethodRecommender](https://github.com/lunalab-ai/recommender/blob/2026-fall-w02b/src/luna_recsys/ranking.py#L18)
+- [evaluate_rankings](https://github.com/lunalab-ai/recommender/blob/2026-fall-w02b/src/luna_recsys/ranking.py#L186)
+- [MeanRatingPredictor](https://github.com/lunalab-ai/recommender/blob/2026-fall-w02b/src/luna_recsys/rating_models.py#L29)
+- [MeanRatingPredictor.fit](https://github.com/lunalab-ai/recommender/blob/2026-fall-w02b/src/luna_recsys/rating_models.py#L77)
+- [MeanRatingPredictor.predict](https://github.com/lunalab-ai/recommender/blob/2026-fall-w02b/src/luna_recsys/rating_models.py#L147)

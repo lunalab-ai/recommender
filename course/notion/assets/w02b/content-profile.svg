@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="430" viewBox="0 0 1200 430">
+<rect width="1200" height="430" fill="#f4f7fb" />
+<g font-family="Malgun Gothic, Noto Sans CJK KR, sans-serif" fill="#17324d">
+<text x="40" y="48" font-size="28" font-weight="bold">아이템 내용과 사용자 이력을 같은 장르 공간에서 표현</text>
+<rect x="35" y="82" width="350" height="256" rx="18" fill="#dcecfb" />
+<text x="55" y="119" font-size="23" font-weight="bold">영화의 장르</text>
+<text x="55" y="159" font-size="20">영화 A: (1, 0) 액션</text>
+<text x="55" y="191" font-size="20">영화 B: (0, 1) 코미디</text>
+<text x="55" y="223" font-size="20">영화 C: (1, 1) 두 장르</text>
+<text x="55" y="255" font-size="20">C 정규화: (0.707, 0.707)</text>
+<text x="392" y="218" font-size="29">→</text>
+<rect x="428" y="82" width="350" height="256" rx="18" fill="#dff1e9" />
+<text x="448" y="119" font-size="23" font-weight="bold">사용자 선호 프로필</text>
+<text x="448" y="159" font-size="20">train에서 좋아한 영화 A</text>
+<svg width="97.3125" height="23.1875" role="img" focusable="false" viewBox="0 -750 4195.2 1000" aria-hidden="true" style="vertical-align: -0.566ex;" x="448" y="167.0" data-tex="\mathbf p=(1,0)" color="#17324d"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="TeXAtom" data-mjx-texclass="ORD"><g data-mml-node="mi"><path data-c="1D429" d="M32 442L123 446Q214 450 215 450H221V409Q222 409 229 413T251 423T284 436T328 446T382 450Q480 450 540 388T600 223Q600 128 539 61T361 -6H354Q292 -6 236 28L227 34V-132H296V-194H287Q269 -191 163 -191Q56 -191 38 -194H29V-132H98V113V284Q98 330 97 348T93 370T83 376Q69 380 42 380H29V442H32ZM457 224Q457 303 427 349T350 395Q282 395 235 352L227 345V104L233 97Q274 45 337 45Q383 45 420 86T457 224Z" /></g></g><g data-mml-node="mo" transform="translate(916.8,0)"><path data-c="3D" d="M56 347Q56 360 70 367H707Q722 359 722 347Q722 336 708 328L390 327H72Q56 332 56 347ZM56 153Q56 168 72 173H708Q722 163 722 153Q722 140 707 133H70Q56 140 56 153Z" /></g><g data-mml-node="mo" transform="translate(1972.6,0)"><path data-c="28" d="M94 250Q94 319 104 381T127 488T164 576T202 643T244 695T277 729T302 750H315H319Q333 750 333 741Q333 738 316 720T275 667T226 581T184 443T167 250T184 58T225 -81T274 -167T316 -220T333 -241Q333 -250 318 -250H315H302L274 -226Q180 -141 137 -14T94 250Z" /></g><g data-mml-node="mn" transform="translate(2361.6,0)"><path data-c="31" d="M213 578L200 573Q186 568 160 563T102 556H83V602H102Q149 604 189 617T245 641T273 663Q275 666 285 666Q294 666 302 660V361L303 61Q310 54 315 52T339 48T401 46H427V0H416Q395 3 257 3Q121 3 100 0H88V46H114Q136 46 152 46T177 47T193 50T201 52T207 57T213 61V578Z" /></g><g data-mml-node="mo" transform="translate(2861.6,0)"><path data-c="2C" d="M78 35T78 60T94 103T137 121Q165 121 187 96T210 8Q210 -27 201 -60T180 -117T154 -158T130 -185T117 -194Q113 -194 104 -185T95 -172Q95 -168 106 -156T131 -126T157 -76T173 -3V9L172 8Q170 7 167 6T161 3T152 1T140 0Q113 0 96 17Z" /></g><g data-mml-node="mn" transform="translate(3306.2,0)"><path data-c="30" d="M96 585Q152 666 249 666Q297 666 345 640T423 548Q460 465 460 320Q460 165 417 83Q397 41 362 16T301 -15T250 -22Q224 -22 198 -16T137 16T82 83Q39 165 39 320Q39 494 96 585ZM321 597Q291 629 250 629Q208 629 178 597Q153 571 145 525T137 333Q137 175 145 125T181 46Q209 16 250 16Q290 16 318 46Q347 76 354 130T362 333Q362 478 354 524T321 597Z" /></g><g data-mml-node="mo" transform="translate(3806.2,0)"><path data-c="29" d="M60 749L64 750Q69 750 74 750H86L114 726Q208 641 251 514T294 250Q294 182 284 119T261 12T224 -76T186 -143T145 -194T113 -227T90 -246Q87 -249 86 -250H74Q66 -250 63 -250T58 -247T55 -238Q56 -237 66 -225Q221 -64 221 250T66 725Q56 737 55 738Q55 746 60 749Z" /></g></g></g></svg><text x="448" y="223" font-size="20">test 영화로 p를 만들지 않음</text>
+<text x="448" y="255" font-size="20">실습: 18차원 장르 벡터</text>
+<text x="785" y="218" font-size="29">→</text>
+<rect x="821" y="82" width="350" height="256" rx="18" fill="#fff0d4" />
+<text x="841" y="119" font-size="23" font-weight="bold">후보와 코사인 비교</text>
+<text x="841" y="159" font-size="20">cos(p, B) = 0</text>
+<text x="841" y="191" font-size="20">cos(p, C) ≈ 0.707</text>
+<text x="841" y="223" font-size="20">같은 내용일수록 높은 점수</text>
+<text x="841" y="255" font-size="20">높은 점수 ≠ 5점 예측</text>
+<text x="40" y="389" font-size="20">교재 2.5는 줄거리 TF–IDF를 사용한다. 여기서는 같은 원리를 MovieLens의 장르 특징으로 확장한다.</text>
+</g></svg>

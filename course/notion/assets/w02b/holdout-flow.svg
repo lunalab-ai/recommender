@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="430" viewBox="0 0 1200 430">
+<rect width="1200" height="430" fill="#f4f7fb"/>
+<g font-family="Malgun Gothic, Noto Sans CJK KR, sans-serif" fill="#17324d">
+<text x="40" y="48" font-size="28" font-weight="bold">MovieLens 100K: 관측 100,000행을 한 번만 분할</text>
+<rect x="35" y="82" width="350" height="256" rx="18" fill="#dcecfb"/>
+<text x="55" y="119" font-size="23" font-weight="bold">학습 75,000행</text>
+<text x="55" y="159" font-size="20">입력 X: 사용자·영화·집단</text>
+<text x="55" y="191" font-size="20">정답 y: 관측 평점 1–5</text>
+<text x="55" y="223" font-size="20">빈도·평균·선호 프로필 학습</text>
+<text x="55" y="255" font-size="20">학습 이력만 후보에서 제외</text>
+<text x="392" y="218" font-size="29">→</text>
+<rect x="428" y="82" width="350" height="256" rx="18" fill="#dff1e9"/>
+<text x="448" y="119" font-size="23" font-weight="bold">고정된 모델</text>
+<text x="448" y="159" font-size="20">생성자: 설정</text>
+<text x="448" y="191" font-size="20">fit(train): 상태 추정</text>
+<text x="448" y="223" font-size="20">predict(X_test): 예측</text>
+<text x="448" y="255" font-size="20">test 정답으로 재학습 금지</text>
+<text x="785" y="218" font-size="29">→</text>
+<rect x="821" y="82" width="350" height="256" rx="18" fill="#fff0d4"/>
+<text x="841" y="119" font-size="23" font-weight="bold">평가 25,000행</text>
+<text x="841" y="159" font-size="20">가려 둔 평점과 예측 대조</text>
+<text x="841" y="191" font-size="20">평점 예측: RMSE/MAE</text>
+<text x="841" y="223" font-size="20">추천 목록: P/R/NDCG@10</text>
+<text x="841" y="255" font-size="20">관련 평점 없는 9명 제외</text>
+<text x="40" y="389" font-size="20">seed=42 · 사용자 층화 · 순위 평가 934명 · 무작위 관측 분할이며 미래 시점 예측 실험은 아니다.</text>
+</g></svg>

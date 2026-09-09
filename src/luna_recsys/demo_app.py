@@ -15,7 +15,12 @@ def recommend_for_app(
     min_ratings: int,
     top_n: int,
 ) -> pd.DataFrame:
-    """Adapt UI values to the baseline and return student-friendly column labels."""
+    """W01B 화면 입력을 추천 함수로 전달하고 한국어 열 이름의 표를 반환한다.
+
+    ratings/movies: movie_id/rating과 영화메타데이터 DataFrame. genre_label:
+    화면의 전체 또는 장르문자열. min_ratings/top_n: 양수 정수형으로 전달할
+    최소평점수/목록길이. 출력 열 영화 ID/영화 제목/평균 평점/평점 수.
+    mean_rating_recommendations에 위임하며 모델학습/서버실행/원본변경은 없다."""
     genre = None if genre_label == "전체" else genre_label
     result = mean_rating_recommendations(
         ratings,
@@ -41,7 +46,13 @@ def build_movie_recommender_app(
     *,
     data_mode: str = "데이터 모드 미지정",
 ):
-    """Build the W01B Gradio Blocks app without launching a server."""
+    """W01B Gradio Blocks 앱 객체를 생성해 반환한다.
+
+    ratings/movies: 로딩한 평점/영화 DataFrame, users: 선택 사용자표(기본None).
+    data_mode: 화면에 표시할 실제 데이터 설명문자열. 장르/최소관측수/Top-N
+    입력을 callback으로 연결한다. 함수 자체는 launch하지 않는다. 반환객체의
+    launch(share=True)는 Colab 서버 실행, close()는종료다. Gradio [apps] 설치가
+    필요하다. 입력에 원본 사용자속성을 공개표로 내보내지 않는다."""
     if users is not None:
         return build_baseline_lab(MovieLens100K(users, movies, ratings), data_mode=data_mode)
     try:
@@ -93,11 +104,14 @@ def build_movie_recommender_app(
 
 
 def build_baseline_lab(dataset: MovieLens100K, *, data_mode: str = "데이터 모드 미지정"):
-    """Build W02A's cumulative responsive app; launch remains the caller's choice.
+    """W02A 추천·평가 탭을 가진 Gradio Blocks를 반환한다.
 
-    Example: ``build_baseline_lab(prepared.data, data_mode=prepared.description).launch()``.
-    W01B's two-argument builder and callback retain their behavior.
-    """
+    dataset: MovieLens100K(users/movies/ratings 표). data_mode: 화면의 실제
+    데이터 설명문자열. 기존 인기목록의 장르/최소수/Top-N과 집단선택, 공통
+    holdout의 평균모형RMSE평가를 연결한다. 앱 준비 시 split_ratings(seed42)를
+    사용한다. 전체 앱 객체를 반환하며 launch는 호출자가 수행한다.
+    목록필터와 개별평점대체의 규칙은 각 탭의basis/level 설명을 따른다.
+    서버네트워크나데이터다운로드를 이 함수 자체에서 시작하지 않는다."""
     import html
 
     import gradio as gr

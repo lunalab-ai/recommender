@@ -3,16 +3,20 @@ resources_checked: '2026-09-07'
 sessions:
   w01a:
     date: '2026-09-01'
-    colab_ref: 2026-fall-w01a-r3
+    colab_ref: 2026-fall-w02b
     notion_url: https://app.notion.com/p/w01a-orientation-and-recommenders-3cd7fd00109f818db55fc0a452d428f3?source=copy_link
   w01b:
     date: '2026-09-03'
-    colab_ref: 2026-fall-w01b
+    colab_ref: 2026-fall-w02b
     notion_url: https://app.notion.com/p/W01B-Colab-3d07fd00109f8168a7e9c245cd0fdd97?source=copy_link
   w02a:
     date: '2026-09-08'
-    colab_ref: 2026-fall-w02a
+    colab_ref: 2026-fall-w02b
     notion_url: https://app.notion.com/p/W02A-1-3d47fd00109f81aa814dd9d44570a0ad?source=copy_link
+  w02b:
+    date: '2026-09-10'
+    colab_ref: 2026-fall-w02b
+    notion_url: https://app.notion.com/p/w02b-basic-recommendation-methods-2-f92b98f5-3d67fd00109f816bb3bcfc20b60c115e?source=copy_link
 resources:
 - group: Python 기초
   title: 이 수업을 위한 Python 복습 길잡이
@@ -64,3 +68,18 @@ resources:
   url: https://keras.io/examples/structured_data/collaborative_filtering_movielens/
   language: 영어
   purpose: Embedding 기반 영화 추천 예제; 딥러닝 추천 단원에서 참고
+- group: 이전 수업 버전 보관
+  title: w01a 원 수업 실습 버전
+  url: https://github.com/lunalab-ai/recommender/tree/2026-fall-w01a-r3/notebooks/student
+  language: 한국어
+  purpose: 기존 수업 링크는 보존합니다. 설명과 풀이를 보완한 현재 실습은 위 수업 표에서 엽니다.
+- group: 이전 수업 버전 보관
+  title: w01b 원 수업 실습 버전
+  url: https://github.com/lunalab-ai/recommender/tree/2026-fall-w01b/notebooks/student
+  language: 한국어
+  purpose: 기존 수업 링크는 보존합니다. 설명과 풀이를 보완한 현재 실습은 위 수업 표에서 엽니다.
+- group: 이전 수업 버전 보관
+  title: w02a 원 수업 실습 버전
+  url: https://github.com/lunalab-ai/recommender/tree/2026-fall-w02a/notebooks/student
+  language: 한국어
+  purpose: 기존 수업 링크는 보존합니다. 설명과 풀이를 보완한 현재 실습은 위 수업 표에서 엽니다.

@@ -77,6 +77,8 @@ def quiz_markdown(page: Path, response: Path) -> str:
 
 def render_html(text: str, source: Path, root: Path) -> str:
     """Embed local teaching images; resolve document links to public GitHub URLs."""
+    from notion_export import protect_math, math_script
+    text, formulas = protect_math(text)
     md = MarkdownIt("commonmark", {"html": False}).enable("table")
     tokens = md.parse(text)
     for token in tokens:
@@ -100,6 +102,10 @@ def render_html(text: str, source: Path, root: Path) -> str:
                         "https://github.com/lunalab-ai/recommender/blob/main/" + rel.as_posix(),
                     )
     body = md.renderer.render(tokens, md.options, {})
+    for i, (tex, display) in enumerate(formulas):
+        body = body.replace(f"MATHPLACEHOLDER{i}END", (r"\[" if display else r"\(") + html.escape(tex) + (r"\]" if display else r"\)"))
+    if formulas:
+        body += math_script(root / "scripts/vendor/tex-svg-full.js")
     return (
         '<!doctype html><html lang="ko"><meta charset="utf-8"><title>'
         + html.escape(text.splitlines()[0].lstrip("# "))
@@ -142,6 +148,8 @@ def build(root: Path = ROOT, *, check_only: bool = False) -> list[Path]:
                 html_path = Path(tmp) / f"{name}.html"
                 html_path.write_text(render_html(content, source, root), encoding="utf-8")
                 tab.goto(html_path.as_uri())
+                from notion_export import verify_math
+                verify_math(tab)
                 tab.evaluate("document.fonts.ready")
                 if not tab.evaluate(
                     "Array.from(document.images).every(i => i.complete && i.naturalWidth > 0)"

@@ -63,7 +63,18 @@ def mean_rating_recommendations(
     min_ratings: int = 50,
     top_n: int = 10,
 ) -> pd.DataFrame:
-    """Return a deterministic mean-rating baseline for the MovieLens lesson app."""
+    """영화 평균 평점의 상위 목록을 반환하는 W01B 함수.
+
+    ratings: movie_id/rating 열의 DataFrame. movies: movie_id/title과 필요한
+    장르 열의 DataFrame. genre: 기본None이면 전체 장르, 문자열이면 해당 열1만.
+    min_ratings: 최소 관측 수, 기본50, 1이상. top_n: 최대 목록 길이, 기본10.
+
+    영화별 개수/평균 집계→최소 표본 필터→영화 제목/장르 연결→평균 내림차순,
+    개수 내림차순, 제목/ID 오름차순으로 정렬한다. 출력은 최대top_n행의
+    movie_id/title/mean_rating/rating_count 표이며 마지막 표시에서만 평균을
+    소수3자리로 반올림한다. 조건에 맞는 영화가 없으면 빈 표다. 사용자 이력
+    제외/학습평가분할은 수행하지 않는다. 입력 표를 수정하지 않는다. 잘못된
+    열/장르/최소값은 ValueError. W02B 공통 순위평가 API와 동점/후보 규칙이 다르다."""
     rating_columns = {"movie_id", "rating"}
     movie_columns = {"movie_id", "title"}
     if missing := rating_columns.difference(ratings.columns):
@@ -105,12 +116,20 @@ def baseline_recommendations(
     users: pd.DataFrame | None = None, group_col: str = "sex", group_value: str = "F",
     genre: str | None = None, min_ratings: int = 5, top_n: int = 10,
 ) -> pd.DataFrame:
-    """Compare count, mean and group mean lists using the W01B output schema.
+    """W02A 앱의 평점수/영화평균/집단평균 목록을 공통 형식으로 반환한다.
 
-    A group list uses only group observations. If no item meets its threshold,
-    return the global movie-mean list and label that fallback explicitly. Prediction
-    fallback is a separate per-row decision in ``MeanRatingPredictor``.
-    """
+    ratings: user_id/movie_id/rating DataFrame. movies: movie_id/title/장르 표.
+    method: mean(기본)/count/group. users: 기본None, group에서 사용자속성필수.
+    group_col: 집단 열 기본sex; group_value: 선택집단 기본F, 문자열로 비교.
+    genre: 기본None(전체), 지정한 장르0/1열로 필터. min_ratings: 기본5, top_n:
+    기본10, 모두 양수. 입력 표는 변경하지 않는다.
+
+    반환 최대top_n행은 movie_id/title/mean_rating/rating_count/basis 열.
+    count는 개수→평균 내림차순→ID, mean/group은 mean_rating_recommendations의
+    동점 규칙을 따른다. group은 선택집단 관측만 집계하고 조건에 맞는 목록이
+    전혀 없으면 전체 사용자 영화평균 목록으로 전환해 basis에 표시한다.
+    개별 평점의 group→movie→global 대체와 다르다. 학습 이력 제외/holdout은
+    이 함수 자체에서 하지 않으며 W02B 성능표는 FourMethodRecommender로 계산한다."""
     if method not in {"count", "mean", "group"}:
         raise ValueError("method must be count, mean or group")
     if min_ratings < 1 or top_n < 1:

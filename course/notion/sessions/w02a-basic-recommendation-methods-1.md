@@ -166,13 +166,15 @@ scores = evaluate_means(split, users, group_col="sex")
 
 ### RMSE: 오차를 제곱하고, 평균 내고, 제곱근 취하기
 
-```text
-오차 = 실제 평점 - 예측 평점
-MSE  = 각 오차의 제곱을 더한 값 / 평가한 평점 수
-RMSE = MSE의 제곱근
-```
+$$
+\begin{aligned}
+e_k&=y_k-\widehat y_k,\\
+\operatorname{MSE}&=\frac{1}{n}\sum_{k=1}^{n}e_k^2,\\
+\operatorname{RMSE}&=\sqrt{\frac{1}{n}\sum_{k=1}^{n}e_k^2}.
+\end{aligned}
+$$
 
-독자적인 예로 실제 평점이 `[5, 2, 4]`, 예측값이 `[4, 2, 2]`라면 오차는 `[1, 0, 2]`다. 제곱 오차는 `[1, 0, 4]`이고 RMSE는 `sqrt(5/3) ≈ 1.291`이다. RMSE는 평점과 같은 단위로 읽으며 이 기준에서는 0에 가까울수록 좋다. 큰 오차가 제곱 때문에 더 크게 반영된다.
+독자적인 예로 실제 평점이 `[5, 2, 4]`, 예측값이 `[4, 2, 2]`라면 오차는 `[1, 0, 2]`다. 제곱 오차는 `[1, 0, 4]`이고 RMSE는 $\sqrt{\frac53}\approx1.291$이다. RMSE는 평점과 같은 단위로 읽으며 이 기준에서는 0에 가까울수록 좋다. 큰 오차가 제곱 때문에 더 크게 반영된다.
 
 **주의:** 평점 수 120은 영화의 예상 평점 120점이 아니다. 따라서 평점 수 순위 점수를 그대로 실제 평점과 빼서 RMSE를 계산하지 않는다. 순위 품질을 직접 평가하는 지표는 후속 수업에서 다룬다.
 
@@ -233,6 +235,162 @@ app.launch(share=True)  # Colab에서 실행 후 표시되는 링크 사용
 
 **앱 실험:** 같은 장르와 최소 평점 수를 유지하고 알고리즘만 바꾼다. 다음에는 집단만 바꾼다. 마지막에 평가 화면을 확인한다. 한 번에 하나의 조건을 바꿔야 결과 차이의 이유를 설명하기 쉽다.
 
+## 집단 추천과 성능평가 보충 설명
+
+### 보충 1. 사용자 집단별 추천: 어떤 평점을 평균하는가?
+
+사용자 $u$, 영화 $i$, 관측 평점 $r_{ui}$, 사용자의 집단 $g(u)$를 생각하자. 학습 관측 집합을 $D_{\mathrm{train}}$이라고 쓴다. $g(u)$는 성별·직업처럼 미리 주어진 속성으로 정할 수 있다. 이번 방식은 군집화 알고리즘으로 집단 자체를 학습하는 방법은 아니다.
+
+영화 $i$에 대해 집단 $g$가 남긴 **학습 평점만** 모은 집합을 다음과 같이 정의한다.
+
+$$
+\begin{aligned}
+D_{gi}&=\{(u,i,r_{ui})\in D_{\mathrm{train}}:g(u)=g\},\\
+n_{gi}&=|D_{gi}|,\\
+\mu_{gi}&=\frac{1}{n_{gi}}\sum_{(u,i,r_{ui})\in D_{gi}}r_{ui}\quad(n_{gi}>0).
+\end{aligned}
+$$
+
+여기서 분모는 집단의 전체 인원수가 아니다. **그 집단에서 해당 영화를 평가한 관측 수**다. 다음은 원자료와 별개로 만든 작은 학습 표다.
+
+| 사용자 | 집단 | 영화 | 학습 평점 |
+|---|---|---|---:|
+| P | 동쪽 | A | 3 |
+| Q | 동쪽 | A | 5 |
+| P | 동쪽 | B | 2 |
+| R | 서쪽 | A | 1 |
+| S | 서쪽 | A | 5 |
+
+동쪽×A는 $\frac{3+5}{2}=4$, 서쪽×A는 $\frac{1+5}{2}=3$, 동쪽×B는 $\frac21=2$다. A 전체 평균은 $\frac{14}{4}=3.5$, 학습 전체 평균은 $\frac{16}{5}=3.2$다. `groupby(["집단", "영화"])`는 이 표를 두 키가 같은 묶음으로 나누는 연산이다. 영화 하나만 키로 사용하면 집단 차이가 사라진다.
+
+#### 표본이 없거나 너무 적다면
+
+최소 집단 표본 수를 $m=2$로 정하면, 동쪽×B의 평점 하나는 집단 평균으로 쓰지 않는다. 이번 예측기의 규칙은 다음과 같다. $n_i$는 영화 $i$의 학습 관측 수이며, $\mu_i$와 $\mu$는 각각 영화 평균과 학습 전체 평균이다.
+
+$$
+\widehat r_{ui}=\begin{cases}
+\mu_{g(u),i},&n_{g(u),i}\ge m,\\
+\mu_i,&n_{g(u),i}<m\ \text{and}\ n_i>0,\\
+\mu,&n_i=0.
+\end{cases}
+$$
+
+동쪽 사용자의 A는 4, 서쪽 사용자의 B는 영화 평균 2, 학습에 없는 C는 전체 평균 3.2로 예측한다. 동쪽×B도 결과는 2지만 **집단 평균이 아니라 영화 평균을 사용했다**. 같은 숫자라도 근거가 다를 수 있으므로 `predict_details`의 `level`을 확인한다.
+
+집단을 세분하면 취향 차이를 포착할 가능성과 표본 부족이 함께 커진다. 같은 집단이라고 모두 같은 취향은 아니다. 최소 표본 수를 높인다고 오차가 반드시 작아지는 것도 아니다.
+
+#### 평균도 지도학습인 이유
+
+집단×영화마다 하나의 모수 $\theta_{gi}$를 학습한다고 생각하자. 그 묶음의 모든 평점을 같은 값으로 예측하는 **범주별 상수 회귀모형**이다.
+
+$$
+\begin{aligned}
+L_{gi}(\theta)&=\sum_{(u,i,r_{ui})\in D_{gi}}(r_{ui}-\theta)^2,\\
+\frac{dL_{gi}}{d\theta}&=2n_{gi}\theta-2\sum_{(u,i,r_{ui})\in D_{gi}}r_{ui},\\
+\frac{dL_{gi}}{d\theta}=0&\ \Longrightarrow\ \widehat\theta_{gi}=\frac{\sum_{(u,i,r_{ui})\in D_{gi}}r_{ui}}{n_{gi}},\\
+\frac{d^2L_{gi}}{d\theta^2}&=2n_{gi}>0.
+\end{aligned}
+$$
+
+평균은 제곱오차를 최소화하는 유일한 해다. 평점이라는 정답 레이블을 이용해 모수를 추정하므로 지도학습이다. 학습에 반드시 신경망이나 경사하강법이 필요한 것은 아니다. 데이터가 달라지면 추정한 평균도 바뀐다. 표본이 없는 묶음에서는 이 손실로 모수를 결정할 수 없으므로 위의 대체 규칙을 추가한다. 대체 규칙 자체는 이번 수업의 모델 설계다.
+
+![평점 3과 5의 제곱오차를 최소화해 평균 4를 학습하고 새 관측을 예측하는 과정](../assets/w02b/mean-learning.svg)
+
+교재의 집단별 추천을 최소제곱 회귀로 해석한 설명과 위의 작은 표는 이해를 돕기 위해 추가한 것이다.
+
+### 보충 2. MovieLens에서는 학습 데이터를 어떻게 준비하는가?
+
+[MovieLens 100K](https://grouplens.org/datasets/movielens/100k/)에는 사용자 943명, 영화 1,682편, 평점 100,000개가 있다. 학생 실행 시 공식 ZIP 또는 해시가 같은 고정 HTTPS 대체 경로에서 다운로드하며 원본 데이터를 수업 저장소에 재배포하지 않는다.
+
+| 표 | 한 행의 의미 | 핵심 열 | 학습에서의 역할 |
+|---|---|---|---|
+| `users` | 사용자 한 명 | `user_id`, `sex`, `occupation` | ID로 집단 속성을 연결 |
+| `movies` | 영화 한 편 | `movie_id`, `title`, 장르 19열 | 제목·내용 특징; `unknown`은 프로필에서 제외 |
+| `ratings` | 사용자–영화의 관측 평점 | `user_id`, `movie_id`, `rating`, `timestamp` | 입력 쌍과 정답 레이블 |
+
+평점 행 하나를 머신러닝의 관점에서 보면 `X=(user_id, movie_id, g(user_id))`, `y=rating`이다. ID 숫자의 크기를 연속형 특징으로 회귀하는 것은 아니다. ID는 학습 통계를 조회하는 범주 키다. 영화 장르는 예측 시 이미 알려진 카탈로그 정보로 가정한다.
+
+#### 처음 사용하는 준비 함수의 계약
+
+`prepare_movielens(cache_dir, local_dir=None, mode="auto", timeout=20)`는 데이터 준비 함수다. `cache_dir`는 캐시 폴더 경로, `local_dir`는 이미 가진 전체 데이터 폴더이며 일반 학생은 지정할 필요가 없다. API 기본값은 `auto`지만 **이번 실습은 `mode="real"`을 명시**하여 다운로드 실패를 합성 데이터로 숨기지 않는다. 반환 객체의 `.data`에는 `.users`, `.movies`, `.ratings` 표가 있고 `.mode`, `.description`은 실제 사용한 데이터 종류를 설명한다. 폴더 생성·다운로드는 이 함수의 부작용이다.
+
+`split_ratings(ratings, test_size=0.25, seed=42)`는 관측 **행 위치**를 한 번 분할하고 `RatingSplit` 객체의 `.train`, `.test`, `.method`를 반환한다. 원본 표를 변경하지 않는다. MovieLens에서는 사용자를 층화하므로 같은 사용자의 관측이 학습·평가 양쪽에 들어가지만, 동일 사용자–영화 쌍은 겹치지 않는다. 사용자 전체를 가리는 새로운 사용자 평가와 다르다. 아주 작은 자료에서는 층화할 수 없어 `.method="random-small-data"`가 될 수 있다.
+
+정의·인자별 설명은 [준비와 분할 API 안내](https://github.com/lunalab-ai/recommender/blob/2026-fall-w02b/src/luna_recsys/README.md)를 참조한다. notebook의 각 import 앞에서도 같은 입력·출력과 정의 위치를 확인할 수 있다.
+
+```python
+from luna_recsys import prepare_movielens, split_ratings
+
+prepared = prepare_movielens("data/local", mode="real")
+data = prepared.data
+split = split_ratings(data.ratings, test_size=0.25, seed=42)
+print(len(split.train), len(split.test), split.method)
+# 실제 결과: 75000 25000 user-stratified
+```
+
+![학습 75000행에서 통계와 프로필을 추정하고 별도 25000행의 정답으로 평가하는 흐름](../assets/w02b/holdout-flow.svg)
+
+이것은 무작위 관측 holdout이다. `timestamp` 순서대로 미래를 예측하는 실험은 아니다. 실제 서비스의 미래 추천을 주장하려면 시간 분할·노출 조건 등도 검토해야 한다.
+
+### 보충 3. MeanRatingPredictor를 생성·학습·예측·평가하기
+
+`MeanRatingPredictor`는 **클래스**다. `MeanRatingPredictor(...)`를 호출하면 설정을 가진 객체가 만들어지고, `fit(...)`을 호출해야 평균이 학습된다. 함수 하나를 불러오는 것과 객체의 메소드를 호출하는 것을 구별하자.
+
+| 코드 | 입력 | 하는 일 | 출력·상태 |
+|---|---|---|---|
+| `MeanRatingPredictor("group", group_col="sex", min_group_ratings=2)` | 기준·집단 열·최소 표본 | 설정 검사 | 아직 평균 없는 객체 |
+| `model.fit(split.train, data.users)` | 학습 평점 표, 사용자 속성 표 | 정답으로 평균 추정 | `self`; 아래 학습 속성 생성 |
+| `model.predict(pairs)` | `user_id`, `movie_id` 두 열 | 저장한 평균 조회 | 입력 순서의 예측 Series |
+| `model.predict_details(pairs)` | 같은 두 열 | 예측과 대체 수준 조회 | `prediction`, `level` DataFrame |
+
+`mode`의 기본값은 `"movie"`, `group_col`은 `"sex"`, `min_group_ratings`는 1이다. `"global"`은 전체 평균, `"movie"`는 영화 평균, `"group"`은 집단×영화 평균을 사용한다. `group`에서는 사용자 ID가 유일하고 집단 값이 빠지지 않은 `users`가 필요하다. `predict`에 아직 학습하지 않은 객체를 사용하면 오류가 난다.
+
+`fit` 후에는 다음 상태가 생긴다. 마지막 밑줄은 학습 후 속성이라는 명명 관례다.
+
+| 속성 | 내용 | 표 연산과의 연결 |
+|---|---|---|
+| `global_mean_` | 숫자 하나 | `train.rating.mean()` |
+| `movie_means_` | 영화 ID별 Series | `train.groupby("movie_id").rating.mean()` |
+| `user_groups_` | 사용자 ID→집단 | 사용자 표의 집단 열 |
+| `group_means_` | 집단·영화 다중 인덱스 Series | 속성을 연결한 뒤 두 키로 평균/개수 집계 |
+
+```python
+from luna_recsys import MeanRatingPredictor
+
+model = MeanRatingPredictor("group", group_col="sex", min_group_ratings=2)
+model.fit(split.train, data.users)                 # y_train으로 모수 추정
+pairs = split.test[["user_id", "movie_id"]]       # y_test를 제거한 입력
+details = model.predict_details(pairs)            # 학습 상태를 그대로 사용
+y_test = split.test["rating"].to_numpy()           # 이제 정답을 평가에만 사용
+y_hat = details["prediction"].to_numpy()
+errors = y_test - y_hat
+mae = abs(errors).mean()
+rmse = (errors ** 2).mean() ** 0.5
+```
+
+`fit`에는 정답을 주고, `predict`에는 정답을 주지 않는다. 평가자가 `y_test`를 별도로 보관했다가 예측과 비교한다. `to_numpy()`는 여기서 행 순서대로 숫자 배열을 얻는 연산이다. 표 인덱스가 섞인 상태에서 잘못 정렬하지 않도록 입력 순서를 보존한다.
+
+**작은 오차 예:** 실제 평점이 `[5, 2, 4]`, 예측이 `[4, 3, 4]`라면 오차는 `[1, −1, 0]`이다. MAE는 $\frac23\approx0.667$, RMSE는 $\sqrt{\frac23}\approx0.816$이다. 큰 오차를 제곱하므로 RMSE가 더 크게 반응한다. 학습 평점을 다시 예측한 오차만 보면 이미 사용한 정답에 잘 맞는 정도를 측정하게 된다.
+
+#### 실제 평균 예측기의 결과
+
+다음은 동일 분할, 집단 `sex`, 최소 집단 표본 **1**일 때의 실제 실행값이다. 위 코드의 표본 2 예와 설정을 구별한다. `evaluate_means(split, users, group_col="sex", min_group_ratings=1)`는 세 모델을 각각 학습해 같은 25,000행에서 RMSE와 대체 사용 건수를 반환하는 편의 함수다.
+
+| 평점 예측 모형 | RMSE | 집단 평균 사용 | 영화 평균 사용 | 전체 평균 사용 |
+|---|---:|---:|---:|---:|
+| 전체 평균 | 1.131210 | 0 | 0 | 25,000 |
+| 영화 평균 | 1.030792 | 0 | 24,953 | 47 |
+| 집단×영화 평균 | 1.041019 | 24,882 | 71 | 47 |
+
+이번에는 집단을 나누지 않은 영화 평균이 더 낮은 RMSE를 보였다. 세분화가 무조건 성능 개선은 아니다. `level`이 집단인 행이 많다는 사실도 정확도 향상을 뜻하지 않는다. 이 RMSE 표는 아래 네 방법의 순위 평가표와 다른 질문에 답한다.
+
+#### 누수와 모델 설정
+
+전체 평점으로 평균을 만든 뒤 train/test를 나누면 이미 정답 일부가 학습 통계에 들어갔다. `fit(data.ratings)`를 한 모델은 평가 정답을 본 것이다. [scikit-learn의 누수 안내](https://scikit-learn.org/stable/common_pitfalls.html)처럼 분할을 먼저 하고 학습에 쓰는 통계는 train에서만 계산해야 한다.
+
+최소 표본 수·장르 처리·선호 하한을 test 점수를 보며 고르면 test도 모델 선택에 사용한 셈이다. 값을 비교해 선택할 때는 train 안에 validation을 추가하고 마지막 test는 고정한다. 이번 주 비교의 설정은 실행 전에 고정했다.
+
+
 ## 점검 퀴즈
 
 1. 평점 표에서 한 행은 무엇을 의미하는가?
@@ -265,3 +423,17 @@ app.launch(share=True)  # Colab에서 실행 후 표시되는 링크 사용
 - [Gradio: 화면 배치](https://gradio.app/guides/controlling-layout): 줄바꿈 가능한 열과 탭 구성.
 
 시각자료는 수업을 위해 새로 제작했다. 개념 그림은 생성 이미지이며 도식과 성능 그래프는 재현 가능한 코드로 작성했다.
+
+## 코드 정의에서 보충 학습하기
+
+[API: arguments, results and examples](https://github.com/lunalab-ai/recommender/blob/2026-fall-w02b/src/API.md)
+
+- [build_comparison_app](https://github.com/lunalab-ai/recommender/blob/2026-fall-w02b/src/luna_recsys/comparison_app.py#L51): 학습된 model을 사용하는 gradio.Blocks 객체를 만들고 반환한다.
+- [prepare_movielens](https://github.com/lunalab-ai/recommender/blob/2026-fall-w02b/src/luna_recsys/datasets.py#L62): 캐시/다운로드/명시한 사본을 준비하고 데이터 종류까지 반환한다.
+- [split_ratings](https://github.com/lunalab-ai/recommender/blob/2026-fall-w02b/src/luna_recsys/evaluation.py#L28): ratings의 행 위치를 한 번 나누어 RatingSplit(train,test,method)를 반환한다.
+- [evaluate_means](https://github.com/lunalab-ai/recommender/blob/2026-fall-w02b/src/luna_recsys/evaluation.py#L60): 동일한 split에서 세 평균 회귀모형을 학습·평가해 DataFrame을 반환한다.
+- [FourMethodRecommender](https://github.com/lunalab-ai/recommender/blob/2026-fall-w02b/src/luna_recsys/ranking.py#L18): 평점 수·영화 평균·집단 평균·장르 프로필을 같은 후보에서 비교한다.
+- [evaluate_rankings](https://github.com/lunalab-ai/recommender/blob/2026-fall-w02b/src/luna_recsys/ranking.py#L186): 학습 완료 model을 고정하고 동일 test/후보/사용자에서 네 방법을 평가한다.
+- [MeanRatingPredictor](https://github.com/lunalab-ai/recommender/blob/2026-fall-w02b/src/luna_recsys/rating_models.py#L29): 관측 평점을 이용해 범주별 상수 회귀모형을 학습하는 클래스.
+- [MeanRatingPredictor.fit](https://github.com/lunalab-ai/recommender/blob/2026-fall-w02b/src/luna_recsys/rating_models.py#L77): ratings의 정답 평점으로 평균 모수를 추정하고 self를 반환한다.
+- [MeanRatingPredictor.predict](https://github.com/lunalab-ai/recommender/blob/2026-fall-w02b/src/luna_recsys/rating_models.py#L147): pairs(user_id/movie_id 표)의 평점 예측 Series를 반환한다.
