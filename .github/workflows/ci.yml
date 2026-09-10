@@ -2,6 +2,14 @@ name: course-ci
 
 on:
   push:
+    paths-ignore:
+      - 'briefs/HANDOFF.md'
+      - 'briefs/history/**'
+      - 'briefs/*/platform-state.json'
+      - 'briefs/*/workflow.json'
+      - 'briefs/*/input-request.md'
+      - 'instructor/announcements/**'
+      - 'instructor/*/lab-links.md'
   pull_request:
 
 jobs:

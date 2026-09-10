@@ -110,6 +110,7 @@
 - [scikit-learn의 누수 안내](https://scikit-learn.org/stable/common_pitfalls.html)
 - [Google의 내용 기반 추천 설명](https://developers.google.com/machine-learning/recommendation/content-based/basics)
 - [공식 API](https://scikit-learn.org/stable/modules/generated/sklearn.feature_extraction.text.TfidfVectorizer.html)
+- [TF–IDF 공식 계산 설명](https://scikit-learn.org/stable/modules/generated/sklearn.feature_extraction.text.TfidfTransformer.html)
 - [NDCG 공식 API 설명](https://scikit-learn.org/stable/modules/generated/sklearn.metrics.ndcg_score.html)
 - [API: arguments, results and examples](https://github.com/lunalab-ai/recommender/blob/2026-fall-w02b/src/API.md)
 - [build_comparison_app](https://github.com/lunalab-ai/recommender/blob/2026-fall-w02b/src/luna_recsys/comparison_app.py#L51)
