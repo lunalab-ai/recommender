@@ -8,3 +8,4 @@
 | W01B · Colab 환경 구축과 첫 추천 앱 | [다운로드](w01b-colab-and-first-recommender-app.pdf) | [답안 PDF](w01b-colab-and-first-recommender-app-quiz.pdf) | [답안 보기](w01b-colab-and-first-recommender-app-quiz.md) |
 | W02A · 기본적인 추천 방법 (1) | [다운로드](w02a-basic-recommendation-methods-1.pdf) | [답안 PDF](w02a-basic-recommendation-methods-1-quiz.pdf) | [답안 보기](w02a-basic-recommendation-methods-1-quiz.md) |
 | W02B · 기본적인 추천 방법 (2) | [다운로드](w02b-basic-recommendation-methods-2.pdf) | [답안 PDF](w02b-basic-recommendation-methods-2-quiz.pdf) | [답안 보기](w02b-basic-recommendation-methods-2-quiz.md) |
+| W03A · 협업 필터링의 기본 원리와 유사도 기반 추천 | [다운로드](w03a-collaborative-filtering-basics.pdf) | [답안 PDF](w03a-collaborative-filtering-basics-quiz.pdf) | [답안 보기](w03a-collaborative-filtering-basics-quiz.md) |

@@ -17,6 +17,10 @@ sessions:
     date: '2026-09-10'
     colab_ref: 2026-fall-w02b-r2
     notion_url: https://app.notion.com/p/w02b-basic-recommendation-methods-2-f92b98f5-3d77fd00109f818eaf25f8785962f984?source=copy_link
+  w03a:
+    date: '2026-09-15'
+    colab_ref: 2026-fall-w03a
+    notion_url: https://fancy-ballcap-a15.notion.site/W03a-3db7fd00109f8184ad2df949b899097c
 resources:
 - group: Python 기초
   title: 이 수업을 위한 Python 복습 길잡이

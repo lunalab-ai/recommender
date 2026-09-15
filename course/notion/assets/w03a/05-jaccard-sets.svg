@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="628.2pt" height="258.336pt" viewBox="0 0 628.2 258.336" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:date>2026-09-15T07:33:47.434146</dc:date>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Matplotlib v3.11.1, https://matplotlib.org/</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 258.336 
+L 628.2 258.336 
+L 628.2 0 
+L 0 0 
+z
+" style="fill: #ffffff"/>
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 211.8 217.5948 
+C 229.43468 217.5948 246.349464 209.241443 258.819065 194.37446 
+C 271.288667 179.507476 278.295 159.34069 278.295 138.3156 
+C 278.295 117.29051 271.288667 97.123724 258.819065 82.25674 
+C 246.349464 67.389757 229.43468 59.0364 211.8 59.0364 
+C 194.16532 59.0364 177.250536 67.389757 164.780935 82.25674 
+C 152.311333 97.123724 145.305 117.29051 145.305 138.3156 
+C 145.305 159.34069 152.311333 179.507476 164.780935 194.37446 
+C 177.250536 209.241443 194.16532 217.5948 211.8 217.5948 
+z
+" clip-path="url(#p66477f8a4f)" style="fill: #007f86; opacity: 0.18; stroke: #007f86; stroke-width: 2; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_3">
+    <path d="M 296.1975 217.5948 
+C 313.83218 217.5948 330.746964 209.241443 343.216565 194.37446 
+C 355.686167 179.507476 362.6925 159.34069 362.6925 138.3156 
+C 362.6925 117.29051 355.686167 97.123724 343.216565 82.25674 
+C 330.746964 67.389757 313.83218 59.0364 296.1975 59.0364 
+C 278.56282 59.0364 261.648036 67.389757 249.178435 82.25674 
+C 236.708833 97.123724 229.7025 117.29051 229.7025 138.3156 
+C 229.7025 159.34069 236.708833 179.507476 249.178435 194.37446 
+C 261.648036 209.241443 278.56282 217.5948 296.1975 217.5948 
+z
+" clip-path="url(#p66477f8a4f)" style="fill: #df9e22; opacity: 0.2; stroke: #df9e22; stroke-width: 2; stroke-linejoin: miter"/>
+   </g>
+   <g id="text_1">
+    <text style="font-weight: 700; font-size: 20px; font-family: 'Malgun Gothic'; text-anchor: start; fill: #17324d" x="7.2" y="25.4952" transform="rotate(-0 7.2 25.4952)">행동 집합의 교집합을 합집합으로 나눕니다</text>
+   </g>
+   <g id="text_2">
+    <text style="font-size: 22px; font-family: 'Malgun Gothic'; text-anchor: start; fill: #007f86" x="165.765" y="147.4632" transform="rotate(-0 165.765 147.4632)">A</text>
+   </g>
+   <g id="text_3">
+    <text style="font-size: 18px; font-family: 'Malgun Gothic'; text-anchor: start; fill: #17324d" x="245.0475" y="147.4632" transform="rotate(-0 245.0475 147.4632)">B, C</text>
+   </g>
+   <g id="text_4">
+    <text style="font-size: 22px; font-family: 'Malgun Gothic'; text-anchor: start; fill: #a36500" x="326.8875" y="147.4632" transform="rotate(-0 326.8875 147.4632)">D</text>
+   </g>
+   <g id="text_5">
+    <text style="font-size: 13px; font-family: 'Malgun Gothic'; text-anchor: start; fill: #007f86" x="140.19" y="49.8888" transform="rotate(-0 140.19 49.8888)">사용자 X: {A, B, C}</text>
+   </g>
+   <g id="text_6">
+    <text style="font-size: 13px; font-family: 'Malgun Gothic'; text-anchor: start; fill: #a36500" x="298.755" y="49.8888" transform="rotate(-0 298.755 49.8888)">사용자 Y: {B, C, D}</text>
+   </g>
+   <g id="text_7">
+    <text style="font-size: 13px; font-family: 'Malgun Gothic'; fill: #17324d" transform="translate(416.4 93.5712)">공통 행동 = 2개</text>
+    <text style="font-size: 13px; font-family: 'Malgun Gothic'; fill: #17324d" transform="translate(416.4 116.9712)">한 명이라도 행동 = 4개</text>
+   </g>
+   <g id="text_8">
+    <text style="font-size: 17px; font-family: 'Malgun Gothic'; text-anchor: start; fill: #007f86" x="416.4" y="190.152" transform="rotate(-0 416.4 190.152)">Jaccard = 2 / 4 = 0.5</text>
+   </g>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="p66477f8a4f">
+   <rect x="7.2" y="7.2" width="613.8" height="243.936"/>
+  </clipPath>
+ </defs>
+</svg>

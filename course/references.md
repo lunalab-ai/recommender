@@ -122,3 +122,21 @@
 - [MeanRatingPredictor](https://github.com/lunalab-ai/recommender/blob/2026-fall-w02b/src/luna_recsys/rating_models.py#L29)
 - [MeanRatingPredictor.fit](https://github.com/lunalab-ai/recommender/blob/2026-fall-w02b/src/luna_recsys/rating_models.py#L77)
 - [MeanRatingPredictor.predict](https://github.com/lunalab-ai/recommender/blob/2026-fall-w02b/src/luna_recsys/rating_models.py#L147)
+
+### W03A · 협업 필터링의 기본 원리와 유사도 기반 추천
+
+[강의 원문](notion/sessions/w03a-collaborative-filtering-basics.md)
+
+- 임일(2025), 『AI 에이전트를 위한 개인화 추천 알고리즘: Python, 머신러닝, AI, LLM 활용』, 청람, 3.1–3.3, pp.34–41. 표·그림은 개념을 참고해 수업용으로 독자 재구성했다.
+- [scikit-learn cosine_similarity](https://scikit-learn.org/stable/modules/generated/sklearn.metrics.pairwise.cosine_similarity.html): 정규화 내적과 입력/출력 차원.
+- [SciPy pearsonr](https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.pearsonr.html): 중심화와 정의 불가 조건.
+- [SciPy Jaccard distance](https://docs.scipy.org/doc/scipy/reference/generated/scipy.spatial.distance.jaccard.html): 거리와 집합 유사도.
+- [Surprise 기본 이웃 알고리즘](https://surprise.readthedocs.io/en/stable/knn_inspired.html): 양의 유사도 가중평균의 보충 참고. 해당 패키지를 실습 의존성으로 추가하지 않는다.
+- [GroupLens MovieLens 100K](https://grouplens.org/datasets/movielens/100k/): 실제 평점 데이터의 공식 출처.
+- [scikit-learn 데이터 누수](https://scikit-learn.org/stable/common_pitfalls.html): train/test 분리.
+
+외부 문서 확인일: 2026-09-14. 성능 실험은 2026-09-15 한국시간에 실행했다.
+
+본문에서 함께 소개한 링크:
+
+- [W03A 코드 사용 안내](https://github.com/lunalab-ai/recommender/blob/2026-fall-w03a/src/W03A-API.md)

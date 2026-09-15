@@ -1,0 +1,427 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="572.4pt" height="295.010664pt" viewBox="0 0 572.4 295.010664" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:date>2026-09-15T07:33:44.823440</dc:date>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Matplotlib v3.11.1, https://matplotlib.org/</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 295.010664 
+L 572.4 295.010664 
+L 572.4 0 
+L 0 0 
+z
+" style="fill: #ffffff"/>
+  </g>
+  <g id="axes_1">
+   <g id="table_1">
+    <g id="patch_2">
+     <path d="M 74.16 98.098125 
+L 161.208 98.098125 
+L 161.208 65.665725 
+L 74.16 65.665725 
+z
+" style="fill: #17324d; stroke: #ffffff; stroke-linejoin: miter"/>
+    </g>
+    <g id="text_1">
+     <text style="font-size: 17px; font-family: 'Malgun Gothic'; text-anchor: middle; fill: #ffffff" x="117.684" y="86.978605" transform="rotate(-0 117.684 86.978605)">A</text>
+    </g>
+    <g id="patch_3">
+     <path d="M 161.208 98.098125 
+L 248.256 98.098125 
+L 248.256 65.665725 
+L 161.208 65.665725 
+z
+" style="fill: #17324d; stroke: #ffffff; stroke-linejoin: miter"/>
+    </g>
+    <g id="text_2">
+     <text style="font-size: 17px; font-family: 'Malgun Gothic'; text-anchor: middle; fill: #ffffff" x="204.732" y="86.978605" transform="rotate(-0 204.732 86.978605)">B</text>
+    </g>
+    <g id="patch_4">
+     <path d="M 248.256 98.098125 
+L 335.304 98.098125 
+L 335.304 65.665725 
+L 248.256 65.665725 
+z
+" style="fill: #17324d; stroke: #ffffff; stroke-linejoin: miter"/>
+    </g>
+    <g id="text_3">
+     <text style="font-size: 17px; font-family: 'Malgun Gothic'; text-anchor: middle; fill: #ffffff" x="291.78" y="86.978605" transform="rotate(-0 291.78 86.978605)">C</text>
+    </g>
+    <g id="patch_5">
+     <path d="M 335.304 98.098125 
+L 422.352 98.098125 
+L 422.352 65.665725 
+L 335.304 65.665725 
+z
+" style="fill: #17324d; stroke: #ffffff; stroke-linejoin: miter"/>
+    </g>
+    <g id="text_4">
+     <text style="font-size: 17px; font-family: 'Malgun Gothic'; text-anchor: middle; fill: #ffffff" x="378.828" y="86.978605" transform="rotate(-0 378.828 86.978605)">D</text>
+    </g>
+    <g id="patch_6">
+     <path d="M 422.352 98.098125 
+L 509.4 98.098125 
+L 509.4 65.665725 
+L 422.352 65.665725 
+z
+" style="fill: #17324d; stroke: #ffffff; stroke-linejoin: miter"/>
+    </g>
+    <g id="text_5">
+     <text style="font-size: 17px; font-family: 'Malgun Gothic'; text-anchor: middle; fill: #ffffff" x="465.876" y="86.978605" transform="rotate(-0 465.876 86.978605)">E</text>
+    </g>
+    <g id="patch_7">
+     <path d="M 48.589875 130.530525 
+L 74.16 130.530525 
+L 74.16 98.098125 
+L 48.589875 98.098125 
+z
+" style="fill: #17324d; stroke: #ffffff; stroke-linejoin: miter"/>
+    </g>
+    <g id="text_6">
+     <text style="font-size: 17px; font-family: 'Malgun Gothic'; text-anchor: start; fill: #ffffff" x="51.146888" y="119.411005" transform="rotate(-0 51.146888 119.411005)">U1</text>
+    </g>
+    <g id="patch_8">
+     <path d="M 74.16 130.530525 
+L 161.208 130.530525 
+L 161.208 98.098125 
+L 74.16 98.098125 
+z
+" style="fill: #e9f3f4; stroke: #ffffff; stroke-linejoin: miter"/>
+    </g>
+    <g id="text_7">
+     <text style="font-size: 17px; font-family: 'Malgun Gothic'; text-anchor: middle" x="117.684" y="119.411005" transform="rotate(-0 117.684 119.411005)">5</text>
+    </g>
+    <g id="patch_9">
+     <path d="M 161.208 130.530525 
+L 248.256 130.530525 
+L 248.256 98.098125 
+L 161.208 98.098125 
+z
+" style="fill: #e9f3f4; stroke: #ffffff; stroke-linejoin: miter"/>
+    </g>
+    <g id="text_8">
+     <text style="font-size: 17px; font-family: 'Malgun Gothic'; text-anchor: middle" x="204.732" y="119.411005" transform="rotate(-0 204.732 119.411005)">3</text>
+    </g>
+    <g id="patch_10">
+     <path d="M 248.256 130.530525 
+L 335.304 130.530525 
+L 335.304 98.098125 
+L 248.256 98.098125 
+z
+" style="fill: #e9f3f4; stroke: #ffffff; stroke-linejoin: miter"/>
+    </g>
+    <g id="text_9">
+     <text style="font-size: 17px; font-family: 'Malgun Gothic'; text-anchor: middle" x="291.78" y="119.411005" transform="rotate(-0 291.78 119.411005)">1</text>
+    </g>
+    <g id="patch_11">
+     <path d="M 335.304 130.530525 
+L 422.352 130.530525 
+L 422.352 98.098125 
+L 335.304 98.098125 
+z
+" style="fill: #fff0cc; stroke: #ffffff; stroke-linejoin: miter"/>
+    </g>
+    <g id="text_10">
+     <text style="font-size: 17px; font-family: 'Malgun Gothic'; text-anchor: middle" x="378.828" y="119.411005" transform="rotate(-0 378.828 119.411005)">—</text>
+    </g>
+    <g id="patch_12">
+     <path d="M 422.352 130.530525 
+L 509.4 130.530525 
+L 509.4 98.098125 
+L 422.352 98.098125 
+z
+" style="fill: #fff0cc; stroke: #ffffff; stroke-linejoin: miter"/>
+    </g>
+    <g id="text_11">
+     <text style="font-size: 17px; font-family: 'Malgun Gothic'; text-anchor: middle" x="465.876" y="119.411005" transform="rotate(-0 465.876 119.411005)">—</text>
+    </g>
+    <g id="patch_13">
+     <path d="M 48.589875 162.962925 
+L 74.16 162.962925 
+L 74.16 130.530525 
+L 48.589875 130.530525 
+z
+" style="fill: #17324d; stroke: #ffffff; stroke-linejoin: miter"/>
+    </g>
+    <g id="text_12">
+     <text style="font-size: 17px; font-family: 'Malgun Gothic'; text-anchor: start; fill: #ffffff" x="51.146888" y="151.843405" transform="rotate(-0 51.146888 151.843405)">U2</text>
+    </g>
+    <g id="patch_14">
+     <path d="M 74.16 162.962925 
+L 161.208 162.962925 
+L 161.208 130.530525 
+L 74.16 130.530525 
+z
+" style="fill: #e9f3f4; stroke: #ffffff; stroke-linejoin: miter"/>
+    </g>
+    <g id="text_13">
+     <text style="font-size: 17px; font-family: 'Malgun Gothic'; text-anchor: middle" x="117.684" y="151.843405" transform="rotate(-0 117.684 151.843405)">4</text>
+    </g>
+    <g id="patch_15">
+     <path d="M 161.208 162.962925 
+L 248.256 162.962925 
+L 248.256 130.530525 
+L 161.208 130.530525 
+z
+" style="fill: #e9f3f4; stroke: #ffffff; stroke-linejoin: miter"/>
+    </g>
+    <g id="text_14">
+     <text style="font-size: 17px; font-family: 'Malgun Gothic'; text-anchor: middle" x="204.732" y="151.843405" transform="rotate(-0 204.732 151.843405)">2</text>
+    </g>
+    <g id="patch_16">
+     <path d="M 248.256 162.962925 
+L 335.304 162.962925 
+L 335.304 130.530525 
+L 248.256 130.530525 
+z
+" style="fill: #e9f3f4; stroke: #ffffff; stroke-linejoin: miter"/>
+    </g>
+    <g id="text_15">
+     <text style="font-size: 17px; font-family: 'Malgun Gothic'; text-anchor: middle" x="291.78" y="151.843405" transform="rotate(-0 291.78 151.843405)">1</text>
+    </g>
+    <g id="patch_17">
+     <path d="M 335.304 162.962925 
+L 422.352 162.962925 
+L 422.352 130.530525 
+L 335.304 130.530525 
+z
+" style="fill: #e9f3f4; stroke: #ffffff; stroke-linejoin: miter"/>
+    </g>
+    <g id="text_16">
+     <text style="font-size: 17px; font-family: 'Malgun Gothic'; text-anchor: middle" x="378.828" y="151.843405" transform="rotate(-0 378.828 151.843405)">5</text>
+    </g>
+    <g id="patch_18">
+     <path d="M 422.352 162.962925 
+L 509.4 162.962925 
+L 509.4 130.530525 
+L 422.352 130.530525 
+z
+" style="fill: #e9f3f4; stroke: #ffffff; stroke-linejoin: miter"/>
+    </g>
+    <g id="text_17">
+     <text style="font-size: 17px; font-family: 'Malgun Gothic'; text-anchor: middle" x="465.876" y="151.843405" transform="rotate(-0 465.876 151.843405)">2</text>
+    </g>
+    <g id="patch_19">
+     <path d="M 48.589875 195.395325 
+L 74.16 195.395325 
+L 74.16 162.962925 
+L 48.589875 162.962925 
+z
+" style="fill: #17324d; stroke: #ffffff; stroke-linejoin: miter"/>
+    </g>
+    <g id="text_18">
+     <text style="font-size: 17px; font-family: 'Malgun Gothic'; text-anchor: start; fill: #ffffff" x="51.146888" y="184.275805" transform="rotate(-0 51.146888 184.275805)">U3</text>
+    </g>
+    <g id="patch_20">
+     <path d="M 74.16 195.395325 
+L 161.208 195.395325 
+L 161.208 162.962925 
+L 74.16 162.962925 
+z
+" style="fill: #e9f3f4; stroke: #ffffff; stroke-linejoin: miter"/>
+    </g>
+    <g id="text_19">
+     <text style="font-size: 17px; font-family: 'Malgun Gothic'; text-anchor: middle" x="117.684" y="184.275805" transform="rotate(-0 117.684 184.275805)">1</text>
+    </g>
+    <g id="patch_21">
+     <path d="M 161.208 195.395325 
+L 248.256 195.395325 
+L 248.256 162.962925 
+L 161.208 162.962925 
+z
+" style="fill: #e9f3f4; stroke: #ffffff; stroke-linejoin: miter"/>
+    </g>
+    <g id="text_20">
+     <text style="font-size: 17px; font-family: 'Malgun Gothic'; text-anchor: middle" x="204.732" y="184.275805" transform="rotate(-0 204.732 184.275805)">3</text>
+    </g>
+    <g id="patch_22">
+     <path d="M 248.256 195.395325 
+L 335.304 195.395325 
+L 335.304 162.962925 
+L 248.256 162.962925 
+z
+" style="fill: #e9f3f4; stroke: #ffffff; stroke-linejoin: miter"/>
+    </g>
+    <g id="text_21">
+     <text style="font-size: 17px; font-family: 'Malgun Gothic'; text-anchor: middle" x="291.78" y="184.275805" transform="rotate(-0 291.78 184.275805)">5</text>
+    </g>
+    <g id="patch_23">
+     <path d="M 335.304 195.395325 
+L 422.352 195.395325 
+L 422.352 162.962925 
+L 335.304 162.962925 
+z
+" style="fill: #e9f3f4; stroke: #ffffff; stroke-linejoin: miter"/>
+    </g>
+    <g id="text_22">
+     <text style="font-size: 17px; font-family: 'Malgun Gothic'; text-anchor: middle" x="378.828" y="184.275805" transform="rotate(-0 378.828 184.275805)">1</text>
+    </g>
+    <g id="patch_24">
+     <path d="M 422.352 195.395325 
+L 509.4 195.395325 
+L 509.4 162.962925 
+L 422.352 162.962925 
+z
+" style="fill: #e9f3f4; stroke: #ffffff; stroke-linejoin: miter"/>
+    </g>
+    <g id="text_23">
+     <text style="font-size: 17px; font-family: 'Malgun Gothic'; text-anchor: middle" x="465.876" y="184.275805" transform="rotate(-0 465.876 184.275805)">5</text>
+    </g>
+    <g id="patch_25">
+     <path d="M 48.589875 227.827725 
+L 74.16 227.827725 
+L 74.16 195.395325 
+L 48.589875 195.395325 
+z
+" style="fill: #17324d; stroke: #ffffff; stroke-linejoin: miter"/>
+    </g>
+    <g id="text_24">
+     <text style="font-size: 17px; font-family: 'Malgun Gothic'; text-anchor: start; fill: #ffffff" x="51.146888" y="216.708205" transform="rotate(-0 51.146888 216.708205)">U4</text>
+    </g>
+    <g id="patch_26">
+     <path d="M 74.16 227.827725 
+L 161.208 227.827725 
+L 161.208 195.395325 
+L 74.16 195.395325 
+z
+" style="fill: #e9f3f4; stroke: #ffffff; stroke-linejoin: miter"/>
+    </g>
+    <g id="text_25">
+     <text style="font-size: 17px; font-family: 'Malgun Gothic'; text-anchor: middle" x="117.684" y="216.708205" transform="rotate(-0 117.684 216.708205)">5</text>
+    </g>
+    <g id="patch_27">
+     <path d="M 161.208 227.827725 
+L 248.256 227.827725 
+L 248.256 195.395325 
+L 161.208 195.395325 
+z
+" style="fill: #e9f3f4; stroke: #ffffff; stroke-linejoin: miter"/>
+    </g>
+    <g id="text_26">
+     <text style="font-size: 17px; font-family: 'Malgun Gothic'; text-anchor: middle" x="204.732" y="216.708205" transform="rotate(-0 204.732 216.708205)">3</text>
+    </g>
+    <g id="patch_28">
+     <path d="M 248.256 227.827725 
+L 335.304 227.827725 
+L 335.304 195.395325 
+L 248.256 195.395325 
+z
+" style="fill: #fff0cc; stroke: #ffffff; stroke-linejoin: miter"/>
+    </g>
+    <g id="text_27">
+     <text style="font-size: 17px; font-family: 'Malgun Gothic'; text-anchor: middle" x="291.78" y="216.708205" transform="rotate(-0 291.78 216.708205)">—</text>
+    </g>
+    <g id="patch_29">
+     <path d="M 335.304 227.827725 
+L 422.352 227.827725 
+L 422.352 195.395325 
+L 335.304 195.395325 
+z
+" style="fill: #e9f3f4; stroke: #ffffff; stroke-linejoin: miter"/>
+    </g>
+    <g id="text_28">
+     <text style="font-size: 17px; font-family: 'Malgun Gothic'; text-anchor: middle" x="378.828" y="216.708205" transform="rotate(-0 378.828 216.708205)">4</text>
+    </g>
+    <g id="patch_30">
+     <path d="M 422.352 227.827725 
+L 509.4 227.827725 
+L 509.4 195.395325 
+L 422.352 195.395325 
+z
+" style="fill: #fff0cc; stroke: #ffffff; stroke-linejoin: miter"/>
+    </g>
+    <g id="text_29">
+     <text style="font-size: 17px; font-family: 'Malgun Gothic'; text-anchor: middle" x="465.876" y="216.708205" transform="rotate(-0 465.876 216.708205)">—</text>
+    </g>
+    <g id="patch_31">
+     <path d="M 48.589875 260.260125 
+L 74.16 260.260125 
+L 74.16 227.827725 
+L 48.589875 227.827725 
+z
+" style="fill: #17324d; stroke: #ffffff; stroke-linejoin: miter"/>
+    </g>
+    <g id="text_30">
+     <text style="font-size: 17px; font-family: 'Malgun Gothic'; text-anchor: start; fill: #ffffff" x="51.146888" y="249.140605" transform="rotate(-0 51.146888 249.140605)">U5</text>
+    </g>
+    <g id="patch_32">
+     <path d="M 74.16 260.260125 
+L 161.208 260.260125 
+L 161.208 227.827725 
+L 74.16 227.827725 
+z
+" style="fill: #fff0cc; stroke: #ffffff; stroke-linejoin: miter"/>
+    </g>
+    <g id="text_31">
+     <text style="font-size: 17px; font-family: 'Malgun Gothic'; text-anchor: middle" x="117.684" y="249.140605" transform="rotate(-0 117.684 249.140605)">—</text>
+    </g>
+    <g id="patch_33">
+     <path d="M 161.208 260.260125 
+L 248.256 260.260125 
+L 248.256 227.827725 
+L 161.208 227.827725 
+z
+" style="fill: #fff0cc; stroke: #ffffff; stroke-linejoin: miter"/>
+    </g>
+    <g id="text_32">
+     <text style="font-size: 17px; font-family: 'Malgun Gothic'; text-anchor: middle" x="204.732" y="249.140605" transform="rotate(-0 204.732 249.140605)">—</text>
+    </g>
+    <g id="patch_34">
+     <path d="M 248.256 260.260125 
+L 335.304 260.260125 
+L 335.304 227.827725 
+L 248.256 227.827725 
+z
+" style="fill: #fff0cc; stroke: #ffffff; stroke-linejoin: miter"/>
+    </g>
+    <g id="text_33">
+     <text style="font-size: 17px; font-family: 'Malgun Gothic'; text-anchor: middle" x="291.78" y="249.140605" transform="rotate(-0 291.78 249.140605)">—</text>
+    </g>
+    <g id="patch_35">
+     <path d="M 335.304 260.260125 
+L 422.352 260.260125 
+L 422.352 227.827725 
+L 335.304 227.827725 
+z
+" style="fill: #e9f3f4; stroke: #ffffff; stroke-linejoin: miter"/>
+    </g>
+    <g id="text_34">
+     <text style="font-size: 17px; font-family: 'Malgun Gothic'; text-anchor: middle" x="378.828" y="249.140605" transform="rotate(-0 378.828 249.140605)">2</text>
+    </g>
+    <g id="patch_36">
+     <path d="M 422.352 260.260125 
+L 509.4 260.260125 
+L 509.4 227.827725 
+L 422.352 227.827725 
+z
+" style="fill: #e9f3f4; stroke: #ffffff; stroke-linejoin: miter"/>
+    </g>
+    <g id="text_35">
+     <text style="font-size: 17px; font-family: 'Malgun Gothic'; text-anchor: middle" x="465.876" y="249.140605" transform="rotate(-0 465.876 249.140605)">4</text>
+    </g>
+   </g>
+   <g id="text_36">
+    <text style="font-size: 13px; font-family: 'Malgun Gothic'; text-anchor: start; fill: #17324d" x="79.74" y="285.208125" transform="rotate(-0 79.74 285.208125)">행 = 사용자  ·  열 = 영화  ·  — = 아직 관측하지 않은 평점</text>
+   </g>
+   <g id="text_37">
+    <text style="font-weight: 700; font-size: 15.6px; font-family: 'Malgun Gothic'; text-anchor: middle; fill: #17324d" x="286.2" y="20.728125" transform="rotate(-0 286.2 20.728125)">평점 18개와 미관측 7개 · 직접 설계한 예제</text>
+   </g>
+  </g>
+ </g>
+</svg>
