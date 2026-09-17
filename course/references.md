@@ -140,3 +140,19 @@
 본문에서 함께 소개한 링크:
 
 - [W03A 코드 사용 안내](https://github.com/lunalab-ai/recommender/blob/2026-fall-w03a/src/W03A-API.md)
+
+### W03B · 협업 필터링 따라가기: 평점 행렬부터 추천 근거까지
+
+[강의 원문](notion/sessions/w03b-cf-step-by-step.md)
+
+- 임일(2025), 『AI 에이전트를 위한 개인화 추천 알고리즘』, 청람, 3.1–3.3, 인쇄 34–41쪽. 원본 스캔과 출판사 코드는 이 자료에 포함하지 않았다.
+- [W03A 강의와 기존 실습](https://github.com/lunalab-ai/recommender/tree/2026-fall-w03a): 기존 수업용 합성 표와 독자 구현을 재사용했다.
+- [scikit-learn cosine_similarity](https://scikit-learn.org/stable/modules/generated/sklearn.metrics.pairwise.cosine_similarity.html): 정규화 내적과 입력·출력 차원. 확인 2026-09-16.
+- [Gradio 6.27.0](https://pypi.org/project/gradio/6.27.0/): 함수와 앱 입력·출력 연결, 실행 중 런타임의 공유 방식. 확인 2026-09-17.
+
+본문에서 함께 소개한 링크:
+
+- [기존 W03A 강의](https://fancy-ballcap-a15.notion.site/W03a-3db7fd00109f8184ad2df949b899097c)
+- [보충 Colab](https://colab.research.google.com/github/lunalab-ai/recommender/blob/2026-fall-w03b/notebooks/student/w03b-cf-step-by-step.ipynb)
+- [기존 MovieLens Colab](https://colab.research.google.com/github/lunalab-ai/recommender/blob/2026-fall-w03a/notebooks/student/w03a-collaborative-filtering-basics.ipynb)
+- [W03A 코드 안내](https://github.com/lunalab-ai/recommender/blob/2026-fall-w03a/src/W03A-API.md)
