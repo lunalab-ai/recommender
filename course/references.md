@@ -157,7 +157,7 @@
 - [기존 MovieLens Colab](https://colab.research.google.com/github/lunalab-ai/recommender/blob/2026-fall-w03a/notebooks/student/w03a-collaborative-filtering-basics.ipynb)
 - [W03A 코드 안내](https://github.com/lunalab-ai/recommender/blob/2026-fall-w03a/src/W03A-API.md)
 
-### W04A · 이웃을 고려한 CF와 사용자의 평가 경향
+### W04A · 이웃 기반 CF의 개선
 
 [강의 원문](notion/sessions/w04a-neighborhood-cf.md)
 
@@ -169,10 +169,13 @@
 
 외부 문서와 측정 조건 확인: 2026-09-22. 검증 데이터 분리, 명시적 대체/clip 정책, 앱의 근거 표시는 이해와 재현성을 위한 수업 보충이다.
 
+공통 API 상세: [NeighborCF 생성·학습](https://github.com/lunalab-ai/recommender/blob/2026-fall-w04a-v2/src/luna_recsys/neighborhood.py#L11), [예측 상세](https://github.com/lunalab-ai/recommender/blob/2026-fall-w04a-v2/src/luna_recsys/neighborhood.py#L57), [이웃 근거](https://github.com/lunalab-ai/recommender/blob/2026-fall-w04a-v2/src/luna_recsys/neighborhood.py#L100), [검증 비교](https://github.com/lunalab-ai/recommender/blob/2026-fall-w04a-v2/src/luna_recsys/neighborhood.py#L124), [데이터 준비](https://github.com/lunalab-ai/recommender/blob/2026-fall-w04a-v2/src/luna_recsys/datasets.py#L62), [관측 분할](https://github.com/lunalab-ai/recommender/blob/2026-fall-w04a-v2/src/luna_recsys/evaluation.py#L28).
+
+표준 API 참고: [pandas concat](https://pandas.pydata.org/docs/reference/api/pandas.concat.html), [DataFrame.mean](https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.mean.html), [RMSE](https://scikit-learn.org/stable/modules/generated/sklearn.metrics.root_mean_squared_error.html), [Gradio Blocks](https://www.gradio.app/docs/gradio/blocks).
+
 본문에서 함께 소개한 링크:
 
-- [학생 Colab 실습](https://colab.research.google.com/github/lunalab-ai/recommender/blob/2026-fall-w04a/notebooks/student/w04a-neighborhood-cf.ipynb)
-- [강의 PDF](https://github.com/lunalab-ai/recommender/blob/2026-fall-w04a/course/handouts/w04a-neighborhood-cf.pdf)
-- [점검 퀴즈 해설 PDF](https://github.com/lunalab-ai/recommender/blob/2026-fall-w04a/course/handouts/w04a-neighborhood-cf-quiz.pdf)
-- [모델 정의와 docstring](https://github.com/lunalab-ai/recommender/blob/2026-fall-w04a/src/luna_recsys/neighborhood.py)
-- [앱과 callback 정의](https://github.com/lunalab-ai/recommender/blob/2026-fall-w04a/src/luna_recsys/neighborhood_app.py)
+- [학생 Colab 실습](https://colab.research.google.com/github/lunalab-ai/recommender/blob/2026-fall-w04a-v2/notebooks/student/w04a-neighborhood-cf.ipynb)
+- [강의 PDF](https://github.com/lunalab-ai/recommender/blob/2026-fall-w04a-v2/course/handouts/w04a-neighborhood-cf.pdf)
+- [점검 퀴즈 해설 PDF](https://github.com/lunalab-ai/recommender/blob/2026-fall-w04a-v2/course/handouts/w04a-neighborhood-cf-quiz.pdf)
+- [앱과 callback 정의](https://github.com/lunalab-ai/recommender/blob/2026-fall-w04a-v2/src/luna_recsys/neighborhood_app.py#L8)
