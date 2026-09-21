@@ -156,3 +156,23 @@
 - [보충 Colab](https://colab.research.google.com/github/lunalab-ai/recommender/blob/2026-fall-w03b/notebooks/student/w03b-cf-step-by-step.ipynb)
 - [기존 MovieLens Colab](https://colab.research.google.com/github/lunalab-ai/recommender/blob/2026-fall-w03a/notebooks/student/w03a-collaborative-filtering-basics.ipynb)
 - [W03A 코드 안내](https://github.com/lunalab-ai/recommender/blob/2026-fall-w03a/src/W03A-API.md)
+
+### W04A · 이웃을 고려한 CF와 사용자의 평가 경향
+
+[강의 원문](notion/sessions/w04a-neighborhood-cf.md)
+
+- 주교재 3.4–3.6: 이웃 선택, 이웃 크기, 사용자 평가 경향 보정의 용어와 설명 흐름을 따른다. 그림3-2/3-3은 개념만 참고했으며 본문의 도식·합성 예·코드·측정 그래프는 수업용 독립 제작이다. 교재 스캔과 출판사 코드를 배포하지 않는다.
+- [Surprise 공식 k-NN 문서](https://surprise.readthedocs.io/en/stable/knn_inspired.html): 원평점/사용자 평균 보정 수식 교차 확인. 이 실습은 Surprise 패키지 실행이 아닌 자체 구현이다.
+- [scikit-learn 공식 교차검증 안내](https://scikit-learn.org/stable/modules/cross_validation.html): 검증과 최종 테스트의 역할을 구분하는 보충 설명.
+- [GroupLens MovieLens 100K](https://grouplens.org/datasets/movielens/100k/): 실제 데이터의 공식 배포처. 원본을 이 저장소에 재배포하지 않는다.
+- [W03B 계산 복습](https://github.com/lunalab-ai/recommender/blob/2026-fall-w03b/course/notion/sessions/w03b-cf-step-by-step.md): 관측 마스크·코사인·가중평균의 연결.
+
+외부 문서와 측정 조건 확인: 2026-09-22. 검증 데이터 분리, 명시적 대체/clip 정책, 앱의 근거 표시는 이해와 재현성을 위한 수업 보충이다.
+
+본문에서 함께 소개한 링크:
+
+- [학생 Colab 실습](https://colab.research.google.com/github/lunalab-ai/recommender/blob/2026-fall-w04a/notebooks/student/w04a-neighborhood-cf.ipynb)
+- [강의 PDF](https://github.com/lunalab-ai/recommender/blob/2026-fall-w04a/course/handouts/w04a-neighborhood-cf.pdf)
+- [점검 퀴즈 해설 PDF](https://github.com/lunalab-ai/recommender/blob/2026-fall-w04a/course/handouts/w04a-neighborhood-cf-quiz.pdf)
+- [모델 정의와 docstring](https://github.com/lunalab-ai/recommender/blob/2026-fall-w04a/src/luna_recsys/neighborhood.py)
+- [앱과 callback 정의](https://github.com/lunalab-ai/recommender/blob/2026-fall-w04a/src/luna_recsys/neighborhood_app.py)

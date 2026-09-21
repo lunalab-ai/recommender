@@ -10,3 +10,4 @@
 | W02B · 기본적인 추천 방법 (2) | [다운로드](w02b-basic-recommendation-methods-2.pdf) | [답안 PDF](w02b-basic-recommendation-methods-2-quiz.pdf) | [답안 보기](w02b-basic-recommendation-methods-2-quiz.md) |
 | W03A · 협업 필터링의 기본 원리와 유사도 기반 추천 | [다운로드](w03a-collaborative-filtering-basics.pdf) | [답안 PDF](w03a-collaborative-filtering-basics-quiz.pdf) | [답안 보기](w03a-collaborative-filtering-basics-quiz.md) |
 | 협업 필터링 따라가기: 평점 행렬부터 추천 근거까지 | [다운로드](w03b-cf-step-by-step.pdf) | [답안 PDF](w03b-cf-step-by-step-quiz.pdf) | [답안 보기](w03b-cf-step-by-step-quiz.md) |
+| W04A · 이웃을 고려한 CF와 사용자의 평가 경향 | [다운로드](w04a-neighborhood-cf.pdf) | [답안 PDF](w04a-neighborhood-cf-quiz.pdf) | [답안 보기](w04a-neighborhood-cf-quiz.md) |
