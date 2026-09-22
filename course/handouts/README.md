@@ -11,3 +11,4 @@
 | W03A · 협업 필터링의 기본 원리와 유사도 기반 추천 | [다운로드](w03a-collaborative-filtering-basics.pdf) | [답안 PDF](w03a-collaborative-filtering-basics-quiz.pdf) | [답안 보기](w03a-collaborative-filtering-basics-quiz.md) |
 | 협업 필터링 따라가기: 평점 행렬부터 추천 근거까지 | [다운로드](w03b-cf-step-by-step.pdf) | [답안 PDF](w03b-cf-step-by-step-quiz.pdf) | [답안 보기](w03b-cf-step-by-step-quiz.md) |
 | W04A · 이웃 기반 CF의 개선 | [다운로드](w04a-neighborhood-cf.pdf) | [답안 PDF](w04a-neighborhood-cf-quiz.pdf) | [답안 보기](w04a-neighborhood-cf-quiz.md) |
+| W04B · 협업 필터링 총정리 | [다운로드](w04b-cf-synthesis.pdf) | [답안 PDF](w04b-cf-synthesis-quiz.pdf) | [답안 보기](w04b-cf-synthesis-quiz.md) |

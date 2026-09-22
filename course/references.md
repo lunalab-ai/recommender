@@ -179,3 +179,35 @@
 - [강의 PDF](https://github.com/lunalab-ai/recommender/blob/2026-fall-w04a-v2/course/handouts/w04a-neighborhood-cf.pdf)
 - [점검 퀴즈 해설 PDF](https://github.com/lunalab-ai/recommender/blob/2026-fall-w04a-v2/course/handouts/w04a-neighborhood-cf-quiz.pdf)
 - [앱과 callback 정의](https://github.com/lunalab-ai/recommender/blob/2026-fall-w04a-v2/src/luna_recsys/neighborhood_app.py#L8)
+
+### W04B · 협업 필터링 총정리
+
+[강의 원문](notion/sessions/w04b-cf-synthesis.md)
+
+CF는 관측 행렬에서 비교 가능한 이웃을 찾고 그들의 평가를 집계하는 과정이다. 공통수·이웃수·평균 보정·축·clip은 서로 다른 부분을 바꾼다. 평가할 때는 평점의 오차, 목록의 적중과 순서, 추천 근거와 노출 범위를 구별하고 데이터 분리와 분모를 함께 제시한다.
+
+주교재 3.7–3.9(인쇄면 53–62)와 3장 제공 예제의 용어·알고리즘을 기준으로 설명했다. 도표는 스캔을 복사하지 않고 독자 값과 배치로 다시 만들었다. NDCG 복습, 연속 shrinkage 비교, 검증 절차, 명시적 fallback·coverage 정의 및 웹 구현은 수업을 위한 추가 설명이다.
+
+- [Surprise KNN 알고리즘](https://surprise.readthedocs.io/en/stable/knn_inspired.html): 최소 이웃과 예측식 비교. 라이브러리의 fallback·유사도 정의를 이 실습과 동일하다고 가정하지 않는다.
+- [Surprise 유사도 정의](https://surprise.readthedocs.io/en/stable/similarities.html): 공통 평가 좌표의 코사인과 이번 전체 차원 코사인의 차이를 확인한다.
+- [Stanford IR: Precision과 Recall](https://nlp.stanford.edu/IR-book/html/htmledition/evaluation-of-unranked-retrieval-sets-1.html), [순위 평가](https://nlp.stanford.edu/IR-book/html/htmledition/evaluation-of-ranked-retrieval-results-1.html): 관련성과 순위 평가의 구분.
+- [GroupLens MovieLens 100K](https://grouplens.org/datasets/movielens/100k/): 데이터 출처와 이용 조건. 원자료는 공개 저장소에 넣지 않는다.
+- [scikit-learn: 교차 검증과 모델 선택](https://scikit-learn.org/stable/modules/cross_validation.html): 설정 선택과 최종 평가의 분리.
+
+- 구현 문법: [NumPy 행렬곱 `@`](https://numpy.org/doc/stable/reference/generated/numpy.matmul.html), [pandas `pivot`](https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.pivot.html), [scikit-learn `cosine_similarity`](https://scikit-learn.org/stable/modules/generated/sklearn.metrics.pairwise.cosine_similarity.html).
+
+확인일: 2026-09-23. 공개 고정 버전 설치·실제 Colab·Notion 가져오기는 로컬 검증과 별도로 배포 단계에서 확인한다.
+
+본문에서 함께 소개한 링크:
+
+- [학생 Colab 실습](https://colab.research.google.com/github/lunalab-ai/recommender/blob/2026-fall-w04b/notebooks/student/w04b-cf-synthesis.ipynb)
+- [predict_details(pairs)](https://github.com/lunalab-ai/recommender/blob/2026-fall-w04b/src/luna_recsys/cf_synthesis.py#L110)
+- [explain(user_id, movie_id)](https://github.com/lunalab-ai/recommender/blob/2026-fall-w04b/src/luna_recsys/cf_synthesis.py#L155)
+- [recommend(user_id, movies, top_n)](https://github.com/lunalab-ai/recommender/blob/2026-fall-w04a-v2/src/luna_recsys/collaborative.py#L198)
+- [configured(**settings)](https://github.com/lunalab-ai/recommender/blob/2026-fall-w04b/src/luna_recsys/cf_synthesis.py#L72)
+- [rating_report(model, heldout)](https://github.com/lunalab-ai/recommender/blob/2026-fall-w04b/src/luna_recsys/cf_synthesis.py#L175)
+- [evaluate_cf(..., top_n=10, ranking_users=None)](https://github.com/lunalab-ai/recommender/blob/2026-fall-w04b/src/luna_recsys/cf_synthesis.py#L197)
+- [EvidenceCF와 평가 함수](https://github.com/lunalab-ai/recommender/blob/2026-fall-w04b/src/luna_recsys/cf_synthesis.py#L13)
+- [CFLab·callback·앱](https://github.com/lunalab-ai/recommender/blob/2026-fall-w04b/src/luna_recsys/synthesis_app.py#L52)
+- [데이터 준비 함수](https://github.com/lunalab-ai/recommender/blob/2026-fall-w04a-v2/src/luna_recsys/datasets.py#L62)
+- [분리 함수](https://github.com/lunalab-ai/recommender/blob/2026-fall-w04a-v2/src/luna_recsys/evaluation.py#L28)
