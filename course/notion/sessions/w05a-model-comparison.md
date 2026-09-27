@@ -6,7 +6,7 @@
 
 지금까지 배운 추천 모델을 하나의 데이터에서 비교합니다. 이번 시간의 목표는 가장 높은 숫자를 찾는 데서 끝나지 않습니다. **모델이 어떤 정보를 사용했고, 지표는 어떤 질문에 답하며, 설정을 바꾸자 추천 경험이 왜 달라졌는지 설명하는 것**이 목표입니다.
 
-[별도 보강: 추천 성과지표를 그림과 계산으로 이해하기](../supplements/w05a-metrics-remediation.md) · [실습 A: 모델·지표 복습](https://colab.research.google.com/github/lunalab-ai/recommender/blob/2026-fall-w05a/notebooks/student/w05a-review-metrics.ipynb) · [실습 B: 비교·튜닝·웹 앱](https://colab.research.google.com/github/lunalab-ai/recommender/blob/2026-fall-w05a/notebooks/student/w05a-model-comparison.ipynb)
+[별도 보강: 추천 성과지표를 그림과 계산으로 이해하기](../supplements/w05a-metrics-remediation.md) · [실습 A: 모델·지표 복습](https://colab.research.google.com/github/lunalab-ai/recommender/blob/2026-fall-w05a-v2/notebooks/student/w05a-review-metrics.ipynb) · [실습 B: 비교·튜닝·웹 앱](https://colab.research.google.com/github/lunalab-ai/recommender/blob/2026-fall-w05a-v2/notebooks/student/w05a-model-comparison.ipynb)
 
 ## 1. 먼저 세 문장으로 현재 이해를 확인하기
 
@@ -252,7 +252,7 @@ train 60,000건에서 학습하고 validation 평점 20,000건을 모두 채점�
 
 ### 7.3 최종 평가와 사용자별 차이를 재현하기
 
-[전체 실험 CSV와 분할·선택 기록](https://github.com/lunalab-ai/recommender/tree/2026-fall-w05a/data/sample/w05a-results)에서 `validation-quick.csv`, `validation-full.csv`, `test-ranking.csv`, `test-rating.csv`를 구분해 읽으세요. 모델군마다 validation의 NDCG 최대 / RMSE 최소 설정을 먼저 고정하고 train+validation 80,000건으로 재학습한 뒤 test 20,000건에서 평가합니다. `selected-configurations.json`은 test 이전 선택 기록이고 `protocol.json`은 seed·관측 집합 식별자·실행 기록입니다.
+[전체 실험 CSV와 분할·선택 기록](https://github.com/lunalab-ai/recommender/tree/2026-fall-w05a-v2/data/sample/w05a-results)에서 `validation-quick.csv`, `validation-full.csv`, `test-ranking.csv`, `test-rating.csv`를 구분해 읽으세요. 모델군마다 validation의 NDCG 최대 / RMSE 최소 설정을 먼저 고정하고 train+validation 80,000건으로 재학습한 뒤 test 20,000건에서 평가합니다. `selected-configurations.json`은 test 이전 선택 기록이고 `protocol.json`은 seed·관측 집합 식별자·실행 기록입니다.
 
 `validation-activity.csv`와 `validation-distribution.csv`는 학습 이력의 양에 따른 집단 차이와 개인별 NDCG 분포를 담습니다. 실습 B에서는 이 두 집단의 개별 사용자를 골라 제목·장르·평가 수·추천 근거를 함께 확인합니다. 집단 간 차이를 학습 이력의 인과 효과로 해석하지 않습니다.
 
@@ -303,23 +303,23 @@ Colab 공유 주소는 런타임이 실행 중일 때만 유지됩니다. 나중
 
 ## 10. 코드를 열어 읽는 순서
 
-노트북에는 사용하는 클래스·함수·메소드의 **고정 수업 버전 정의 줄**로 이동하는 바로가기를 제공합니다. `help(...)`로 입력과 반환을, `inspect.getsource(...)`로 실제 설치된 구현을 확인할 수 있습니다. 설치 버전과 GitHub 링크의 버전은 모두 `2026-fall-w05a`입니다.
+노트북에는 사용하는 클래스·함수·메소드의 **고정 수업 버전 정의 줄**로 이동하는 바로가기를 제공합니다. `help(...)`로 입력과 반환을, `inspect.getsource(...)`로 실제 설치된 구현을 확인할 수 있습니다. 설치 버전과 GitHub 링크의 버전은 모두 `2026-fall-w05a-v2`입니다.
 
 `ComparisonSuite(train, users, movies)`는 복사한 학습 표와 메타데이터를 보관합니다. `model(spec)`은 해당 설정의 기존 모델을 학습 또는 재사용하고, `recommend(spec, user_id, top_n)`은 같은 후보에서 추천 표를 반환합니다. `evaluate(spec, heldout, ranking_users=...)`는 요약 사전과 사용자별 지표 표를 반환하며 평가 정답은 이 단계에서만 채점에 사용합니다.
 
-- [ModelSpec](https://github.com/lunalab-ai/recommender/blob/2026-fall-w05a/src/luna_recsys/model_comparison.py#L21)
-- [ComparisonSuite](https://github.com/lunalab-ai/recommender/blob/2026-fall-w05a/src/luna_recsys/model_comparison.py#L111)
-- [ComparisonSuite.model](https://github.com/lunalab-ai/recommender/blob/2026-fall-w05a/src/luna_recsys/model_comparison.py#L131)
-- [ComparisonSuite.recommend](https://github.com/lunalab-ai/recommender/blob/2026-fall-w05a/src/luna_recsys/model_comparison.py#L150)
-- [ComparisonSuite.evaluate](https://github.com/lunalab-ai/recommender/blob/2026-fall-w05a/src/luna_recsys/model_comparison.py#L172)
-- [compare](https://github.com/lunalab-ai/recommender/blob/2026-fall-w05a/src/luna_recsys/model_comparison.py#L226)
-- [select_best](https://github.com/lunalab-ai/recommender/blob/2026-fall-w05a/src/luna_recsys/model_comparison.py#L241)
-- [split_three](https://github.com/lunalab-ai/recommender/blob/2026-fall-w05a/src/luna_recsys/model_comparison.py#L81)
-- [ranking_metrics](https://github.com/lunalab-ai/recommender/blob/2026-fall-w05a/src/luna_recsys/ranking.py#L163)
-- [ComparisonLab](https://github.com/lunalab-ai/recommender/blob/2026-fall-w05a/src/luna_recsys/comparison_lab.py#L16)
-- [ComparisonLab.metrics](https://github.com/lunalab-ai/recommender/blob/2026-fall-w05a/src/luna_recsys/comparison_lab.py#L32)
-- [comparison_view](https://github.com/lunalab-ai/recommender/blob/2026-fall-w05a/src/luna_recsys/comparison_lab.py#L39)
-- [build_comparison_app](https://github.com/lunalab-ai/recommender/blob/2026-fall-w05a/src/luna_recsys/comparison_lab.py#L87)
+- [ModelSpec](https://github.com/lunalab-ai/recommender/blob/2026-fall-w05a-v2/src/luna_recsys/model_comparison.py#L21)
+- [ComparisonSuite](https://github.com/lunalab-ai/recommender/blob/2026-fall-w05a-v2/src/luna_recsys/model_comparison.py#L111)
+- [ComparisonSuite.model](https://github.com/lunalab-ai/recommender/blob/2026-fall-w05a-v2/src/luna_recsys/model_comparison.py#L131)
+- [ComparisonSuite.recommend](https://github.com/lunalab-ai/recommender/blob/2026-fall-w05a-v2/src/luna_recsys/model_comparison.py#L150)
+- [ComparisonSuite.evaluate](https://github.com/lunalab-ai/recommender/blob/2026-fall-w05a-v2/src/luna_recsys/model_comparison.py#L172)
+- [compare](https://github.com/lunalab-ai/recommender/blob/2026-fall-w05a-v2/src/luna_recsys/model_comparison.py#L226)
+- [select_best](https://github.com/lunalab-ai/recommender/blob/2026-fall-w05a-v2/src/luna_recsys/model_comparison.py#L241)
+- [split_three](https://github.com/lunalab-ai/recommender/blob/2026-fall-w05a-v2/src/luna_recsys/model_comparison.py#L81)
+- [ranking_metrics](https://github.com/lunalab-ai/recommender/blob/2026-fall-w05a-v2/src/luna_recsys/ranking.py#L163)
+- [ComparisonLab](https://github.com/lunalab-ai/recommender/blob/2026-fall-w05a-v2/src/luna_recsys/comparison_lab.py#L16)
+- [ComparisonLab.metrics](https://github.com/lunalab-ai/recommender/blob/2026-fall-w05a-v2/src/luna_recsys/comparison_lab.py#L32)
+- [comparison_view](https://github.com/lunalab-ai/recommender/blob/2026-fall-w05a-v2/src/luna_recsys/comparison_lab.py#L39)
+- [build_comparison_app](https://github.com/lunalab-ai/recommender/blob/2026-fall-w05a-v2/src/luna_recsys/comparison_lab.py#L87)
 
 `ModelSpec`의 설정은 불변 객체로 관리합니다. 설정을 바꿀 때는 `dataclasses.replace`로 새 설정을 만들어 이전 기록과 혼동하지 않습니다. DataFrame의 행 순서와 ID를 유지하고, 반올림은 계산이 끝난 뒤 화면에 표시할 때만 적용합니다.
 

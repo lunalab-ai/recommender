@@ -124,5 +124,12 @@
   "quick_configs": 38,
   "final_configs": 17,
   "validation_activity_median": 39.0,
-  "completed_at": "2026-09-27T20:12:26.224677+00:00"
+  "completed_at": "2026-09-27T20:12:26.224677+00:00",
+  "pair_digest_format": "Sorted user_id,movie_id; UTF-8 CSV with header and CRLF including final newline.",
+  "compatibility_patch": {
+    "date": "2026-09-28",
+    "reason": "Make Windows/Linux split identifiers identical by fixing CSV newline serialization. Split membership, predictions and metric values are unchanged.",
+    "numeric_results_recomputed": false,
+    "original_experiment_source_sha256_preserved": true
+  }
 }

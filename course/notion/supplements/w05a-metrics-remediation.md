@@ -4,7 +4,7 @@
 
 2026년 9월 29일 수업 보강자료 · 주교재 3.9의 성과지표와 이전 순위 평가 복습
 
-지표의 공식을 읽을 수 있어도 무엇을 측정하는지 설명하기는 어렵습니다. 이 자료에서는 같은 숫자를 여러 관점에서 보며 **단위, 분자, 분모, 비교 대상**을 먼저 확인합니다. [본 강의](../sessions/w05a-model-comparison.md)와 [계산 실습 A](https://colab.research.google.com/github/lunalab-ai/recommender/blob/2026-fall-w05a/notebooks/student/w05a-review-metrics.ipynb)를 함께 사용할 수 있습니다.
+지표의 공식을 읽을 수 있어도 무엇을 측정하는지 설명하기는 어렵습니다. 이 자료에서는 같은 숫자를 여러 관점에서 보며 **단위, 분자, 분모, 비교 대상**을 먼저 확인합니다. [본 강의](../sessions/w05a-model-comparison.md)와 [계산 실습 A](https://colab.research.google.com/github/lunalab-ai/recommender/blob/2026-fall-w05a-v2/notebooks/student/w05a-review-metrics.ipynb)를 함께 사용할 수 있습니다.
 
 ## 1. 평가 질문부터 세 가지로 나누기
 
@@ -176,4 +176,4 @@ F1은 먼저 사용자별 P·R로 계산하고 그 F1들을 평균합니다. 평
 
 - [Stanford IR: 집합 평가](https://nlp.stanford.edu/IR-book/html/htmledition/evaluation-of-unranked-retrieval-sets-1.html), [순위 평가](https://nlp.stanford.edu/IR-book/html/htmledition/evaluation-of-ranked-retrieval-results-1.html).
 - [MovieLens100K README](https://files.grouplens.org/datasets/movielens/ml-100k-README.txt).
-- [실제 수업 지표 구현](https://github.com/lunalab-ai/recommender/blob/2026-fall-w05a/src/luna_recsys/ranking.py#L163): 요청 N을 Precision 분모로 사용하는 규약. 자료 확인: 2026-09-28.
+- [실제 수업 지표 구현](https://github.com/lunalab-ai/recommender/blob/2026-fall-w05a-v2/src/luna_recsys/ranking.py#L163): 요청 N을 Precision 분모로 사용하는 규약. 자료 확인: 2026-09-28.

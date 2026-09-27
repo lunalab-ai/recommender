@@ -23,4 +23,7 @@ train/validation/test는 60,000/20,000/20,000건이며, test 직전에는 train+
 
 38개 탐색 설정과 12개 기본 설정 및 17개 최종 설정은 같은 개수를 뜻하지 않습니다. 전체 표와 100명 표본의 수치를 바로 빼서 개선량으로 보고하지 마세요. test 결과를 보고 설정을 다시 선택하지 마세요.
 
-[실습 B](https://colab.research.google.com/github/lunalab-ai/recommender/blob/2026-fall-w05a/notebooks/student/w05a-model-comparison.ipynb) · [공개 구현](https://github.com/lunalab-ai/recommender/blob/2026-fall-w05a/src/luna_recsys/model_comparison.py) · [GroupLens](https://grouplens.org/datasets/movielens/100k/)
+[실습 B](https://colab.research.google.com/github/lunalab-ai/recommender/blob/2026-fall-w05a-v2/notebooks/student/w05a-model-comparison.ipynb) · [공개 구현](https://github.com/lunalab-ai/recommender/blob/2026-fall-w05a-v2/src/luna_recsys/model_comparison.py) · [GroupLens](https://grouplens.org/datasets/movielens/100k/)
+
+
+2026-09-28 호환성 수정: 관측쌍 식별자는 UTF-8 CSV의 CRLF 줄바꿈으로 고정하여 Windows/Linux에서 동일하게 계산합니다. 기존 Windows 실측 해시와 분할·성과 수치는 그대로입니다. protocol.json의 source_sha256는 원실험 당시 코드 해시이며, 호환성 수정 내역을 별도로 기록했습니다.

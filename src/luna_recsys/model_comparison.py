@@ -103,8 +103,8 @@ def cohort(heldout: pd.DataFrame, limit: int | None = 100, seed: int = 20260929)
 
 
 def pair_digest(frame: pd.DataFrame) -> str:
-    """ID쌍을 정렬한 SHA256. 레이블을 포함하지 않는 분할 식별자."""
-    raw=frame[['user_id','movie_id']].sort_values(['user_id','movie_id']).to_csv(index=False)
+    """ID쌍 정렬 후 UTF-8/CRLF CSV의 SHA256. OS와 레이블에 독립인 식별자."""
+    raw=frame[['user_id','movie_id']].sort_values(['user_id','movie_id']).to_csv(index=False,lineterminator='\r\n')
     return hashlib.sha256(raw.encode()).hexdigest()
 
 
@@ -252,7 +252,7 @@ def select_best(validation_results: pd.DataFrame, metric: str = 'ndcg') -> pd.Da
     return rows.sort_values([metric,'name'],ascending=[metric=='rmse',True]).drop_duplicates('family').copy()
 
 
-def definition_link(obj, ref: str = '2026-fall-w05a') -> str:
+def definition_link(obj, ref: str = '2026-fall-w05a-v2') -> str:
     """실제 설치된 luna_recsys 객체의 정의 시작 줄로 GitHub 바로가기 생성.
 
     obj는 공개 함수·클래스·메소드; ref는노트북설치태그와같아야한다.
