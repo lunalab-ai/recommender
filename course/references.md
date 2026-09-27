@@ -21,6 +21,9 @@
 | 이전 수업 버전 보관 | [w01a 원 수업 실습 버전](https://github.com/lunalab-ai/recommender/tree/2026-fall-w01a-r3/notebooks/student) | 한국어 | 기존 수업 링크는 보존합니다. 설명과 풀이를 보완한 현재 실습은 위 수업 표에서 엽니다. |
 | 이전 수업 버전 보관 | [w01b 원 수업 실습 버전](https://github.com/lunalab-ai/recommender/tree/2026-fall-w01b/notebooks/student) | 한국어 | 기존 수업 링크는 보존합니다. 설명과 풀이를 보완한 현재 실습은 위 수업 표에서 엽니다. |
 | 이전 수업 버전 보관 | [w02a 원 수업 실습 버전](https://github.com/lunalab-ai/recommender/tree/2026-fall-w02a/notebooks/student) | 한국어 | 기존 수업 링크는 보존합니다. 설명과 풀이를 보완한 현재 실습은 위 수업 표에서 엽니다. |
+| W05A 복습과 실험 | [W05A 실습 A · 모델과 지표 복습](https://colab.research.google.com/github/lunalab-ai/recommender/blob/2026-fall-w05a/notebooks/student/w05a-review-metrics.ipynb) | 한국어 | 작은 표의 계산부터 지표 해석과 미니 웹 앱까지 |
+| W05A 복습과 실험 | [W05A 지표 보강 노트](../course/notion/supplements/w05a-metrics-remediation.md) | 한국어 | MAE/RMSE, Precision/Recall, NDCG를 그림과 계산으로 복습 |
+| W05A 복습과 실험 | [W05A 실험 기록 양식](../course/notion/supplements/w05a-experiment-record.md) | 한국어 | 목적·고정 조건·변경 설정·수치·목록·한계를 남기는 양식 |
 
 ## 차시별 출처와 참고 링크
 
@@ -211,3 +214,35 @@ CF는 관측 행렬에서 비교 가능한 이웃을 찾고 그들의 평가를 
 - [CFLab·callback·앱](https://github.com/lunalab-ai/recommender/blob/2026-fall-w04b/src/luna_recsys/synthesis_app.py#L52)
 - [데이터 준비 함수](https://github.com/lunalab-ai/recommender/blob/2026-fall-w04a-v2/src/luna_recsys/datasets.py#L62)
 - [분리 함수](https://github.com/lunalab-ai/recommender/blob/2026-fall-w04a-v2/src/luna_recsys/evaluation.py#L28)
+
+### W05A · 추천시스템 핵심 복습과 동일 데이터 모델 비교·튜닝·평가
+
+[강의 원문](notion/sessions/w05a-model-comparison.md)
+
+강의 원문에 참고자료 절이 아직 작성되지 않았습니다.
+
+본문에서 함께 소개한 링크:
+
+- [실습 A: 모델·지표 복습](https://colab.research.google.com/github/lunalab-ai/recommender/blob/2026-fall-w05a/notebooks/student/w05a-review-metrics.ipynb)
+- [실습 B: 비교·튜닝·웹 앱](https://colab.research.google.com/github/lunalab-ai/recommender/blob/2026-fall-w05a/notebooks/student/w05a-model-comparison.ipynb)
+- [전체 실험 CSV와 분할·선택 기록](https://github.com/lunalab-ai/recommender/tree/2026-fall-w05a/data/sample/w05a-results)
+- [ModelSpec](https://github.com/lunalab-ai/recommender/blob/2026-fall-w05a/src/luna_recsys/model_comparison.py#L21)
+- [ComparisonSuite](https://github.com/lunalab-ai/recommender/blob/2026-fall-w05a/src/luna_recsys/model_comparison.py#L111)
+- [ComparisonSuite.model](https://github.com/lunalab-ai/recommender/blob/2026-fall-w05a/src/luna_recsys/model_comparison.py#L131)
+- [ComparisonSuite.recommend](https://github.com/lunalab-ai/recommender/blob/2026-fall-w05a/src/luna_recsys/model_comparison.py#L150)
+- [ComparisonSuite.evaluate](https://github.com/lunalab-ai/recommender/blob/2026-fall-w05a/src/luna_recsys/model_comparison.py#L172)
+- [compare](https://github.com/lunalab-ai/recommender/blob/2026-fall-w05a/src/luna_recsys/model_comparison.py#L226)
+- [select_best](https://github.com/lunalab-ai/recommender/blob/2026-fall-w05a/src/luna_recsys/model_comparison.py#L241)
+- [split_three](https://github.com/lunalab-ai/recommender/blob/2026-fall-w05a/src/luna_recsys/model_comparison.py#L81)
+- [ranking_metrics](https://github.com/lunalab-ai/recommender/blob/2026-fall-w05a/src/luna_recsys/ranking.py#L163)
+- [ComparisonLab](https://github.com/lunalab-ai/recommender/blob/2026-fall-w05a/src/luna_recsys/comparison_lab.py#L16)
+- [ComparisonLab.metrics](https://github.com/lunalab-ai/recommender/blob/2026-fall-w05a/src/luna_recsys/comparison_lab.py#L32)
+- [comparison_view](https://github.com/lunalab-ai/recommender/blob/2026-fall-w05a/src/luna_recsys/comparison_lab.py#L39)
+- [build_comparison_app](https://github.com/lunalab-ai/recommender/blob/2026-fall-w05a/src/luna_recsys/comparison_lab.py#L87)
+- [GroupLens MovieLens100K](https://grouplens.org/datasets/movielens/100k/)
+- [공식 README](https://files.grouplens.org/datasets/movielens/ml-100k-README.txt)
+- [Stanford IR: 집합 기반 평가](https://nlp.stanford.edu/IR-book/html/htmledition/evaluation-of-unranked-retrieval-sets-1.html)
+- [순위 기반 평가](https://nlp.stanford.edu/IR-book/html/htmledition/evaluation-of-ranked-retrieval-results-1.html)
+- [scikit-learn: 검증과 test 분리](https://scikit-learn.org/stable/modules/cross_validation.html)
+- [Surprise: 이웃 기반 알고리즘](https://surprise.readthedocs.io/en/stable/knn_inspired.html)
+- [Gradio Blocks](https://gradio.app/docs/gradio/blocks)

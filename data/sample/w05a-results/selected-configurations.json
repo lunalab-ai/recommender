@@ -1,0 +1,340 @@
+{
+  "ranking": [
+    {
+      "family": "count",
+      "name": "count",
+      "ndcg": 0.1343400793067545
+    },
+    {
+      "family": "user-evidence",
+      "name": "user-evidence-c3-m3",
+      "ndcg": 0.049120539341123086
+    },
+    {
+      "family": "content",
+      "name": "content-5",
+      "ndcg": 0.03996240257371966
+    },
+    {
+      "family": "item-k",
+      "name": "item-k5",
+      "ndcg": 0.03983396566230106
+    },
+    {
+      "family": "global",
+      "name": "global",
+      "ndcg": 0.035635777364034685
+    },
+    {
+      "family": "group",
+      "name": "group-occupation-1",
+      "ndcg": 0.026825339623905597
+    },
+    {
+      "family": "user-centered",
+      "name": "user-centered5",
+      "ndcg": 0.025039972432903387
+    },
+    {
+      "family": "user-k",
+      "name": "user-k5",
+      "ndcg": 0.017338438609643788
+    },
+    {
+      "family": "item-evidence",
+      "name": "item-evidence-c1-m2",
+      "ndcg": 0.012618127239969835
+    },
+    {
+      "family": "movie",
+      "name": "movie",
+      "ndcg": 0.0023898149182119146
+    },
+    {
+      "family": "user-all",
+      "name": "user-all",
+      "ndcg": 0.0023898149182119146
+    },
+    {
+      "family": "pearson",
+      "name": "pearson-all-c3",
+      "ndcg": 0.0006426342242318357
+    }
+  ],
+  "rating": [
+    {
+      "family": "user-evidence",
+      "name": "user-evidence-c3-m2",
+      "rmse": 0.9530297601140779
+    },
+    {
+      "family": "user-centered",
+      "name": "user-centered-k30",
+      "rmse": 0.9548803027656259
+    },
+    {
+      "family": "item-k",
+      "name": "item-k10",
+      "rmse": 0.9872395841164157
+    },
+    {
+      "family": "item-evidence",
+      "name": "item-evidence-c1-m2",
+      "rmse": 0.9936894826941295
+    },
+    {
+      "family": "user-k",
+      "name": "user-k30",
+      "rmse": 1.0199157052204872
+    },
+    {
+      "family": "user-all",
+      "name": "user-all",
+      "rmse": 1.023731694388502
+    },
+    {
+      "family": "pearson",
+      "name": "pearson-all-c3",
+      "rmse": 1.0261376957836381
+    },
+    {
+      "family": "movie",
+      "name": "movie",
+      "rmse": 1.0290085663871518
+    },
+    {
+      "family": "group",
+      "name": "group-sex-20",
+      "rmse": 1.0294835680907537
+    },
+    {
+      "family": "global",
+      "name": "global",
+      "rmse": 1.1244913140072617
+    }
+  ],
+  "frozen_before_test_at": "2026-09-27T19:49:40.105235+00:00",
+  "configs": [
+    {
+      "name": "global",
+      "family": "global",
+      "kind": "global",
+      "k": 30,
+      "min_common": 1,
+      "min_neighbors": 1,
+      "centered": false,
+      "clip": true,
+      "group_col": "sex",
+      "min_group_ratings": 1,
+      "like_threshold": 4
+    },
+    {
+      "name": "movie",
+      "family": "movie",
+      "kind": "movie",
+      "k": 30,
+      "min_common": 1,
+      "min_neighbors": 1,
+      "centered": false,
+      "clip": true,
+      "group_col": "sex",
+      "min_group_ratings": 1,
+      "like_threshold": 4
+    },
+    {
+      "name": "count",
+      "family": "count",
+      "kind": "count",
+      "k": 30,
+      "min_common": 1,
+      "min_neighbors": 1,
+      "centered": false,
+      "clip": true,
+      "group_col": "sex",
+      "min_group_ratings": 1,
+      "like_threshold": 4
+    },
+    {
+      "name": "user-all",
+      "family": "user-all",
+      "kind": "user",
+      "k": 0,
+      "min_common": 1,
+      "min_neighbors": 1,
+      "centered": false,
+      "clip": true,
+      "group_col": "sex",
+      "min_group_ratings": 1,
+      "like_threshold": 4
+    },
+    {
+      "name": "user-k30",
+      "family": "user-k",
+      "kind": "user",
+      "k": 30,
+      "min_common": 1,
+      "min_neighbors": 1,
+      "centered": false,
+      "clip": true,
+      "group_col": "sex",
+      "min_group_ratings": 1,
+      "like_threshold": 4
+    },
+    {
+      "name": "user-centered-k30",
+      "family": "user-centered",
+      "kind": "user",
+      "k": 30,
+      "min_common": 1,
+      "min_neighbors": 1,
+      "centered": true,
+      "clip": true,
+      "group_col": "sex",
+      "min_group_ratings": 1,
+      "like_threshold": 4
+    },
+    {
+      "name": "user-evidence-c3-m2",
+      "family": "user-evidence",
+      "kind": "user",
+      "k": 30,
+      "min_common": 3,
+      "min_neighbors": 2,
+      "centered": true,
+      "clip": true,
+      "group_col": "sex",
+      "min_group_ratings": 1,
+      "like_threshold": 4
+    },
+    {
+      "name": "pearson-all-c3",
+      "family": "pearson",
+      "kind": "pearson",
+      "k": 0,
+      "min_common": 3,
+      "min_neighbors": 1,
+      "centered": false,
+      "clip": true,
+      "group_col": "sex",
+      "min_group_ratings": 1,
+      "like_threshold": 4
+    },
+    {
+      "name": "group-sex-20",
+      "family": "group",
+      "kind": "group",
+      "k": 30,
+      "min_common": 1,
+      "min_neighbors": 1,
+      "centered": false,
+      "clip": true,
+      "group_col": "sex",
+      "min_group_ratings": 20,
+      "like_threshold": 4
+    },
+    {
+      "name": "group-occupation-1",
+      "family": "group",
+      "kind": "group",
+      "k": 30,
+      "min_common": 1,
+      "min_neighbors": 1,
+      "centered": false,
+      "clip": true,
+      "group_col": "occupation",
+      "min_group_ratings": 1,
+      "like_threshold": 4
+    },
+    {
+      "name": "content-5",
+      "family": "content",
+      "kind": "content",
+      "k": 30,
+      "min_common": 1,
+      "min_neighbors": 1,
+      "centered": false,
+      "clip": true,
+      "group_col": "sex",
+      "min_group_ratings": 1,
+      "like_threshold": 5
+    },
+    {
+      "name": "user-k5",
+      "family": "user-k",
+      "kind": "user",
+      "k": 5,
+      "min_common": 1,
+      "min_neighbors": 1,
+      "centered": false,
+      "clip": true,
+      "group_col": "sex",
+      "min_group_ratings": 1,
+      "like_threshold": 4
+    },
+    {
+      "name": "user-centered5",
+      "family": "user-centered",
+      "kind": "user",
+      "k": 5,
+      "min_common": 1,
+      "min_neighbors": 1,
+      "centered": true,
+      "clip": true,
+      "group_col": "sex",
+      "min_group_ratings": 1,
+      "like_threshold": 4
+    },
+    {
+      "name": "item-k5",
+      "family": "item-k",
+      "kind": "item",
+      "k": 5,
+      "min_common": 1,
+      "min_neighbors": 1,
+      "centered": false,
+      "clip": true,
+      "group_col": "sex",
+      "min_group_ratings": 1,
+      "like_threshold": 4
+    },
+    {
+      "name": "item-k10",
+      "family": "item-k",
+      "kind": "item",
+      "k": 10,
+      "min_common": 1,
+      "min_neighbors": 1,
+      "centered": false,
+      "clip": true,
+      "group_col": "sex",
+      "min_group_ratings": 1,
+      "like_threshold": 4
+    },
+    {
+      "name": "user-evidence-c3-m3",
+      "family": "user-evidence",
+      "kind": "user",
+      "k": 30,
+      "min_common": 3,
+      "min_neighbors": 3,
+      "centered": true,
+      "clip": true,
+      "group_col": "sex",
+      "min_group_ratings": 1,
+      "like_threshold": 4
+    },
+    {
+      "name": "item-evidence-c1-m2",
+      "family": "item-evidence",
+      "kind": "item",
+      "k": 30,
+      "min_common": 1,
+      "min_neighbors": 2,
+      "centered": false,
+      "clip": true,
+      "group_col": "sex",
+      "min_group_ratings": 1,
+      "like_threshold": 4
+    }
+  ]
+}

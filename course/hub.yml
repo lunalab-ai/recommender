@@ -33,6 +33,10 @@ sessions:
     date: '2026-09-23'
     colab_ref: 2026-fall-w04b
     notion_url: https://fancy-ballcap-a15.notion.site/W04B-2026-09-23-3e37fd00109f8171aa64d504be1576f8
+  w05a:
+    date: '2026-09-29'
+    colab_ref: 2026-fall-w05a
+    notion_url: https://fancy-ballcap-a15.notion.site/3e87fd00109f817ea872d0a0474f5196
 resources:
 - group: Python 기초
   title: 이 수업을 위한 Python 복습 길잡이
@@ -99,3 +103,18 @@ resources:
   url: https://github.com/lunalab-ai/recommender/tree/2026-fall-w02a/notebooks/student
   language: 한국어
   purpose: 기존 수업 링크는 보존합니다. 설명과 풀이를 보완한 현재 실습은 위 수업 표에서 엽니다.
+- group: W05A 복습과 실험
+  title: W05A 실습 A · 모델과 지표 복습
+  url: https://colab.research.google.com/github/lunalab-ai/recommender/blob/2026-fall-w05a/notebooks/student/w05a-review-metrics.ipynb
+  language: 한국어
+  purpose: 작은 표의 계산부터 지표 해석과 미니 웹 앱까지
+- group: W05A 복습과 실험
+  title: W05A 지표 보강 노트
+  url: course/notion/supplements/w05a-metrics-remediation.md
+  language: 한국어
+  purpose: MAE/RMSE, Precision/Recall, NDCG를 그림과 계산으로 복습
+- group: W05A 복습과 실험
+  title: W05A 실험 기록 양식
+  url: course/notion/supplements/w05a-experiment-record.md
+  language: 한국어
+  purpose: 목적·고정 조건·변경 설정·수치·목록·한계를 남기는 양식

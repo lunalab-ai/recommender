@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="684pt" height="192.924pt" viewBox="0 0 684 192.924" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:date>2026-09-28T05:01:51.044551</dc:date>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Matplotlib v3.11.1, https://matplotlib.org/</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 192.924
+L 684 192.924
+L 684 0
+L 0 0
+z
+" style="fill: #ffffff"/>
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 21.708 177.8238
+L 215.892 177.8238
+Q 223.704 177.8238 223.704 172.29366
+L 223.704 42.73038
+Q 223.704 37.20024 215.892 37.20024
+L 21.708 37.20024
+Q 13.896 37.20024 13.896 42.73038
+L 13.896 172.29366
+Q 13.896 177.8238 21.708 177.8238
+z
+" clip-path="url(#p97370a19bc)" style="fill: #eff7fa; stroke: #a6c9ce; stroke-width: 1.4; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_3">
+    <path d="M 244.908 177.8238
+L 439.092 177.8238
+Q 446.904 177.8238 446.904 172.29366
+L 446.904 42.73038
+Q 446.904 37.20024 439.092 37.20024
+L 244.908 37.20024
+Q 237.096 37.20024 237.096 42.73038
+L 237.096 172.29366
+Q 237.096 177.8238 244.908 177.8238
+z
+" clip-path="url(#p97370a19bc)" style="fill: #eff7fa; stroke: #a6c9ce; stroke-width: 1.4; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_4">
+    <path d="M 468.108 177.8238
+L 662.292 177.8238
+Q 670.104 177.8238 670.104 172.29366
+L 670.104 42.73038
+Q 670.104 37.20024 662.292 37.20024
+L 468.108 37.20024
+Q 460.296 37.20024 460.296 42.73038
+L 460.296 172.29366
+Q 460.296 177.8238 468.108 177.8238
+z
+" clip-path="url(#p97370a19bc)" style="fill: #eff7fa; stroke: #a6c9ce; stroke-width: 1.4; stroke-linejoin: miter"/>
+   </g>
+   <g id="text_1">
+    <text style="font-weight: 700; font-size: 16px; font-family: 'Malgun Gothic'; text-anchor: middle; fill: #087f8c" x="118.8" y="74.144477" transform="rotate(-0 118.8 74.144477)">CF 근거 확보</text>
+   </g>
+   <g id="text_2">
+    <text style="font-size: 13px; font-family: 'Malgun Gothic'; fill: #172d4f" transform="translate(43.792031 106.102791)">CF로 예측한 평가 관측 수</text>
+    <text style="font-size: 13px; font-family: 'Malgun Gothic'; fill: #172d4f" transform="translate(59.605312 127.552791)">÷ 전체 평가 관측 수</text>
+    <text style="font-size: 13px; font-family: 'Malgun Gothic'; fill: #172d4f" transform="translate(40.444531 148.952009)">평균 대체는 분자에서 제외</text>
+   </g>
+   <g id="text_3">
+    <text style="font-weight: 700; font-size: 16px; font-family: 'Malgun Gothic'; text-anchor: middle; fill: #087f8c" x="342" y="74.144477" transform="rotate(-0 342 74.144477)">카탈로그 노출</text>
+   </g>
+   <g id="text_4">
+    <text style="font-size: 13px; font-family: 'Malgun Gothic'; fill: #172d4f" transform="translate(259.074219 106.150525)">추천 목록에 한 번 이상 나온</text>
+    <text style="font-size: 13px; font-family: 'Malgun Gothic'; fill: #172d4f" transform="translate(273.563125 127.210525)">고유 영화 수 ÷ 1,682편</text>
+    <text style="font-size: 13px; font-family: 'Malgun Gothic'; fill: #172d4f" transform="translate(259.074219 148.952009)">한 영화를 여러 번 세지 않음</text>
+   </g>
+   <g id="text_5">
+    <text style="font-weight: 700; font-size: 16px; font-family: 'Malgun Gothic'; text-anchor: middle; fill: #087f8c" x="565.2" y="74.031977" transform="rotate(-0 565.2 74.031977)">사용자 평균 성과</text>
+   </g>
+   <g id="text_6">
+    <text style="font-size: 13px; font-family: 'Malgun Gothic'; fill: #172d4f" transform="translate(495.629688 106.052009)">사용자마다 지표를 계산</text>
+    <text style="font-size: 13px; font-family: 'Malgun Gothic'; fill: #172d4f" transform="translate(500.168516 127.502009)">→ 같은 비중으로 평균</text>
+    <text style="font-size: 13px; font-family: 'Malgun Gothic'; fill: #172d4f" transform="translate(475.774219 148.952009)">관련 영화 없음은 제외 수 보고</text>
+   </g>
+  </g>
+  <g id="text_7">
+   <text style="font-weight: 700; font-size: 20px; font-family: 'Malgun Gothic'; text-anchor: middle; fill: #172d4f" x="331.2" y="24.28125" transform="rotate(-0 331.2 24.28125)">coverage는 이름보다 분모를 먼저 읽는다</text>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="p97370a19bc">
+   <rect x="7.2" y="27.72" width="669.6" height="158.004"/>
+  </clipPath>
+ </defs>
+</svg>
