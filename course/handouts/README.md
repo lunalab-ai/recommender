@@ -13,3 +13,4 @@
 | W04A · 이웃 기반 CF의 개선 | [다운로드](w04a-neighborhood-cf.pdf) | [답안 PDF](w04a-neighborhood-cf-quiz.pdf) | [답안 보기](w04a-neighborhood-cf-quiz.md) |
 | W04B · 협업 필터링 총정리 | [다운로드](w04b-cf-synthesis.pdf) | [답안 PDF](w04b-cf-synthesis-quiz.pdf) | [답안 보기](w04b-cf-synthesis-quiz.md) |
 | W05A · 추천시스템 핵심 복습과 동일 데이터 모델 비교·튜닝·평가 | [다운로드](w05a-model-comparison.pdf) | [답안 PDF](w05a-model-comparison-quiz.pdf) | [답안 보기](w05a-model-comparison-quiz.md) |
+| W05B · 행렬요인화(MF)와 SGD | [다운로드](w05b-mf-sgd.pdf) | [답안 PDF](w05b-mf-sgd-quiz.pdf) | [답안 보기](w05b-mf-sgd-quiz.md) |

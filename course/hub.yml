@@ -37,6 +37,10 @@ sessions:
     date: '2026-09-29'
     colab_ref: 2026-fall-w05a-v2
     notion_url: https://fancy-ballcap-a15.notion.site/3e87fd00109f817ea872d0a0474f5196
+  w05b:
+    date: '2026-10-01'
+    colab_ref: 2026-fall-w05b
+    notion_url: https://fancy-ballcap-a15.notion.site/W05b-MF-SGD-3ea7fd00109f81149c30cae158dd5271
 resources:
 - group: Python 기초
   title: 이 수업을 위한 Python 복습 길잡이
@@ -118,3 +122,13 @@ resources:
   url: course/notion/supplements/w05a-experiment-record.md
   language: 한국어
   purpose: 목적·고정 조건·변경 설정·수치·목록·한계를 남기는 양식
+- group: W05B MF와 SGD
+  title: W05B 실습 A · SGD 한 단계
+  url: https://colab.research.google.com/github/lunalab-ai/recommender/blob/2026-fall-w05b/notebooks/student/w05b-sgd-step.ipynb
+  language: 한국어
+  purpose: 관측·내적·편향·기울기를 숫자로 계산
+- group: W05B MF와 SGD
+  title: W05B SGD 손계산 워크북
+  url: https://fancy-ballcap-a15.notion.site/W05B-SGD-3ea7fd00109f81858004ec041a8e151d
+  language: 한국어
+  purpose: 미분을 한 줄씩 읽고 여섯 모수의 갱신을 따라가기

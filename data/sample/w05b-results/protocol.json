@@ -1,0 +1,17 @@
+{
+  "data": "MovieLens 100K",
+  "all_observations": 100000,
+  "training_sample": 20000,
+  "sample_seed": 20261001,
+  "model": {
+    "K": 8,
+    "alpha": 0.02,
+    "beta": 0.02,
+    "epochs": 12,
+    "init_scale": 0.1,
+    "seed": 20261001
+  },
+  "initial_train_rmse": 1.125559542801612,
+  "final_train_rmse": 0.7939861560860365,
+  "scope": "training observations only; no held-out accuracy or ranking quality claim"
+}

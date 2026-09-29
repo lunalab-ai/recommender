@@ -24,6 +24,8 @@
 | W05A 복습과 실험 | [W05A 실습 A · 모델과 지표 복습](https://colab.research.google.com/github/lunalab-ai/recommender/blob/2026-fall-w05a-v2/notebooks/student/w05a-review-metrics.ipynb) | 한국어 | 작은 표의 계산부터 지표 해석과 미니 웹 앱까지 |
 | W05A 복습과 실험 | [W05A 지표 보강 노트](../course/notion/supplements/w05a-metrics-remediation.md) | 한국어 | MAE/RMSE, Precision/Recall, NDCG를 그림과 계산으로 복습 |
 | W05A 복습과 실험 | [W05A 실험 기록 양식](../course/notion/supplements/w05a-experiment-record.md) | 한국어 | 목적·고정 조건·변경 설정·수치·목록·한계를 남기는 양식 |
+| W05B MF와 SGD | [W05B 실습 A · SGD 한 단계](https://colab.research.google.com/github/lunalab-ai/recommender/blob/2026-fall-w05b/notebooks/student/w05b-sgd-step.ipynb) | 한국어 | 관측·내적·편향·기울기를 숫자로 계산 |
+| W05B MF와 SGD | [W05B SGD 손계산 워크북](https://fancy-ballcap-a15.notion.site/W05B-SGD-3ea7fd00109f81858004ec041a8e151d) | 한국어 | 미분을 한 줄씩 읽고 여섯 모수의 갱신을 따라가기 |
 
 ## 차시별 출처와 참고 링크
 
@@ -246,3 +248,29 @@ CF는 관측 행렬에서 비교 가능한 이웃을 찾고 그들의 평가를 
 - [scikit-learn: 검증과 test 분리](https://scikit-learn.org/stable/modules/cross_validation.html)
 - [Surprise: 이웃 기반 알고리즘](https://surprise.readthedocs.io/en/stable/knn_inspired.html)
 - [Gradio Blocks](https://gradio.app/docs/gradio/blocks)
+
+### W05B · 행렬요인화(MF)와 SGD
+
+[강의 원문](notion/sessions/w05b-mf-sgd.md)
+
+강의 원문에 참고자료 절이 아직 작성되지 않았습니다.
+
+본문에서 함께 소개한 링크:
+
+- [실험 설정과 epoch별 수치](https://github.com/lunalab-ai/recommender/tree/2026-fall-w05b/data/sample/w05b-results)
+- [Google MF 설명](https://developers.google.com/machine-learning/recommendation/collaborative/matrix)
+- [Surprise MF 문서](https://surprise.readthedocs.io/en/stable/matrix_factorization.html)
+- [GroupLens 공식 데이터 설명](https://files.grouplens.org/datasets/movielens/ml-100k-README.txt)
+- [Gradio Blocks](https://www.gradio.app/docs/gradio/blocks)
+- [Colab A · 한 단계 손계산](https://colab.research.google.com/github/lunalab-ai/recommender/blob/2026-fall-w05b/notebooks/student/w05b-sgd-step.ipynb)
+- [Colab B · MF 학습과 웹 앱](https://colab.research.google.com/github/lunalab-ai/recommender/blob/2026-fall-w05b/notebooks/student/w05b-mf-sgd.ipynb)
+- [MFSGD](https://github.com/lunalab-ai/recommender/blob/2026-fall-w05b/src/luna_recsys/mf_sgd.py#L54)
+- [MFSGD.fit](https://github.com/lunalab-ai/recommender/blob/2026-fall-w05b/src/luna_recsys/mf_sgd.py#L73)
+- [MFSGD.predict](https://github.com/lunalab-ai/recommender/blob/2026-fall-w05b/src/luna_recsys/mf_sgd.py#L150)
+- [MFSGD.explain](https://github.com/lunalab-ai/recommender/blob/2026-fall-w05b/src/luna_recsys/mf_sgd.py#L133)
+- [MFSGD.rmse](https://github.com/lunalab-ai/recommender/blob/2026-fall-w05b/src/luna_recsys/mf_sgd.py#L154)
+- [MFSGD.recommend](https://github.com/lunalab-ai/recommender/blob/2026-fall-w05b/src/luna_recsys/mf_sgd.py#L165)
+- [sgd_step](https://github.com/lunalab-ai/recommender/blob/2026-fall-w05b/src/luna_recsys/mf_sgd.py#L15)
+- [step_view](https://github.com/lunalab-ai/recommender/blob/2026-fall-w05b/src/luna_recsys/mf_lab.py#L10)
+- [training_view](https://github.com/lunalab-ai/recommender/blob/2026-fall-w05b/src/luna_recsys/mf_lab.py#L29)
+- [build_mf_app](https://github.com/lunalab-ai/recommender/blob/2026-fall-w05b/src/luna_recsys/mf_lab.py#L45)
