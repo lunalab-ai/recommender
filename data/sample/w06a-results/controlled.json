@@ -1,0 +1,32 @@
+[
+  {
+    "experiment": "learning_rate",
+    "lr": 0.002,
+    "best_rmse": 1.0787059121565488
+  },
+  {
+    "experiment": "learning_rate",
+    "lr": 0.02,
+    "best_rmse": 1.0787059121565488
+  },
+  {
+    "experiment": "learning_rate",
+    "lr": 0.08,
+    "best_rmse": 1.0787059121565488
+  },
+  {
+    "experiment": "initialization_seed",
+    "seed": 1,
+    "best_rmse": 1.0810032760272565
+  },
+  {
+    "experiment": "initialization_seed",
+    "seed": 2,
+    "best_rmse": 1.080400053047355
+  },
+  {
+    "experiment": "initialization_seed",
+    "seed": 3,
+    "best_rmse": 1.0863325305897347
+  }
+]

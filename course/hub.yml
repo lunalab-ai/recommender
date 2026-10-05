@@ -41,6 +41,10 @@ sessions:
     date: '2026-10-01'
     colab_ref: 2026-fall-w05b
     notion_url: https://fancy-ballcap-a15.notion.site/W05b-MF-SGD-3ea7fd00109f81149c30cae158dd5271
+  w06a:
+    date: '2026-10-06'
+    colab_ref: 2026-fall-w06a
+    notion_url: https://fancy-ballcap-a15.notion.site/W06a-MF-MF-SVD-3f07fd00109f813780c8efefc6f50336
 resources:
 - group: Python 기초
   title: 이 수업을 위한 Python 복습 길잡이
@@ -132,3 +136,13 @@ resources:
   url: https://fancy-ballcap-a15.notion.site/W05B-SGD-3ea7fd00109f81858004ec041a8e151d
   language: 한국어
   purpose: 미분을 한 줄씩 읽고 여섯 모수의 갱신을 따라가기
+- group: W06A MF 평가와 튜닝
+  title: W06A 실습 A · 분할과 검증
+  url: https://colab.research.google.com/github/lunalab-ai/recommender/blob/2026-fall-w06a/notebooks/student/w06a-mf-validation.ipynb
+  language: 한국어
+  purpose: 작은 표의 분할·지표 계산에서 실제 학습·검증 곡선까지
+- group: W06A MF 평가와 튜닝
+  title: W06A 평가 손계산 워크북
+  url: https://fancy-ballcap-a15.notion.site/W06A-MF-3f07fd00109f81c2be33d73f8961efae
+  language: 한국어
+  purpose: 관측 역할·오차·체크포인트·SVD를 직접 계산하고 실험 기록하기

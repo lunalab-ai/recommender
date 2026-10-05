@@ -26,6 +26,8 @@
 | W05A 복습과 실험 | [W05A 실험 기록 양식](../course/notion/supplements/w05a-experiment-record.md) | 한국어 | 목적·고정 조건·변경 설정·수치·목록·한계를 남기는 양식 |
 | W05B MF와 SGD | [W05B 실습 A · SGD 한 단계](https://colab.research.google.com/github/lunalab-ai/recommender/blob/2026-fall-w05b/notebooks/student/w05b-sgd-step.ipynb) | 한국어 | 관측·내적·편향·기울기를 숫자로 계산 |
 | W05B MF와 SGD | [W05B SGD 손계산 워크북](https://fancy-ballcap-a15.notion.site/W05B-SGD-3ea7fd00109f81858004ec041a8e151d) | 한국어 | 미분을 한 줄씩 읽고 여섯 모수의 갱신을 따라가기 |
+| W06A MF 평가와 튜닝 | [W06A 실습 A · 분할과 검증](https://colab.research.google.com/github/lunalab-ai/recommender/blob/2026-fall-w06a/notebooks/student/w06a-mf-validation.ipynb) | 한국어 | 작은 표의 분할·지표 계산에서 실제 학습·검증 곡선까지 |
+| W06A MF 평가와 튜닝 | [W06A 평가 손계산 워크북](https://fancy-ballcap-a15.notion.site/W06A-MF-3f07fd00109f81c2be33d73f8961efae) | 한국어 | 관측 역할·오차·체크포인트·SVD를 직접 계산하고 실험 기록하기 |
 
 ## 차시별 출처와 참고 링크
 
@@ -274,3 +276,32 @@ CF는 관측 행렬에서 비교 가능한 이웃을 찾고 그들의 평가를 
 - [step_view](https://github.com/lunalab-ai/recommender/blob/2026-fall-w05b/src/luna_recsys/mf_lab.py#L10)
 - [training_view](https://github.com/lunalab-ai/recommender/blob/2026-fall-w05b/src/luna_recsys/mf_lab.py#L29)
 - [build_mf_app](https://github.com/lunalab-ai/recommender/blob/2026-fall-w05b/src/luna_recsys/mf_lab.py#L45)
+
+### W06A · MF의 평가와 튜닝, MF와 SVD
+
+[강의 원문](notion/sessions/w06a-mf-evaluation.md)
+
+- 학습은 모수를 바꾸고, 검증은 설정을 고르며, 테스트는 선택이 끝난 모델을 채점합니다.
+- 최적 설정은 데이터·분할·후보·계산 조건을 함께 말해야 의미가 있습니다.
+- 완전한 행렬의 재구성과 미관측 평점의 예측은 다른 평가 문제입니다.
+
+주교재: 임일(2025), 『AI 에이전트를 위한 개인화 추천 알고리즘: Python, 머신러닝, AI, LLM 활용』, 청람, 4.4–4.6, 79–94쪽. 그림 4-4와 93쪽 도식은 수업용 직접 발췌, 나머지 그림과 2×2 예제는 수업용 제작입니다.
+
+- [scikit-learn: 모형 선택과 교차검증](https://scikit-learn.org/stable/modules/cross_validation.html)
+- [NumPy: SVD와 재구성](https://numpy.org/doc/stable/reference/generated/numpy.linalg.svd.html)
+- [Surprise: SGD 기반 SVD 구현](https://surprise.readthedocs.io/en/latest/matrix_factorization.html)
+- [GroupLens: MovieLens 100K와 이용 조건](https://grouplens.org/datasets/movielens/100k/)
+
+실측 기준: 2026-10-05, Python 3.12, 고정 seed·표본·분할. 실행시간은 환경에 따라 달라집니다. 재현 가능한 설정과 결과표는 실습에서 다시 확인합니다.
+
+본문에서 함께 소개한 링크:
+
+- [MFSGD.fit](https://github.com/lunalab-ai/recommender/blob/2026-fall-w06a/src/luna_recsys/mf_sgd.py#L73)
+- [MFSGD.predict](https://github.com/lunalab-ai/recommender/blob/2026-fall-w06a/src/luna_recsys/mf_sgd.py#L150)
+- [sgd_step](https://github.com/lunalab-ai/recommender/blob/2026-fall-w06a/src/luna_recsys/mf_sgd.py#L15)
+- [split_three_way](https://github.com/lunalab-ai/recommender/blob/2026-fall-w06a/src/luna_recsys/mf_evaluation.py#L44)
+- [fit_validated](https://github.com/lunalab-ai/recommender/blob/2026-fall-w06a/src/luna_recsys/mf_evaluation.py#L126)
+- [search_mf](https://github.com/lunalab-ai/recommender/blob/2026-fall-w06a/src/luna_recsys/mf_evaluation.py#L187)
+- [evaluate_mf](https://github.com/lunalab-ai/recommender/blob/2026-fall-w06a/src/luna_recsys/mf_evaluation.py#L99)
+- [svd_reconstruct](https://github.com/lunalab-ai/recommender/blob/2026-fall-w06a/src/luna_recsys/mf_evaluation.py#L211)
+- [build_evaluation_app](https://github.com/lunalab-ai/recommender/blob/2026-fall-w06a/src/luna_recsys/mf_evaluation_lab.py#L72)

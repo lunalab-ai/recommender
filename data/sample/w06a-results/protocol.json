@@ -1,0 +1,33 @@
+{
+  "data": "MovieLens100K fixed 20000-observation sample",
+  "seed": 20261006,
+  "split": [
+    12000,
+    4000,
+    4000
+  ],
+  "split_methods": [
+    "random-small-data",
+    "random-small-data"
+  ],
+  "search_seconds": 20.402848000012455,
+  "best_epoch": 7,
+  "K": 2,
+  "regularization": 0.2,
+  "learning_rate": 0.02,
+  "mf_test": {
+    "n": 4000,
+    "rmse": 0.977992676389323,
+    "mae": 0.7791494686746213,
+    "unknown_user": 10,
+    "unknown_item": 75,
+    "fallback_rows": 84
+  },
+  "global_mean_test": {
+    "n": 4000,
+    "rmse": 1.1214433160490598,
+    "mae": 0.9436873333333333
+  },
+  "mean_train": 3.529333333333333,
+  "note": "Test used only after validation selection. No refit, no clipping. Training sample differs from W05B; no direct generalization comparison."
+}
