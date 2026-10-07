@@ -29,6 +29,7 @@ concurrency:
 jobs:
   build:
     runs-on: ubuntu-latest
+    timeout-minutes: 20
     steps:
       - uses: actions/checkout@v4
         with:
@@ -37,6 +38,10 @@ jobs:
         with:
           python-version: '3.12'
       - run: pip install -r scripts/requirements-handouts.txt
+      - name: Use Ubuntu HTTPS mirror with bounded retries
+        run: |
+          printf '%s\n' 'https://archive.ubuntu.com/ubuntu/' | sudo tee /etc/apt/apt-mirrors.txt
+          printf '%s\n' 'Acquire::http::Timeout "30";' 'Acquire::https::Timeout "30";' 'Acquire::Retries "2";' | sudo tee /etc/apt/apt.conf.d/80-course-timeouts
       - run: python -m playwright install --with-deps chromium
       - run: sudo apt-get update && sudo apt-get install -y fonts-noto-cjk
       - run: python scripts/build_handouts.py
