@@ -28,6 +28,8 @@
 | W05B MF와 SGD | [W05B SGD 손계산 워크북](https://fancy-ballcap-a15.notion.site/W05B-SGD-3ea7fd00109f81858004ec041a8e151d) | 한국어 | 미분을 한 줄씩 읽고 여섯 모수의 갱신을 따라가기 |
 | W06A MF 평가와 튜닝 | [W06A 실습 A · 분할과 검증](https://colab.research.google.com/github/lunalab-ai/recommender/blob/2026-fall-w06a/notebooks/student/w06a-mf-validation.ipynb) | 한국어 | 작은 표의 분할·지표 계산에서 실제 학습·검증 곡선까지 |
 | W06A MF 평가와 튜닝 | [W06A 평가 손계산 워크북](https://fancy-ballcap-a15.notion.site/W06A-MF-3f07fd00109f81c2be33d73f8961efae) | 한국어 | 관측 역할·오차·체크포인트·SVD를 직접 계산하고 실험 기록하기 |
+| W06B SVD 기초 | [실습 B · rank와 웹 앱](https://colab.research.google.com/github/lunalab-ai/recommender/blob/2026-fall-w06b/notebooks/student/w06b-svd-reconstruction.ipynb) | 한국어 | rank·오차·미관측 반례·웹 앱 |
+| W06B SVD 기초 | [SVD 계산 문제편](../course/notion/supplements/w06b-calculation-practice.md) | 한국어 | 9문제의 독립 풀이와 검산 |
 
 ## 차시별 출처와 참고 링크
 
@@ -305,3 +307,17 @@ CF는 관측 행렬에서 비교 가능한 이웃을 찾고 그들의 평가를 
 - [evaluate_mf](https://github.com/lunalab-ai/recommender/blob/2026-fall-w06a/src/luna_recsys/mf_evaluation.py#L99)
 - [svd_reconstruct](https://github.com/lunalab-ai/recommender/blob/2026-fall-w06a/src/luna_recsys/mf_evaluation.py#L211)
 - [build_evaluation_app](https://github.com/lunalab-ai/recommender/blob/2026-fall-w06a/src/luna_recsys/mf_evaluation_lab.py#L72)
+
+### W06B · 고유값·고유벡터부터 이해하는 SVD와 추천시스템
+
+[강의 원문](notion/sessions/w06b-svd-foundations.md)
+
+고유벡터는 변환 후 같은 직선에 남는 특별한 방향입니다. 특이값은 $A^\top A$ 고유값의 음이 아닌 제곱근이며 입력의 단위방향이 늘어나는 길이 배율입니다. SVD는 방향별 패턴을 합쳐 행렬을 만들고, 일부만 남기면 저차원 근사가 됩니다. 원본 재구성과 미관측 평점 예측은 서로 다른 평가 문제입니다.
+
+- 주교재: 임일(2025), 『AI 에이전트를 위한 개인화 추천 알고리즘: Python, 머신러닝, AI, LLM 활용』, 청람, 4.6, 93–94쪽. 교재 도식 외 그림과 계산 예제는 자체 제작입니다.
+- [MIT OCW: SVD와 고유분해의 연결](https://ocw.mit.edu/courses/18-06sc-linear-algebra-fall-2011/pages/positive-definite-matrices-and-applications/singular-value-decomposition/)
+- [NumPy: SVD의 반환값과 재구성](https://numpy.org/doc/stable/reference/generated/numpy.linalg.svd.html)
+- [NumPy: 대칭행렬 고유분해 eigh](https://numpy.org/doc/stable/reference/generated/numpy.linalg.eigh.html)
+- [Surprise: SGD 기반 추천 SVD](https://surprise.readthedocs.io/en/stable/matrix_factorization.html)
+
+웹 문서 확인: 2026-10-08. 실습에서는 직접 계산한 값과 코드 출력을 비교하며 라이브러리 버전·검증 환경은 별도 실행 기록으로 남깁니다.

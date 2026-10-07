@@ -45,6 +45,10 @@ sessions:
     date: '2026-10-06'
     colab_ref: 2026-fall-w06a
     notion_url: https://fancy-ballcap-a15.notion.site/W06a-MF-MF-SVD-3f07fd00109f813780c8efefc6f50336
+  w06b:
+    date: '2026-10-08'
+    colab_ref: 2026-fall-w06b
+    notion_url: https://fancy-ballcap-a15.notion.site/W06b-SVD-3f27fd00109f81059e90c409d18410cf
 resources:
 - group: Python 기초
   title: 이 수업을 위한 Python 복습 길잡이
@@ -146,3 +150,13 @@ resources:
   url: https://fancy-ballcap-a15.notion.site/W06A-MF-3f07fd00109f81c2be33d73f8961efae
   language: 한국어
   purpose: 관측 역할·오차·체크포인트·SVD를 직접 계산하고 실험 기록하기
+- group: W06B SVD 기초
+  title: 실습 B · rank와 웹 앱
+  url: https://colab.research.google.com/github/lunalab-ai/recommender/blob/2026-fall-w06b/notebooks/student/w06b-svd-reconstruction.ipynb
+  language: 한국어
+  purpose: rank·오차·미관측 반례·웹 앱
+- group: W06B SVD 기초
+  title: SVD 계산 문제편
+  url: course/notion/supplements/w06b-calculation-practice.md
+  language: 한국어
+  purpose: 9문제의 독립 풀이와 검산
