@@ -1,0 +1,64 @@
+[W07a] SVD 마무리와 중간고사 대비 ①
+
+여러분, 안녕하세요.
+10월 13일(화) 추천시스템 수업 자료를 안내합니다.
+
+이번 시간에는 지난 수업의 SVD 섹션 8 이후와 실습을 마무리한 뒤, 1~2주차 내용을 작은 표와 계산으로 다시 살펴봅니다. 처음에 이해가 잘되지 않았던 부분이 있어도 괜찮습니다. 이번 복습에서는 ‘무엇을 더하는지, 무엇으로 나누는지, 어떤 조건으로 추천을 고르는지’를 함께 차근차근 확인하겠습니다.
+
+1. 이번 시간의 학습 자료
+
+Notion 핵심 요약 + 정답 없는 60문항
+https://fancy-ballcap-a15.notion.site/W07a-SVD-60-3f77fd00109f81bc9f3af9405a92fb8e
+
+SVD 섹션 8~13 마무리 노트
+https://fancy-ballcap-a15.notion.site/W07A-SVD-8-13-3f77fd00109f81489fdce9ed733004b4
+
+핵심 요약·문제 PDF
+https://github.com/lunalab-ai/recommender/releases/download/2026-fall-w07a/w07a-review-foundations.pdf
+
+인쇄용 60문항 문제지 PDF — 문항마다 풀이 공간이 있습니다.
+https://github.com/lunalab-ai/recommender/releases/download/2026-fall-w07a/w07a-practice-questions.pdf
+
+SVD 마무리 PDF
+https://github.com/lunalab-ai/recommender/releases/download/2026-fall-w07a/w07a-svd-finish.pdf
+
+SVD 점검 퀴즈 5개 해설 PDF — 중간고사 대비 60문항의 정답지는 아닙니다.
+https://github.com/lunalab-ai/recommender/releases/download/2026-fall-w07a/w07a-review-foundations-quiz.pdf
+
+2. Python 실습과 마지막 웹앱
+
+Colab A: 데이터·평균·집단 추천 / Q40~Q53
+https://colab.research.google.com/github/lunalab-ai/recommender/blob/2026-fall-w07a/notebooks/student/w07a-review-foundations.ipynb
+
+Colab B: 내용 기반 추천·평가·웹앱 / Q54~Q60
+https://colab.research.google.com/github/lunalab-ai/recommender/blob/2026-fall-w07a/notebooks/student/w07a-review-content-app.ipynb
+
+지난 SVD 실습 마무리용 Colab
+https://colab.research.google.com/github/lunalab-ai/recommender/blob/2026-fall-w06b/notebooks/student/w06b-svd-reconstruction.ipynb
+
+새 Colab A와 B는 각각 독립적으로 실행할 수 있습니다. ‘파일 → Drive에 사본 저장’으로 본인의 실습본을 만든 후 CPU 환경에서 위부터 실행하세요. GPU나 유료 API는 필요하지 않습니다. 새 실습의 필수 데이터는 코드에 포함된 작은 합성 표입니다. 설치 후 재시작 안내가 나오면 런타임을 재시작하고 첫 셀부터 다시 실행해 주세요.
+
+불러오는 수업 함수의 이름을 클릭하면 GitHub의 해당 버전·정의 위치로 이동합니다. 코드 전체를 외우기보다 입력과 출력, 평균의 분모, 조건문의 의미를 읽어 보세요.
+
+Colab B 마지막 웹앱에서는 추천 방식, 최소 평점 수, Top-K를 바꾸고 결과를 비교합니다. SVD 탭에서는 k를 바꾸어 재구성을 확인합니다. 먼저 결과를 예상한 뒤 실행하고, 본인이 쓴 설명 문장이 설정에 맞게 바뀌는지도 확인해 주세요. 앱 실행 후 생기는 gradio.live 주소는 임시 주소이므로, 나중에는 위 Colab B 링크에서 다시 실행하면 됩니다.
+
+3. 60문항은 이렇게 활용해 주세요
+
+일반 문제 39문항(65%), Python 문제 21문항(35%)입니다. Python은 빈칸 채우기, 오류 수정, 출력 추적으로 구성되어 있으며 특정 라이브러리의 사용법을 외우지 않아도 풀 수 있습니다.
+
+수업에서는 대표 문항 Q08·Q13·Q20·Q28·Q38·Q43·Q50·Q59를 중심으로 함께 생각합니다. 60문항을 한 번에 다 풀려고 서두르지 않아도 됩니다. 먼저 ‘기초’ 문항을 풀고, 막힌 문제에 표시한 다음 핵심 요약으로 돌아가 보세요.
+
+답만 적기보다 ‘사용한 개념과 조건 → 중간 계산 또는 코드 추적 → 최종 답과 의미 → 검산’을 남겨 주세요. 코드가 오류 없이 실행됐다는 사실과 자신의 풀이가 맞다는 사실은 다릅니다. 실행 결과를 예상한 이유도 설명해 보는 것이 중요합니다.
+
+중간고사는 이 학습자료의 문제를 조금씩 변형하여 출제할 예정입니다. 숫자만 외우기보다 조건이 바뀌어도 같은 원리로 풀 수 있도록 연습해 주세요. 이번 자료는 복습을 돕는 연습자료이며, 새로 부과하는 성적 과제나 제출 마감은 없습니다.
+
+4. 앞으로의 복습 일정
+
+10월 13일(화) W07a: 1~2주차 복습
+10월 15일(목) W07b: 3주차 복습
+10월 20일(화) W08a: 4주차 복습
+
+잘 풀리지 않는 문제는 ‘어느 단계까지 이해했는지’를 표시해 두었다가 수업에서 편하게 질문해 주세요. 답을 바로 맞히는 것보다, 헷갈렸던 이유를 하나씩 알아가는 것이 이번 복습의 목표입니다. 함께 차근차근 정리해 봅시다.
+
+Notion 접속이 불편할 때의 동일한 강의 원문
+https://github.com/lunalab-ai/recommender/blob/2026-fall-w07a/course/notion/sessions/w07a-review-foundations.md

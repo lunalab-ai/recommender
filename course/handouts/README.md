@@ -16,3 +16,4 @@
 | W05B · 행렬요인화(MF)와 SGD | [다운로드](w05b-mf-sgd.pdf) | [답안 PDF](w05b-mf-sgd-quiz.pdf) | [답안 보기](w05b-mf-sgd-quiz.md) |
 | W06a · MF의 평가와 튜닝, MF와 SVD | [다운로드](w06a-mf-evaluation.pdf) | [답안 PDF](w06a-mf-evaluation-quiz.pdf) | [답안 보기](w06a-mf-evaluation-quiz.md) |
 | W06b · 고유값·고유벡터부터 이해하는 SVD와 추천시스템 | [다운로드](w06b-svd-foundations.pdf) | [답안 PDF](w06b-svd-foundations-quiz.pdf) | [답안 보기](w06b-svd-foundations-quiz.md) |
+| W07A · SVD 마무리와 중간고사 대비 ① | [다운로드](w07a-review-foundations.pdf) | [답안 PDF](w07a-review-foundations-quiz.pdf) | [답안 보기](w07a-review-foundations-quiz.md) |

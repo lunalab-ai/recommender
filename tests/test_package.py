@@ -302,3 +302,11 @@ def test_recommend_for_app_uses_korean_output_labels() -> None:
     movies = pd.DataFrame({"movie_id": [1], "title": ["Alpha"]})
     result = recommend_for_app(ratings, movies, "전체", 1, 5)
     assert result.columns.tolist() == ["영화 ID", "영화 제목", "평균 평점", "평점 수"]
+def test_w07a_review_contract_in_public_package():
+    from luna_recsys.review_foundations import review_data, rank_candidates, mean_predict
+    data = review_data()
+    assert [r['item'] for r in rank_candidates(data, min_count=2)] == ['E', 'B']
+    assert mean_predict(data['train'], 'B', groups=data['groups'], group='G1', min_count=2)[0] == 2.5
+    changed = review_data()
+    changed['test'] = [('u1', 'B', 1.0), ('u1', 'D', 5.0), ('u1', 'E', 1.0)]
+    assert rank_candidates(changed) == rank_candidates(data)

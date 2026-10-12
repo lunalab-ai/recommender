@@ -321,3 +321,19 @@ CF는 관측 행렬에서 비교 가능한 이웃을 찾고 그들의 평가를 
 - [Surprise: SGD 기반 추천 SVD](https://surprise.readthedocs.io/en/stable/matrix_factorization.html)
 
 웹 문서 확인: 2026-10-08. 실습에서는 직접 계산한 값과 코드 출력을 비교하며 라이브러리 버전·검증 환경은 별도 실행 기록으로 남깁니다.
+
+### W07A · SVD 마무리와 중간고사 대비 ①
+
+[강의 원문](notion/sessions/w07a-review-foundations.md)
+
+강의 원문에 참고자료 절이 아직 작성되지 않았습니다.
+
+본문에서 함께 소개한 링크:
+
+- [Colab A · 데이터·평균·집단](https://colab.research.google.com/github/lunalab-ai/recommender/blob/2026-fall-w07a/notebooks/student/w07a-review-foundations.ipynb)
+- [Colab B · 내용·평가·웹 앱](https://colab.research.google.com/github/lunalab-ai/recommender/blob/2026-fall-w07a/notebooks/student/w07a-review-content-app.ipynb)
+- [기존 W02B 실습](https://github.com/lunalab-ai/recommender/tree/main/notebooks/student)
+- [Google 내용 기반 추천](https://developers.google.com/machine-learning/recommendation/content-based/basics)
+- [scikit-learn 데이터 누수](https://scikit-learn.org/stable/common_pitfalls.html)
+- [TF–IDF 공식과 정규화](https://scikit-learn.org/stable/modules/generated/sklearn.feature_extraction.text.TfidfTransformer.html)
+- [NumPy SVD](https://numpy.org/doc/stable/reference/generated/numpy.linalg.svd.html)
