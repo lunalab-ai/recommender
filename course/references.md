@@ -337,3 +337,16 @@ CF는 관측 행렬에서 비교 가능한 이웃을 찾고 그들의 평가를 
 - [scikit-learn 데이터 누수](https://scikit-learn.org/stable/common_pitfalls.html)
 - [TF–IDF 공식과 정규화](https://scikit-learn.org/stable/modules/generated/sklearn.feature_extraction.text.TfidfTransformer.html)
 - [NumPy SVD](https://numpy.org/doc/stable/reference/generated/numpy.linalg.svd.html)
+
+### W07B · W07B ·협업 필터링 3~4주차 핵심 복습과 60문제
+
+[강의 원문](notion/sessions/w07b-cf-foundations.md)
+
+강의 원문에 참고자료 절이 아직 작성되지 않았습니다.
+
+본문에서 함께 소개한 링크:
+
+- [Colab A ·관측·유사도·가중평균](https://colab.research.google.com/github/lunalab-ai/recommender/blob/2026-fall-w07b/notebooks/student/w07b-cf-foundations.ipynb)
+- [Colab B ·이웃·평균보정·평가·마지막 앱](https://colab.research.google.com/github/lunalab-ai/recommender/blob/2026-fall-w07b/notebooks/student/w07b-cf-evidence-app.ipynb)
+- [scikit-learn 코사인 정의](https://scikit-learn.org/stable/modules/metrics.html#cosine-similarity)
+- [scikit-learn 데이터 누수](https://scikit-learn.org/stable/common_pitfalls.html#data-leakage)

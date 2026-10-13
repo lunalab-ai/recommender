@@ -53,6 +53,10 @@ sessions:
     date: '2026-10-13'
     colab_ref: 2026-fall-w07a
     notion_url: https://fancy-ballcap-a15.notion.site/W07a-SVD-60-3f77fd00109f81bc9f3af9405a92fb8e
+  w07b:
+    date: '2026-10-15'
+    colab_ref: 2026-fall-w07b
+    notion_url: https://fancy-ballcap-a15.notion.site/W07b-3-4-60-3f87fd00109f811680ebebe907cc6354
 resources:
 - group: Python 기초
   title: 이 수업을 위한 Python 복습 길잡이

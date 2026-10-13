@@ -102,6 +102,14 @@ def render_html(text: str, source: Path, root: Path) -> str:
                         "https://github.com/lunalab-ai/recommender/blob/main/" + rel.as_posix(),
                     )
     body = md.renderer.render(tokens, md.options, {})
+    # Keep each W07B review question and its code together in local and CI PDFs.
+    if source.stem == "w07b-cf-foundations" and "· 퀴즈 답안" not in text.splitlines()[0]:
+        chunks = re.split(r"(?=<h2>Q\d{2}\b)", body)
+        body = chunks[0] + "".join(
+            '<section class="practice-question">' + part + '</section>'
+            for part in chunks[1:]
+        )
+        body += '<style>.practice-question{break-inside:avoid}.practice-question h2{margin-top:1.2em}</style>'
     for i, (tex, display) in enumerate(formulas):
         body = body.replace(f"MATHPLACEHOLDER{i}END", (r"\[" if display else r"\(") + html.escape(tex) + (r"\]" if display else r"\)"))
     if formulas:
