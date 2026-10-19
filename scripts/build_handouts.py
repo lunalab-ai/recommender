@@ -102,8 +102,8 @@ def render_html(text: str, source: Path, root: Path) -> str:
                         "https://github.com/lunalab-ai/recommender/blob/main/" + rel.as_posix(),
                     )
     body = md.renderer.render(tokens, md.options, {})
-    # Keep each W07B review question and its code together in local and CI PDFs.
-    if source.stem == "w07b-cf-foundations" and "· 퀴즈 답안" not in text.splitlines()[0]:
+    # Keep review questions and their code together in local and CI PDFs.
+    if source.stem in {"w07b-cf-foundations", "w08a-mf-svd-review"} and "· 퀴즈 답안" not in text.splitlines()[0]:
         chunks = re.split(r"(?=<h2>Q\d{2}\b)", body)
         body = chunks[0] + "".join(
             '<section class="practice-question">' + part + '</section>'

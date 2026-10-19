@@ -30,6 +30,7 @@
 | W06A MF 평가와 튜닝 | [W06A 평가 손계산 워크북](https://fancy-ballcap-a15.notion.site/W06A-MF-3f07fd00109f81c2be33d73f8961efae) | 한국어 | 관측 역할·오차·체크포인트·SVD를 직접 계산하고 실험 기록하기 |
 | W06B SVD 기초 | [실습 B · rank와 웹 앱](https://colab.research.google.com/github/lunalab-ai/recommender/blob/2026-fall-w06b/notebooks/student/w06b-svd-reconstruction.ipynb) | 한국어 | rank·오차·미관측 반례·웹 앱 |
 | W06B SVD 기초 | [SVD 계산 문제편](../course/notion/supplements/w06b-calculation-practice.md) | 한국어 | 9문제의 독립 풀이와 검산 |
+| W08A 중간고사 대비 | [실습 B · validation·SVD·복습 앱](https://colab.research.google.com/github/lunalab-ai/recommender/blob/2026-fall-w08a/notebooks/student/w08a-validation-svd-app.ipynb) | 한국어 | 최적 상태 선택과 재구성오차를 확인하고 Q58 보고 함수를 수정 |
 
 ## 차시별 출처와 참고 링크
 
@@ -350,3 +351,26 @@ CF는 관측 행렬에서 비교 가능한 이웃을 찾고 그들의 평가를 
 - [Colab B ·이웃·평균보정·평가·마지막 앱](https://colab.research.google.com/github/lunalab-ai/recommender/blob/2026-fall-w07b/notebooks/student/w07b-cf-evidence-app.ipynb)
 - [scikit-learn 코사인 정의](https://scikit-learn.org/stable/modules/metrics.html#cosine-similarity)
 - [scikit-learn 데이터 누수](https://scikit-learn.org/stable/common_pitfalls.html#data-leakage)
+
+### W08A · 중간고사 대비 ③: 5~6주차 핵심 요약과 60문제
+
+[강의 원문](notion/sessions/w08a-mf-svd-review.md)
+
+| 막힌 단계 | 다시 볼 자료 | 다시 시도할 문제 |
+|---|---|---|
+| 단위·분모·평균 | W05A 지표 보강 S1–S5 | Q01–Q12 |
+| 차원·편향·관측 손실 | W05B 본문 §3–8, 워크북 S1 | Q13–Q22 |
+| 잔차·갱신 순서 | W05B 워크북 S1–S3 | Q23–Q34 |
+| 선택·누수·복원 | W06A 평가 워크북 W1–W3 | Q35–Q44 |
+| 고유값·정규화·rank | W06B 계산 문제편 기존 Q4–Q6 | Q45–Q54 |
+| 재구성·추천 주장 | W06B 기존 Q9, W06A §9–11 | Q55–Q60 |
+
+- [W05A 지표 보강](../course/notion/supplements/w05a-metrics-remediation.md)
+- [W05B MF와 SGD](../course/notion/sessions/w05b-mf-sgd.md), [SGD 손계산 워크북](../course/notion/supplements/w05b-sgd-workbook.md)
+- [W06A MF 평가와 튜닝](../course/notion/sessions/w06a-mf-evaluation.md), [평가 워크북](../course/notion/supplements/w06a-evaluation-workbook.md)
+- [W06B SVD 기초](../course/notion/sessions/w06b-svd-foundations.md), [SVD 계산 문제편](../course/notion/supplements/w06b-calculation-practice.md)
+- [Google Developers: Matrix factorization](https://developers.google.com/machine-learning/recommendation/collaborative/matrix)
+- [NumPy: SVD의 입력·반환 차원](https://numpy.org/doc/stable/reference/generated/numpy.linalg.svd.html)
+- [scikit-learn: 데이터 누수](https://scikit-learn.org/stable/common_pitfalls.html)
+
+원 강의의 교재 범위와 용어를 유지하며, 본문의 수치 예제와 그림은 복습용으로 새로 구성했습니다. 공식 문서는 원리·차원·검증 규약의 대조에 사용했고 새 알고리즘을 시험범위에 추가하지 않았습니다.

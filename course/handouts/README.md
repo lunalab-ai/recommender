@@ -18,3 +18,4 @@
 | W06b · 고유값·고유벡터부터 이해하는 SVD와 추천시스템 | [다운로드](w06b-svd-foundations.pdf) | [답안 PDF](w06b-svd-foundations-quiz.pdf) | [답안 보기](w06b-svd-foundations-quiz.md) |
 | W07A · SVD 마무리와 중간고사 대비 ① | [다운로드](w07a-review-foundations.pdf) | [답안 PDF](w07a-review-foundations-quiz.pdf) | [답안 보기](w07a-review-foundations-quiz.md) |
 | W07B ·협업 필터링 3~4주차 핵심 복습과 60문제 | [다운로드](w07b-cf-foundations.pdf) | [답안 PDF](w07b-cf-foundations-quiz.pdf) | [답안 보기](w07b-cf-foundations-quiz.md) |
+| W08A · 중간고사 대비 ③: 5~6주차 핵심 요약과 60문제 | [다운로드](w08a-mf-svd-review.pdf) | [답안 PDF](w08a-mf-svd-review-quiz.pdf) | [답안 보기](w08a-mf-svd-review-quiz.md) |

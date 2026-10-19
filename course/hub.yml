@@ -57,6 +57,10 @@ sessions:
     date: '2026-10-15'
     colab_ref: 2026-fall-w07b
     notion_url: https://fancy-ballcap-a15.notion.site/W07b-3-4-60-3f87fd00109f811680ebebe907cc6354
+  w08a:
+    date: '2026-10-20'
+    colab_ref: 2026-fall-w08a
+    notion_url: https://fancy-ballcap-a15.notion.site/W08a-5-6-60-3fd7fd00109f8110b038dc9a950f0acf
 resources:
 - group: Python 기초
   title: 이 수업을 위한 Python 복습 길잡이
@@ -168,3 +172,8 @@ resources:
   url: course/notion/supplements/w06b-calculation-practice.md
   language: 한국어
   purpose: 9문제의 독립 풀이와 검산
+- group: W08A 중간고사 대비
+  title: 실습 B · validation·SVD·복습 앱
+  url: https://colab.research.google.com/github/lunalab-ai/recommender/blob/2026-fall-w08a/notebooks/student/w08a-validation-svd-app.ipynb
+  language: 한국어
+  purpose: 최적 상태 선택과 재구성오차를 확인하고 Q58 보고 함수를 수정
