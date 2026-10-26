@@ -102,6 +102,16 @@ def render_html(text: str, source: Path, root: Path) -> str:
                         "https://github.com/lunalab-ai/recommender/blob/main/" + rel.as_posix(),
                     )
     body = md.renderer.render(tokens, md.options, {})
+    from board_review_pdf import CSS as board_css, settings_for_page, render_body
+    review = settings_for_page(root, source)
+    review_css = board_css if review else ""
+    if review:
+        body = render_body(body, question_count=review["board_review_questions"])
+        # Keep the original rubric's score and unit readable as one item.
+        review_css += ("\n.pdf-question h3+table th:last-child,.pdf-question h3+table td:last-child"
+                       "{white-space:nowrap;width:14mm;min-width:14mm}\n"
+                       ".pdf-question h3+table th:first-child,.pdf-question h3+table td:first-child"
+                       "{width:36mm;min-width:36mm}\n")
     # Keep review questions and their code together in local and CI PDFs.
     if source.stem in {"w07b-cf-foundations", "w08a-mf-svd-review"} and "· 퀴즈 답안" not in text.splitlines()[0]:
         chunks = re.split(r"(?=<h2>Q\d{2}\b)", body)
@@ -117,7 +127,7 @@ def render_html(text: str, source: Path, root: Path) -> str:
     return (
         '<!doctype html><html lang="ko"><meta charset="utf-8"><title>'
         + html.escape(text.splitlines()[0].lstrip("# "))
-        + f'</title><style>{CSS}</style><body class="'
+        + f'</title><style>{CSS}{review_css}</style><body class="'
         + ("quiz" if "· 퀴즈 답안" in text.splitlines()[0] else "lecture")
         + f'">{body}</body></html>'
     )
@@ -129,8 +139,16 @@ def build(root: Path = ROOT, *, check_only: bool = False) -> list[Path]:
         raise ValueError("No session pages found")
     documents = []
     for page in pages:
+        from board_review_pdf import settings_for_page
         response = root / "course/quiz" / f"{page.stem}.yml"
-        quiz = quiz_markdown(page, response)
+        review = settings_for_page(root, page)
+        if review:
+            sid = page.stem.split("-", 1)[0]
+            if response.exists() or list((root / "notebooks/student").glob(sid + "-*.ipynb")):
+                raise ValueError("Board review is explicitly PDF-only; review conflicting quiz/notebook artifacts")
+            quiz = None
+        else:
+            quiz = quiz_markdown(page, response)
         documents.append((page, page.read_text(encoding="utf-8"), quiz))
     if check_only:
         return pages
@@ -151,7 +169,8 @@ def build(root: Path = ROOT, *, check_only: bool = False) -> list[Path]:
         tab.route("http://**/*", lambda route: route.abort())
         tab.route("https://**/*", lambda route: route.abort())
         for source, lecture, quiz in documents:
-            for suffix, content in [("", lecture), ("-quiz", quiz)]:
+            editions = [("", lecture)] + ([("-quiz", quiz)] if quiz is not None else [])
+            for suffix, content in editions:
                 name = source.stem + suffix
                 html_path = Path(tmp) / f"{name}.html"
                 html_path.write_text(render_html(content, source, root), encoding="utf-8")
@@ -176,12 +195,14 @@ def build(root: Path = ROOT, *, check_only: bool = False) -> list[Path]:
                     '<span class="pageNumber"></span> / <span class="totalPages"></span></div>',
                 )
                 built.append(destination)
-            quiz_path = output / f"{source.stem}-quiz.md"
-            quiz_path.write_text(quiz, encoding="utf-8", newline="\n")
-            built.append(quiz_path)
+            if quiz is not None:
+                quiz_path = output / f"{source.stem}-quiz.md"
+                quiz_path.write_text(quiz, encoding="utf-8", newline="\n")
+                built.append(quiz_path)
             stem = source.stem
             title = lecture.splitlines()[0].lstrip("# ")
             index.append(
+                f"| {title} | [다운로드]({stem}.pdf) | — | — |" if quiz is None else
                 f"| {title} | [다운로드]({stem}.pdf) | [답안 PDF]({stem}-quiz.pdf) | [답안 보기]({stem}-quiz.md) |"
             )
         browser.close()

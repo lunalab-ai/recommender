@@ -374,3 +374,9 @@ CF는 관측 행렬에서 비교 가능한 이웃을 찾고 그들의 평가를 
 - [scikit-learn: 데이터 누수](https://scikit-learn.org/stable/common_pitfalls.html)
 
 원 강의의 교재 범위와 용어를 유지하며, 본문의 수치 예제와 그림은 복습용으로 새로 구성했습니다. 공식 문서는 원리·차원·검증 규약의 대조에 사용했고 새 알고리즘을 시험범위에 추가하지 않았습니다.
+
+### W09A · 중간고사 답안 리뷰와 판서 필기
+
+[강의 원문](notion/sessions/w09a-midterm-review-notes.md)
+
+강의 원문에 참고자료 절이 아직 작성되지 않았습니다.
