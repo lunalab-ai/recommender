@@ -20,3 +20,4 @@
 | W07B ·협업 필터링 3~4주차 핵심 복습과 60문제 | [다운로드](w07b-cf-foundations.pdf) | [답안 PDF](w07b-cf-foundations-quiz.pdf) | [답안 보기](w07b-cf-foundations-quiz.md) |
 | W08A · 중간고사 대비 ③: 5~6주차 핵심 요약과 60문제 | [다운로드](w08a-mf-svd-review.pdf) | [답안 PDF](w08a-mf-svd-review-quiz.pdf) | [답안 보기](w08a-mf-svd-review-quiz.md) |
 | W09A · 중간고사 답안 리뷰와 판서 필기 | [다운로드](w09a-midterm-review-notes.pdf) | — | — |
+| W09B · Factorization Machines: 특성 상호작용과 잠재벡터 공유 | [다운로드](w09b-fm-theory.pdf) | [답안 PDF](w09b-fm-theory-quiz.pdf) | [답안 보기](w09b-fm-theory-quiz.md) |

@@ -380,3 +380,16 @@ CF는 관측 행렬에서 비교 가능한 이웃을 찾고 그들의 평가를 
 [강의 원문](notion/sessions/w09a-midterm-review-notes.md)
 
 강의 원문에 참고자료 절이 아직 작성되지 않았습니다.
+
+### W09B · Factorization Machines: 특성 상호작용과 잠재벡터 공유
+
+[강의 원문](notion/sessions/w09b-fm-theory.md)
+
+강의 원문에 참고자료 절이 아직 작성되지 않았습니다.
+
+본문에서 함께 소개한 링크:
+
+- [학생용 계산 노트북](https://colab.research.google.com/github/lunalab-ai/recommender/blob/2026-fall-w09b/notebooks/student/w09b-fm-theory.ipynb)
+- [Factorization Machines](https://jame-zhang.github.io/assets/algo/Factorization-Machines-Rendle2010.pdf)
+- [Dive into Deep Learning 21.9](https://d2l.ai/chapter_recommender-systems/fm.html)
+- [libFM 매뉴얼](https://www.libfm.org/libfm-1.42.manual.pdf)

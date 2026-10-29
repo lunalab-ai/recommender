@@ -133,6 +133,22 @@ def render_html(text: str, source: Path, root: Path) -> str:
     )
 
 
+def write_pdf_atomic(destination: Path, data: bytes, root: Path) -> None:
+    """완성 PDF만 교체한다. Windows의 기존 파일 직접 truncate를 피한다.
+
+    렌더/임시 저장/교체 실패 시 기존 PDF를 보존한다. 임시 파일은 공개
+    allowlist 밖의 같은 저장소 .build에만 만들고 함수 종료 시 정리한다.
+    """
+    if not data.startswith(b"%PDF-"):
+        raise ValueError("Rendered result is not a PDF")
+    temporary_root = root / ".build"
+    temporary_root.mkdir(parents=True, exist_ok=True)
+    with tempfile.TemporaryDirectory(prefix="handout-write-", dir=temporary_root) as tmp:
+        candidate = Path(tmp) / destination.name
+        candidate.write_bytes(data)
+        candidate.replace(destination)
+
+
 def build(root: Path = ROOT, *, check_only: bool = False) -> list[Path]:
     pages = sorted((root / "course/notion/sessions").glob("w[0-9][0-9][ab]-*.md"))
     if not pages:
@@ -183,8 +199,7 @@ def build(root: Path = ROOT, *, check_only: bool = False) -> list[Path]:
                 ):
                     raise ValueError(f"Image failed to render: {source}")
                 destination = output / f"{name}.pdf"
-                tab.pdf(
-                    path=str(destination),
+                pdf_data = tab.pdf(
                     prefer_css_page_size=True,
                     print_background=True,
                     tagged=True,
@@ -194,6 +209,7 @@ def build(root: Path = ROOT, *, check_only: bool = False) -> list[Path]:
                     footer_template='<div style="font-size:8px;width:100%;text-align:center;color:#667">'
                     '<span class="pageNumber"></span> / <span class="totalPages"></span></div>',
                 )
+                write_pdf_atomic(destination, pdf_data, root)
                 built.append(destination)
             if quiz is not None:
                 quiz_path = output / f"{source.stem}-quiz.md"
