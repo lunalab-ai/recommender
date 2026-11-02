@@ -31,6 +31,9 @@
 | W06B SVD 기초 | [실습 B · rank와 웹 앱](https://colab.research.google.com/github/lunalab-ai/recommender/blob/2026-fall-w06b/notebooks/student/w06b-svd-reconstruction.ipynb) | 한국어 | rank·오차·미관측 반례·웹 앱 |
 | W06B SVD 기초 | [SVD 계산 문제편](../course/notion/supplements/w06b-calculation-practice.md) | 한국어 | 9문제의 독립 풀이와 검산 |
 | W08A 중간고사 대비 | [실습 B · validation·SVD·복습 앱](https://colab.research.google.com/github/lunalab-ai/recommender/blob/2026-fall-w08a/notebooks/student/w08a-validation-svd-app.ipynb) | 한국어 | 최적 상태 선택과 재구성오차를 확인하고 Q58 보고 함수를 수정 |
+| W10A 딥러닝 추천 | [실습 B · MLP·직업·나이](https://colab.research.google.com/github/lunalab-ai/recommender/blob/2026-fall-w10a/notebooks/student/w10a-mlp-features.ipynb) | 한국어 | 같은 분할에서 MF/MLP/직업 비교와 설명 앱 수정 |
+| W10A 딥러닝 추천 | [계산 워크북](../course/notion/supplements/w10a-workbook.md) | 한국어 | 필수6문제와 보충4문제의 예상·계산·실행·해석 |
+| W10A 딥러닝 추천 | [실습 API 길잡이](../course/notion/supplements/w10a-api-guide.md) | 한국어 | 인수·배열 크기·반환값과 상태 변경을 미리 확인 |
 
 ## 차시별 출처와 참고 링크
 
@@ -393,3 +396,13 @@ CF는 관측 행렬에서 비교 가능한 이웃을 찾고 그들의 평가를 
 - [Factorization Machines](https://jame-zhang.github.io/assets/algo/Factorization-Machines-Rendle2010.pdf)
 - [Dive into Deep Learning 21.9](https://d2l.ai/chapter_recommender-systems/fm.html)
 - [libFM 매뉴얼](https://www.libfm.org/libfm-1.42.manual.pdf)
+
+### W10A · FM 복습과 딥러닝을 이용한 추천 시스템
+
+[강의 원문](notion/sessions/w10a-neural-recommenders.md)
+
+- 임일(2025), 『AI 에이전트를 위한 개인화 추천 알고리즘』, 청람,5.1–5.4(pp.96–103),6.1–6.4 및 연습6-1(pp.120–146).
+- [Keras Embedding](https://keras.io/api/layers/core_layers/embedding/), [Dense](https://keras.io/api/layers/core_layers/dense/), [Dot](https://keras.io/api/layers/merging_layers/dot/), [Functional API](https://keras.io/guides/functional_api/).
+- [He et al.(2017), Neural Collaborative Filtering](https://arxiv.org/abs/1708.05031).
+- [Dive into Deep Learning, Factorization Machines](https://d2l.ai/chapter_recommender-systems/fm.html).
+- [GroupLens MovieLens100K README](https://files.grouplens.org/datasets/movielens/ml-100k-README.txt).

@@ -71,6 +71,10 @@ sessions:
     date: '2026-10-29'
     colab_ref: 2026-fall-w09b
     notion_url: https://fancy-ballcap-a15.notion.site/W09B-FM-2026-10-29-4077fd00109f81d08aeef941e70146ad
+  w10a:
+    date: '2026-11-03'
+    colab_ref: 2026-fall-w10a
+    notion_url: https://fancy-ballcap-a15.notion.site/W10A-FM-2026-11-03-40b7fd00109f813eb976c23976428c94
 resources:
 - group: Python 기초
   title: 이 수업을 위한 Python 복습 길잡이
@@ -187,3 +191,18 @@ resources:
   url: https://colab.research.google.com/github/lunalab-ai/recommender/blob/2026-fall-w08a/notebooks/student/w08a-validation-svd-app.ipynb
   language: 한국어
   purpose: 최적 상태 선택과 재구성오차를 확인하고 Q58 보고 함수를 수정
+- group: W10A 딥러닝 추천
+  title: 실습 B · MLP·직업·나이
+  url: https://colab.research.google.com/github/lunalab-ai/recommender/blob/2026-fall-w10a/notebooks/student/w10a-mlp-features.ipynb
+  language: 한국어
+  purpose: 같은 분할에서 MF/MLP/직업 비교와 설명 앱 수정
+- group: W10A 딥러닝 추천
+  title: 계산 워크북
+  url: course/notion/supplements/w10a-workbook.md
+  language: 한국어
+  purpose: 필수6문제와 보충4문제의 예상·계산·실행·해석
+- group: W10A 딥러닝 추천
+  title: 실습 API 길잡이
+  url: course/notion/supplements/w10a-api-guide.md
+  language: 한국어
+  purpose: 인수·배열 크기·반환값과 상태 변경을 미리 확인

@@ -26,7 +26,7 @@ jobs:
           python-version: ${{ matrix.python-version }}
           cache: pip
       - run: python -m pip install --upgrade pip
-      - run: pip install -e ".[dev,apps]"
+      - run: pip install -e ".[dev,apps,neural]"
       - name: Install browser for authoring math and Notion tests
         if: ${{ hashFiles('scripts/build_notebooks.py') != '' }}
         run: |
