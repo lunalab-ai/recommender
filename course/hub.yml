@@ -77,7 +77,7 @@ sessions:
     notion_url: https://fancy-ballcap-a15.notion.site/W10A-FM-2026-11-03-40b7fd00109f813eb976c23976428c94
   w10b:
     date: '2026-11-05'
-    colab_ref: 2026-fall-w10b
+    colab_ref: 2026-fall-w10b-r1
     notion_url: https://fancy-ballcap-a15.notion.site/W10B-40d7fd00109f81ccb732d840670bc4a3
 resources:
 - group: Python 기초
