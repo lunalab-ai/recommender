@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="594.72pt" height="213.984pt" viewBox="0 0 594.72 213.984" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:date>2026-11-04T06:39:54.175547</dc:date>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Matplotlib v3.11.1, https://matplotlib.org/</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 213.984
+L 594.72 213.984
+L 594.72 0
+L 0 0
+z
+" style="fill: #ffffff"/>
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 13.0032 122.160384
+L 108.756 122.160384
+Q 113.39856 122.160384 113.39856 118.96704
+L 113.39856 79.05024
+Q 113.39856 75.856896 108.756 75.856896
+L 13.0032 75.856896
+Q 8.36064 75.856896 8.36064 79.05024
+L 8.36064 118.96704
+Q 8.36064 122.160384 13.0032 122.160384
+z
+" clip-path="url(#pb6116f8125)" style="fill: #e7effa; stroke: #94a6bd; stroke-width: 1.2; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_3">
+    <path d="M 129.0672 122.160384
+L 224.82 122.160384
+Q 229.46256 122.160384 229.46256 118.96704
+L 229.46256 79.05024
+Q 229.46256 75.856896 224.82 75.856896
+L 129.0672 75.856896
+Q 124.42464 75.856896 124.42464 79.05024
+L 124.42464 118.96704
+Q 124.42464 122.160384 129.0672 122.160384
+z
+" clip-path="url(#pb6116f8125)" style="fill: #e7effa; stroke: #94a6bd; stroke-width: 1.2; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_4">
+    <path d="M 245.1312 122.160384
+L 340.884 122.160384
+Q 345.52656 122.160384 345.52656 118.96704
+L 345.52656 79.05024
+Q 345.52656 75.856896 340.884 75.856896
+L 245.1312 75.856896
+Q 240.48864 75.856896 240.48864 79.05024
+L 240.48864 118.96704
+Q 240.48864 122.160384 245.1312 122.160384
+z
+" clip-path="url(#pb6116f8125)" style="fill: #e7effa; stroke: #94a6bd; stroke-width: 1.2; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_5">
+    <path d="M 361.1952 122.160384
+L 456.948 122.160384
+Q 461.59056 122.160384 461.59056 118.96704
+L 461.59056 79.05024
+Q 461.59056 75.856896 456.948 75.856896
+L 361.1952 75.856896
+Q 356.55264 75.856896 356.55264 79.05024
+L 356.55264 118.96704
+Q 356.55264 122.160384 361.1952 122.160384
+z
+" clip-path="url(#pb6116f8125)" style="fill: #e7effa; stroke: #94a6bd; stroke-width: 1.2; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_6">
+    <path d="M 477.2592 122.160384
+L 573.012 122.160384
+Q 577.65456 122.160384 577.65456 118.96704
+L 577.65456 79.05024
+Q 577.65456 75.856896 573.012 75.856896
+L 477.2592 75.856896
+Q 472.61664 75.856896 472.61664 79.05024
+L 472.61664 118.96704
+Q 472.61664 122.160384 477.2592 122.160384
+z
+" clip-path="url(#pb6116f8125)" style="fill: #e7effa; stroke: #94a6bd; stroke-width: 1.2; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_7">
+    <path d="M 137.772 188.023104
+L 546.8976 188.023104
+Q 551.54016 188.023104 551.54016 184.82976
+L 551.54016 152.89632
+Q 551.54016 149.702976 546.8976 149.702976
+L 137.772 149.702976
+Q 133.12944 149.702976 133.12944 152.89632
+L 133.12944 184.82976
+Q 133.12944 188.023104 137.772 188.023104
+z
+" clip-path="url(#pb6116f8125)" style="fill: #fff0d7; stroke: #94a6bd; stroke-width: 1.2; stroke-linejoin: miter"/>
+   </g>
+   <g id="text_1">
+    <text style="font-size: 13px; font-family: 'Malgun Gothic', 'DejaVu Sans'; fill: #213248" transform="translate(33.457725 96.456882)">평점·관측</text>
+    <text style="font-size: 13px; font-family: 'Malgun Gothic', 'DejaVu Sans'; fill: #213248" transform="translate(32.594444 110.162234)">입력 위젯</text>
+   </g>
+   <g id="text_2">
+    <text style="font-size: 13px; font-family: 'Malgun Gothic', 'DejaVu Sans'; fill: #213248" transform="translate(154.285006 96.021941)">ae_view</text>
+    <text style="font-size: 13px; font-family: 'Malgun Gothic', 'DejaVu Sans'; fill: #213248" transform="translate(148.658444 109.790261)">계산 함수</text>
+   </g>
+   <g id="patch_8">
+    <path d="M 112.499744 99.00864
+Q 117.462143 99.00864 120.41208 99.00864
+" style="fill: none; stroke: #60758c; stroke-width: 1.8; stroke-linecap: round"/>
+    <path d="M 115.21208 96.40864
+L 120.41208 99.00864
+L 115.21208 101.60864
+" style="fill: none; stroke: #60758c; stroke-width: 1.8; stroke-linecap: round"/>
+   </g>
+   <g id="text_3">
+    <text style="font-size: 13px; font-family: 'Malgun Gothic', 'DejaVu Sans'; fill: #213248" transform="translate(272.085725 96.406101)">표·그림</text>
+    <text style="font-size: 13px; font-family: 'Malgun Gothic', 'DejaVu Sans'; fill: #213248" transform="translate(273.5076 110.111452)">반환값</text>
+   </g>
+   <g id="patch_9">
+    <path d="M 228.563744 99.00864
+Q 233.526143 99.00864 236.47608 99.00864
+" style="fill: none; stroke: #60758c; stroke-width: 1.8; stroke-linecap: round"/>
+    <path d="M 231.27608 96.40864
+L 236.47608 99.00864
+L 231.27608 101.60864
+" style="fill: none; stroke: #60758c; stroke-width: 1.8; stroke-linecap: round"/>
+   </g>
+   <g id="text_4">
+    <text style="font-size: 13px; font-family: 'Malgun Gothic', 'DejaVu Sans'; fill: #213248" transform="translate(368.582694 95.818054)">export_ae_csv</text>
+    <text style="font-size: 13px; font-family: 'Malgun Gothic', 'DejaVu Sans'; fill: #213248" transform="translate(372.001288 109.994148)">같은 표 사용</text>
+   </g>
+   <g id="patch_10">
+    <path d="M 344.627744 99.00864
+Q 349.590143 99.00864 352.54008 99.00864
+" style="fill: none; stroke: #60758c; stroke-width: 1.8; stroke-linecap: round"/>
+    <path d="M 347.34008 96.40864
+L 352.54008 99.00864
+L 347.34008 101.60864
+" style="fill: none; stroke: #60758c; stroke-width: 1.8; stroke-linecap: round"/>
+   </g>
+   <g id="text_5">
+    <text style="font-size: 13px; font-family: 'Malgun Gothic', 'DejaVu Sans'; fill: #213248" transform="translate(513.357397 96.053425)">CSV</text>
+    <text style="font-size: 13px; font-family: 'Malgun Gothic', 'DejaVu Sans'; fill: #213248" transform="translate(499.1356 109.758777)">다운로드</text>
+   </g>
+   <g id="patch_11">
+    <path d="M 460.691744 99.00864
+Q 465.654143 99.00864 468.60408 99.00864
+" style="fill: none; stroke: #60758c; stroke-width: 1.8; stroke-linecap: round"/>
+    <path d="M 463.40408 96.40864
+L 468.60408 99.00864
+L 463.40408 101.60864
+" style="fill: none; stroke: #60758c; stroke-width: 1.8; stroke-linecap: round"/>
+   </g>
+   <g id="text_6">
+    <text style="font-size: 13px; font-family: 'Malgun Gothic', 'DejaVu Sans'; text-anchor: middle; fill: #213248" x="342.3348" y="173.163958" transform="rotate(-0 342.3348 173.163958)">학생이 만든 view_fn으로 교체 → 화면의 새 열이 CSV에도 이어지는지 확인</text>
+   </g>
+   <g id="patch_12">
+    <path d="M 180.858918 146.950461
+Q 178.394316 135.931305 176.368978 126.876086
+" style="fill: none; stroke: #ca8126; stroke-width: 1.8; stroke-linecap: round"/>
+    <path d="M 174.966685 132.518211
+L 176.368978 126.876086
+L 180.041302 131.383195
+" style="fill: none; stroke: #ca8126; stroke-width: 1.8; stroke-linecap: round"/>
+   </g>
+   <g id="text_7">
+    <text style="font-weight: 700; font-size: 16px; font-family: 'Malgun Gothic', 'DejaVu Sans'; text-anchor: middle" x="297.36" y="41.12928" transform="rotate(-0 297.36 41.12928)">수정 전 예상값 → 수정 후 실제값 → 이유 한 문장</text>
+   </g>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="pb6116f8125">
+   <rect x="7.2" y="7.2" width="580.32" height="199.584"/>
+  </clipPath>
+ </defs>
+</svg>

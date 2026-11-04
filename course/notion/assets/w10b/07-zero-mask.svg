@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="594.72pt" height="202.896pt" viewBox="0 0 594.72 202.896" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:date>2026-11-04T06:39:52.354853</dc:date>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Matplotlib v3.11.1, https://matplotlib.org/</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 202.896
+L 594.72 202.896
+L 594.72 -0
+L 0 -0
+z
+" style="fill: #ffffff"/>
+  </g>
+  <g id="axes_1">
+   <g id="table_1">
+    <g id="patch_2">
+     <path d="M 7.2 53.38152
+L 152.28 53.38152
+L 152.28 20.39472
+L 7.2 20.39472
+z
+" style="fill: #ffffff; stroke: #000000; stroke-linejoin: miter"/>
+    </g>
+    <g id="text_1">
+     <text style="font-size: 15px; font-family: 'Malgun Gothic', 'DejaVu Sans'; text-anchor: middle" x="79.74" y="41.792124" transform="rotate(-0 79.74 41.792124)">의미</text>
+    </g>
+    <g id="patch_3">
+     <path d="M 152.28 53.38152
+L 261.09 53.38152
+L 261.09 20.39472
+L 152.28 20.39472
+z
+" style="fill: #ffffff; stroke: #000000; stroke-linejoin: miter"/>
+    </g>
+    <g id="text_2">
+     <text style="font-size: 15px; font-family: 'Malgun Gothic', 'DejaVu Sans'; text-anchor: middle" x="206.685" y="41.38519" transform="rotate(-0 206.685 41.38519)">P</text>
+    </g>
+    <g id="patch_4">
+     <path d="M 261.09 53.38152
+L 369.9 53.38152
+L 369.9 20.39472
+L 261.09 20.39472
+z
+" style="fill: #ffffff; stroke: #000000; stroke-linejoin: miter"/>
+    </g>
+    <g id="text_3">
+     <text style="font-size: 15px; font-family: 'Malgun Gothic', 'DejaVu Sans'; text-anchor: middle" x="315.495" y="41.38519" transform="rotate(-0 315.495 41.38519)">Q</text>
+    </g>
+    <g id="patch_5">
+     <path d="M 369.9 53.38152
+L 478.71 53.38152
+L 478.71 20.39472
+L 369.9 20.39472
+z
+" style="fill: #ffffff; stroke: #000000; stroke-linejoin: miter"/>
+    </g>
+    <g id="text_4">
+     <text style="font-size: 15px; font-family: 'Malgun Gothic', 'DejaVu Sans'; text-anchor: middle" x="424.305" y="41.38519" transform="rotate(-0 424.305 41.38519)">R</text>
+    </g>
+    <g id="patch_6">
+     <path d="M 478.71 53.38152
+L 587.52 53.38152
+L 587.52 20.39472
+L 478.71 20.39472
+z
+" style="fill: #ffffff; stroke: #000000; stroke-linejoin: miter"/>
+    </g>
+    <g id="text_5">
+     <text style="font-size: 15px; font-family: 'Malgun Gothic', 'DejaVu Sans'; text-anchor: middle" x="533.115" y="41.38519" transform="rotate(-0 533.115 41.38519)">S</text>
+    </g>
+    <g id="patch_7">
+     <path d="M 7.2 86.36832
+L 152.28 86.36832
+L 152.28 53.38152
+L 7.2 53.38152
+z
+" style="fill: #ffffff; stroke: #000000; stroke-linejoin: miter"/>
+    </g>
+    <g id="text_6">
+     <text style="font-size: 15px; font-family: 'Malgun Gothic', 'DejaVu Sans'; text-anchor: middle" x="79.74" y="74.778924" transform="rotate(-0 79.74 74.778924)">원래 평점</text>
+    </g>
+    <g id="patch_8">
+     <path d="M 152.28 86.36832
+L 261.09 86.36832
+L 261.09 53.38152
+L 152.28 53.38152
+z
+" style="fill: #ffffff; stroke: #000000; stroke-linejoin: miter"/>
+    </g>
+    <g id="text_7">
+     <text style="font-size: 15px; font-family: 'Malgun Gothic', 'DejaVu Sans'; text-anchor: middle" x="206.685" y="74.37199" transform="rotate(-0 206.685 74.37199)">5</text>
+    </g>
+    <g id="patch_9">
+     <path d="M 261.09 86.36832
+L 369.9 86.36832
+L 369.9 53.38152
+L 261.09 53.38152
+z
+" style="fill: #ffffff; stroke: #000000; stroke-linejoin: miter"/>
+    </g>
+    <g id="text_8">
+     <text style="font-size: 15px; font-family: 'Malgun Gothic', 'DejaVu Sans'; text-anchor: middle" x="315.495" y="74.778924" transform="rotate(-0 315.495 74.778924)">빈칸</text>
+    </g>
+    <g id="patch_10">
+     <path d="M 369.9 86.36832
+L 478.71 86.36832
+L 478.71 53.38152
+L 369.9 53.38152
+z
+" style="fill: #ffffff; stroke: #000000; stroke-linejoin: miter"/>
+    </g>
+    <g id="text_9">
+     <text style="font-size: 15px; font-family: 'Malgun Gothic', 'DejaVu Sans'; text-anchor: middle" x="424.305" y="74.37199" transform="rotate(-0 424.305 74.37199)">3</text>
+    </g>
+    <g id="patch_11">
+     <path d="M 478.71 86.36832
+L 587.52 86.36832
+L 587.52 53.38152
+L 478.71 53.38152
+z
+" style="fill: #ffffff; stroke: #000000; stroke-linejoin: miter"/>
+    </g>
+    <g id="text_10">
+     <text style="font-size: 15px; font-family: 'Malgun Gothic', 'DejaVu Sans'; text-anchor: middle" x="533.115" y="74.37199" transform="rotate(-0 533.115 74.37199)">1</text>
+    </g>
+    <g id="patch_12">
+     <path d="M 7.2 119.35512
+L 152.28 119.35512
+L 152.28 86.36832
+L 7.2 86.36832
+z
+" style="fill: #ffffff; stroke: #000000; stroke-linejoin: miter"/>
+    </g>
+    <g id="text_11">
+     <text style="font-size: 15px; font-family: 'Malgun Gothic', 'DejaVu Sans'; text-anchor: middle" x="79.74" y="107.765724" transform="rotate(-0 79.74 107.765724)">평균3 빼기</text>
+    </g>
+    <g id="patch_13">
+     <path d="M 152.28 119.35512
+L 261.09 119.35512
+L 261.09 86.36832
+L 152.28 86.36832
+z
+" style="fill: #ffffff; stroke: #000000; stroke-linejoin: miter"/>
+    </g>
+    <g id="text_12">
+     <text style="font-size: 15px; font-family: 'Malgun Gothic', 'DejaVu Sans'; text-anchor: middle" x="206.685" y="107.35879" transform="rotate(-0 206.685 107.35879)">2</text>
+    </g>
+    <g id="patch_14">
+     <path d="M 261.09 119.35512
+L 369.9 119.35512
+L 369.9 86.36832
+L 261.09 86.36832
+z
+" style="fill: #e9edf2; stroke: #000000; stroke-linejoin: miter"/>
+    </g>
+    <g id="text_13">
+     <text style="font-size: 15px; font-family: 'Malgun Gothic', 'DejaVu Sans'; text-anchor: middle" x="315.495" y="107.35879" transform="rotate(-0 315.495 107.35879)">0</text>
+    </g>
+    <g id="patch_15">
+     <path d="M 369.9 119.35512
+L 478.71 119.35512
+L 478.71 86.36832
+L 369.9 86.36832
+z
+" style="fill: #dceaff; stroke: #000000; stroke-linejoin: miter"/>
+    </g>
+    <g id="text_14">
+     <text style="font-size: 15px; font-family: 'Malgun Gothic', 'DejaVu Sans'; text-anchor: middle" x="424.305" y="107.35879" transform="rotate(-0 424.305 107.35879)">0</text>
+    </g>
+    <g id="patch_16">
+     <path d="M 478.71 119.35512
+L 587.52 119.35512
+L 587.52 86.36832
+L 478.71 86.36832
+z
+" style="fill: #ffffff; stroke: #000000; stroke-linejoin: miter"/>
+    </g>
+    <g id="text_15">
+     <text style="font-size: 15px; font-family: 'Malgun Gothic', 'DejaVu Sans'; text-anchor: middle" x="533.115" y="107.35879" transform="rotate(-0 533.115 107.35879)">−2</text>
+    </g>
+    <g id="patch_17">
+     <path d="M 7.2 152.34192
+L 152.28 152.34192
+L 152.28 119.35512
+L 7.2 119.35512
+z
+" style="fill: #ffffff; stroke: #000000; stroke-linejoin: miter"/>
+    </g>
+    <g id="text_16">
+     <text style="font-size: 15px; font-family: 'Malgun Gothic', 'DejaVu Sans'; text-anchor: middle" x="79.74" y="140.811118" transform="rotate(-0 79.74 140.811118)">관측 마스크</text>
+    </g>
+    <g id="patch_18">
+     <path d="M 152.28 152.34192
+L 261.09 152.34192
+L 261.09 119.35512
+L 152.28 119.35512
+z
+" style="fill: #ffffff; stroke: #000000; stroke-linejoin: miter"/>
+    </g>
+    <g id="text_17">
+     <text style="font-size: 15px; font-family: 'Malgun Gothic', 'DejaVu Sans'; text-anchor: middle" x="206.685" y="140.34559" transform="rotate(-0 206.685 140.34559)">1</text>
+    </g>
+    <g id="patch_19">
+     <path d="M 261.09 152.34192
+L 369.9 152.34192
+L 369.9 119.35512
+L 261.09 119.35512
+z
+" style="fill: #ffffff; stroke: #000000; stroke-linejoin: miter"/>
+    </g>
+    <g id="text_18">
+     <text style="font-size: 15px; font-family: 'Malgun Gothic', 'DejaVu Sans'; text-anchor: middle" x="315.495" y="140.34559" transform="rotate(-0 315.495 140.34559)">0</text>
+    </g>
+    <g id="patch_20">
+     <path d="M 369.9 152.34192
+L 478.71 152.34192
+L 478.71 119.35512
+L 369.9 119.35512
+z
+" style="fill: #ffffff; stroke: #000000; stroke-linejoin: miter"/>
+    </g>
+    <g id="text_19">
+     <text style="font-size: 15px; font-family: 'Malgun Gothic', 'DejaVu Sans'; text-anchor: middle" x="424.305" y="140.34559" transform="rotate(-0 424.305 140.34559)">1</text>
+    </g>
+    <g id="patch_21">
+     <path d="M 478.71 152.34192
+L 587.52 152.34192
+L 587.52 119.35512
+L 478.71 119.35512
+z
+" style="fill: #ffffff; stroke: #000000; stroke-linejoin: miter"/>
+    </g>
+    <g id="text_20">
+     <text style="font-size: 15px; font-family: 'Malgun Gothic', 'DejaVu Sans'; text-anchor: middle" x="533.115" y="140.34559" transform="rotate(-0 533.115 140.34559)">1</text>
+    </g>
+   </g>
+   <g id="text_21">
+    <text style="font-size: 13px; font-family: 'Malgun Gothic', 'DejaVu Sans'; text-anchor: middle; fill: #677789" x="178.3944" y="190.3104" transform="rotate(-0 178.3944 190.3104)">Q: 미관측이라 0</text>
+   </g>
+   <g id="text_22">
+    <text style="font-size: 13px; font-family: 'Malgun Gothic', 'DejaVu Sans'; text-anchor: middle; fill: #2463aa" x="384.408" y="190.3104" transform="rotate(-0 384.408 190.3104)">R: 관측3점 − 평균3 = 0</text>
+   </g>
+  </g>
+ </g>
+</svg>

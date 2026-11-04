@@ -75,6 +75,10 @@ sessions:
     date: '2026-11-03'
     colab_ref: 2026-fall-w10a
     notion_url: https://fancy-ballcap-a15.notion.site/W10A-FM-2026-11-03-40b7fd00109f813eb976c23976428c94
+  w10b:
+    date: '2026-11-05'
+    colab_ref: 2026-fall-w10b
+    notion_url: https://fancy-ballcap-a15.notion.site/W10B-40d7fd00109f81ccb732d840670bc4a3
 resources:
 - group: Python 기초
   title: 이 수업을 위한 Python 복습 길잡이
@@ -206,3 +210,18 @@ resources:
   url: course/notion/supplements/w10a-api-guide.md
   language: 한국어
   purpose: 인수·배열 크기·반환값과 상태 변경을 미리 확인
+- group: W10B 오토인코더 추천
+  title: 실습 B · 실제 사용자/아이템 AE
+  url: https://colab.research.google.com/github/lunalab-ai/recommender/blob/2026-fall-w10b/notebooks/student/w10b-user-item-comparison.ipynb
+  language: 한국어
+  purpose: 같은 관측 분할의 전치·실제 학습·연습 7-1 비교
+- group: W10B 오토인코더 추천
+  title: AE 계산 워크북
+  url: course/notion/supplements/w10b-workbook.md
+  language: 한국어
+  purpose: 핵심4개와 추가 반복4개의 예상·계산·실행·설명
+- group: W10B 오토인코더 추천
+  title: AE 실습 API 길잡이
+  url: course/notion/supplements/w10b-api-guide.md
+  language: 한국어
+  purpose: 입력·배열 크기·반환값·상태 변경 확인

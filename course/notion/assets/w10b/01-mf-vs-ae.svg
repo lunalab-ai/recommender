@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="594.72pt" height="263.88pt" viewBox="0 0 594.72 263.88" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:date>2026-11-04T06:39:51.103710</dc:date>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Matplotlib v3.11.1, https://matplotlib.org/</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 263.88
+L 594.72 263.88
+L 594.72 0
+L 0 0
+z
+" style="fill: #ffffff"/>
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 18.8064 101.00448
+L 175.4928 101.00448
+Q 180.13536 101.00448 180.13536 97.0128
+L 180.13536 57.096
+Q 180.13536 53.10432 175.4928 53.10432
+L 18.8064 53.10432
+Q 14.16384 53.10432 14.16384 57.096
+L 14.16384 97.0128
+Q 14.16384 101.00448 18.8064 101.00448
+z
+" clip-path="url(#p86692bf7da)" style="fill: #e7effa; stroke: #94a6bd; stroke-width: 1.2; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_3">
+    <path d="M 213.2136 101.00448
+L 369.9 101.00448
+Q 374.54256 101.00448 374.54256 97.0128
+L 374.54256 57.096
+Q 374.54256 53.10432 369.9 53.10432
+L 213.2136 53.10432
+Q 208.57104 53.10432 208.57104 57.096
+L 208.57104 97.0128
+Q 208.57104 101.00448 213.2136 101.00448
+z
+" clip-path="url(#p86692bf7da)" style="fill: #e7effa; stroke: #94a6bd; stroke-width: 1.2; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_4">
+    <path d="M 413.424 101.00448
+L 564.3072 101.00448
+Q 568.94976 101.00448 568.94976 97.0128
+L 568.94976 57.096
+Q 568.94976 53.10432 564.3072 53.10432
+L 413.424 53.10432
+Q 408.78144 53.10432 408.78144 57.096
+L 408.78144 97.0128
+Q 408.78144 101.00448 413.424 101.00448
+z
+" clip-path="url(#p86692bf7da)" style="fill: #e7effa; stroke: #94a6bd; stroke-width: 1.2; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_5">
+    <path d="M 18.8064 205.78608
+L 175.4928 205.78608
+Q 180.13536 205.78608 180.13536 201.7944
+L 180.13536 161.8776
+Q 180.13536 157.88592 175.4928 157.88592
+L 18.8064 157.88592
+Q 14.16384 157.88592 14.16384 161.8776
+L 14.16384 201.7944
+Q 14.16384 205.78608 18.8064 205.78608
+z
+" clip-path="url(#p86692bf7da)" style="fill: #eee7f5; stroke: #94a6bd; stroke-width: 1.2; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_6">
+    <path d="M 213.2136 205.78608
+L 369.9 205.78608
+Q 374.54256 205.78608 374.54256 201.7944
+L 374.54256 161.8776
+Q 374.54256 157.88592 369.9 157.88592
+L 213.2136 157.88592
+Q 208.57104 157.88592 208.57104 161.8776
+L 208.57104 201.7944
+Q 208.57104 205.78608 213.2136 205.78608
+z
+" clip-path="url(#p86692bf7da)" style="fill: #eee7f5; stroke: #94a6bd; stroke-width: 1.2; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_7">
+    <path d="M 413.424 205.78608
+L 564.3072 205.78608
+Q 568.94976 205.78608 568.94976 201.7944
+L 568.94976 161.8776
+Q 568.94976 157.88592 564.3072 157.88592
+L 413.424 157.88592
+Q 408.78144 157.88592 408.78144 161.8776
+L 408.78144 201.7944
+Q 408.78144 205.78608 413.424 205.78608
+z
+" clip-path="url(#p86692bf7da)" style="fill: #eee7f5; stroke: #94a6bd; stroke-width: 1.2; stroke-linejoin: miter"/>
+   </g>
+   <g id="text_1">
+    <text style="font-size: 14px; font-family: 'Malgun Gothic', 'DejaVu Sans'; text-anchor: middle; fill: #213248" x="97.1496" y="81.63147" transform="rotate(-0 97.1496 81.63147)">MF: 사용자ID·영화ID</text>
+   </g>
+   <g id="text_2">
+    <text style="font-size: 14px; font-family: 'Malgun Gothic', 'DejaVu Sans'; text-anchor: middle; fill: #213248" x="291.5568" y="81.665377" transform="rotate(-0 291.5568 81.665377)">학습한 벡터 조회</text>
+   </g>
+   <g id="text_3">
+    <text style="font-size: 14px; font-family: 'Malgun Gothic', 'DejaVu Sans'; text-anchor: middle; fill: #213248" x="488.8656" y="81.63147" transform="rotate(-0 488.8656 81.63147)">평점 하나</text>
+   </g>
+   <g id="text_4">
+    <text style="font-size: 14px; font-family: 'Malgun Gothic', 'DejaVu Sans'; text-anchor: middle; fill: #213248" x="97.1496" y="186.41307" transform="rotate(-0 97.1496 186.41307)">AE: 사용자 평점 벡터</text>
+   </g>
+   <g id="text_5">
+    <text style="font-size: 14px; font-family: 'Malgun Gothic', 'DejaVu Sans'; text-anchor: middle; fill: #213248" x="291.5568" y="186.41307" transform="rotate(-0 291.5568 186.41307)">공유 인코더로 계산</text>
+   </g>
+   <g id="text_6">
+    <text style="font-size: 14px; font-family: 'Malgun Gothic', 'DejaVu Sans'; text-anchor: middle; fill: #213248" x="488.8656" y="186.41307" transform="rotate(-0 488.8656 186.41307)">모든 영화의 복원값</text>
+   </g>
+   <g id="patch_8">
+    <path d="M 180.395626 77.0544
+Q 192.90216 77.0544 203.396234 77.0544
+" style="fill: none; stroke: #60758c; stroke-width: 1.8; stroke-linecap: round"/>
+    <path d="M 198.196234 74.4544
+L 203.396234 77.0544
+L 198.196234 79.6544
+" style="fill: none; stroke: #60758c; stroke-width: 1.8; stroke-linecap: round"/>
+   </g>
+   <g id="patch_9">
+    <path d="M 374.803534 77.0544
+Q 390.212667 77.0544 403.609338 77.0544
+" style="fill: none; stroke: #60758c; stroke-width: 1.8; stroke-linecap: round"/>
+    <path d="M 398.409338 74.4544
+L 403.609338 77.0544
+L 398.409338 79.6544
+" style="fill: none; stroke: #60758c; stroke-width: 1.8; stroke-linecap: round"/>
+   </g>
+   <g id="patch_10">
+    <path d="M 180.395626 181.836
+Q 192.90216 181.836 203.396234 181.836
+" style="fill: none; stroke: #60758c; stroke-width: 1.8; stroke-linecap: round"/>
+    <path d="M 198.196234 179.236
+L 203.396234 181.836
+L 198.196234 184.436
+" style="fill: none; stroke: #60758c; stroke-width: 1.8; stroke-linecap: round"/>
+   </g>
+   <g id="patch_11">
+    <path d="M 374.803534 181.836
+Q 390.212667 181.836 403.609338 181.836
+" style="fill: none; stroke: #60758c; stroke-width: 1.8; stroke-linecap: round"/>
+    <path d="M 398.409338 179.236
+L 403.609338 181.836
+L 398.409338 184.436
+" style="fill: none; stroke: #60758c; stroke-width: 1.8; stroke-linecap: round"/>
+   </g>
+   <g id="text_7">
+    <text style="font-size: 13px; font-family: 'Malgun Gothic', 'DejaVu Sans'; text-anchor: middle" x="297.36" y="239.2164" transform="rotate(-0 297.36 239.2164)">AE의 잠재표현은 입력마다 달라지고, Dense 가중치는 여러 사용자에게 공유됩니다.</text>
+   </g>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="p86692bf7da">
+   <rect x="7.2" y="7.2" width="580.32" height="249.48"/>
+  </clipPath>
+ </defs>
+</svg>

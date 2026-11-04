@@ -34,6 +34,9 @@
 | W10A 딥러닝 추천 | [실습 B · MLP·직업·나이](https://colab.research.google.com/github/lunalab-ai/recommender/blob/2026-fall-w10a/notebooks/student/w10a-mlp-features.ipynb) | 한국어 | 같은 분할에서 MF/MLP/직업 비교와 설명 앱 수정 |
 | W10A 딥러닝 추천 | [계산 워크북](../course/notion/supplements/w10a-workbook.md) | 한국어 | 필수6문제와 보충4문제의 예상·계산·실행·해석 |
 | W10A 딥러닝 추천 | [실습 API 길잡이](../course/notion/supplements/w10a-api-guide.md) | 한국어 | 인수·배열 크기·반환값과 상태 변경을 미리 확인 |
+| W10B 오토인코더 추천 | [실습 B · 실제 사용자/아이템 AE](https://colab.research.google.com/github/lunalab-ai/recommender/blob/2026-fall-w10b/notebooks/student/w10b-user-item-comparison.ipynb) | 한국어 | 같은 관측 분할의 전치·실제 학습·연습 7-1 비교 |
+| W10B 오토인코더 추천 | [AE 계산 워크북](../course/notion/supplements/w10b-workbook.md) | 한국어 | 핵심4개와 추가 반복4개의 예상·계산·실행·설명 |
+| W10B 오토인코더 추천 | [AE 실습 API 길잡이](../course/notion/supplements/w10b-api-guide.md) | 한국어 | 입력·배열 크기·반환값·상태 변경 확인 |
 
 ## 차시별 출처와 참고 링크
 
@@ -406,3 +409,18 @@ CF는 관측 행렬에서 비교 가능한 이웃을 찾고 그들의 평가를 
 - [He et al.(2017), Neural Collaborative Filtering](https://arxiv.org/abs/1708.05031).
 - [Dive into Deep Learning, Factorization Machines](https://d2l.ai/chapter_recommender-systems/fm.html).
 - [GroupLens MovieLens100K README](https://files.grouplens.org/datasets/movielens/ml-100k-README.txt).
+
+### W10B · 오토인코더 추천을 한 칸씩 이해하기
+
+[강의 원문](notion/sessions/w10b-autoencoder-recommendation.md)
+
+- 주교재: 임일(2025), 『AI 에이전트를 위한 개인화 추천 알고리즘: Python, 머신러닝, AI, LLM 활용』, 청람,7장pp.148–156, 그림7-1~7-4, 연습7-1. 교재 보고값은B절 표에 별도 표시했습니다.
+- [AutoRec: Autoencoders Meet Collaborative Filtering](https://ssanner.github.io/papers/anu/www15.pdf): 관측 재구성 오차·공유 모수·사용자/아이템 기준의 원논문. 이 논문의 구조·규제·데이터·학습법과 교재/수업 구현은 동일하지 않습니다.
+- [Keras Dense](https://keras.io/api/layers/core_layers/dense/): 가중합·편향·활성함수와배열 크기.
+- [Keras Masking](https://keras.io/api/layers/core_layers/masking/): 시점 마스크와이번 관측 손실 마스크의역할 구분.
+- [Keras Losses](https://keras.io/api/losses/),[가중치 정규화](https://keras.io/api/layers/regularizers/),[Adamax](https://keras.io/api/optimizers/adamax/): 손실 집계·L1·실제 학습 방법.
+- [TensorFlow 오토인코더 입문](https://www.tensorflow.org/tutorials/generative/autoencoder): 인코더와 디코더의 기본 설명. 이미지 손실을 희소 평점에 그대로 적용하는 자료는 아닙니다.
+- [MovieLens 100K 공식README](https://files.grouplens.org/datasets/movielens/ml-100k-README.txt): 자료 크기·형식·이용조건. 실습 중 공식 자료를 준비하며 원자료를 배포 묶음에 복사하지 않습니다.
+- [IES 학습·수업 설계 가이드](https://ies.ed.gov/ncee/wwc/PracticeGuide/1): 풀이 예제와 독립 문제의 교대, 그림·언어 및 추상·구체 표현의 연결에 참고했습니다.
+
+외부 문서 확인: 2026-11-04. 별도 표시한 교재 그림 외 도해와 작은 숫자 예제는독자 제작입니다. 실제 소형 사용자 AE의 곡선과 수치는 이번 로컬 CPU 실행 범위를 나타내며, 향후 모든 환경의 성능을 보장하지 않습니다.

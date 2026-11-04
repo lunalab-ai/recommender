@@ -22,3 +22,4 @@
 | W09A · 중간고사 답안 리뷰와 판서 필기 | [다운로드](w09a-midterm-review-notes.pdf) | — | — |
 | W09B · Factorization Machines: 특성 상호작용과 잠재벡터 공유 | [다운로드](w09b-fm-theory.pdf) | [답안 PDF](w09b-fm-theory-quiz.pdf) | [답안 보기](w09b-fm-theory-quiz.md) |
 | W10A · FM 복습과 딥러닝을 이용한 추천 시스템 | [다운로드](w10a-neural-recommenders.pdf) | [답안 PDF](w10a-neural-recommenders-quiz.pdf) | [답안 보기](w10a-neural-recommenders-quiz.md) |
+| W10B · 오토인코더 추천을 한 칸씩 이해하기 | [다운로드](w10b-autoencoder-recommendation.pdf) | [답안 PDF](w10b-autoencoder-recommendation-quiz.pdf) | [답안 보기](w10b-autoencoder-recommendation-quiz.md) |
