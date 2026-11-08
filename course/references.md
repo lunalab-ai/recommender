@@ -424,3 +424,24 @@ CF는 관측 행렬에서 비교 가능한 이웃을 찾고 그들의 평가를 
 - [IES 학습·수업 설계 가이드](https://ies.ed.gov/ncee/wwc/PracticeGuide/1): 풀이 예제와 독립 문제의 교대, 그림·언어 및 추상·구체 표현의 연결에 참고했습니다.
 
 외부 문서 확인: 2026-11-04. 별도 표시한 교재 그림 외 도해와 작은 숫자 예제는독자 제작입니다. 실제 소형 사용자 AE의 곡선과 수치는 이번 로컬 CPU 실행 범위를 나타내며, 향후 모든 환경의 성능을 보장하지 않습니다.
+
+### W11A · 이력을 읽고 다음 아이템을 추천하기
+
+[강의 원문](notion/sessions/w11a-transformer-recommendation.md)
+
+입력·정답을 먼저 정하고, 작은 계산을 본문 코드와 대조하세요. 함수 하나를 수정한 뒤 실제 결과의 변화와 이유를 설명할 수 있어야 합니다.
+
+- 임일(2025), 『AI 에이전트를 위한 개인화 추천 알고리즘』, 8장 전체 pp.158–176, 연습 8-1; 7장 pp.148–156 복습. 교재의 개념·원형과 독자 수치·보완 구현을 구분했습니다.
+- [Attention Is All You Need, §§3.1–3.5](https://arxiv.org/html/1706.03762v7)
+- [SASRec: 다른 순차 학습 설정과 인과성](https://arxiv.org/html/1808.09781v1)
+- [Keras MultiHeadAttention](https://keras.io/api/layers/attention_layers/multi_head_attention/)
+- [TensorFlow masking과 padding](https://www.tensorflow.org/guide/keras/understanding_masking_and_padding)
+- [Keras 직접 학습 루프](https://keras.io/guides/writing_a_custom_training_loop_in_tensorflow/)
+- [MovieLens 100K 자료와 이용 조건](https://files.grouplens.org/datasets/movielens/ml-100k-README.txt)
+
+본문에서 함께 소개한 링크:
+
+- [7A 보강 실습](https://colab.research.google.com/github/lunalab-ai/recommender/blob/2026-fall-w11a/notebooks/student/w11a-ch07-a-principles.ipynb)
+- [7B 보강 실습](https://colab.research.google.com/github/lunalab-ai/recommender/blob/2026-fall-w11a/notebooks/student/w11a-ch07-b-comparison.ipynb)
+- [8A attention 실습](https://colab.research.google.com/github/lunalab-ai/recommender/blob/2026-fall-w11a/notebooks/student/w11a-attention-principles.ipynb)
+- [8B 순차 추천 실습](https://colab.research.google.com/github/lunalab-ai/recommender/blob/2026-fall-w11a/notebooks/student/w11a-transformer-recommendation.ipynb)

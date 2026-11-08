@@ -216,14 +216,15 @@ def build_autoencoder(n_features: int, *, hidden: tuple[int, int] = (32, 8),
     return keras.Model(inputs, output, name='rating_autoencoder')
 
 
-def build_fixed_autoencoder():
+def build_fixed_autoencoder(*, forward_fn: Any = None):
     """설명용4→2(tanh)→4를 같은 고정값으로Keras화. 학습 모수22개.
 
     fixed_ae_forward와 같은 가중치/0인bias. 초기화와TensorFlow import만 수행.
+    선택적 forward_fn의 실제 encoder/decoder를 사용해 본문 수정과 일치시킨다.
     model(fixed_ae_forward()['input'][None,:])로 중심화 출력을 비교한다.
     """
     _, keras = _keras(20261105)
-    trace = fixed_ae_forward()
+    trace = (forward_fn or fixed_ae_forward)()
     model = keras.Sequential([keras.Input((4,)), keras.layers.Dense(2, activation='tanh'),
                               keras.layers.Dense(4)])
     model.set_weights([trace['encoder'].astype('float32'), np.zeros(2, dtype='float32'),
@@ -247,16 +248,58 @@ def _predict_centered(model: Any, inputs: np.ndarray, batch_size: int = 256) -> 
                            for j in range(0, len(inputs), batch_size)])
 
 
+def observed_reconstruction_loss(target: Any, prediction: Any, observed: Any, *, loss_kind: str = 'mse'):
+    """Same-shaped tensors -> observed MSE (or stabilized RMSE); no updates.
+
+    Explicit observation mask retains centered observed zeros. An empty mask
+    is an error. L1 is added by the training step, not by this reconstruction loss.
+    """
+    import tensorflow as tf
+    mask = tf.cast(observed, tf.float32)
+    tf.debugging.assert_equal(tf.shape(target), tf.shape(prediction))
+    tf.debugging.assert_equal(tf.shape(target), tf.shape(mask))
+    tf.debugging.assert_positive(tf.reduce_sum(mask))
+    if loss_kind not in {'mse', 'rmse'}:
+        raise ValueError('loss_kind must be mse or rmse.')
+    delta = tf.where(tf.cast(mask, tf.bool), target - prediction, tf.zeros_like(prediction))
+    mse = tf.reduce_sum(tf.square(delta)) / tf.reduce_sum(mask)
+    return mse if loss_kind == 'mse' else tf.sqrt(mse + 1e-8)
+
+
+def autoencoder_train_step(model: Any, optimizer: Any, target: Any, observed: Any, *,
+                           loss_kind: str = 'mse', loss_fn=None) -> dict:
+    """One real update. Optional loss_fn is the notebook's actual editable loss.
+
+    Changes model weights and optimizer state; returns objective and gradient norm.
+    Default loss preserves the previous observed-MSE/RMSE+L1 calculation.
+    """
+    import tensorflow as tf
+    loss_fn = loss_fn or observed_reconstruction_loss
+    with tf.GradientTape() as tape:
+        pred = model(target, training=True)
+        reconstruction = loss_fn(target, pred, observed, loss_kind=loss_kind)
+        objective = reconstruction + (tf.add_n(model.losses) if model.losses else 0.)
+    gradients = tape.gradient(objective, model.trainable_variables)
+    if not bool(tf.math.is_finite(objective)) or any(
+            g is None or not bool(tf.reduce_all(tf.math.is_finite(g))) for g in gradients):
+        raise FloatingPointError('학습 목적함수 또는 기울기가 유한하지 않습니다.')
+    norm = float(tf.linalg.global_norm(gradients))
+    optimizer.apply_gradients(zip(gradients, model.trainable_variables))
+    return {'objective': float(objective), 'gradient_norm': norm}
+
+
 def fit_autoencoder(data: AutoencoderData, *, direction: str = 'user', epochs: int = 8,
                     hidden: tuple[int, int] = (32, 8), reg: float = .0003,
                     learning_rate: float = .001, batch_size: int = 128,
-                    patience: int = 3, loss_kind: str = 'mse', seed: int = 20261105) -> AutoencoderFit:
+                    patience: int = 3, loss_kind: str = 'mse', seed: int = 20261105,
+                    step_fn=None, loss_fn=None) -> AutoencoderFit:
     """관측 마스크를 명시해Adamax로 실제 학습, 검증RMSE 최상의 가중치 복원.
 
     train 입력만 쓰고validation으로 선택한다. test를 참조하지 않는다.
     기본은 관측MSE+L1,rmse는sqrt(MSE+1e-8)+L1인 안정화 경로다. 보고RMSE는
     전체 관측의 정확한SSE/n에서 구한다. 반환은 모형·이력·최상epoch·시간·갱신 수.
     데이터/디스크를 변경하지 않으며TensorFlow seed와 모형 가중치를 변경한다.
+    선택적 step_fn/loss_fn은 노트북에서 수정한 실제 함수를 연결한다.
     예: fit_autoencoder(data,direction='user',epochs=3).
     """
     if (type(epochs) is not int or epochs < 1 or batch_size < 1 or patience < 1
@@ -282,16 +325,8 @@ def fit_autoencoder(data: AutoencoderData, *, direction: str = 'user', epochs: i
                 continue
             target = tf.convert_to_tensor(x[take])
             observed = tf.convert_to_tensor(train_mask[take], dtype=tf.float32)
-            with tf.GradientTape() as tape:
-                pred = model(target, training=True)
-                mse = tf.reduce_sum(observed * tf.square(target - pred)) / tf.reduce_sum(observed)
-                reconstruction = mse if loss_kind == 'mse' else tf.sqrt(mse + 1e-8)
-                objective = reconstruction + tf.add_n(model.losses)
-            gradients = tape.gradient(objective, model.trainable_variables)
-            if not bool(tf.math.is_finite(objective)) or any(
-                    g is None or not bool(tf.reduce_all(tf.math.is_finite(g))) for g in gradients):
-                raise FloatingPointError('학습 목적함수 또는 기울기가 유한하지 않습니다.')
-            optimizer.apply_gradients(zip(gradients, model.trainable_variables))
+            (step_fn or autoencoder_train_step)(model, optimizer, target, observed,
+                                                  loss_kind=loss_kind, loss_fn=loss_fn)
             updates += 1
         pred = _predict_centered(model, x)
         # Cold axes use the training mean (centered0), in either orientation.
@@ -300,6 +335,11 @@ def fit_autoencoder(data: AutoencoderData, *, direction: str = 'user', epochs: i
         val = masked_metrics(values['validation'], pred, masks['validation'])
         penalty = float(tf.add_n(model.losses))
         train_loss = train['mse'] if loss_kind == 'mse' else float(np.sqrt(train['mse'] + 1e-8))
+        if loss_fn is not None:
+            train_loss = float(loss_fn(tf.convert_to_tensor(values['train']),
+                                      tf.convert_to_tensor(pred, dtype=tf.float32),
+                                      tf.convert_to_tensor(masks['train'], dtype=tf.float32),
+                                      loss_kind=loss_kind))
         history.append({'epoch': epoch, 'train_mse': train['mse'], 'train_rmse': train['rmse'],
                         'validation_rmse': val['rmse'], 'l1_penalty': penalty,
                         'objective': train_loss + penalty})

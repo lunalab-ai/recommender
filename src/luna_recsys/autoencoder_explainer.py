@@ -15,7 +15,7 @@ from .autoencoder_recommenders import (
 )
 
 
-def ae_view(r1=5., r2=3., r3=3., r4=1., o1=True, o2=False, o3=True, o4=True):
+def ae_view(r1=5., r2=3., r3=3., r4=1., o1=True, o2=False, o3=True, o4=True, *, forward_fn: Callable = fixed_ae_forward):
     """8개 위젯(평점4,관측 여부4)→요약/평점표/잠재표/오차표/Figure.
 
     훈련 평균3과 모수는 고정이다. 관측False인 위젯값은 입력에서 제외한다.
@@ -27,7 +27,7 @@ def ae_view(r1=5., r2=3., r3=3., r4=1., o1=True, o2=False, o3=True, o4=True):
     if not np.isfinite(ratings[observed]).all():
         raise ValueError('관측으로 선택한 칸에 평점을 입력하세요.')
     raw = np.where(observed, ratings, np.nan)
-    trace = fixed_ae_forward(raw)
+    trace = forward_fn(raw)
     prediction = trace['rating_prediction']
     table = pd.DataFrame({'movie': ['P', 'Q', 'R', 'S'], 'rating': raw,
                           'observed': observed, 'centered_input': trace['input'],
