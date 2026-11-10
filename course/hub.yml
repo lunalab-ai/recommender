@@ -83,6 +83,10 @@ sessions:
     date: '2026-11-10'
     colab_ref: 2026-fall-w11a
     notion_url: https://fancy-ballcap-a15.notion.site/W11A-4127fd00109f817b802fd8c6282ae8eb
+  w11b:
+    date: '2026-11-11'
+    colab_ref: 2026-fall-w11b
+    notion_url: https://fancy-ballcap-a15.notion.site/W11B-LLM-2026-11-11-4137fd00109f81348271d1a3d2977c00
 resources:
 - group: Python 기초
   title: 이 수업을 위한 Python 복습 길잡이
@@ -229,3 +233,8 @@ resources:
   url: course/notion/supplements/w10b-api-guide.md
   language: 한국어
   purpose: 입력·배열 크기·반환값·상태 변경 확인
+- group: W11B LLM 추천
+  title: 실습 B · 실제 리뷰 임베딩+FM
+  url: https://colab.research.google.com/github/lunalab-ai/recommender/blob/2026-fall-w11b/notebooks/student/w11b-embedding-fm.ipynb
+  language: 한국어
+  purpose: 훈련 리뷰·본문 특성/SGD 수정·고정 분할 학습·앱CSV

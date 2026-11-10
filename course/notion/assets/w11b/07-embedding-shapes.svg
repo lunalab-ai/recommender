@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="907.2pt" height="259.2pt" viewBox="0 0 907.2 259.2" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:date>2026-11-10T08:03:41.967660</dc:date>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Matplotlib v3.11.1, https://matplotlib.org/</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 259.2
+L 907.2 259.2
+L 907.2 0
+L 0 0
+z
+" style="fill: #f8fafc"/>
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 32.4 183.6
+L 212.4 183.6
+Q 219.6 183.6 219.6 176.4
+L 219.6 82.8
+Q 219.6 75.6 212.4 75.6
+L 32.4 75.6
+Q 25.2 75.6 25.2 82.8
+L 25.2 176.4
+Q 25.2 183.6 32.4 183.6
+z
+" clip-path="url(#pb565ef6c49)" style="fill: #ffffff; stroke: #087f8c; stroke-width: 1.8; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_3">
+    <path d="M 284.4 183.6
+L 457.2 183.6
+Q 464.4 183.6 464.4 176.4
+L 464.4 82.8
+Q 464.4 75.6 457.2 75.6
+L 284.4 75.6
+Q 277.2 75.6 277.2 82.8
+L 277.2 176.4
+Q 277.2 183.6 284.4 183.6
+z
+" clip-path="url(#pb565ef6c49)" style="fill: #ffffff; stroke: #087f8c; stroke-width: 1.8; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_4">
+    <path d="M 529.2 183.6
+L 673.2 183.6
+Q 680.4 183.6 680.4 176.4
+L 680.4 82.8
+Q 680.4 75.6 673.2 75.6
+L 529.2 75.6
+Q 522 75.6 522 82.8
+L 522 176.4
+Q 522 183.6 529.2 183.6
+z
+" clip-path="url(#pb565ef6c49)" style="fill: #ffffff; stroke: #087f8c; stroke-width: 1.8; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_5">
+    <path d="M 738 183.6
+L 874.8 183.6
+Q 882 183.6 882 176.4
+L 882 82.8
+Q 882 75.6 874.8 75.6
+L 738 75.6
+Q 730.8 75.6 730.8 82.8
+L 730.8 176.4
+Q 730.8 183.6 738 183.6
+z
+" clip-path="url(#pb565ef6c49)" style="fill: #ffffff; stroke: #087f8c; stroke-width: 1.8; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_6">
+    <path d="M 225.202588 129.6
+Q 248.401384 129.6 269.811326 129.6
+" clip-path="url(#pb565ef6c49)" style="fill: none; stroke: #64748b; stroke-width: 1.6; stroke-linecap: round"/>
+    <path d="M 263.411326 126.4
+L 269.811326 129.6
+L 263.411326 132.8
+z
+" clip-path="url(#pb565ef6c49)" style="fill: #64748b; stroke: #64748b; stroke-width: 1.6; stroke-linecap: round"/>
+   </g>
+   <g id="patch_7">
+    <path d="M 470.002588 129.6
+Q 493.201384 129.6 514.611326 129.6
+" clip-path="url(#pb565ef6c49)" style="fill: none; stroke: #64748b; stroke-width: 1.6; stroke-linecap: round"/>
+    <path d="M 508.211326 126.4
+L 514.611326 129.6
+L 508.211326 132.8
+z
+" clip-path="url(#pb565ef6c49)" style="fill: #64748b; stroke: #64748b; stroke-width: 1.6; stroke-linecap: round"/>
+   </g>
+   <g id="patch_8">
+    <path d="M 686.00127 129.6
+Q 705.601093 129.6 723.412062 129.6
+" clip-path="url(#pb565ef6c49)" style="fill: none; stroke: #64748b; stroke-width: 1.6; stroke-linecap: round"/>
+    <path d="M 717.012062 126.4
+L 723.412062 129.6
+L 717.012062 132.8
+z
+" clip-path="url(#pb565ef6c49)" style="fill: #64748b; stroke: #64748b; stroke-width: 1.6; stroke-linecap: round"/>
+   </g>
+   <g id="text_1">
+    <text style="font-weight: 700; font-size: 20px; font-family: 'Malgun Gothic', 'DejaVu Sans'; text-anchor: start; fill: #17334b" x="21.6" y="28.138672" transform="rotate(-0 21.6 28.138672)">9.3 · 텍스트를 실제 숫자 벡터로</text>
+   </g>
+   <g id="text_2">
+    <text style="font-size: 11px; font-family: 'Malgun Gothic', 'DejaVu Sans'; text-anchor: start; fill: #64748b" x="21.6" y="53.99627" transform="rotate(-0 21.6 53.99627)">encoder는 고정 · 임베딩 차원 d와 FM 잠재요인 K는 별개입니다.</text>
+   </g>
+   <g id="text_3">
+    <text style="font-size: 12px; font-family: 'Malgun Gothic', 'DejaVu Sans'; fill: #17334b" transform="translate(82.18125 125.202187)">훈련 리뷰 집계</text>
+    <text style="font-size: 12px; font-family: 'Malgun Gothic', 'DejaVu Sans'; fill: #17334b" transform="translate(85.805625 143.009062)">사용자 / 제품</text>
+   </g>
+   <g id="text_4">
+    <text style="font-size: 12px; font-family: 'Malgun Gothic', 'DejaVu Sans'; fill: #17334b" transform="translate(328.859062 125.082188)">Nomic encoder</text>
+    <text style="font-size: 12px; font-family: 'Malgun Gothic', 'DejaVu Sans'; fill: #17334b" transform="translate(320.667187 143.275312)">768차원 실제 출력</text>
+   </g>
+   <g id="text_5">
+    <text style="font-size: 12px; font-family: 'Malgun Gothic', 'DejaVu Sans'; fill: #17334b" transform="translate(575.97 125.196562)">앞 d=8개</text>
+    <text style="font-size: 12px; font-family: 'Malgun Gothic', 'DejaVu Sans'; fill: #17334b" transform="translate(574.905937 143.196562)">L2 정규화</text>
+   </g>
+   <g id="text_6">
+    <text style="font-size: 12px; font-family: 'Malgun Gothic', 'DejaVu Sans'; fill: #17334b" transform="translate(771.796875 125.196562)">FM 특성으로</text>
+    <text style="font-size: 12px; font-family: 'Malgun Gothic', 'DejaVu Sans'; fill: #17334b" transform="translate(794.4 143.26125)">연결</text>
+   </g>
+   <g id="text_7">
+    <text style="font-size: 12px; font-family: 'Malgun Gothic', 'DejaVu Sans'; text-anchor: start; fill: #17334b" x="36" y="226.8" transform="rotate(-0 36 226.8)">차원 축에 ‘로맨스’, ‘컴퓨터’ 같은 이름이 자동으로 붙지 않습니다. 앞부분 선택은 PCA가 아닙니다.</text>
+   </g>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="pb565ef6c49">
+   <rect x="0" y="0" width="907.2" height="259.2"/>
+  </clipPath>
+ </defs>
+</svg>

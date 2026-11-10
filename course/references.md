@@ -37,6 +37,7 @@
 | W10B 오토인코더 추천 | [실습 B · 실제 사용자/아이템 AE](https://colab.research.google.com/github/lunalab-ai/recommender/blob/2026-fall-w10b/notebooks/student/w10b-user-item-comparison.ipynb) | 한국어 | 같은 관측 분할의 전치·실제 학습·연습 7-1 비교 |
 | W10B 오토인코더 추천 | [AE 계산 워크북](../course/notion/supplements/w10b-workbook.md) | 한국어 | 핵심4개와 추가 반복4개의 예상·계산·실행·설명 |
 | W10B 오토인코더 추천 | [AE 실습 API 길잡이](../course/notion/supplements/w10b-api-guide.md) | 한국어 | 입력·배열 크기·반환값·상태 변경 확인 |
+| W11B LLM 추천 | [실습 B · 실제 리뷰 임베딩+FM](https://colab.research.google.com/github/lunalab-ai/recommender/blob/2026-fall-w11b/notebooks/student/w11b-embedding-fm.ipynb) | 한국어 | 훈련 리뷰·본문 특성/SGD 수정·고정 분할 학습·앱CSV |
 
 ## 차시별 출처와 참고 링크
 
@@ -445,3 +446,18 @@ CF는 관측 행렬에서 비교 가능한 이웃을 찾고 그들의 평가를 
 - [7B 보강 실습](https://colab.research.google.com/github/lunalab-ai/recommender/blob/2026-fall-w11a/notebooks/student/w11a-ch07-b-comparison.ipynb)
 - [8A attention 실습](https://colab.research.google.com/github/lunalab-ai/recommender/blob/2026-fall-w11a/notebooks/student/w11a-attention-principles.ipynb)
 - [8B 순차 추천 실습](https://colab.research.google.com/github/lunalab-ai/recommender/blob/2026-fall-w11a/notebooks/student/w11a-transformer-recommendation.ipynb)
+
+### W11B · LLM을 사용한 추천의 원리와 구현
+
+[강의 원문](notion/sessions/w11b-llm-recommendation.md)
+
+강의 원문에 참고자료 절이 아직 작성되지 않았습니다.
+
+본문에서 함께 소개한 링크:
+
+- [실습 A · 실제 CF·CB 요청](https://colab.research.google.com/github/lunalab-ai/recommender/blob/2026-fall-w11b/notebooks/student/w11b-llm-recommendation.ipynb)
+- [실습 B · 임베딩+FM](https://colab.research.google.com/github/lunalab-ai/recommender/blob/2026-fall-w11b/notebooks/student/w11b-embedding-fm.ipynb)
+- [UCSD Amazon Reviews 2018](https://cseweb.ucsd.edu/~jmcauley/datasets/amazon_v2/)
+- [Ollama](https://docs.ollama.com/api/introduction)
+- [Qwen2.5 0.5B](https://huggingface.co/Qwen/Qwen2.5-0.5B-Instruct)
+- [Nomic v1.5](https://huggingface.co/nomic-ai/nomic-embed-text-v1.5)

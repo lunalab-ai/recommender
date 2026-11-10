@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="907.2pt" height="259.2pt" viewBox="0 0 907.2 259.2" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:date>2026-11-10T08:03:42.292984</dc:date>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Matplotlib v3.11.1, https://matplotlib.org/</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 259.2
+L 907.2 259.2
+L 907.2 0
+L 0 0
+z
+" style="fill: #f8fafc"/>
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 36 190.8
+L 280.8 190.8
+Q 288 190.8 288 183.6
+L 288 75.6
+Q 288 68.4 280.8 68.4
+L 36 68.4
+Q 28.8 68.4 28.8 75.6
+L 28.8 183.6
+Q 28.8 190.8 36 190.8
+z
+" clip-path="url(#p7a264ec07c)" style="fill: #ffffff; stroke: #2563eb; stroke-width: 1.8; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_3">
+    <path d="M 331.2 190.8
+L 576 190.8
+Q 583.2 190.8 583.2 183.6
+L 583.2 75.6
+Q 583.2 68.4 576 68.4
+L 331.2 68.4
+Q 324 68.4 324 75.6
+L 324 183.6
+Q 324 190.8 331.2 190.8
+z
+" clip-path="url(#p7a264ec07c)" style="fill: #ffffff; stroke: #087f8c; stroke-width: 1.8; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_4">
+    <path d="M 626.4 190.8
+L 871.2 190.8
+Q 878.4 190.8 878.4 183.6
+L 878.4 75.6
+Q 878.4 68.4 871.2 68.4
+L 626.4 68.4
+Q 619.2 68.4 619.2 75.6
+L 619.2 183.6
+Q 619.2 190.8 626.4 190.8
+z
+" clip-path="url(#p7a264ec07c)" style="fill: #ffffff; stroke: #c76416; stroke-width: 1.8; stroke-linejoin: miter"/>
+   </g>
+   <g id="text_1">
+    <text style="font-weight: 700; font-size: 20px; font-family: 'Malgun Gothic', 'DejaVu Sans'; text-anchor: start; fill: #17334b" x="21.6" y="28.269922" transform="rotate(-0 21.6 28.269922)">실제 CPU 실행 · 검증 결과를 제한과 함께 읽기</text>
+   </g>
+   <g id="text_2">
+    <text style="font-size: 11px; font-family: 'Malgun Gothic', 'DejaVu Sans'; text-anchor: start; fill: #64748b" x="21.6" y="54.079629" transform="rotate(-0 21.6 54.079629)">Software 5-core 수업용 표본: 32명·631행·385제품 · 동일 분할과 학습 규칙</text>
+   </g>
+   <g id="text_3">
+    <text style="font-size: 12px; font-family: 'Malgun Gothic', 'DejaVu Sans'; fill: #17334b" transform="translate(135.872812 116.414062)">ID만 FM</text>
+    <text style="font-size: 12px; font-family: 'Malgun Gothic', 'DejaVu Sans'; fill: #17334b" transform="translate(102.214687 134.255625)">검증 RMSE 1.044534</text>
+    <text style="font-size: 12px; font-family: 'Malgun Gothic', 'DejaVu Sans'; fill: #17334b" transform="translate(122.16 151.305937)">최적 epoch 5</text>
+   </g>
+   <g id="text_4">
+    <text style="font-size: 12px; font-family: 'Malgun Gothic', 'DejaVu Sans'; fill: #17334b" transform="translate(422.9025 116.196562)">임베딩+FM</text>
+    <text style="font-size: 12px; font-family: 'Malgun Gothic', 'DejaVu Sans'; fill: #17334b" transform="translate(397.414687 134.255625)">검증 RMSE 1.031021</text>
+    <text style="font-size: 12px; font-family: 'Malgun Gothic', 'DejaVu Sans'; fill: #17334b" transform="translate(417.36 151.305937)">최적 epoch 5</text>
+   </g>
+   <g id="text_5">
+    <text style="font-size: 12px; font-family: 'Malgun Gothic', 'DejaVu Sans'; fill: #17334b" transform="translate(713.971875 116.255625)">검증 95건 중</text>
+    <text style="font-size: 12px; font-family: 'Malgun Gothic', 'DejaVu Sans'; fill: #17334b" transform="translate(701.971875 134.243437)">미관측 제품 41건</text>
+    <text style="font-size: 12px; font-family: 'Malgun Gothic', 'DejaVu Sans'; fill: #17334b" transform="translate(676.471875 152.196562)">전체 성능으로 일반화 금지</text>
+   </g>
+   <g id="text_6">
+    <text style="font-size: 11px; font-family: 'Malgun Gothic', 'DejaVu Sans'; text-anchor: start; fill: #17334b" x="36" y="230.4" transform="rotate(-0 36 230.4)">이 수치는 제작 시 기본형 검증 결과입니다. 시험 점수가 아니며 학생의 수정 결과는 달라질 수 있습니다.</text>
+   </g>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="p7a264ec07c">
+   <rect x="0" y="0" width="907.2" height="259.2"/>
+  </clipPath>
+ </defs>
+</svg>

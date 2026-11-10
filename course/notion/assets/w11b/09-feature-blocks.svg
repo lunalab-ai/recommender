@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="907.2pt" height="259.2pt" viewBox="0 0 907.2 259.2" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:date>2026-11-10T08:03:42.092176</dc:date>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Matplotlib v3.11.1, https://matplotlib.org/</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 259.2
+L 907.2 259.2
+L 907.2 0
+L 0 0
+z
+" style="fill: #f8fafc"/>
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 32.4 176.4
+L 190.8 176.4
+Q 198 176.4 198 169.2
+L 198 90
+Q 198 82.8 190.8 82.8
+L 32.4 82.8
+Q 25.2 82.8 25.2 90
+L 25.2 169.2
+Q 25.2 176.4 32.4 176.4
+z
+" clip-path="url(#p3a46661d5f)" style="fill: #ffffff; stroke: #2563eb; stroke-width: 1.8; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_3">
+    <path d="M 219.6 176.4
+L 442.8 176.4
+Q 450 176.4 450 169.2
+L 450 90
+Q 450 82.8 442.8 82.8
+L 219.6 82.8
+Q 212.4 82.8 212.4 90
+L 212.4 169.2
+Q 212.4 176.4 219.6 176.4
+z
+" clip-path="url(#p3a46661d5f)" style="fill: #ffffff; stroke: #2563eb; stroke-width: 1.8; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_4">
+    <path d="M 471.6 176.4
+L 651.6 176.4
+Q 658.8 176.4 658.8 169.2
+L 658.8 90
+Q 658.8 82.8 651.6 82.8
+L 471.6 82.8
+Q 464.4 82.8 464.4 90
+L 464.4 169.2
+Q 464.4 176.4 471.6 176.4
+z
+" clip-path="url(#p3a46661d5f)" style="fill: #ffffff; stroke: #087f8c; stroke-width: 1.8; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_5">
+    <path d="M 680.4 176.4
+L 860.4 176.4
+Q 867.6 176.4 867.6 169.2
+L 867.6 90
+Q 867.6 82.8 860.4 82.8
+L 680.4 82.8
+Q 673.2 82.8 673.2 90
+L 673.2 169.2
+Q 673.2 176.4 680.4 176.4
+z
+" clip-path="url(#p3a46661d5f)" style="fill: #ffffff; stroke: #087f8c; stroke-width: 1.8; stroke-linejoin: miter"/>
+   </g>
+   <g id="text_1">
+    <text style="font-weight: 700; font-size: 20px; font-family: 'Malgun Gothic', 'DejaVu Sans'; text-anchor: start; fill: #17334b" x="21.6" y="28.269922" transform="rotate(-0 21.6 28.269922)">한 평점 관측을 FM 특성 한 행으로</text>
+   </g>
+   <g id="text_2">
+    <text style="font-size: 11px; font-family: 'Malgun Gothic', 'DejaVu Sans'; text-anchor: start; fill: #64748b" x="21.6" y="53.99627" transform="rotate(-0 21.6 53.99627)">손계산 예: 사용자 2명, 제품 3개, 임베딩 d=1 → n=2+3+2=7</text>
+   </g>
+   <g id="text_3">
+    <text style="font-size: 12px; font-family: 'Malgun Gothic', 'DejaVu Sans'; fill: #17334b" transform="translate(79.490625 125.196562)">사용자 원핫</text>
+    <text style="font-size: 12px; font-family: 'Malgun Gothic', 'DejaVu Sans'; fill: #17334b" transform="translate(100.021875 142.0275)">[1,0]</text>
+   </g>
+   <g id="text_4">
+    <text style="font-size: 12px; font-family: 'Malgun Gothic', 'DejaVu Sans'; fill: #17334b" transform="translate(305.090625 125.196562)">제품 원핫</text>
+    <text style="font-size: 12px; font-family: 'Malgun Gothic', 'DejaVu Sans'; fill: #17334b" transform="translate(315.004687 142.0275)">[1,0,0]</text>
+   </g>
+   <g id="text_5">
+    <text style="font-size: 12px; font-family: 'Malgun Gothic', 'DejaVu Sans'; fill: #17334b" transform="translate(523.490625 125.196562)">사용자 임베딩</text>
+    <text style="font-size: 12px; font-family: 'Malgun Gothic', 'DejaVu Sans'; fill: #17334b" transform="translate(550.021875 142.004063)">[0.6]</text>
+   </g>
+   <g id="text_6">
+    <text style="font-size: 12px; font-family: 'Malgun Gothic', 'DejaVu Sans'; fill: #17334b" transform="translate(738.290625 125.196562)">제품 임베딩</text>
+    <text style="font-size: 12px; font-family: 'Malgun Gothic', 'DejaVu Sans'; fill: #17334b" transform="translate(758.821875 142.004063)">[0.8]</text>
+   </g>
+   <g id="text_7">
+    <text style="font-size: 12px; font-family: 'Malgun Gothic', 'DejaVu Sans'; text-anchor: start; fill: #17334b" x="36" y="219.6" transform="rotate(-0 36 219.6)">x=(7,), w=(7,), V=(7,K) · K=2라면 V는 7×2 · 연속 특성도 쌍별 상호작용에 참여</text>
+   </g>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="p3a46661d5f">
+   <rect x="0" y="0" width="907.2" height="259.2"/>
+  </clipPath>
+ </defs>
+</svg>

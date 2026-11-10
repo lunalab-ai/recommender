@@ -1,34 +1,51 @@
 datasets:
-  - id: tiny-ratings
-    path: data/sample/ratings_tiny.csv
-    status: bundled
-    purpose: "CI와 초기 실습용 synthetic ratings"
-    license: "CC0-1.0; synthetic data generated for this course"
-  - id: publisher-amazon-ratings
-    expected_filename: Amazon_ratings.csv
-    status: local-only
-    redistribution: "unverified"
-  - id: publisher-movielens-20m
-    expected_filename: ratings-20m.csv
-    status: local-only
-    redistribution: "verify upstream and publisher terms before use"
-  - id: publisher-movielens-100k
-    expected_filenames: [u.data, u.item, u.user]
-    status: local-only
-    redistribution: "verify upstream and publisher terms before use"
-  - id: grouplens-movielens-100k
-    official_page: "https://grouplens.org/datasets/movielens/100k/"
-    download_url: "https://files.grouplens.org/datasets/movielens/ml-100k.zip"
-    expected_filenames: [u.data, u.item, u.user]
-    archive_md5: "0e33842e24a9c977be4e0107933c0723"
-    status: download-or-student-upload-at-runtime
-    purpose: "W01B부터 사용하는 공식 MovieLens 100K 교육·연구 데이터"
-    license: "GroupLens MovieLens 100K README의 연구 목적·출처 표기·비상업·재배포 제한 조건 확인"
-    redistribution: "별도 허가 없이 원본이나 변환본을 저장소·Notion ZIP·스마트클래스에 재배포하지 않음"
-  - id: ml100k-schema-tiny
-    path: data/sample/ml100k_tiny
-    expected_filenames: [u.data, u.item, u.user]
-    status: bundled
-    purpose: "GroupLens 공식 서버 장애 시 W01B 코드 흐름을 유지하는 동일 형식의 소형 fallback"
-    license: "CC0-1.0; synthetic data generated for this course"
-    redistribution: "공개 가능; 실제 MovieLens 사용자·영화·평점에서 추출하거나 변환한 데이터가 아님"
+- id: tiny-ratings
+  path: data/sample/ratings_tiny.csv
+  status: bundled
+  purpose: CI와 초기 실습용 synthetic ratings
+  license: CC0-1.0; synthetic data generated for this course
+- id: publisher-amazon-ratings
+  expected_filename: Amazon_ratings.csv
+  status: local-only
+  redistribution: unverified
+- id: publisher-movielens-20m
+  expected_filename: ratings-20m.csv
+  status: local-only
+  redistribution: verify upstream and publisher terms before use
+- id: publisher-movielens-100k
+  expected_filenames:
+  - u.data
+  - u.item
+  - u.user
+  status: local-only
+  redistribution: verify upstream and publisher terms before use
+- id: grouplens-movielens-100k
+  official_page: https://grouplens.org/datasets/movielens/100k/
+  download_url: https://files.grouplens.org/datasets/movielens/ml-100k.zip
+  expected_filenames:
+  - u.data
+  - u.item
+  - u.user
+  archive_md5: 0e33842e24a9c977be4e0107933c0723
+  status: download-or-student-upload-at-runtime
+  purpose: W01B부터 사용하는 공식 MovieLens 100K 교육·연구 데이터
+  license: GroupLens MovieLens 100K README의 연구 목적·출처 표기·비상업·재배포 제한 조건 확인
+  redistribution: 별도 허가 없이 원본이나 변환본을 저장소·Notion ZIP·스마트클래스에 재배포하지 않음
+- id: ml100k-schema-tiny
+  path: data/sample/ml100k_tiny
+  expected_filenames:
+  - u.data
+  - u.item
+  - u.user
+  status: bundled
+  purpose: GroupLens 공식 서버 장애 시 W01B 코드 흐름을 유지하는 동일 형식의 소형 fallback
+  license: CC0-1.0; synthetic data generated for this course
+  redistribution: 공개 가능; 실제 MovieLens 사용자·영화·평점에서 추출하거나 변환한 데이터가 아님
+- id: amazon-software-2018-5core
+  official_page: https://nijianmo.github.io/amazon/index.html
+  download_url: https://mcauleylab.ucsd.edu/public_datasets/data/amazon_v2/categoryFilesSmall/Software_5.json.gz
+  archive_sha256: 1495184a2d3a166516b1fbc5be57c5dbcc9fd44eb6be3df72a67aeb5546cd9ed
+  status: official-download-and-local-cache-at-runtime
+  purpose: 주교재9장의프롬프팅/리뷰임베딩+FM을위한수업용별도표본;교재제공Amazon과구별
+  license: UCSD공식데이터안내의인용요구를따르는학술·수업사용. 원자료저장소재배포없음.
+  redistribution: 공개저장소/NotionZIP에는원본/리뷰어명/원리뷰/변환표를복사하지않고공식URL로준비함

@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="907.2pt" height="259.2pt" viewBox="0 0 907.2 259.2" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:date>2026-11-10T08:03:41.620349</dc:date>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Matplotlib v3.11.1, https://matplotlib.org/</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 259.2
+L 907.2 259.2
+L 907.2 0
+L 0 0
+z
+" style="fill: #f8fafc"/>
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 32.4 180
+L 248.4 180
+Q 255.6 180 255.6 172.8
+L 255.6 86.4
+Q 255.6 79.2 248.4 79.2
+L 32.4 79.2
+Q 25.2 79.2 25.2 86.4
+L 25.2 172.8
+Q 25.2 180 32.4 180
+z
+" clip-path="url(#p0d5746c8a3)" style="fill: #ffffff; stroke: #2563eb; stroke-width: 1.8; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_3">
+    <path d="M 327.6 180
+L 536.4 180
+Q 543.6 180 543.6 172.8
+L 543.6 86.4
+Q 543.6 79.2 536.4 79.2
+L 327.6 79.2
+Q 320.4 79.2 320.4 86.4
+L 320.4 172.8
+Q 320.4 180 327.6 180
+z
+" clip-path="url(#p0d5746c8a3)" style="fill: #ffffff; stroke: #087f8c; stroke-width: 1.8; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_4">
+    <path d="M 615.6 180
+L 867.6 180
+Q 874.8 180 874.8 172.8
+L 874.8 86.4
+Q 874.8 79.2 867.6 79.2
+L 615.6 79.2
+Q 608.4 79.2 608.4 86.4
+L 608.4 172.8
+Q 608.4 180 615.6 180
+z
+" clip-path="url(#p0d5746c8a3)" style="fill: #ffffff; stroke: #c76416; stroke-width: 1.8; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_5">
+    <path d="M 261.200391 129.6
+Q 288.0008 129.6 313.012356 129.6
+" clip-path="url(#p0d5746c8a3)" style="fill: none; stroke: #64748b; stroke-width: 1.6; stroke-linecap: round"/>
+    <path d="M 306.612356 126.4
+L 313.012356 129.6
+L 306.612356 132.8
+z
+" clip-path="url(#p0d5746c8a3)" style="fill: #64748b; stroke: #64748b; stroke-width: 1.6; stroke-linecap: round"/>
+   </g>
+   <g id="patch_6">
+    <path d="M 549.200391 129.6
+Q 576.0008 129.6 601.012356 129.6
+" clip-path="url(#p0d5746c8a3)" style="fill: none; stroke: #64748b; stroke-width: 1.6; stroke-linecap: round"/>
+    <path d="M 594.612356 126.4
+L 601.012356 129.6
+L 594.612356 132.8
+z
+" clip-path="url(#p0d5746c8a3)" style="fill: #64748b; stroke: #64748b; stroke-width: 1.6; stroke-linecap: round"/>
+   </g>
+   <g id="text_1">
+    <text style="font-weight: 700; font-size: 20px; font-family: 'Malgun Gothic', 'DejaVu Sans'; text-anchor: start; fill: #17334b" x="21.6" y="28.269922" transform="rotate(-0 21.6 28.269922)">프롬프트의 예시 ≠ 기울기로 학습</text>
+   </g>
+   <g id="text_2">
+    <text style="font-size: 11px; font-family: 'Malgun Gothic', 'DejaVu Sans'; text-anchor: start; fill: #64748b" x="21.6" y="54.068457" transform="rotate(-0 21.6 54.068457)">이번 실습에서 실제로 바뀌는 모수를 먼저 표시합니다.</text>
+   </g>
+   <g id="text_3">
+    <text style="font-size: 12px; font-family: 'Malgun Gothic', 'DejaVu Sans'; fill: #17334b" transform="translate(88.665 125.196562)">이력·리뷰 + 지시문</text>
+    <text style="font-size: 12px; font-family: 'Malgun Gothic', 'DejaVu Sans'; fill: #17334b" transform="translate(80.071875 143.249062)">바뀌는 것은 요청 내용</text>
+   </g>
+   <g id="text_4">
+    <text style="font-size: 12px; font-family: 'Malgun Gothic', 'DejaVu Sans'; fill: #17334b" transform="translate(391.921875 124.381875)">Qwen / Nomic</text>
+    <text style="font-size: 12px; font-family: 'Malgun Gothic', 'DejaVu Sans'; fill: #17334b" transform="translate(373.78125 143.225625)">사전학습 가중치 고정</text>
+   </g>
+   <g id="text_5">
+    <text style="font-size: 12px; font-family: 'Malgun Gothic', 'DejaVu Sans'; fill: #17334b" transform="translate(713.635312 124.9275)">FM의 w, V</text>
+    <text style="font-size: 12px; font-family: 'Malgun Gothic', 'DejaVu Sans'; fill: #17334b" transform="translate(681.271875 143.202187)">훈련 평점 오차로 갱신</text>
+   </g>
+   <g id="text_6">
+    <text style="font-size: 10px; font-family: 'Malgun Gothic', 'DejaVu Sans'; text-anchor: middle; fill: #64748b" x="576" y="116.64" transform="rotate(-0 576 116.64)">임베딩 경로</text>
+   </g>
+   <g id="text_7">
+    <text style="font-size: 12px; font-family: 'Malgun Gothic', 'DejaVu Sans'; text-anchor: start; fill: #17334b" x="36" y="226.8" transform="rotate(-0 36 226.8)">지시 예시가 늘어도 이 수업의 chat 호출은 LLM의 역전파·optimizer를 실행하지 않습니다.</text>
+   </g>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="p0d5746c8a3">
+   <rect x="0" y="0" width="907.2" height="259.2"/>
+  </clipPath>
+ </defs>
+</svg>

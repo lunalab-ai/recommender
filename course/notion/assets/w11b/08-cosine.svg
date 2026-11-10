@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="907.2pt" height="259.2pt" viewBox="0 0 907.2 259.2" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:date>2026-11-10T08:03:42.029916</dc:date>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Matplotlib v3.11.1, https://matplotlib.org/</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 259.2
+L 907.2 259.2
+L 907.2 0
+L 0 0
+z
+" style="fill: #f8fafc"/>
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 202.799707 218.000391
+Q 244.800529 161.999295 285.45971 107.787053
+" clip-path="url(#p7de787c5b1)" style="fill: none; stroke: #2563eb; stroke-width: 2; stroke-linecap: round"/>
+    <path d="M 278.25971 111.387053
+L 285.45971 107.787053
+L 284.01971 115.707053
+z
+" clip-path="url(#p7de787c5b1)" style="fill: #2563eb; stroke: #2563eb; stroke-width: 2; stroke-linecap: round"/>
+   </g>
+   <g id="patch_3">
+    <path d="M 203.199609 218.400293
+Q 259.200705 176.399471 313.412947 135.74029
+" clip-path="url(#p7de787c5b1)" style="fill: none; stroke: #087f8c; stroke-width: 2; stroke-linecap: round"/>
+    <path d="M 305.492947 137.18029
+L 313.412947 135.74029
+L 309.812947 142.94029
+z
+" clip-path="url(#p7de787c5b1)" style="fill: #087f8c; stroke: #087f8c; stroke-width: 2; stroke-linecap: round"/>
+   </g>
+   <g id="patch_4">
+    <path d="M 200.000391 218.400293
+Q 143.999295 176.399471 89.787053 135.74029
+" clip-path="url(#p7de787c5b1)" style="fill: none; stroke: #c76416; stroke-width: 2; stroke-linecap: round"/>
+    <path d="M 93.387053 142.94029
+L 89.787053 135.74029
+L 97.707053 137.18029
+z
+" clip-path="url(#p7de787c5b1)" style="fill: #c76416; stroke: #c76416; stroke-width: 2; stroke-linecap: round"/>
+   </g>
+   <g id="patch_5">
+    <path d="M 399.6 187.2
+L 853.2 187.2
+Q 860.4 187.2 860.4 180
+L 860.4 79.2
+Q 860.4 72 853.2 72
+L 399.6 72
+Q 392.4 72 392.4 79.2
+L 392.4 180
+Q 392.4 187.2 399.6 187.2
+z
+" clip-path="url(#p7de787c5b1)" style="fill: #ffffff; stroke: #087f8c; stroke-width: 1.8; stroke-linejoin: miter"/>
+   </g>
+   <g id="text_1">
+    <text style="font-weight: 700; font-size: 20px; font-family: 'Malgun Gothic', 'DejaVu Sans'; text-anchor: start; fill: #17334b" x="21.6" y="28.269922" transform="rotate(-0 21.6 28.269922)">코사인 · 길이보다 방향을 비교하기</text>
+   </g>
+   <g id="text_2">
+    <text style="font-size: 11px; font-family: 'Malgun Gothic', 'DejaVu Sans'; text-anchor: start; fill: #64748b" x="21.6" y="54.068457" transform="rotate(-0 21.6 54.068457)">합성 벡터 u=(3,4), a=(4,3), b=(-4,3) · 실제 encoder 출력이 아닙니다.</text>
+   </g>
+   <g id="text_3">
+    <text style="font-size: 13px; font-family: 'Malgun Gothic', 'DejaVu Sans'; text-anchor: start; fill: #2563eb" x="288" y="93.6" transform="rotate(-0 288 93.6)">u</text>
+   </g>
+   <g id="text_4">
+    <text style="font-size: 13px; font-family: 'Malgun Gothic', 'DejaVu Sans'; text-anchor: start; fill: #087f8c" x="316.8" y="122.4" transform="rotate(-0 316.8 122.4)">a</text>
+   </g>
+   <g id="text_5">
+    <text style="font-size: 13px; font-family: 'Malgun Gothic', 'DejaVu Sans'; text-anchor: start; fill: #c76416" x="86.4" y="122.4" transform="rotate(-0 86.4 122.4)">b</text>
+   </g>
+   <g id="text_6">
+    <text style="font-size: 12px; font-family: 'Malgun Gothic', 'DejaVu Sans'; fill: #17334b" transform="translate(526.456875 115.745625)">길이는 모두 5 → u 단위벡터 (0.6,0.8)</text>
+    <text style="font-size: 12px; font-family: 'Malgun Gothic', 'DejaVu Sans'; fill: #17334b" transform="translate(570.585 133.004063)">cos(u,a)=24/25=0.96</text>
+    <text style="font-size: 12px; font-family: 'Malgun Gothic', 'DejaVu Sans'; fill: #17334b" transform="translate(581.327812 151.176562)">cos(u,b)=0/25=0</text>
+   </g>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="p7de787c5b1">
+   <rect x="0" y="0" width="907.2" height="259.2"/>
+  </clipPath>
+ </defs>
+</svg>

@@ -24,3 +24,4 @@
 | W10A · FM 복습과 딥러닝을 이용한 추천 시스템 | [다운로드](w10a-neural-recommenders.pdf) | [답안 PDF](w10a-neural-recommenders-quiz.pdf) | [답안 보기](w10a-neural-recommenders-quiz.md) |
 | W10B · 오토인코더 추천을 한 칸씩 이해하기 | [다운로드](w10b-autoencoder-recommendation.pdf) | [답안 PDF](w10b-autoencoder-recommendation-quiz.pdf) | [답안 보기](w10b-autoencoder-recommendation-quiz.md) |
 | W11A · 이력을 읽고 다음 아이템을 추천하기 | [다운로드](w11a-transformer-recommendation.pdf) | [답안 PDF](w11a-transformer-recommendation-quiz.pdf) | [답안 보기](w11a-transformer-recommendation-quiz.md) |
+| W11B · LLM을 사용한 추천의 원리와 구현 | [다운로드](w11b-llm-recommendation.pdf) | [답안 PDF](w11b-llm-recommendation-quiz.pdf) | [답안 보기](w11b-llm-recommendation-quiz.md) |

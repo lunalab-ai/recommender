@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="907.2pt" height="259.2pt" viewBox="0 0 907.2 259.2" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:date>2026-11-10T08:03:41.809375</dc:date>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Matplotlib v3.11.1, https://matplotlib.org/</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 259.2
+L 907.2 259.2
+L 907.2 0
+L 0 0
+z
+" style="fill: #f8fafc"/>
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 32.4 198
+L 219.6 198
+Q 226.8 198 226.8 190.8
+L 226.8 82.8
+Q 226.8 75.6 219.6 75.6
+L 32.4 75.6
+Q 25.2 75.6 25.2 82.8
+L 25.2 190.8
+Q 25.2 198 32.4 198
+z
+" clip-path="url(#p20e44e7f9a)" style="fill: #ffffff; stroke: #2563eb; stroke-width: 1.8; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_3">
+    <path d="M 252 198
+L 439.2 198
+Q 446.4 198 446.4 190.8
+L 446.4 82.8
+Q 446.4 75.6 439.2 75.6
+L 252 75.6
+Q 244.8 75.6 244.8 82.8
+L 244.8 190.8
+Q 244.8 198 252 198
+z
+" clip-path="url(#p20e44e7f9a)" style="fill: #ffffff; stroke: #2563eb; stroke-width: 1.8; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_4">
+    <path d="M 471.6 198
+L 658.8 198
+Q 666 198 666 190.8
+L 666 82.8
+Q 666 75.6 658.8 75.6
+L 471.6 75.6
+Q 464.4 75.6 464.4 82.8
+L 464.4 190.8
+Q 464.4 198 471.6 198
+z
+" clip-path="url(#p20e44e7f9a)" style="fill: #ffffff; stroke: #2563eb; stroke-width: 1.8; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_5">
+    <path d="M 691.2 198
+L 878.4 198
+Q 885.6 198 885.6 190.8
+L 885.6 82.8
+Q 885.6 75.6 878.4 75.6
+L 691.2 75.6
+Q 684 75.6 684 82.8
+L 684 190.8
+Q 684 198 691.2 198
+z
+" clip-path="url(#p20e44e7f9a)" style="fill: #ffffff; stroke: #2563eb; stroke-width: 1.8; stroke-linejoin: miter"/>
+   </g>
+   <g id="text_1">
+    <text style="font-weight: 700; font-size: 20px; font-family: 'Malgun Gothic', 'DejaVu Sans'; text-anchor: start; fill: #17334b" x="21.6" y="28.269922" transform="rotate(-0 21.6 28.269922)">요청을 짧게, 근거를 분명하게</text>
+   </g>
+   <g id="text_2">
+    <text style="font-size: 11px; font-family: 'Malgun Gothic', 'DejaVu Sans'; text-anchor: start; fill: #64748b" x="21.6" y="54.068457" transform="rotate(-0 21.6 54.068457)">프롬프트 구성 함수의 본문 한 줄을 바꾸고 같은 호출에 전달합니다.</text>
+   </g>
+   <g id="text_3">
+    <text style="font-size: 12px; font-family: 'Malgun Gothic', 'DejaVu Sans'; fill: #17334b" transform="translate(114 123.396562)">지시</text>
+    <text style="font-size: 12px; font-family: 'Malgun Gothic', 'DejaVu Sans'; fill: #17334b" transform="translate(89.03625 141.396562)">K개·중복 금지</text>
+    <text style="font-size: 12px; font-family: 'Malgun Gothic', 'DejaVu Sans'; fill: #17334b" transform="translate(93.890625 159.396562)">제품 코드만</text>
+   </g>
+   <g id="text_4">
+    <text style="font-size: 12px; font-family: 'Malgun Gothic', 'DejaVu Sans'; fill: #17334b" transform="translate(319.490625 123.443437)">관측 근거</text>
+    <text style="font-size: 12px; font-family: 'Malgun Gothic', 'DejaVu Sans'; fill: #17334b" transform="translate(309.268125 141.396562)">CF: 이력 예시</text>
+    <text style="font-size: 12px; font-family: 'Malgun Gothic', 'DejaVu Sans'; fill: #17334b" transform="translate(302.759062 159.396562)">CB: 리뷰 텍스트</text>
+   </g>
+   <g id="text_5">
+    <text style="font-size: 12px; font-family: 'Malgun Gothic', 'DejaVu Sans'; fill: #17334b" transform="translate(553.2 123.39)">후보</text>
+    <text style="font-size: 12px; font-family: 'Malgun Gothic', 'DejaVu Sans'; fill: #17334b" transform="translate(527.090625 141.449062)">요청마다 같은</text>
+    <text style="font-size: 12px; font-family: 'Malgun Gothic', 'DejaVu Sans'; fill: #17334b" transform="translate(527.676562 159.396562)">8개 제품 목록</text>
+   </g>
+   <g id="text_6">
+    <text style="font-size: 12px; font-family: 'Malgun Gothic', 'DejaVu Sans'; fill: #17334b" transform="translate(758.690625 123.425625)">응답 형식</text>
+    <text style="font-size: 12px; font-family: 'Malgun Gothic', 'DejaVu Sans'; fill: #17334b" transform="translate(750.042187 141.396562)">JSON 스키마</text>
+    <text style="font-size: 12px; font-family: 'Malgun Gothic', 'DejaVu Sans'; fill: #17334b" transform="translate(744.58125 159.396562)">별도 의미 검사</text>
+   </g>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="p20e44e7f9a">
+   <rect x="0" y="0" width="907.2" height="259.2"/>
+  </clipPath>
+ </defs>
+</svg>

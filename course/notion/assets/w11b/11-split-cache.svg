@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="907.2pt" height="259.2pt" viewBox="0 0 907.2 259.2" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:date>2026-11-10T08:03:42.221444</dc:date>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Matplotlib v3.11.1, https://matplotlib.org/</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 259.2
+L 907.2 259.2
+L 907.2 0
+L 0 0
+z
+" style="fill: #f8fafc"/>
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 39.6 180
+L 291.6 180
+Q 298.8 180 298.8 172.8
+L 298.8 82.8
+Q 298.8 75.6 291.6 75.6
+L 39.6 75.6
+Q 32.4 75.6 32.4 82.8
+L 32.4 172.8
+Q 32.4 180 39.6 180
+z
+" clip-path="url(#p58a10997cf)" style="fill: #ffffff; stroke: #2563eb; stroke-width: 1.8; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_3">
+    <path d="M 334.8 180
+L 586.8 180
+Q 594 180 594 172.8
+L 594 82.8
+Q 594 75.6 586.8 75.6
+L 334.8 75.6
+Q 327.6 75.6 327.6 82.8
+L 327.6 172.8
+Q 327.6 180 334.8 180
+z
+" clip-path="url(#p58a10997cf)" style="fill: #ffffff; stroke: #087f8c; stroke-width: 1.8; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_4">
+    <path d="M 630 180
+L 882 180
+Q 889.2 180 889.2 172.8
+L 889.2 82.8
+Q 889.2 75.6 882 75.6
+L 630 75.6
+Q 622.8 75.6 622.8 82.8
+L 622.8 172.8
+Q 622.8 180 630 180
+z
+" clip-path="url(#p58a10997cf)" style="fill: #ffffff; stroke: #c76416; stroke-width: 1.8; stroke-linejoin: miter"/>
+   </g>
+   <g id="text_1">
+    <text style="font-weight: 700; font-size: 20px; font-family: 'Malgun Gothic', 'DejaVu Sans'; text-anchor: start; fill: #17334b" x="21.6" y="28.269922" transform="rotate(-0 21.6 28.269922)">훈련 → 검증 선택 → 보류 시험</text>
+   </g>
+   <g id="text_2">
+    <text style="font-size: 11px; font-family: 'Malgun Gothic', 'DejaVu Sans'; text-anchor: start; fill: #64748b" x="21.6" y="54.039238" transform="rotate(-0 21.6 54.039238)">평균·리뷰·벡터를 만들 때 시험 관측이 들어가면 정보가 샙니다.</text>
+   </g>
+   <g id="text_3">
+    <text style="font-size: 12px; font-family: 'Malgun Gothic', 'DejaVu Sans'; fill: #17334b" transform="translate(135.576562 123.4725)">훈련 378건</text>
+    <text style="font-size: 12px; font-family: 'Malgun Gothic', 'DejaVu Sans'; fill: #17334b" transform="translate(112.865625 141.396562)">평균·리뷰·모수 갱신</text>
+   </g>
+   <g id="text_4">
+    <text style="font-size: 12px; font-family: 'Malgun Gothic', 'DejaVu Sans'; fill: #17334b" transform="translate(434.08125 123.455625)">검증 95건</text>
+    <text style="font-size: 12px; font-family: 'Malgun Gothic', 'DejaVu Sans'; fill: #17334b" transform="translate(402.552187 140.505937)">최적 epoch 선택·복원</text>
+   </g>
+   <g id="text_5">
+    <text style="font-size: 12px; font-family: 'Malgun Gothic', 'DejaVu Sans'; fill: #17334b" transform="translate(725.976562 123.425625)">시험 158건</text>
+    <text style="font-size: 12px; font-family: 'Malgun Gothic', 'DejaVu Sans'; fill: #17334b" transform="translate(705.5625 141.396562)">선택 후 한 번 평가</text>
+   </g>
+   <g id="text_6">
+    <text style="font-size: 12px; font-family: 'Malgun Gothic', 'DejaVu Sans'; text-anchor: start; fill: #17334b" x="36" y="223.2" transform="rotate(-0 36 223.2)">같은 사용자 내 무작위 관측 분할 · 실제 미래 시점 예측/새 사용자 일반화 실험과 구별</text>
+   </g>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="p58a10997cf">
+   <rect x="0" y="0" width="907.2" height="259.2"/>
+  </clipPath>
+ </defs>
+</svg>

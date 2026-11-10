@@ -19,6 +19,9 @@ dependencies = [
 ]
 
 [project.optional-dependencies]
+llm = [
+  "zstandard==0.25.0"
+]
 neural = [
   "tensorflow==2.21.0",
   "keras==3.15.1"
