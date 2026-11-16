@@ -87,6 +87,10 @@ sessions:
     date: '2026-11-11'
     colab_ref: 2026-fall-w11b
     notion_url: https://fancy-ballcap-a15.notion.site/W11B-LLM-2026-11-11-4137fd00109f81348271d1a3d2977c00
+  w12a:
+    date: '2026-11-17'
+    colab_ref: 2026-fall-w12a
+    notion_url: https://fancy-ballcap-a15.notion.site/W12A-2026-11-17-41a7fd00109f8135b880cc3563eabe88
 resources:
 - group: Python 기초
   title: 이 수업을 위한 Python 복습 길잡이
@@ -238,3 +242,18 @@ resources:
   url: https://colab.research.google.com/github/lunalab-ai/recommender/blob/2026-fall-w11b/notebooks/student/w11b-embedding-fm.ipynb
   language: 한국어
   purpose: 훈련 리뷰·본문 특성/SGD 수정·고정 분할 학습·앱CSV
+- group: W12A 하이브리드 추천
+  title: 실습 A · 실제 LLM 영화제 편성
+  url: https://colab.research.google.com/github/lunalab-ai/recommender/blob/2026-fall-w12a/notebooks/student/w12a-festival-llm.ipynb
+  language: 한국어
+  purpose: 가상 카탈로그·실제 LLM 응답 검수·리뷰 임베딩과 FM
+- group: W12A 하이브리드 추천
+  title: 영화 카드와 가중 결합 기록지
+  url: course/notion/supplements/w12a-workbook.md
+  language: 한국어
+  purpose: 영화제 편성 조건과 10장 손계산·실습 기록
+- group: W12A 하이브리드 추천
+  title: Colab 실습 길잡이
+  url: course/notion/supplements/w12a-lab-guide.md
+  language: 한국어
+  purpose: 본문 변경 위치와 앱·CSV 검산
