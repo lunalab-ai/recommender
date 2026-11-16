@@ -38,7 +38,7 @@
 | W10B 오토인코더 추천 | [AE 계산 워크북](../course/notion/supplements/w10b-workbook.md) | 한국어 | 핵심4개와 추가 반복4개의 예상·계산·실행·설명 |
 | W10B 오토인코더 추천 | [AE 실습 API 길잡이](../course/notion/supplements/w10b-api-guide.md) | 한국어 | 입력·배열 크기·반환값·상태 변경 확인 |
 | W11B LLM 추천 | [실습 B · 실제 리뷰 임베딩+FM](https://colab.research.google.com/github/lunalab-ai/recommender/blob/2026-fall-w11b/notebooks/student/w11b-embedding-fm.ipynb) | 한국어 | 훈련 리뷰·본문 특성/SGD 수정·고정 분할 학습·앱CSV |
-| W12A 하이브리드 추천 | [실습 A · 실제 LLM 영화제 편성](https://colab.research.google.com/github/lunalab-ai/recommender/blob/2026-fall-w12a/notebooks/student/w12a-festival-llm.ipynb) | 한국어 | 가상 카탈로그·실제 LLM 응답 검수·리뷰 임베딩과 FM |
+| W12A 하이브리드 추천 | [실습 A · 실제 LLM 영화제 편성](https://colab.research.google.com/github/lunalab-ai/recommender/blob/2026-fall-w12a-r1/notebooks/student/w12a-festival-llm.ipynb) | 한국어 | 가상 카탈로그·실제 LLM 응답 검수·리뷰 임베딩과 FM |
 | W12A 하이브리드 추천 | [영화 카드와 가중 결합 기록지](../course/notion/supplements/w12a-workbook.md) | 한국어 | 영화제 편성 조건과 10장 손계산·실습 기록 |
 | W12A 하이브리드 추천 | [Colab 실습 길잡이](../course/notion/supplements/w12a-lab-guide.md) | 한국어 | 본문 변경 위치와 앱·CSV 검산 |
 
@@ -473,9 +473,9 @@ CF는 관측 행렬에서 비교 가능한 이웃을 찾고 그들의 평가를 
 
 본문에서 함께 소개한 링크:
 
-- [실습 A · LLM 영화제 편성](https://colab.research.google.com/github/lunalab-ai/recommender/blob/2026-fall-w12a/notebooks/student/w12a-festival-llm.ipynb)
-- [실습 B · CF·MF 가중 결합](https://colab.research.google.com/github/lunalab-ai/recommender/blob/2026-fall-w12a/notebooks/student/w12a-hybrid-recommendation.ipynb)
+- [실습 A · LLM 영화제 편성](https://colab.research.google.com/github/lunalab-ai/recommender/blob/2026-fall-w12a-r1/notebooks/student/w12a-festival-llm.ipynb)
+- [실습 B · CF·MF 가중 결합](https://colab.research.google.com/github/lunalab-ai/recommender/blob/2026-fall-w12a-r1/notebooks/student/w12a-hybrid-recommendation.ipynb)
 - [Ollama 구조화 출력](https://docs.ollama.com/capabilities/structured-outputs)
 - [GroupLens MovieLens 100K](https://grouplens.org/datasets/movielens/100k/)
 - [추천 단계 도해](https://developers.google.com/machine-learning/recommendation/overview/types)
-- [고정 배포판](https://github.com/lunalab-ai/recommender/releases/tag/2026-fall-w12a)
+- [고정 배포판](https://github.com/lunalab-ai/recommender/releases/tag/2026-fall-w12a-r1)

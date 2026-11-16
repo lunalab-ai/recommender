@@ -89,7 +89,7 @@ sessions:
     notion_url: https://fancy-ballcap-a15.notion.site/W11B-LLM-2026-11-11-4137fd00109f81348271d1a3d2977c00
   w12a:
     date: '2026-11-17'
-    colab_ref: 2026-fall-w12a
+    colab_ref: 2026-fall-w12a-r1
     notion_url: https://fancy-ballcap-a15.notion.site/W12A-2026-11-17-41a7fd00109f8135b880cc3563eabe88
 resources:
 - group: Python 기초
@@ -244,7 +244,7 @@ resources:
   purpose: 훈련 리뷰·본문 특성/SGD 수정·고정 분할 학습·앱CSV
 - group: W12A 하이브리드 추천
   title: 실습 A · 실제 LLM 영화제 편성
-  url: https://colab.research.google.com/github/lunalab-ai/recommender/blob/2026-fall-w12a/notebooks/student/w12a-festival-llm.ipynb
+  url: https://colab.research.google.com/github/lunalab-ai/recommender/blob/2026-fall-w12a-r1/notebooks/student/w12a-festival-llm.ipynb
   language: 한국어
   purpose: 가상 카탈로그·실제 LLM 응답 검수·리뷰 임베딩과 FM
 - group: W12A 하이브리드 추천

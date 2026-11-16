@@ -4,7 +4,7 @@
 
 ## A · 영화제 편성
 
-[실습 A 열기](https://colab.research.google.com/github/lunalab-ai/recommender/blob/2026-fall-w12a/notebooks/student/w12a-festival-llm.ipynb)
+[실습 A 열기](https://colab.research.google.com/github/lunalab-ai/recommender/blob/2026-fall-w12a-r1/notebooks/student/w12a-festival-llm.ipynb)
 
 처음에는 팀당 한 대에서 Colab 기본 CPU로 실행합니다. 생성 모델 준비 중에는 10편의 가상 카드에서 후보를 손으로 고릅니다. 실제 생성이 준비되면 기본 CF, 기본 CB, 사전 필터 CB의 원응답과 검사 열을 차례대로 비교합니다.
 
@@ -19,7 +19,7 @@
 
 ## B · 하이브리드 점수와 앱
 
-[실습 B 열기](https://colab.research.google.com/github/lunalab-ai/recommender/blob/2026-fall-w12a/notebooks/student/w12a-hybrid-recommendation.ipynb)
+[실습 B 열기](https://colab.research.google.com/github/lunalab-ai/recommender/blob/2026-fall-w12a-r1/notebooks/student/w12a-hybrid-recommendation.ipynb)
 
 | 본문 함수 | 입력 | 출력에서 볼 것 |
 | --- | --- | --- |

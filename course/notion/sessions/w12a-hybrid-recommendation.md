@@ -4,7 +4,7 @@
 
 주교재 9.2–9.3 실습을 마무리하고 10.1–10.3과 연습 10-1을 공부합니다. 먼저 영화 세 편을 편성해 모델 답을 검수하고, 이어서 두 모델의 평점을 섞는 기준을 실험합니다.
 
-[실습 A · LLM 영화제 편성](https://colab.research.google.com/github/lunalab-ai/recommender/blob/2026-fall-w12a/notebooks/student/w12a-festival-llm.ipynb) · [실습 B · CF·MF 가중 결합](https://colab.research.google.com/github/lunalab-ai/recommender/blob/2026-fall-w12a/notebooks/student/w12a-hybrid-recommendation.ipynb) · [영화 카드와 계산 기록지](../supplements/w12a-workbook.md)
+[실습 A · LLM 영화제 편성](https://colab.research.google.com/github/lunalab-ai/recommender/blob/2026-fall-w12a-r1/notebooks/student/w12a-festival-llm.ipynb) · [실습 B · CF·MF 가중 결합](https://colab.research.google.com/github/lunalab-ai/recommender/blob/2026-fall-w12a-r1/notebooks/student/w12a-hybrid-recommendation.ipynb) · [영화 카드와 계산 기록지](../supplements/w12a-workbook.md)
 
 ## 9.2 · 캠퍼스 영화제 편성회의
 
@@ -80,7 +80,7 @@ $$
 
 **수업 끝에 남길 두 문장.** 내 본문 코드에서 바꾼 한 줄과 확인한 출력은? 시험 전에 고정한 선택은?
 
-임일(2025), 『AI 에이전트를 위한 개인화 추천 알고리즘』 9.2–9.3, 10장 본문 210–215쪽. 그림은 수업용으로 직접 제작했습니다. 실습 A는 Qwen2.5 0.5B와 Nomic v1.5를 CPU로 실행하고, 실습 B는 GroupLens 공식 데이터를 내려받습니다. [Ollama 구조화 출력](https://docs.ollama.com/capabilities/structured-outputs) · [GroupLens MovieLens 100K](https://grouplens.org/datasets/movielens/100k/) · [추천 단계 도해](https://developers.google.com/machine-learning/recommendation/overview/types) · [고정 배포판](https://github.com/lunalab-ai/recommender/releases/tag/2026-fall-w12a)
+임일(2025), 『AI 에이전트를 위한 개인화 추천 알고리즘』 9.2–9.3, 10장 본문 210–215쪽. 그림은 수업용으로 직접 제작했습니다. 실습 A는 Qwen2.5 0.5B와 Nomic v1.5를 CPU로 실행하고, 실습 B는 GroupLens 공식 데이터를 내려받습니다. [Ollama 구조화 출력](https://docs.ollama.com/capabilities/structured-outputs) · [GroupLens MovieLens 100K](https://grouplens.org/datasets/movielens/100k/) · [추천 단계 도해](https://developers.google.com/machine-learning/recommendation/overview/types) · [고정 배포판](https://github.com/lunalab-ai/recommender/releases/tag/2026-fall-w12a-r1)
 
 ## 점검 퀴즈
 
