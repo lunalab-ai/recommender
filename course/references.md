@@ -41,6 +41,7 @@
 | W12A 하이브리드 추천 | [실습 A · 실제 LLM 영화제 편성](https://colab.research.google.com/github/lunalab-ai/recommender/blob/2026-fall-w12a-r1/notebooks/student/w12a-festival-llm.ipynb) | 한국어 | 가상 카탈로그·실제 LLM 응답 검수·리뷰 임베딩과 FM |
 | W12A 하이브리드 추천 | [영화 카드와 가중 결합 기록지](../course/notion/supplements/w12a-workbook.md) | 한국어 | 영화제 편성 조건과 10장 손계산·실습 기록 |
 | W12A 하이브리드 추천 | [Colab 실습 길잡이](../course/notion/supplements/w12a-lab-guide.md) | 한국어 | 본문 변경 위치와 앱·CSV 검산 |
+| W12B 하이브리드 추천 | [두 예측을 하나의 추천으로 · 계산 기록지](../course/notion/supplements/w12b-workbook.md) | 한국어 | 손계산부터 검증 가중치와 순위 교차까지 기록 |
 
 ## 차시별 출처와 참고 링크
 
@@ -479,3 +480,16 @@ CF는 관측 행렬에서 비교 가능한 이웃을 찾고 그들의 평가를 
 - [GroupLens MovieLens 100K](https://grouplens.org/datasets/movielens/100k/)
 - [추천 단계 도해](https://developers.google.com/machine-learning/recommendation/overview/types)
 - [고정 배포판](https://github.com/lunalab-ai/recommender/releases/tag/2026-fall-w12a-r1)
+
+### W12B · 하이브리드 추천 시스템 · 두 예측을 하나의 추천으로
+
+[강의 원문](notion/sessions/w12b-hybrid-recommendation.md)
+
+강의 원문에 참고자료 절이 아직 작성되지 않았습니다.
+
+본문에서 함께 소개한 링크:
+
+- [계산 기록지와 강의 PDF](https://github.com/lunalab-ai/recommender/releases/tag/2026-fall-w12b)
+- [W12B Colab](https://colab.research.google.com/github/lunalab-ai/recommender/blob/2026-fall-w12b/notebooks/student/w12b-hybrid-recommendation.ipynb)
+- [GroupLens MovieLens 100K](https://grouplens.org/datasets/movielens/100k/)
+- [Robin Burke, Hybrid Recommender Systems](https://link.springer.com/article/10.1023/A:1021240730564)

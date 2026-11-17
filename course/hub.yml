@@ -91,6 +91,10 @@ sessions:
     date: '2026-11-17'
     colab_ref: 2026-fall-w12a-r1
     notion_url: https://fancy-ballcap-a15.notion.site/W12A-2026-11-17-41a7fd00109f8135b880cc3563eabe88
+  w12b:
+    date: '2026-11-19'
+    colab_ref: 2026-fall-w12b
+    notion_url: https://fancy-ballcap-a15.notion.site/W12B-2026-11-19-41b7fd00109f815d95d6c053b735eb64
 resources:
 - group: Python 기초
   title: 이 수업을 위한 Python 복습 길잡이
@@ -257,3 +261,8 @@ resources:
   url: course/notion/supplements/w12a-lab-guide.md
   language: 한국어
   purpose: 본문 변경 위치와 앱·CSV 검산
+- group: W12B 하이브리드 추천
+  title: 두 예측을 하나의 추천으로 · 계산 기록지
+  url: course/notion/supplements/w12b-workbook.md
+  language: 한국어
+  purpose: 손계산부터 검증 가중치와 순위 교차까지 기록
