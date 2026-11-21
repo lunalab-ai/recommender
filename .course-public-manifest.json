@@ -9,6 +9,7 @@
     "course/assets/course-overview.svg",
     "course/assets/w12a/replay.json",
     "course/assets/w13a/media.json",
+    "course/assets/w13a/shop-design.template.html",
     "course/assets/w13a/shop.template.html",
     "course/assets/w13a/w13a-default-shop.html",
     "course/course.yml",
@@ -636,6 +637,7 @@
     "src/luna_recsys/synthesis_app.py",
     "src/luna_recsys/transformer_explainer.py",
     "src/luna_recsys/w13a_basket.py",
+    "src/luna_recsys/w13a_design.py",
     "tests/test_package.py",
     "tests/test_ranking.py"
   ]

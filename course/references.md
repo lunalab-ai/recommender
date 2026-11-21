@@ -494,6 +494,6 @@ CF는 관측 행렬에서 비교 가능한 이웃을 찾고 그들의 평가를 
 - [GroupLens MovieLens 100K](https://grouplens.org/datasets/movielens/100k/)
 - [Robin Burke, Hybrid Recommender Systems](https://link.springer.com/article/10.1023/A:1021240730564)
 
-### W13A · 첫 추천을 내 쇼핑몰에 띄우기 · 인기순과 아이템 CF
+### W13A · 내 쇼핑몰의 추천 모델 출시 심사
 
 [학생 슬라이드 PDF](../course/handouts/w13a-first-recommendation.pdf)

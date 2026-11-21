@@ -1,0 +1,202 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>소소상점 | 추천 모델 출시 심사</title>
+<style>
+:root{--ink:#322427;--muted:#6e5960;--accent:#783e51;--line:#e3d5ce;--paper:#fffdf8;--bg:#f8f2eb;--rose:#f7e7e9;--teal:#295d57}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font-family:system-ui,"Malgun Gothic",sans-serif}
+header{background:var(--paper);border-bottom:1px solid var(--line)}header>div,main,footer{max-width:1360px;margin:auto;padding:16px clamp(16px,3vw,40px)}
+header>div{display:flex;align-items:center;justify-content:space-between;gap:12px}.brand{font-family:Georgia,"Malgun Gothic",serif;font-size:24px;font-weight:bold;color:var(--accent)}
+nav{display:flex;gap:6px;flex-wrap:wrap}button,select,input{font:inherit}button,select,input[type=search]{padding:8px 10px;border-radius:8px;border:1px solid var(--line);background:white;color:var(--ink)}
+button{cursor:pointer}button[aria-pressed=true],.primary{background:var(--accent);border-color:var(--accent);color:white}button:disabled{cursor:default;opacity:.55}
+button:focus-visible,select:focus-visible,input:focus-visible{outline:2px solid var(--teal);outline-offset:3px}h1{font:700 clamp(25px,3vw,38px) Georgia,"Malgun Gothic",serif;margin:4px 0 14px}h2{font-size:18px;margin:0 0 10px}
+h3,p{margin:0}.muted,.parts,footer{font-size:.8rem;color:var(--muted)}.layout{display:grid;grid-template-columns:minmax(320px,.95fr) minmax(490px,1.25fr);gap:18px;align-items:start}
+.panel{padding:16px;background:var(--paper);border:1px solid var(--line);border-radius:14px}.hero{height:134px;border-radius:10px;background:#e6d7ca center/cover no-repeat;margin-bottom:14px}
+.actions{display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin:0 0 12px}.actions input{width:min(100%,240px)}
+.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:9px}.product{border:1px solid var(--line);border-radius:10px;overflow:hidden;background:white}
+.photo{height:94px;background:#f2e8df;display:grid;place-items:center;color:var(--muted);font-size:.75rem}.photo img{width:100%;height:94px;object-fit:contain}
+.info{padding:8px;display:grid;gap:6px}.info h3{font-size:.84rem;min-height:34px;overflow-wrap:anywhere}.info button{font-size:.76rem;padding:4px 8px}
+.chips{display:flex;gap:6px;flex-wrap:wrap;margin:6px 0 15px}.chips button{font-size:.78rem}.compare{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+.column{border:1px solid var(--line);border-radius:11px;padding:9px;background:#fcf9f4;min-width:0}.column.current{background:#f0f7f1}
+.column label{display:grid;gap:5px;font-size:.85rem;font-weight:700}.column select{width:100%;font-size:.79rem}.metrics-note{margin:8px 0;font-size:.77rem;color:var(--teal);line-height:1.45}
+.rec{padding-left:22px;margin:6px 0}.rec li{padding:7px 2px;border-top:1px solid var(--line);font-size:.82rem;overflow-wrap:anywhere}
+.rec li.gain{background:#f2e4e7}.parts{display:block;font-variant-numeric:tabular-nums;margin-top:3px}.annotate{font-size:.78rem;color:var(--muted);margin-top:10px}
+#stats{overflow:auto}table{width:100%;border-collapse:collapse;text-align:left}th,td{padding:8px;border-bottom:1px solid var(--line);white-space:nowrap}th{background:#efe5df;font-size:.82rem}td{font-size:.8rem}.active{background:var(--rose)}
+[hidden]{display:none!important}footer{padding-top:9px}#more{margin-top:10px}
+@media(max-width:900px){.layout{grid-template-columns:1fr}.grid{grid-template-columns:repeat(4,minmax(0,1fr))}.hero{height:110px}}
+@media(max-width:540px){.grid{grid-template-columns:repeat(2,minmax(0,1fr))}.panel{padding:11px}.compare{gap:7px}.column{padding:6px}.brand{font-size:20px}header button{padding:5px 7px;font-size:.78rem}}
+</style>
+</head>
+<body>
+<header><div><div class="brand">소소상점</div><nav aria-label="실습 화면">
+<button id="shop-tab" aria-pressed="true">장바구니 실험</button>
+<button id="stats-tab" aria-pressed="false">검증 기록</button>
+</nav></div></header>
+<main>
+<h1>추천 모델 출시 심사</h1>
+<div id="shop" class="layout">
+<section class="panel" aria-label="상품 선택">
+<div id="hero" class="hero" aria-label="소소상점의 선물 상품" role="img"></div>
+<h2>장바구니에 담을 상품</h2>
+<div class="actions"><input id="search" type="search" placeholder="이름이나 상품번호" aria-label="상품 검색"></div>
+<div id="product-grid" class="grid"></div>
+<button id="more">상품 더 보기</button>
+</section>
+<section class="panel" aria-label="같은 장바구니에서 모델 비교">
+<div class="actions"><h2>같은 장바구니, 두 가지 추천</h2><button id="case">내 확인 사례</button><button id="empty">비우기</button></div>
+<div id="basket" class="chips" aria-live="polite"></div>
+<div class="compare">
+<div class="column current"><label>비교 기준<select id="reference"></select></label><p id="ref-metric" class="metrics-note"></p><ol id="ref-top" class="rec"></ol></div>
+<div class="column"><label>내가 적용한 실험<select id="candidate"></select></label><p id="my-metric" class="metrics-note"></p><ol id="my-top" class="rec" aria-live="polite"></ol></div>
+</div>
+<p class="annotate">색이 들어간 행은 선택한 실험에서 더 앞선 상품입니다. 빈 장바구니는 인기순으로 표시합니다.</p>
+</section>
+</div>
+<section id="stats" class="panel" hidden aria-label="검증 기록">
+<h2>같은 검증 주문에서 실험 비교</h2>
+<table><thead><tr><th>실험</th><th>동시구매</th><th>잠재 차원</th><th>잠재 비중</th><th>검증 건수</th><th>Hit@5</th><th>NDCG@5</th><th>한 품목 Hit@5</th><th>여러 품목 Hit@5</th></tr></thead><tbody id="runs"></tbody></table>
+</section>
+</main>
+<footer>거래 자료 Chen (2015), UCI Online Retail · CC BY 4.0 · 상품 이미지는 수업용 예시</footer>
+<script id="w13a-design-data" type="application/json"><!-- W13A_DESIGN_DATA --></script>
+<script>
+"use strict";
+const p=JSON.parse(document.getElementById("w13a-design-data").textContent);
+const $=id=>document.getElementById(id);
+const items=p.catalog, basket=new Set();
+const lookup=new Map(items.map((x,i)=>[x.sku,i]));
+const displayName=item=>p.media.labels?.[item.sku] || item.name;
+const labels={popularity:"인기순",cf:"아이템 CF",svd:"잠재요인",hybrid:"결합"};
+const label=t=>labels[t.kind]+[t.support ? "동시구매 "+t.support : "", t.rank ? "차원 "+t.rank : "",
+  t.kind==="hybrid" ? "잠재 "+t.latent_weight+"%" : ""].filter(Boolean).map(s=>" · "+s).join("");
+const metric=x=>x == null ? "—" : Number(x).toFixed(4);
+let limit=9;
+
+function element(tag,text,classes){
+  const node=document.createElement(tag);
+  if(text!==undefined)node.textContent=text;
+  if(classes)node.className=classes;
+  return node;
+}
+
+function button(text,click){
+  const node=element("button",text);
+  node.type="button";
+  node.onclick=click;
+  return node;
+}
+
+function choose(raw){
+  const values=raw.map((n,i)=>basket.has(i)?0:Math.max(0,n));
+  const max=Math.max(1,...values);
+  return values.map(n=>Math.floor((n*p.scale+Math.floor(max/2))/max));
+}
+
+function rank(runId){
+  const spec=p.specs[runId];
+  const co=Array(items.length).fill(0), latent=Array(items.length).fill(0);
+  for(const item of basket){
+    if(spec.support){p.similarities[spec.support][item].forEach((v,i)=>{co[i]+=v;});}
+    if(spec.rank){p.kernels[spec.rank][item].forEach((v,i)=>{latent[i]+=v;});}
+  }
+  const l=choose(co), r=choose(latent);
+  return items.map((item,i)=>{
+    const a=(100-spec.latent_weight)*l[i], b=spec.latent_weight*r[i];
+    return {i,sku:item.sku,a,b,score:spec.kind==="popularity"?p.counts[i]:a+b};
+  }).filter(x=>!basket.has(x.i)).sort((x,y)=>y.score-x.score||
+    p.counts[y.i]-p.counts[x.i]||(x.sku<y.sku?-1:x.sku>y.sku?1:0)).slice(0,5);
+}
+
+function renderRank(id,runId,comparison=[]){
+  const rows=rank(runId);
+  const prev=new Map(comparison.map((x,i)=>[x.sku,i]));
+  $(id).replaceChildren(...rows.map((x,i)=>{
+    const row=element("li",undefined,comparison.length&&(prev.get(x.sku)??5)>i?"gain":"");
+    row.dataset.sku=x.sku;
+    row.dataset.cf=x.a;
+    row.dataset.latent=x.b;
+    row.append(element("span",displayName(items[x.i])));
+    if(basket.size && p.specs[runId].kind!=="popularity"){
+      row.append(element("small","CF "+(x.a/(100*p.scale)).toFixed(3)+
+        " · 잠재 "+(x.b/(100*p.scale)).toFixed(3),"parts"));
+    }
+    return row;
+  }));
+  return rows;
+}
+
+function showMetric(id,runId){
+  const x=p.metrics.find(r=>r.run_id===runId);
+  $(id).textContent=x?"Hit@5 "+metric(x.hit_at_5)+" · NDCG@5 "+metric(x.ndcg_at_5):"공통 비교 모델";
+}
+
+function displayBasket(){
+  const chips=[...basket].map(i=>button(displayName(items[i])+" ×",()=>{
+    basket.delete(i); refresh();
+  }));
+  $("basket").replaceChildren(...(chips.length?chips:[element("span","상품을 담으면 순위가 바뀝니다.","muted")]));
+  const reference=$("reference").value, candidate=$("candidate").value;
+  const top=renderRank("ref-top",reference);
+  renderRank("my-top",candidate,top);
+  showMetric("ref-metric",reference);
+  showMetric("my-metric",candidate);
+}
+
+function renderProducts(){
+  const q=$("search").value.trim().toLowerCase();
+  const priority=[...p.featured.map(x=>lookup.get(x)),...items.map((_,i)=>i)].filter((i,n,a)=>a.indexOf(i)===n);
+  const found=priority.filter(i=>[displayName(items[i]),items[i].original,items[i].sku].join(" ").toLowerCase().includes(q));
+  $("product-grid").replaceChildren(...found.slice(0,limit).map(i=>{
+    const item=items[i];
+    const card=element("article",undefined,"product");
+    card.dataset.sku=item.sku;
+    const photo=element("div",undefined,"photo");
+    const picture=p.media.products?.[item.sku];
+    if(picture){
+      const img=element("img");img.src=picture;img.alt="";photo.append(img);
+    }else{photo.textContent="이미지 없음";}
+    const info=element("div",undefined,"info");
+    const add=button(basket.has(i)?"담음":"담기",()=>{basket.add(i);refresh();});
+    add.disabled=basket.has(i);
+    add.setAttribute("aria-label",displayName(item)+" 담기");
+    info.append(element("h3",displayName(item)),add);
+    card.append(photo,info);
+    return card;
+  }));
+  if(!found.length)$("product-grid").append(element("p","검색 결과가 없습니다."));
+  $("more").hidden=found.length<=limit;
+}
+
+function refresh(){displayBasket();renderProducts();}
+function switchTab(stats){
+  $("shop").hidden=stats;$("stats").hidden=!stats;
+  $("shop-tab").setAttribute("aria-pressed",String(!stats));
+  $("stats-tab").setAttribute("aria-pressed",String(stats));
+}
+for(const id of ["reference","candidate"]){
+  for(const [key,spec] of Object.entries(p.specs)){
+    const option=element("option",label(spec));option.value=key;$(id).append(option);
+  }
+  $(id).onchange=displayBasket;
+}
+$("reference").value=p.reference;$("candidate").value=p.selected;
+if(p.media.hero)$("hero").style.backgroundImage="url("+p.media.hero+")";
+$("case").onclick=()=>{basket.clear();p.screenshot_case.forEach(code=>basket.add(lookup.get(code)));refresh();};
+$("empty").onclick=()=>{basket.clear();refresh();};
+$("search").oninput=()=>{limit=9;renderProducts();};
+$("more").onclick=()=>{limit+=9;renderProducts();};
+$("stats-tab").onclick=()=>switchTab(true);$("shop-tab").onclick=()=>switchTab(false);
+for(const run of p.metrics){
+  const row=element("tr",undefined,run.run_id===p.selected?"active":"");
+  row.dataset.runId=run.run_id;
+  for(const cell of [label(p.specs[run.run_id]),run.support||"—",run.rank||"—",
+    run.latent_weight+"%",run.orders,metric(run.hit_at_5),metric(run.ndcg_at_5),
+    metric(run.one_item_hit_at_5),metric(run.multi_item_hit_at_5)])row.append(element("td",cell));
+  $("runs").append(row);
+}
+refresh();
+</script>
+</body>
+</html>
