@@ -16,7 +16,7 @@ h1,h2,h3,p{margin:0}h1{font-size:33px;letter-spacing:-.055em}h2{font-size:22px;l
 .hero{background:#ead9c9 center 51%/cover no-repeat;border-radius:11px;min-height:190px;margin:14px 0}
 input[type=search],select{background:var(--white);color:var(--ink);border:1px solid var(--line);border-radius:7px;padding:8px 10px;min-width:0}
 .categories{display:flex;gap:6px;flex-wrap:wrap;margin:14px 0}.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:11px}.card,.pane{background:var(--white);border:1px solid var(--line);border-radius:10px;overflow:hidden}
-.photo{aspect-ratio:1.38;background:#e8d9d3 center/cover no-repeat}.photo.plain{display:grid;place-items:center;color:#5f4350;font-size:14px;background:#f0e5e6}
+.photo{aspect-ratio:1.38;display:grid;place-items:center;background:#f3e9df;overflow:hidden}.photo img{display:block;width:100%;height:100%;object-fit:contain;min-height:0}.photo.plain{color:#66535d;font-size:13px;background:#f0e5e6}
 .card-body{padding:10px;min-width:0}.card-body h3{overflow-wrap:anywhere}.card-body .row{margin-top:8px}.price{white-space:nowrap}.pane{padding:15px;align-self:start}.pane h2,.pane h3{margin-bottom:8px}
 .stack{display:grid;gap:7px;margin:9px 0 16px}.stack:empty:before{content:"장바구니가 비어 있습니다";color:var(--muted)}
 .line{border-top:1px solid var(--line);display:grid;grid-template-columns:minmax(0,1fr) auto;align-items:center;gap:7px;padding:8px 0}.line span{overflow-wrap:anywhere}.line small{display:block}.line button{padding:6px 9px}
@@ -49,7 +49,7 @@ footer{max-width:1240px;padding:10px 24px 22px;margin:auto;color:var(--muted);fo
 <div class="controls"><button id="download-csv" type="button">통계 CSV 받기</button><button id="download-zip" class="primary" type="button">제출 ZIP 받기</button></div>
 <p id="export-note" class="muted action-note" aria-live="polite"></p></div></section>
 </main>
-<footer>거래 자료 Chen (2015), UCI Online Retail · CC BY 4.0 · 분류와 사진은 수업용 예시</footer>
+<footer>거래 자료 Chen (2015), UCI Online Retail · CC BY 4.0 · 상품 이미지는 이름을 바탕으로 생성한 수업용 예시</footer>
 <script id="w13a-data" type="application/json"><!-- W13A_DATA --></script>
 <script>
 "use strict";
@@ -61,6 +61,7 @@ const names = {popularity:"인기순", "cf-1":"아이템 CF · 1", "cf-3":"아�
 const headers = ["run_id","model","min_coorders","n_orders","hits_at_5","hit_at_5","ndcg_at_5"];
 let selected = payload.selected, category = "", limit = 12;
 const price = item => "£"+item.price.toFixed(2);
+const displayName = item => payload.media.labels?.[item.sku] || item.name;
 
 function element(name, content, className) {
   const node = document.createElement(name);
@@ -87,22 +88,27 @@ function remove(index) {
   basket.delete(index); renderBasket(); renderProducts();
 }
 function picture(item) {
-  const src = payload.media[item.picture];
-  const node = element("div", src ? undefined : item.category, src ? "photo" : "photo plain");
-  if (src) node.style.backgroundImage = "url(" + src + ")";
-  node.setAttribute("aria-hidden", "true"); return node;
+  const src = payload.media.products?.[item.sku];
+  const node = element("div", src ? undefined : "이미지 없음", src ? "photo" : "photo plain");
+  if (src) {
+    const photo = document.createElement("img");
+    photo.src = src;
+    photo.alt = "";
+    node.append(photo);
+  }
+  return node;
 }
 function renderProducts() {
   const query = $("search").value.trim().toLocaleLowerCase();
   const priority = [...payload.featured, ...items.map((_,i)=>i).filter(i=>!payload.featured.includes(i))];
   const matches = priority.filter(i => (!category || items[i].category===category) &&
-    (items[i].name+" "+items[i].original+" "+items[i].sku).toLocaleLowerCase().includes(query));
+    (displayName(items[i])+" "+items[i].original+" "+items[i].sku).toLocaleLowerCase().includes(query));
   $("product-grid").replaceChildren(...matches.slice(0,limit).map(i => {
     const item=items[i], card=element("article",undefined,"card"), body=element("div",undefined,"card-body");
     const bar=element("div",undefined,"row");
     const addButton=button(basket.has(i)?"담음":"담기",()=>add(i),"primary");
-    addButton.disabled=basket.has(i); addButton.setAttribute("aria-label",item.name+" 담기");
-    bar.append(element("span",price(item),"price"),addButton); body.append(element("h3",item.name),bar);
+    addButton.disabled=basket.has(i); addButton.setAttribute("aria-label",displayName(item)+" 담기");
+    bar.append(element("span",price(item),"price"),addButton); body.append(element("h3",displayName(item)),bar);
     card.dataset.sku=item.sku; card.append(picture(item),body); return card;
   }));
   if(!matches.length) $("product-grid").append(element("p","검색 결과가 없습니다."));
@@ -124,16 +130,16 @@ function renderBasket() {
   $("basket").replaceChildren(...[...basket].map(i=>{
     const item=items[i], row=element("div",undefined,"line");
     row.dataset.sku=item.sku;
-    const b=button("빼기",()=>remove(i)); b.setAttribute("aria-label",item.name+" 빼기");
-    row.append(element("span",item.name+" · "+price(item)),b); return row;
+    const b=button("빼기",()=>remove(i)); b.setAttribute("aria-label",displayName(item)+" 빼기");
+    row.append(element("span",displayName(item)+" · "+price(item)),b); return row;
   }));
   $("model-note").textContent = !basket.size ? "빈 장바구니에서는 인기 상품을 표시합니다." :
     selected==="popularity" ? "주문에 포함된 횟수로 정렬합니다." : "함께 주문된 근거를 이용하고, 근거가 약한 자리에는 인기 상품을 표시합니다.";
   $("recommendations").replaceChildren(...rank().map(([i,score],position)=>{
     const item=items[i], row=element("div",undefined,"line"); row.dataset.sku=item.sku;
-    const label=element("span",String(position+1)+". "+item.name);
+    const label=element("span",String(position+1)+". "+displayName(item));
     label.append(element("small",score>0 ? "동시구매 기반 추천" : "인기 상품"));
-    const b=button("담기",()=>add(i)); b.setAttribute("aria-label","추천 "+item.name+" 담기");
+    const b=button("담기",()=>add(i)); b.setAttribute("aria-label","추천 "+displayName(item)+" 담기");
     row.append(label,b); return row;
   }));
 }

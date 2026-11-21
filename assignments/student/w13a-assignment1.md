@@ -6,7 +6,7 @@
 
 ## 1. 실습을 이어서 열기
 
-- [W13A Colab](https://colab.research.google.com/github/lunalab-ai/recommender/blob/2026-fall-w13a/notebooks/student/w13a-first-recommendation.ipynb)의 자신의 사본을 열고 CPU에서 위부터 실행합니다.
+- [W13A Colab](https://colab.research.google.com/github/lunalab-ai/recommender/blob/2026-fall-w13a-r1/notebooks/student/w13a-first-recommendation.ipynb)의 자신의 사본을 열고 CPU에서 위부터 실행합니다.
 - 4절의 두 함수에 각각 `return` 식 한 줄을 작성합니다. 함수 이름과 인수는 그대로 둡니다. 첫 함수에서는 제공된 `sqrt`를 사용합니다. 새 패키지나 파일 입력은 필요하지 않습니다.
 - 5절의 공개 검사에서 두 항목을 통과시키고 비교표를 만듭니다. 도움말은 [W04B E1·E3](https://colab.research.google.com/github/lunalab-ai/recommender/blob/2026-fall-w04b/notebooks/student/w04b-cf-synthesis.ipynb)에 있습니다.
 
