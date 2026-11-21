@@ -95,6 +95,11 @@ sessions:
     date: '2026-11-19'
     colab_ref: 2026-fall-w12b
     notion_url: https://fancy-ballcap-a15.notion.site/W12B-2026-11-19-41b7fd00109f815d95d6c053b735eb64
+  w13a:
+    date: '2026-11-24'
+    colab_ref: 2026-fall-w13a
+    slide_pdf: course/handouts/w13a-first-recommendation.pdf
+    title: 첫 추천을 내 쇼핑몰에 띄우기 · 인기순과 아이템 CF
 resources:
 - group: Python 기초
   title: 이 수업을 위한 Python 복습 길잡이

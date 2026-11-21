@@ -49,3 +49,10 @@ datasets:
   purpose: 주교재9장의프롬프팅/리뷰임베딩+FM을위한수업용별도표본;교재제공Amazon과구별
   license: UCSD공식데이터안내의인용요구를따르는학술·수업사용. 원자료저장소재배포없음.
   redistribution: 공개저장소/NotionZIP에는원본/리뷰어명/원리뷰/변환표를복사하지않고공식URL로준비함
+
+- id: uci-online-retail-w13a
+  official_page: https://archive.ics.uci.edu/dataset/352/online%2Bretail
+  download_url: https://archive.ics.uci.edu/static/public/352/data.csv
+  status: cc-by-4.0-course-snapshot
+  license: CC BY 4.0
+  purpose: 취소·수량·가격 필터 후 학습과 검증 주문만 수업용 변환

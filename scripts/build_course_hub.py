@@ -69,7 +69,19 @@ def read_sessions(root: Path, metadata: dict) -> list[dict]:
                 notion=notion,
             )
         )
-    return lessons
+    for sid, info in metadata.items():
+        pdf = info.get("slide_pdf")
+        if not pdf:
+            continue
+        path = Path(pdf)
+        if sid in seen or path.parent.as_posix() != "course/handouts" or not path.name.startswith(sid + "-") or path.suffix != ".pdf":
+            raise ValueError(f"Invalid slide PDF registration for {sid}")
+        ref = info.get("colab_ref", "main")
+        if not re.fullmatch(r"[A-Za-z0-9][A-Za-z0-9._/-]*", ref):
+            raise ValueError(f"Invalid Colab ref for {sid}")
+        lessons.append(dict(id=sid, stem=path.stem, page=root/path, title=info["title"], text="",
+                            date=dt.date.fromisoformat(str(info["date"])), ref=ref, notion=None, slide_pdf=pdf))
+    return sorted(lessons, key=lambda lesson: lesson["id"])
 
 
 def session_table(root: Path, lessons: list[dict], repository: str) -> str:
@@ -93,6 +105,9 @@ def session_table(root: Path, lessons: list[dict], repository: str) -> str:
             local_link(root, "답안", f"course/handouts/{stem}-quiz.md"),
             local_link(root, "PDF", f"course/handouts/{stem}-quiz.pdf"),
         ]
+        if lesson.get("slide_pdf"):
+            notes = [local_link(root, "학생 슬라이드 PDF", lesson["slide_pdf"])]
+            quiz = ["—"]
         notebook = f"notebooks/student/{stem}.ipynb"
         if (root / notebook).is_file():
             suffix = f"{repository}/blob/{quote(ref, safe='')}/{notebook}"
@@ -147,6 +162,10 @@ def references(
         "각 강의의 참고자료 절과 본문 외부 링크를 모았습니다. 출처 구분 설명은 강의 원문을 유지합니다.",
     ]
     for lesson in lessons:
+        if lesson.get("slide_pdf"):
+            parts.extend([f"### {lesson['id'].upper()} · {lesson['title']}",
+                          f"[학생 슬라이드 PDF](../{lesson['slide_pdf']})"])
+            continue
         parts.extend(
             [
                 f"### {lesson['id'].upper()} · {lesson['title']}",

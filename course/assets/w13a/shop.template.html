@@ -1,0 +1,214 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>소소상점 · 추천시스템 실습</title>
+<style>
+:root{--ink:#291f23;--wine:#71374e;--muted:#61535a;--line:#ded2cb;--paper:#fcf7f1;--white:#fffdfa;--tint:#f4e9e9}
+*{box-sizing:border-box} body{margin:0;background:var(--paper);color:var(--ink);font:16px/1.55 "Malgun Gothic","Apple SD Gothic Neo",system-ui,sans-serif}
+button,input,select{font:inherit} button,select{cursor:pointer} button:focus-visible,input:focus-visible,select:focus-visible{outline:3px solid #9b4260;outline-offset:2px}
+header{background:var(--white);border-bottom:2px solid var(--wine)} .bar{max-width:1240px;margin:auto;min-height:72px;display:flex;align-items:center;justify-content:space-between;gap:12px;padding:10px 24px}
+.brand{font-size:27px;letter-spacing:-.065em;font-weight:800}.nav{display:flex;gap:8px} button{border:1px solid var(--line);border-radius:8px;background:var(--white);color:var(--ink);padding:8px 13px}.nav button{border:0;background:transparent}.nav button[aria-pressed=true]{color:var(--wine);box-shadow:inset 0 -2px var(--wine)}
+.primary,button[aria-pressed=true].category{background:var(--wine);color:#fff;border-color:var(--wine)}button[disabled]{opacity:.53;cursor:default}
+main{max-width:1240px;margin:auto;padding:24px}.market{display:grid;grid-template-columns:minmax(0,1.65fr) minmax(290px,1fr);gap:22px}
+h1,h2,h3,p{margin:0}h1{font-size:33px;letter-spacing:-.055em}h2{font-size:22px;letter-spacing:-.03em}h3{font-size:16px}.muted,small{color:var(--muted)} .row{display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap}
+.hero{background:#ead9c9 center 51%/cover no-repeat;border-radius:11px;min-height:190px;margin:14px 0}
+input[type=search],select{background:var(--white);color:var(--ink);border:1px solid var(--line);border-radius:7px;padding:8px 10px;min-width:0}
+.categories{display:flex;gap:6px;flex-wrap:wrap;margin:14px 0}.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:11px}.card,.pane{background:var(--white);border:1px solid var(--line);border-radius:10px;overflow:hidden}
+.photo{aspect-ratio:1.38;background:#e8d9d3 center/cover no-repeat}.photo.plain{display:grid;place-items:center;color:#5f4350;font-size:14px;background:#f0e5e6}
+.card-body{padding:10px;min-width:0}.card-body h3{overflow-wrap:anywhere}.card-body .row{margin-top:8px}.price{white-space:nowrap}.pane{padding:15px;align-self:start}.pane h2,.pane h3{margin-bottom:8px}
+.stack{display:grid;gap:7px;margin:9px 0 16px}.stack:empty:before{content:"장바구니가 비어 있습니다";color:var(--muted)}
+.line{border-top:1px solid var(--line);display:grid;grid-template-columns:minmax(0,1fr) auto;align-items:center;gap:7px;padding:8px 0}.line span{overflow-wrap:anywhere}.line small{display:block}.line button{padding:6px 9px}
+.box{background:var(--white);border:1px solid var(--line);border-radius:10px;padding:18px;margin:14px 0}.intro{margin:8px 0 14px;color:var(--muted)}
+.stats-wrap{overflow:auto}table{border-collapse:collapse;width:100%;text-align:left;min-width:620px}th,td{border-bottom:1px solid var(--line);padding:8px 9px;white-space:nowrap}th{background:var(--tint)}tr.selected td{background:#f7eced}td:last-child{white-space:normal}
+.controls{display:flex;flex-wrap:wrap;gap:9px;margin-top:13px}.bars{display:grid;gap:10px}.metric{display:grid;grid-template-columns:105px minmax(40px,1fr) 55px;gap:8px;align-items:center}.track{height:10px;background:var(--tint);border-radius:12px}.fill{height:100%;background:var(--wine);border-radius:12px}
+footer{max-width:1240px;padding:10px 24px 22px;margin:auto;color:var(--muted);font-size:13px}.status{margin:7px 0;font-size:14px}.action-note{margin-top:8px}
+@media(max-width:810px){.market{grid-template-columns:minmax(0,1fr)}.grid{grid-template-columns:repeat(3,minmax(0,1fr))}.bar,main{padding:12px 16px}.hero{min-height:139px}}
+@media(max-width:500px){.brand{font-size:20px}.bar{flex-wrap:wrap}.nav button{padding:5px 7px}.grid{grid-template-columns:repeat(2,minmax(0,1fr))}h1{font-size:26px}.market{gap:12px}}
+</style>
+</head>
+<body>
+<header><div class="bar"><span class="brand">소소상점</span><nav class="nav" aria-label="메뉴"><button id="catalog-tab" type="button" aria-pressed="true">상품 둘러보기</button><button id="stats-tab" type="button" aria-pressed="false">실험 통계</button></nav><button type="button" id="cart-jump">장바구니 <span id="count">0</span></button></div></header>
+<main>
+<section id="catalog-view" class="market">
+<div><div class="row"><h1>선물과 생활소품</h1><input id="search" type="search" placeholder="상품 검색" aria-label="상품 검색"></div>
+<div id="hero" class="hero" role="img" aria-label="선물과 도자기 소품 예시"></div>
+<div class="categories" aria-label="상품 분류"><button class="category" data-cat="" aria-pressed="true">전체</button><button class="category" data-cat="선물" aria-pressed="false">선물</button><button class="category" data-cat="테이블웨어" aria-pressed="false">테이블웨어</button><button class="category" data-cat="생활소품" aria-pressed="false">생활소품</button></div>
+<div id="product-grid" class="grid"></div><div class="controls"><button id="more" type="button">상품 더 보기</button></div></div>
+<aside id="basket-panel" class="pane"><div class="row"><h2>장바구니</h2><button id="clear-basket" type="button">비우기</button></div>
+<div id="basket" class="stack"></div><h2>함께 추천하는 상품</h2>
+<label for="model">추천 방식 </label><select id="model"></select>
+<p class="muted status" id="model-note" aria-live="polite"></p>
+<div id="recommendations" class="stack" aria-live="polite"></div></aside>
+</section>
+<section id="stats-view" hidden><h1>실험 통계</h1><p class="intro" id="stats-context"></p>
+<div class="box"><h2>Hit@5 비교</h2><p class="intro">가린 상품이 추천 5개 안에 들어온 주문의 비율</p><div id="bars" class="bars"></div></div>
+<div class="box"><h2>실험표와 출시 모델</h2><p class="intro">Hit@5가 같으면 NDCG@5를 비교하세요.</p>
+<div class="stats-wrap"><table id="metrics"><thead><tr><th>방식</th><th>동시구매 하한</th><th>검증 주문</th><th>적중</th><th>Hit@5</th><th>NDCG@5</th><th>선택</th></tr></thead><tbody></tbody></table></div>
+<div class="controls"><button id="download-csv" type="button">통계 CSV 받기</button><button id="download-zip" class="primary" type="button">제출 ZIP 받기</button></div>
+<p id="export-note" class="muted action-note" aria-live="polite"></p></div></section>
+</main>
+<footer>거래 자료 Chen (2015), UCI Online Retail · CC BY 4.0 · 분류와 사진은 수업용 예시</footer>
+<script id="w13a-data" type="application/json"><!-- W13A_DATA --></script>
+<script>
+"use strict";
+const originalMarkup = "<!doctype html>\n" + document.documentElement.outerHTML;
+const payload = JSON.parse(document.getElementById("w13a-data").textContent);
+const $ = id => document.getElementById(id);
+const items = payload.catalog, basket = new Set();
+const names = {popularity:"인기순", "cf-1":"아이템 CF · 1", "cf-3":"아이템 CF · 3", "cf-5":"아이템 CF · 5"};
+const headers = ["run_id","model","min_coorders","n_orders","hits_at_5","hit_at_5","ndcg_at_5"];
+let selected = payload.selected, category = "", limit = 12;
+const price = item => "£"+item.price.toFixed(2);
+
+function element(name, content, className) {
+  const node = document.createElement(name);
+  if (content !== undefined) node.textContent = content;
+  if (className) node.className = className;
+  return node;
+}
+function button(label, handler, className) {
+  const node = element("button", label, className);
+  node.type="button"; node.addEventListener("click", handler); return node;
+}
+function show(which) {
+  const catalog = which === "catalog";
+  $("catalog-view").hidden = !catalog; $("stats-view").hidden = catalog;
+  // A grid display rule would otherwise override the browser's default hidden rule.
+  $("catalog-view").style.display = catalog ? "" : "none";
+  $("catalog-tab").setAttribute("aria-pressed", String(catalog)); $("stats-tab").setAttribute("aria-pressed", String(!catalog));
+  if (!catalog) renderStats();
+}
+function add(index) {
+  basket.add(index); renderBasket(); renderProducts();
+}
+function remove(index) {
+  basket.delete(index); renderBasket(); renderProducts();
+}
+function picture(item) {
+  const src = payload.media[item.picture];
+  const node = element("div", src ? undefined : item.category, src ? "photo" : "photo plain");
+  if (src) node.style.backgroundImage = "url(" + src + ")";
+  node.setAttribute("aria-hidden", "true"); return node;
+}
+function renderProducts() {
+  const query = $("search").value.trim().toLocaleLowerCase();
+  const priority = [...payload.featured, ...items.map((_,i)=>i).filter(i=>!payload.featured.includes(i))];
+  const matches = priority.filter(i => (!category || items[i].category===category) &&
+    (items[i].name+" "+items[i].original+" "+items[i].sku).toLocaleLowerCase().includes(query));
+  $("product-grid").replaceChildren(...matches.slice(0,limit).map(i => {
+    const item=items[i], card=element("article",undefined,"card"), body=element("div",undefined,"card-body");
+    const bar=element("div",undefined,"row");
+    const addButton=button(basket.has(i)?"담음":"담기",()=>add(i),"primary");
+    addButton.disabled=basket.has(i); addButton.setAttribute("aria-label",item.name+" 담기");
+    bar.append(element("span",price(item),"price"),addButton); body.append(element("h3",item.name),bar);
+    card.dataset.sku=item.sku; card.append(picture(item),body); return card;
+  }));
+  if(!matches.length) $("product-grid").append(element("p","검색 결과가 없습니다."));
+  $("more").hidden = matches.length <= limit;
+}
+function rank() {
+  const scores=Array(items.length).fill(0);
+  const minimum=selected==="popularity" ? null : Number(selected.split("-")[1]);
+  if(minimum!==null) for(const i of basket) for(const [candidate,co,score] of payload.neighbors[i]) {
+    if(co>=minimum) scores[candidate]+=score;
+  }
+  const order=items.map((_,i)=>i).filter(i=>!basket.has(i)).sort((a,b)=>scores[b]-scores[a] ||
+    payload.counts[b]-payload.counts[a] || (items[a].sku < items[b].sku ? -1 : items[a].sku > items[b].sku ? 1 : 0));
+  return order.slice(0,5).map(i=>[i,scores[i]]);
+}
+function renderBasket() {
+  $("count").textContent=String(basket.size);
+  $("model").value=selected;
+  $("basket").replaceChildren(...[...basket].map(i=>{
+    const item=items[i], row=element("div",undefined,"line");
+    row.dataset.sku=item.sku;
+    const b=button("빼기",()=>remove(i)); b.setAttribute("aria-label",item.name+" 빼기");
+    row.append(element("span",item.name+" · "+price(item)),b); return row;
+  }));
+  $("model-note").textContent = !basket.size ? "빈 장바구니에서는 인기 상품을 표시합니다." :
+    selected==="popularity" ? "주문에 포함된 횟수로 정렬합니다." : "함께 주문된 근거를 이용하고, 근거가 약한 자리에는 인기 상품을 표시합니다.";
+  $("recommendations").replaceChildren(...rank().map(([i,score],position)=>{
+    const item=items[i], row=element("div",undefined,"line"); row.dataset.sku=item.sku;
+    const label=element("span",String(position+1)+". "+item.name);
+    label.append(element("small",score>0 ? "동시구매 기반 추천" : "인기 상품"));
+    const b=button("담기",()=>add(i)); b.setAttribute("aria-label","추천 "+item.name+" 담기");
+    row.append(label,b); return row;
+  }));
+}
+function renderStats() {
+  const rows=payload.metrics;
+  $("stats-context").textContent = (payload.student_code ? "공통 검증 주문 " : "시연용 주문 표본 ")+rows[0].n_orders+"건";
+  $("bars").replaceChildren(...rows.map(row=>{
+    const line=element("div",undefined,"metric"), track=element("div",undefined,"track"), fill=element("div",undefined,"fill");
+    fill.style.width=(Number(row.hit_at_5)*100)+"%"; track.append(fill);
+    line.append(element("span",names[row.run_id]),track,element("span",(Number(row.hit_at_5)*100).toFixed(1)+"%")); return line;
+  }));
+  $("metrics").querySelector("tbody").replaceChildren(...rows.map(row=>{
+    const tr=element("tr",undefined,row.run_id===selected?"selected":""); tr.dataset.runId=row.run_id;
+    for(const value of [names[row.run_id],row.min_coorders||"—",row.n_orders,row.hits_at_5,
+      Number(row.hit_at_5).toFixed(6),Number(row.ndcg_at_5).toFixed(6)]) tr.append(element("td",String(value)));
+    const td=element("td"), radio=element("input"); radio.type="radio"; radio.name="release-model";
+    radio.setAttribute("aria-label",names[row.run_id]+" 선택"); radio.checked=row.run_id===selected;
+    radio.addEventListener("change",()=>{selected=row.run_id;renderBasket();renderStats();}); td.append(radio); tr.append(td); return tr;
+  }));
+  $("download-zip").disabled=!payload.student_code;
+  $("export-note").textContent=payload.student_code ? "선택한 모델: "+names[selected] : "이 화면은 시연용입니다. 두 코드를 완성한 뒤 본인 프로젝트에서 제출 ZIP을 받을 수 있습니다.";
+}
+const csv = () => headers.join(",")+"\r\n"+payload.metrics.map(row=>headers.map(key=>row[key]).join(",")).join("\r\n")+"\r\n";
+function download(content,name,type){
+  const url=URL.createObjectURL(new Blob([content],{type}));
+  const link=element("a"); link.href=url; link.download=name; document.body.append(link); link.click(); link.remove();
+  setTimeout(()=>URL.revokeObjectURL(url),5000);
+}
+function crc32(bytes){
+  let crc=-1;
+  for(const byte of bytes){crc^=byte;for(let bit=0;bit<8;bit++)crc=(crc>>>1)^((crc&1)?0xedb88320:0);}
+  return (crc^-1)>>>0;
+}
+function storedZip(entries){
+  const encoder=new TextEncoder(), files=[], central=[]; let offset=0, size=0;
+  for(const [name,content] of entries){
+    const filename=encoder.encode(name), data=encoder.encode(content), checksum=crc32(data);
+    const local=new Uint8Array(30+filename.length), l=new DataView(local.buffer);
+    l.setUint32(0,0x04034b50,true);l.setUint16(4,20,true);l.setUint16(12,33,true);l.setUint32(14,checksum,true);l.setUint32(18,data.length,true);l.setUint32(22,data.length,true);l.setUint16(26,filename.length,true);local.set(filename,30);
+    const head=new Uint8Array(46+filename.length), h=new DataView(head.buffer);
+    h.setUint32(0,0x02014b50,true);h.setUint16(4,20,true);h.setUint16(6,20,true);h.setUint16(14,33,true);h.setUint32(16,checksum,true);h.setUint32(20,data.length,true);h.setUint32(24,data.length,true);h.setUint16(28,filename.length,true);h.setUint32(42,offset,true);head.set(filename,46);
+    files.push(local,data);central.push(head);offset+=local.length+data.length;size+=head.length;
+  }
+  const end=new Uint8Array(22), view=new DataView(end.buffer);
+  view.setUint32(0,0x06054b50,true);view.setUint16(8,entries.length,true);view.setUint16(10,entries.length,true);view.setUint32(12,size,true);view.setUint32(16,offset,true);
+  return new Blob([...files,...central,end],{type:"application/zip"});
+}
+function exportSubmission(){
+  if(!payload.student_code)return;
+  const manifest={schema_version:1,assignment:"2026-2-recommender-w13a-a1",data_version:payload.version,
+    dataset_sha256:payload.snapshot,runs:Object.keys(names),selected_run_id:selected};
+  const saved={...payload,selected};
+  const markup=originalMarkup.replace(/(<script id="w13a-data" type="application\/json">)[\s\S]*?(<\/script>)/,
+    (_,start,end)=>start+JSON.stringify(saved).replaceAll("<","\\u003c")+end);
+  const zip=storedZip([["submission.json",JSON.stringify(manifest)],["student_model.py",payload.student_code],["metrics.csv",csv()],["shop.html",markup]]);
+  download(zip,"w13a-assignment1.zip","application/zip");
+}
+if(payload.media.hero)$("hero").style.backgroundImage="url("+payload.media.hero+")";
+$("model").replaceChildren(...payload.metrics.map(row=>{
+  const option=element("option",names[row.run_id]);option.value=row.run_id;return option;
+}));
+$("catalog-tab").onclick=()=>show("catalog");$("stats-tab").onclick=()=>show("stats");
+$("cart-jump").onclick=()=>{show("catalog");$("basket-panel").scrollIntoView({block:"nearest"});};
+$("model").onchange=e=>{selected=e.target.value;renderBasket();};
+$("search").oninput=()=>{limit=12;renderProducts();};
+$("clear-basket").onclick=()=>{basket.clear();renderBasket();renderProducts();};
+$("more").onclick=()=>{limit+=12;renderProducts();};
+document.querySelectorAll(".category").forEach(button=>button.onclick=()=>{
+  category=button.dataset.cat;limit=12;
+  document.querySelectorAll(".category").forEach(b=>b.setAttribute("aria-pressed",String(b===button)));
+  renderProducts();
+});
+$("download-csv").onclick=()=>download(csv(),"metrics.csv","text/csv;charset=utf-8");
+$("download-zip").onclick=exportSubmission;
+renderProducts();renderBasket();show("catalog");
+</script>
+</body>
+</html>
